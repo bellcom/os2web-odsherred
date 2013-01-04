@@ -34,18 +34,55 @@ function os2web_grund_paneler_views_default_views() {
   $handler->display->display_options['exposed_form']['options']['exposed_sorts_label'] = 'Sortér efter';
   $handler->display->display_options['exposed_form']['options']['sort_asc_label'] = 'Stigende';
   $handler->display->display_options['exposed_form']['options']['sort_desc_label'] = 'Faldende';
-  $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '3';
   $handler->display->display_options['pager']['options']['offset'] = '0';
-  $handler->display->display_options['pager']['options']['id'] = '0';
-  $handler->display->display_options['pager']['options']['expose']['items_per_page_label'] = 'Antal elementer';
-  $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all_label'] = '- Alle -';
-  $handler->display->display_options['pager']['options']['expose']['offset_label'] = 'Forskydning';
-  $handler->display->display_options['pager']['options']['tags']['first'] = '« første';
-  $handler->display->display_options['pager']['options']['tags']['previous'] = '‹ forrige';
-  $handler->display->display_options['pager']['options']['tags']['next'] = 'næste ›';
-  $handler->display->display_options['pager']['options']['tags']['last'] = 'sidste »';
-  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_plugin'] = 'slideshow';
+  $handler->display->display_options['style_options']['class'] = 'front-background';
+  $handler->display->display_options['style_options']['slideshow_type'] = 'views_slideshow_cycle';
+  $handler->display->display_options['style_options']['slideshow_skin'] = 'default';
+  $handler->display->display_options['style_options']['skin_info'] = array(
+    'class' => 'default',
+    'name' => 'Standard',
+    'module' => 'views_slideshow',
+    'path' => '',
+    'stylesheets' => array(),
+  );
+  $handler->display->display_options['style_options']['widgets']['top']['views_slideshow_pager']['weight'] = '1';
+  $handler->display->display_options['style_options']['widgets']['top']['views_slideshow_pager']['type'] = 'views_slideshow_pager_fields';
+  $handler->display->display_options['style_options']['widgets']['top']['views_slideshow_pager']['views_slideshow_pager_fields_fields'] = array(
+    'title' => 0,
+    'field_resume_long' => 0,
+    'field_site_structure' => 0,
+    'field_lead_image' => 0,
+  );
+  $handler->display->display_options['style_options']['widgets']['top']['views_slideshow_controls']['weight'] = '1';
+  $handler->display->display_options['style_options']['widgets']['top']['views_slideshow_controls']['type'] = 'views_slideshow_controls_text';
+  $handler->display->display_options['style_options']['widgets']['top']['views_slideshow_slide_counter']['weight'] = '1';
+  $handler->display->display_options['style_options']['widgets']['bottom']['views_slideshow_pager']['enable'] = 1;
+  $handler->display->display_options['style_options']['widgets']['bottom']['views_slideshow_pager']['weight'] = '1';
+  $handler->display->display_options['style_options']['widgets']['bottom']['views_slideshow_pager']['type'] = 'views_slideshow_pager_fields';
+  $handler->display->display_options['style_options']['widgets']['bottom']['views_slideshow_pager']['views_slideshow_pager_fields_fields'] = array(
+    'field_site_structure' => 'field_site_structure',
+    'title' => 0,
+    'field_resume_long' => 0,
+    'field_lead_image' => 0,
+  );
+  $handler->display->display_options['style_options']['widgets']['bottom']['views_slideshow_pager']['views_slideshow_pager_fields_hover'] = 1;
+  $handler->display->display_options['style_options']['widgets']['bottom']['views_slideshow_controls']['enable'] = 1;
+  $handler->display->display_options['style_options']['widgets']['bottom']['views_slideshow_controls']['weight'] = '1';
+  $handler->display->display_options['style_options']['widgets']['bottom']['views_slideshow_controls']['type'] = 'views_slideshow_controls_text';
+  $handler->display->display_options['style_options']['widgets']['bottom']['views_slideshow_slide_counter']['weight'] = '1';
+  $handler->display->display_options['style_options']['views_slideshow_cycle']['effect'] = 'scrollLeft';
+  $handler->display->display_options['style_options']['views_slideshow_cycle']['timeout'] = '5000';
+  $handler->display->display_options['style_options']['views_slideshow_cycle']['speed'] = '700';
+  $handler->display->display_options['style_options']['views_slideshow_cycle']['delay'] = '0';
+  $handler->display->display_options['style_options']['views_slideshow_cycle']['start_paused'] = 0;
+  $handler->display->display_options['style_options']['views_slideshow_cycle']['remember_slide_days'] = '1';
+  $handler->display->display_options['style_options']['views_slideshow_cycle']['items_per_slide'] = '1';
+  $handler->display->display_options['style_options']['views_slideshow_cycle']['wait_for_image_load_timeout'] = '3000';
+  $handler->display->display_options['style_options']['views_slideshow_cycle']['cleartype'] = 0;
+  $handler->display->display_options['style_options']['views_slideshow_cycle']['cleartypenobg'] = 0;
   $handler->display->display_options['row_plugin'] = 'fields';
   /* Felt: Indhold: Titel */
   $handler->display->display_options['fields']['title']['id'] = 'title';
@@ -61,6 +98,22 @@ function os2web_grund_paneler_views_default_views() {
   $handler->display->display_options['fields']['field_site_structure']['label'] = '';
   $handler->display->display_options['fields']['field_site_structure']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_site_structure']['type'] = 'taxonomy_term_reference_plain';
+  /* Felt: Indhold: Primære billede */
+  $handler->display->display_options['fields']['field_lead_image']['id'] = 'field_lead_image';
+  $handler->display->display_options['fields']['field_lead_image']['table'] = 'field_data_field_lead_image';
+  $handler->display->display_options['fields']['field_lead_image']['field'] = 'field_lead_image';
+  $handler->display->display_options['fields']['field_lead_image']['label'] = '';
+  $handler->display->display_options['fields']['field_lead_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_lead_image']['element_wrapper_type'] = 'div';
+  $handler->display->display_options['fields']['field_lead_image']['element_wrapper_class'] = 'background-images';
+  $handler->display->display_options['fields']['field_lead_image']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_lead_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_lead_image']['type'] = 'image_url';
+  $handler->display->display_options['fields']['field_lead_image']['settings'] = array(
+    'image_style' => '',
+    'image_link' => '',
+  );
+  $handler->display->display_options['fields']['field_lead_image']['delta_offset'] = '0';
   /* Sorteringskriterie: Indhold: Oprettelsesdato */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
@@ -96,12 +149,7 @@ function os2web_grund_paneler_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'news' => 'news',
   );
-  /* Filterkriterie: Indhold: Forfrem til (field_promoteto) */
-  $handler->display->display_options['filters']['field_promoteto_tid']['id'] = 'field_promoteto_tid';
-  $handler->display->display_options['filters']['field_promoteto_tid']['table'] = 'field_data_field_promoteto';
-  $handler->display->display_options['filters']['field_promoteto_tid']['field'] = 'field_promoteto_tid';
-  $handler->display->display_options['filters']['field_promoteto_tid']['type'] = 'select';
-  $handler->display->display_options['filters']['field_promoteto_tid']['vocabulary'] = 'forfrem_til';
+  $handler->display->display_options['filters']['type']['group'] = 1;
 
   /* Display: Aktuelt - Sektionsforside */
   $handler = $view->new_display('panel_pane', 'Aktuelt - Sektionsforside', 'panel_pane_1');
@@ -155,6 +203,65 @@ function os2web_grund_paneler_views_default_views() {
   $handler->display->display_options['filters']['field_promoteto_tid']['vocabulary'] = 'forfrem_til';
   $handler->display->display_options['pane_category']['name'] = 'CMS Theme';
   $handler->display->display_options['pane_category']['weight'] = '0';
+
+  /* Display: Aktuelt - forside slideshow */
+  $handler = $view->new_display('panel_pane', 'Aktuelt - forside slideshow', 'panel_pane_3');
+  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Felt: Indhold: Portalkategori */
+  $handler->display->display_options['fields']['field_site_structure_1']['id'] = 'field_site_structure_1';
+  $handler->display->display_options['fields']['field_site_structure_1']['table'] = 'field_data_field_site_structure';
+  $handler->display->display_options['fields']['field_site_structure_1']['field'] = 'field_site_structure';
+  $handler->display->display_options['fields']['field_site_structure_1']['label'] = '';
+  $handler->display->display_options['fields']['field_site_structure_1']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_site_structure_1']['alter']['strip_tags'] = TRUE;
+  $handler->display->display_options['fields']['field_site_structure_1']['element_label_colon'] = FALSE;
+  /* Felt: Indhold: Titel */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_wrapper_class'] = '[field_site_structure_1]';
+  /* Felt: Indhold: Resume - lang overskrift */
+  $handler->display->display_options['fields']['field_resume_long']['id'] = 'field_resume_long';
+  $handler->display->display_options['fields']['field_resume_long']['table'] = 'field_data_field_resume_long';
+  $handler->display->display_options['fields']['field_resume_long']['field'] = 'field_resume_long';
+  $handler->display->display_options['fields']['field_resume_long']['label'] = '';
+  $handler->display->display_options['fields']['field_resume_long']['alter']['max_length'] = '70';
+  $handler->display->display_options['fields']['field_resume_long']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['field_resume_long']['alter']['trim'] = TRUE;
+  $handler->display->display_options['fields']['field_resume_long']['element_type'] = 'span';
+  $handler->display->display_options['fields']['field_resume_long']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_resume_long']['element_wrapper_class'] = '[field_site_structure_1]';
+  /* Felt: Indhold: Portalkategori */
+  $handler->display->display_options['fields']['field_site_structure']['id'] = 'field_site_structure';
+  $handler->display->display_options['fields']['field_site_structure']['table'] = 'field_data_field_site_structure';
+  $handler->display->display_options['fields']['field_site_structure']['field'] = 'field_site_structure';
+  $handler->display->display_options['fields']['field_site_structure']['label'] = '';
+  $handler->display->display_options['fields']['field_site_structure']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_site_structure']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_site_structure']['alter']['text'] = '<i class="bullet [field_site_structure_1]"></i>';
+  $handler->display->display_options['fields']['field_site_structure']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_site_structure']['type'] = 'taxonomy_term_reference_plain';
+  /* Felt: Indhold: Primære billede */
+  $handler->display->display_options['fields']['field_lead_image']['id'] = 'field_lead_image';
+  $handler->display->display_options['fields']['field_lead_image']['table'] = 'field_data_field_lead_image';
+  $handler->display->display_options['fields']['field_lead_image']['field'] = 'field_lead_image';
+  $handler->display->display_options['fields']['field_lead_image']['label'] = '';
+  $handler->display->display_options['fields']['field_lead_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_lead_image']['element_wrapper_type'] = 'div';
+  $handler->display->display_options['fields']['field_lead_image']['element_wrapper_class'] = 'background-images';
+  $handler->display->display_options['fields']['field_lead_image']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_lead_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_lead_image']['type'] = 'image_url';
+  $handler->display->display_options['fields']['field_lead_image']['settings'] = array(
+    'image_style' => '',
+    'image_link' => '',
+  );
+  $handler->display->display_options['fields']['field_lead_image']['delta_offset'] = '0';
   $translatables['aktuelt'] = array(
     t('Master'),
     t('mere'),
@@ -163,17 +270,13 @@ function os2web_grund_paneler_views_default_views() {
     t('Sortér efter'),
     t('Stigende'),
     t('Faldende'),
-    t('Antal elementer'),
-    t('- Alle -'),
-    t('Forskydning'),
-    t('« første'),
-    t('‹ forrige'),
-    t('næste ›'),
-    t('sidste »'),
     t('Alle'),
     t('Aktuelt - Sektionsforside'),
     t('CMS Theme'),
     t('Aktuelt - Portalforside'),
+    t('Aktuelt - forside slideshow'),
+    t('<i class="bullet [field_site_structure_1]"></i>'),
+    t('View panes'),
   );
   $export['aktuelt'] = $view;
 
