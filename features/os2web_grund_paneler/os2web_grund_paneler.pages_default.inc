@@ -864,6 +864,24 @@ function os2web_grund_paneler_default_page_manager_pages() {
     $pane = new stdClass();
     $pane->pid = 'new-6';
     $pane->panel = 'left';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'aktuelt-panel_pane_4';
+    $pane->shown = FALSE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-6'] = $pane;
+    $display->panels['left'][0] = 'new-6';
+    $pane = new stdClass();
+    $pane->pid = 'new-7';
+    $pane->panel = 'left';
     $pane->type = 'views';
     $pane->subtype = 'rotating_image_view';
     $pane->shown = FALSE;
@@ -893,12 +911,12 @@ function os2web_grund_paneler_default_page_manager_pages() {
       'css_class' => 'grid-8 alpha omega',
     );
     $pane->extras = array();
-    $pane->position = 0;
+    $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-6'] = $pane;
-    $display->panels['left'][0] = 'new-6';
+    $display->content['new-7'] = $pane;
+    $display->panels['left'][1] = 'new-7';
     $pane = new stdClass();
-    $pane->pid = 'new-7';
+    $pane->pid = 'new-8';
     $pane->panel = 'left';
     $pane->type = 'views';
     $pane->subtype = 'newslist';
@@ -929,12 +947,12 @@ function os2web_grund_paneler_default_page_manager_pages() {
       'css_class' => 'grid-4 alpha omega',
     );
     $pane->extras = array();
-    $pane->position = 1;
+    $pane->position = 2;
     $pane->locks = array();
-    $display->content['new-7'] = $pane;
-    $display->panels['left'][1] = 'new-7';
+    $display->content['new-8'] = $pane;
+    $display->panels['left'][2] = 'new-8';
     $pane = new stdClass();
-    $pane->pid = 'new-8';
+    $pane->pid = 'new-9';
     $pane->panel = 'left';
     $pane->type = 'views';
     $pane->subtype = 'kulturnaut_events_lister';
@@ -965,12 +983,12 @@ function os2web_grund_paneler_default_page_manager_pages() {
       'css_class' => 'grid-4 omega alpha newslist-panel',
     );
     $pane->extras = array();
-    $pane->position = 2;
+    $pane->position = 3;
     $pane->locks = array();
-    $display->content['new-8'] = $pane;
-    $display->panels['left'][2] = 'new-8';
+    $display->content['new-9'] = $pane;
+    $display->panels['left'][3] = 'new-9';
     $pane = new stdClass();
-    $pane->pid = 'new-9';
+    $pane->pid = 'new-10';
     $pane->panel = 'left';
     $pane->type = 'views_panes';
     $pane->subtype = 'aktuelt-panel_pane_3';
@@ -983,12 +1001,12 @@ function os2web_grund_paneler_default_page_manager_pages() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 3;
+    $pane->position = 4;
     $pane->locks = array();
-    $display->content['new-9'] = $pane;
-    $display->panels['left'][3] = 'new-9';
+    $display->content['new-10'] = $pane;
+    $display->panels['left'][4] = 'new-10';
     $pane = new stdClass();
-    $pane->pid = 'new-10';
+    $pane->pid = 'new-11';
     $pane->panel = 'right_';
     $pane->type = 'views';
     $pane->subtype = 'selvbetjening';
@@ -1018,8 +1036,8 @@ function os2web_grund_paneler_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-10'] = $pane;
-    $display->panels['right_'][0] = 'new-10';
+    $display->content['new-11'] = $pane;
+    $display->panels['right_'][0] = 'new-11';
   $display->hide_title = PANELS_TITLE_NONE;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
