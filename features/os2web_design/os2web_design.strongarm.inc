@@ -49,7 +49,7 @@ function os2web_design_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'job_scheduler_rebuild_all';
-  $strongarm->value = FALSE;
+  $strongarm->value = TRUE;
   $export['job_scheduler_rebuild_all'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -107,7 +107,7 @@ function os2web_design_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'scheduler_publish_required_baggrund';
-  $strongarm->value = 1;
+  $strongarm->value = 0;
   $export['scheduler_publish_required_baggrund'] = $strongarm;
 
   $strongarm = new stdClass();
