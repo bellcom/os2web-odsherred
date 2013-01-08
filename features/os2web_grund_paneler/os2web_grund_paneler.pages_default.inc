@@ -367,7 +367,7 @@ function os2web_grund_paneler_default_page_manager_handlers() {
   $handler->task = 'term_view';
   $handler->subtask = '';
   $handler->handler = 'panel_context';
-  $handler->weight = 7;
+  $handler->weight = -25;
   $handler->conf = array(
     'title' => 'Sektionsforsider',
     'no_blocks' => 0,
@@ -454,7 +454,7 @@ function os2web_grund_paneler_default_page_manager_handlers() {
   $handler->task = 'term_view';
   $handler->subtask = '';
   $handler->handler = 'panel_context';
-  $handler->weight = 8;
+  $handler->weight = -24;
   $handler->conf = array(
     'title' => 'Sektionsforside',
     'no_blocks' => 0,
