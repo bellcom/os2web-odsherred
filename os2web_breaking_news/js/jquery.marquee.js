@@ -1,7 +1,7 @@
 $j(document).ready(function($){
-  var breakingnews = $('.view-id-aktuelt.view-display-id-panel_pane_4');
+  var breakingnews = $('.view-id-aktuelt.view-display-id-panel_pane_6');
 
-  breakingnews.marquee('view-id-aktuelt view-display-id-panel_pane_4').mouseover(function () {
+  breakingnews.marquee('view-id-aktuelt view-display-id-panel_pane_6').mouseover(function () {
     $(this).trigger('stop');
   }).mouseout(function () {
     $(this).trigger('start');

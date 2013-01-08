@@ -10,7 +10,7 @@
 function os2web_breaking_news_page_alter(&$page) {
   if(arg(0) !== 'admin')
   {
-    $page['page_top']['breaking_news']['content']['#markup']  = views_embed_view('aktuelt', 'panel_pane_4');
+    $page['page_top']['breaking_news']['content']['#markup']  = views_embed_view('aktuelt', 'panel_pane_6');
   }
 }
 
