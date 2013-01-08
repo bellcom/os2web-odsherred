@@ -457,6 +457,73 @@ function os2web_grund_paneler_views_default_views() {
       'label' => 'Portalkategori ID',
     ),
   );
+
+  /* Display: Aktuelt - breaking news */
+  $handler = $view->new_display('panel_pane', 'Aktuelt - breaking news', 'panel_pane_6');
+  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_options']['row_class_special'] = FALSE;
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Felt: Indhold: Resume - lang overskrift */
+  $handler->display->display_options['fields']['field_resume_long']['id'] = 'field_resume_long';
+  $handler->display->display_options['fields']['field_resume_long']['table'] = 'field_data_field_resume_long';
+  $handler->display->display_options['fields']['field_resume_long']['field'] = 'field_resume_long';
+  $handler->display->display_options['fields']['field_resume_long']['label'] = '';
+  $handler->display->display_options['fields']['field_resume_long']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_resume_long']['element_label_colon'] = FALSE;
+  /* Felt: Indhold: Titel */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = 'Breaking news';
+  $handler->display->display_options['fields']['title']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['title']['alter']['text'] = '[field_resume_long] ';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filterkriterie: Indhold: Udgivet */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filterkriterie: Indhold: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'news' => 'news',
+  );
+  $handler->display->display_options['filters']['type']['group'] = 1;
+  /* Filterkriterie: Indhold: Forfrem til (field_promoteto) */
+  $handler->display->display_options['filters']['field_promoteto_tid']['id'] = 'field_promoteto_tid';
+  $handler->display->display_options['filters']['field_promoteto_tid']['table'] = 'field_data_field_promoteto';
+  $handler->display->display_options['filters']['field_promoteto_tid']['field'] = 'field_promoteto_tid';
+  $handler->display->display_options['filters']['field_promoteto_tid']['value'] = array(
+    0 => '25751',
+  );
+  $handler->display->display_options['filters']['field_promoteto_tid']['expose']['operator_id'] = 'field_promoteto_tid_op';
+  $handler->display->display_options['filters']['field_promoteto_tid']['expose']['label'] = 'Forfrem til (field_promoteto)';
+  $handler->display->display_options['filters']['field_promoteto_tid']['expose']['operator'] = 'field_promoteto_tid_op';
+  $handler->display->display_options['filters']['field_promoteto_tid']['expose']['identifier'] = 'field_promoteto_tid';
+  $handler->display->display_options['filters']['field_promoteto_tid']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    6 => 0,
+    4 => 0,
+    7 => 0,
+    3 => 0,
+    5 => 0,
+  );
+  $handler->display->display_options['filters']['field_promoteto_tid']['vocabulary'] = 'forfrem_til';
+  $handler->display->display_options['filters']['field_promoteto_tid']['error_message'] = FALSE;
   $translatables['aktuelt'] = array(
     t('Master'),
     t('mere'),
@@ -477,6 +544,10 @@ function os2web_grund_paneler_views_default_views() {
     t('<span class="title">[title]</span>
 <span class="text">[field_resume_long]</span>'),
     t('Forside - Portalnyhed - 2-5'),
+    t('Aktuelt - breaking news'),
+    t('Breaking news'),
+    t('[field_resume_long] '),
+    t('Forfrem til (field_promoteto)'),
   );
   $export['aktuelt'] = $view;
 
