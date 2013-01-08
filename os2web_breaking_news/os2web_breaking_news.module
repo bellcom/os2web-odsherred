@@ -1,0 +1,23 @@
+<?php
+/**
+ * @file
+ * Adds breaking news marquee to frontpage
+ */
+
+/*
+ * Implements hook_page_alter()
+ */
+function os2web_breaking_news_page_alter(&$page) {
+  if(arg(0) !== 'admin')
+  {
+    $page['page_top']['breaking_news']['content']['#markup']  = views_embed_view('aktuelt', 'panel_pane_6');
+  }
+}
+
+/*
+ * Implements hook_init()
+ */
+function os2web_breaking_news_init() {
+  drupal_add_js(drupal_get_path('module', 'os2web_breaking_news') . '/js/jquery.marquee.js');
+}
+

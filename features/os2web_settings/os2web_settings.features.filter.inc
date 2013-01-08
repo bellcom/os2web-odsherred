@@ -49,30 +49,7 @@ function os2web_settings_filter_default_formats() {
     'cache' => '1',
     'status' => '1',
     'weight' => '-9',
-    'filters' => array(
-      'filter_url' => array(
-        'weight' => '-48',
-        'status' => '1',
-        'settings' => array(
-          'filter_url_length' => '72',
-        ),
-      ),
-      'filter_autop' => array(
-        'weight' => '-46',
-        'status' => '1',
-        'settings' => array(),
-      ),
-      'media_filter' => array(
-        'weight' => '-45',
-        'status' => '1',
-        'settings' => array(),
-      ),
-      'filter_htmlcorrector' => array(
-        'weight' => '-42',
-        'status' => '1',
-        'settings' => array(),
-      ),
-    ),
+    'filters' => array(),
   );
 
   return $formats;

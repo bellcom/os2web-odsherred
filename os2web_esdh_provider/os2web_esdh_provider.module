@@ -134,9 +134,9 @@ function os2web_esdh_provider_node_delete($node) {
     // Remove any addenums relating to this node.
     $query = new EntityFieldQuery();
     $result = array_keys(array_shift($query->entityCondition('entity_type', 'node')
-        ->propertyCondition('type', 'meeting')
-        ->fieldCondition('field_addenum_to', 'nid', $node->nid, '=')
-        ->execute()));
+                ->propertyCondition('type', 'meeting')
+                ->fieldCondition('field_addenum_to', 'nid', $node->nid, '=')
+                ->execute()));
     if (is_array($results)) {
       foreach ($result as $add_node) {
         node_delete($add_node->nid);
@@ -396,4 +396,110 @@ function os2web_esdh_provider_default_bullet() {
     // String.
     'body' => NULL,
   );
+}
+
+function os2web_esdh_provider_prod_check_alter(&$checks) {
+  $checks['os2web'] = array(
+    'title' => 'OS2Web',
+    'description' => 'Check various integration systems used in OS2Web, aswell as sanity check on settings.',
+    'functions' => array(
+      '_os2web_esdh_provider_import_check' => 'ESDH Meeting import status',
+      '_os2web_esdh_provider_pws_check' => 'ESDH case/document backend check',
+      '_os2web_esdh_provider_adlib_check' => 'AdLib PDF Conversion',
+    ),
+  );
+}
+
+function _os2web_esdh_provider_import_check($caller = 'internal') {
+  $last_import = variable_get('os2web_esdh_provider_last_import', 0);
+  $last_import_hr = format_date($last_import);
+  $time_since = time() - $last_import;
+  if ($time_since < 3600) {
+    $error = 0;
+    $severity = ($caller == 'nagios') ? NAGIOS_STATUS_OK : PROD_CHECK_REQUIREMENT_OK;
+  }
+  elseif ($time_since < 3600 * 6) {
+    $error = 1;
+    $severity = ($caller == 'nagios') ? NAGIOS_STATUS_WARNING : PROD_CHECK_REQUIREMENT_WARNING;
+  }
+  else {
+    $error = 2;
+    $severity = ($caller == 'nagios') ? NAGIOS_STATUS_CRITICAL : PROD_CHECK_REQUIREMENT_ERROR;
+  }
+  $check['esdh_import_check'] = array(
+    '#title' => t('ESDH Import'),
+    '#state' => $error == 0,
+    '#severity' => $severity,
+    '#value_ok' => t('Working'),
+    '#value_nok' => $error==1?t('Warning'):t('Error'),
+    '#description_ok' => t('Import was run within the last hour, at %time, which indicates that it is run correctly during cron.', array('%time' => $last_import_hr)),
+    '#description_nok' => t('Import has not been run recently. Lastly at %time This could be due to a faulty cron setup, you can run it manually Verify endpoint is properly set up in the <a href="/admin/config/os2web/esdh_provider">here</a>.', array('%time' => $last_import_hr)),
+    '#nagios_key' => 'OS2',
+    '#nagios_type' => 'state',
+  );
+  return prod_check_execute_check($check, $caller);
+}
+
+function _os2web_esdh_provider_pws_check($caller = 'internal') {
+  $status = os2web_esdh_provider_has_api('cm');
+  if ($status) {
+    $severity = ($caller == 'nagios') ? NAGIOS_STATUS_OK : PROD_CHECK_REQUIREMENT_OK;
+  }
+  else {
+    $severity = ($caller == 'nagios') ? NAGIOS_STATUS_CRITICAL : PROD_CHECK_REQUIREMENT_ERROR;
+  }
+  $check['esdh_pws_check'] = array(
+    '#title' => t('ESDH Webservices'),
+    '#state' => $status,
+    '#severity' => $severity,
+    '#value_ok' => t('Connected'),
+    '#value_nok' => t('Disconnected'),
+    '#description_ok' => t('The case/document service is correctly configured and connected.'),
+    '#description_nok' => t('Could not connect to the case/document serivice. Verify endpoint is properly set up in the <a href="/admin/config/os2web/settings">settings</a>.'),
+    '#nagios_key' => 'OS2',
+    '#nagios_type' => 'state',
+  );
+  return prod_check_execute_check($check, $caller);
+}
+
+function _os2web_esdh_provider_adlib_check($caller = 'internal') {
+  $status = FALSE;
+  $severity = ($caller == 'nagios') ? NAGIOS_STATUS_CRITICAL : PROD_CHECK_REQUIREMENT_ERROR;
+  $msg = 'AdLib service seems to be connected and running with %jobs active jobs.';
+  $jobs = 0;
+  if (drupal_load('module', 'os2web_adlib_api')) {
+    $adlib = _os2web_adlib_api_get_instance();
+    $statuslist = $adlib->getConnectorStatusList();
+    if (is_array($statuslist)) {
+      foreach ($statuslist as $cstatus) {
+        if ($cstatus->ServerDetail['Enabled'] == 'True') {
+          // A Server is available
+          $status = TRUE;
+          $severity = ($caller == 'nagios') ? NAGIOS_STATUS_OK : PROD_CHECK_REQUIREMENT_OK;
+          $jobs += $cstatus->ServerInfo['JobCount'];
+        }
+      }
+    }
+    else {
+      // No available connectors.
+      $msg = $statuslist . ' Check endpoint setup in <a href="/admin/config/os2web/settings">settings</a>.';
+    }
+  }
+  else {
+    // Module not available.
+   $msg = 'AdLib module not available. Check <a href="/admin/modules">module list</a>';
+  }
+
+  $check['esdh_adlib_check'] = array(
+    '#title' => t('AdLib webservice'),
+    '#state' => $status,
+    '#severity' => $severity,
+    '#value_ok' => t('Connected'),
+    '#value_nok' => t('Disconnected'),
+    '#description_ok' => t($msg, array('%jobs' => $jobs)),
+    '#description_nok' => t($msg),
+    '#nagios_key' => 'OS2',
+    '#nagios_type' => 'state',
+  );
+  return prod_check_execute_check($check, $caller);
 }

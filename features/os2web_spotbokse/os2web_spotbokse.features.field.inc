@@ -1019,7 +1019,7 @@ function os2web_spotbokse_field_default_fields() {
           'module' => 'taxonomy',
           'settings' => array(),
           'type' => 'taxonomy_term_reference_link',
-          'weight' => '2',
+          'weight' => 2,
         ),
         'related_block' => array(
           'label' => 'above',
@@ -1101,7 +1101,7 @@ function os2web_spotbokse_field_default_fields() {
           'module' => 'taxonomy',
           'settings' => array(),
           'type' => 'taxonomy_term_reference_link',
-          'weight' => '6',
+          'weight' => 6,
         ),
         'related_block' => array(
           'label' => 'above',
@@ -1175,7 +1175,7 @@ function os2web_spotbokse_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => '11',
+          'weight' => 11,
         ),
         'related_block' => array(
           'label' => 'above',
@@ -1250,7 +1250,7 @@ function os2web_spotbokse_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => '4',
+          'weight' => 4,
         ),
         'related_block' => array(
           'label' => 'above',

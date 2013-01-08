@@ -7,7 +7,8 @@
 
 define('ADLIB_JOBTYPE_PDF', 0);
 define('ADLIB_JOBTYPE_HTML', 1);
-define('ADLIB_DISABLED', $_SERVER['SERVER_ADDR'] != '10.255.1.46');
+//define('ADLIB_DISABLED', $_SERVER['SERVER_ADDR'] != '10.255.1.46');
+define('ADLIB_DISABLED', FALSE);
 
 /**
  * Description of AdLibWS
@@ -20,6 +21,20 @@ class AdLibWS {
   // Private static $base_path = 'd:\\wwwroot\\';
   protected static $basePath = 'C:\\InetPub\\wwwroot\\';
   protected static $baseUrl = 'http://10.1.1.180/';
+
+  /**
+   * Heuristic to validate url availability.
+   */
+  private function checkUrl($url) {
+    $handle = curl_init($url);
+    curl_setopt($handle, CURLOPT_RETURNTRANSFER, TRUE);
+    curl_setopt($handle, CURLOPT_CONNECTTIMEOUT, 2);
+    curl_exec($handle);
+    $http_code = curl_getinfo($handle, CURLINFO_HTTP_CODE);
+    curl_close($handle);
+    // Since this is just a heuristic, we allow access denied (401) for further check.
+    return in_array($http_code, array(200, 401));
+  }
 
   /**
    * Initializes connector.
@@ -38,21 +53,21 @@ class AdLibWS {
         $options['proxy_host'] = variable_get('os2web_pws_proxy_host');
         $options['proxy_port'] = variable_get('os2web_pws_proxy_port');
       }
-      $url = variable_get('os2web_adlib_url', 'http://706CAR01/ExponentWSA/ExponentWSA.asmx?wsdl');
-      // $url = preg_replace('/([fhtps]{3,5}):\/\/(.+?)\//', self::$base_url, $url);
-      // preg_match('%http://.+?/%', $url, $matches);
-      // self::$base_url = array_shift($matches);
-      if (function_exists('xdebug_disable')) {
-        xdebug_disable();
-      }
-      try {
-        $this->client = new SoapClient($url, $options);
-        // error_log(basename(__FILE__) . ':' . __LINE__ . " jm@bellcom.dk: Created SOAP client.");
-      } catch (Exception $exc) {
-        watchdog('adlib_api', 'Error creating AdLib client, message: %var', array('%var' => $exc->getMessage()), WATCHDOG_ERROR);
-      }
-      if (function_exists('xdebug_enable')) {
-        xdebug_enable();
+      $url = variable_get('os2web_adlib_url', FALSE);
+      if ($this->checkUrl($url)) {
+        if (function_exists('xdebug_disable')) {
+          xdebug_disable();
+        }
+        try {
+          if (FALSE !== $url) {
+            $this->client = new SoapClient($url, $options);
+          }
+        } catch (Exception $exc) {
+          watchdog('adlib_api', 'Error creating AdLib client, message: %var', array('%var' => $exc->getMessage()), WATCHDOG_ERROR);
+        }
+        if (function_exists('xdebug_enable')) {
+          xdebug_enable();
+        }
       }
     }
   }
@@ -104,7 +119,7 @@ class AdLibWS {
       '!outfile' => $this->safeFilename($file_info['out_filename']),
       '!outfolder' => self::$basePath . $file_info['out_folder'],
       '!jobtype' => ($type == ADLIB_JOBTYPE_HTML ? 'HTML' : 'PDF'),
-    ));
+        ));
     $result = simplexml_load_string($this->client->addJob(array('job_info' => $job_info, 'job_ticket' => $job_ticket))->AddJobResult);
     if (is_object($result) && isset($result->JobSettings['JobID'])) {
       return $result;
@@ -280,7 +295,6 @@ class AdLibWS {
         $jobtype = 'PDF';
         $jobext = 'pdf';
         break;
-
     }
     if (!isset($folder)) {
       $folder = $this->addJobFolder();

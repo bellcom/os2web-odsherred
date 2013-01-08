@@ -262,13 +262,10 @@ function bg_image_add_background_image($image_path, $css_settings = array()) {
     });
     });';
 
-  drupal_add_js($bg, array('type' => 'inline', 'scope' => 'header', 'weight' => 90));
+  drupal_add_js($bg, array('type' => 'inline'));
 
   // Oprindeligt bliver det indsat med drupal_add_css
   // drupal_add_css($style, array('type' => 'inline', 'media' => 'all', 'group' => CSS_THEME));
-
-
-
 
     return TRUE;
   }

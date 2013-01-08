@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Odsherred Web feature.
+ */
+
+include_once 'odsherred_web.features.inc';

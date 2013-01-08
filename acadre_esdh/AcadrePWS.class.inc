@@ -5,7 +5,6 @@
  * This file implements a facade class for the PWS webservices
  */
 
-
 define('PWS_CACHE_TIMEOUT', 3600 * 4);
 define('ACADRE_CM_DEFAULT_DOC_CACHE_PATH', 'public://pws_documents/');
 
@@ -14,6 +13,20 @@ class AcadrePWS {
   private $client;
   private $client6;
   private $clientSearch;
+
+  /**
+   * Heuristic to validate url availability.
+   */
+  private function checkUrl($url) {
+    $handle = curl_init($url);
+    curl_setopt($handle, CURLOPT_RETURNTRANSFER, TRUE);
+    curl_setopt($handle, CURLOPT_CONNECTTIMEOUT, 2);
+    curl_exec($handle);
+    $http_code = curl_getinfo($handle, CURLINFO_HTTP_CODE);
+    curl_close($handle);
+    // Since this is just a heuristic, we allow access denied (401) for further check.
+    return in_array($http_code, array(200, 401));
+  }
 
   /**
    * Basic setup for SOAP connections.
@@ -42,7 +55,7 @@ class AcadrePWS {
    * Initializes the v4 client interface.
    */
   public function getClient() {
-    $this->client = &drupal_static('os2web_acadre_pws_client');
+    $this->client = &drupal_static('os2web_acadre_pws_client', NULL);
     if (!$this->client) {
       $url = variable_get('os2web_pws_url');
       $url = trim($url);
@@ -50,21 +63,23 @@ class AcadrePWS {
         drupal_set_message(t('Error, no endpoint url set for v4soap.'), 'error');
       }
       else {
-        // FIXME: Use a wellformed WSDL for V4 services.
-        $options = $this->getBaseWSSetup();
-        $options['location'] = $url;
-        $options['uri'] = 'http://www.traen.com/2007/09/06/';
-        if (function_exists('xdebug_disable')) {
-          xdebug_disable();
-        }
-        try {
-          $this->client = new SoapClient(NULL, $options);
-        } catch (Exception $e) {
-          drupal_set_message('Error connecting to PWSv4 endpoint', 'error');
-          return FALSE;
-        }
-        if (function_exists('xdebug_enable')) {
-          xdebug_enable();
+        if ($this->checkUrl($url)) {
+          // FIXME: Use a wellformed WSDL for V4 services.
+          $options = $this->getBaseWSSetup();
+          $options['location'] = $url;
+          $options['uri'] = 'http://www.traen.com/2007/09/06/';
+          if (function_exists('xdebug_disable')) {
+            xdebug_disable();
+          }
+          try {
+            $this->client = new SoapClient(NULL, $options);
+          } catch (Exception $e) {
+            drupal_set_message('Error connecting to PWSv4 endpoint', 'error');
+            return FALSE;
+          }
+          if (function_exists('xdebug_enable')) {
+            xdebug_enable();
+          }
         }
       }
     }
@@ -83,18 +98,20 @@ class AcadrePWS {
         drupal_set_message(t('Error, no endpoint url set for v6.'), 'error');
       }
       else {
-        $options = $this->getBaseWSSetup();
-        if (function_exists('xdebug_disable')) {
-          xdebug_disable();
-        }
-        try {
-          $this->client6 = new SoapClient($url . '?WSDL', $options);
-        } catch (Exception $sf) {
-          drupal_set_message('Error connecting to PWSv6 endpoint', 'error');
-          return FALSE;
-        }
-        if (function_exists('xdebug_enable')) {
-          xdebug_enable();
+        if ($this->checkUrl($url)) {
+          $options = $this->getBaseWSSetup();
+          if (function_exists('xdebug_disable')) {
+            xdebug_disable();
+          }
+          try {
+            $this->client6 = new SoapClient($url . '?WSDL', $options);
+          } catch (Exception $sf) {
+            drupal_set_message('Error connecting to PWSv6 endpoint', 'error');
+            return FALSE;
+          }
+          if (function_exists('xdebug_enable')) {
+            xdebug_enable();
+          }
         }
       }
     }
@@ -113,19 +130,21 @@ class AcadrePWS {
         drupal_set_message(t('Error, no endpoint url set for document search searvice.'), 'error');
       }
       else {
-        $options = $this->getBaseWSSetup();
-        if (function_exists('xdebug_disable')) {
-          xdebug_disable();
-        }
-        try {
-          $this->clientSearch = new SoapClient($url . '?WSDL', $options);
-          return TRUE;
-        } catch (SoapFault $sf) {
-          drupal_set_message('Error connecting to PWS document search service endpoint', 'error');
-          return FALSE;
-        }
-        if (function_exists('xdebug_enable')) {
-          xdebug_enable();
+        if ($this->checkUrl($url)) {
+          $options = $this->getBaseWSSetup();
+          if (function_exists('xdebug_disable')) {
+            xdebug_disable();
+          }
+          try {
+            $this->clientSearch = new SoapClient($url . '?WSDL', $options);
+            return TRUE;
+          } catch (SoapFault $sf) {
+            drupal_set_message('Error connecting to PWS document search service endpoint', 'error');
+            return FALSE;
+          }
+          if (function_exists('xdebug_enable')) {
+            xdebug_enable();
+          }
         }
       }
     }

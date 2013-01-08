@@ -99,7 +99,7 @@ password=706web',
     'update' => 0,
     'import_period' => '-1',
     'expire_period' => 3600,
-    'import_on_create' => 0,
+    'import_on_create' => 1,
     'process_in_background' => 0,
   );
   $export['borger_online'] = $feeds_importer;

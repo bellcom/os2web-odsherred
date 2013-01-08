@@ -17,11 +17,11 @@ function os2web_menuer_og_blokke_menu_default_menu_links() {
     'router_path' => 'taxonomy/term/%',
     'link_title' => 'Borger',
     'options' => array(
-      'minipanel' => 'mega_menu_borger',
+      'minipanel' => 'odsherred_borger',
       'menu_minipanels_hover' => array(
         'position' => array(
           'target' => 'custom',
-          'target_custom' => '#zone-menu',
+          'target_custom' => '.region-menu',
           'type' => 'absolute',
           'corner' => array(
             'target' => 'bottomLeft',
@@ -48,8 +48,8 @@ function os2web_menuer_og_blokke_menu_default_menu_links() {
         'style' => array(
           'name' => 'cmstheme',
           'width' => array(
-            'min' => '970',
-            'max' => '970',
+            'min' => '940',
+            'max' => '940',
           ),
           'border' => array(
             'width' => '0',
@@ -82,7 +82,7 @@ function os2web_menuer_og_blokke_menu_default_menu_links() {
       'menu_minipanels_hover' => array(
         'position' => array(
           'target' => 'custom',
-          'target_custom' => '#zone-menu',
+          'target_custom' => '.region-menu',
           'type' => 'absolute',
           'corner' => array(
             'target' => 'bottomLeft',
@@ -109,8 +109,8 @@ function os2web_menuer_og_blokke_menu_default_menu_links() {
         'style' => array(
           'name' => 'cmstheme',
           'width' => array(
-            'min' => '970',
-            'max' => '970',
+            'min' => '940',
+            'max' => '940',
           ),
           'border' => array(
             'width' => '0',
@@ -137,13 +137,13 @@ function os2web_menuer_og_blokke_menu_default_menu_links() {
     'menu_name' => 'main-menu',
     'link_path' => 'taxonomy/term/6',
     'router_path' => 'taxonomy/term/%',
-    'link_title' => 'Politik og planer',
+    'link_title' => 'Politik',
     'options' => array(
       'minipanel' => 'mega_menu_for_politik_og_planer',
       'menu_minipanels_hover' => array(
         'position' => array(
           'target' => 'custom',
-          'target_custom' => '#zone-menu',
+          'target_custom' => '.region-menu',
           'type' => 'absolute',
           'corner' => array(
             'target' => 'bottomLeft',
@@ -170,8 +170,8 @@ function os2web_menuer_og_blokke_menu_default_menu_links() {
         'style' => array(
           'name' => 'cmstheme',
           'width' => array(
-            'min' => '970',
-            'max' => '970',
+            'min' => '940',
+            'max' => '940',
           ),
           'border' => array(
             'width' => '0',
@@ -635,8 +635,8 @@ function os2web_menuer_og_blokke_menu_default_menu_links() {
   t('Om Kommunen');
   t('Opret ESDH dokument');
   t('Opret ESDH sag');
+  t('Politik');
   t('Politik & planer');
-  t('Politik og planer');
   t('Selvbetjening');
   t('User account');
   t('Workbench');
