@@ -1,0 +1,25 @@
+<?php
+/**
+ * @file
+ * Adds the needed taxonomy term.
+ */
+
+/*
+ * Implements hook_install()
+ */
+function os2web_breaking_news_install() {
+  $vocab = taxonomy_vocabulary_machine_name_load('forfrem_til');
+
+  if(is_object($vocab))
+  {
+    $term = reset(taxonomy_get_term_by_name('Breaking news'));
+    if(!is_object($term))
+    {
+      $term = new stdClass();
+      $term->name = 'Breaking news';
+      $term->vid = $vocab->vid;
+      taxonomy_term_save($term);
+    }
+  }
+}
+
