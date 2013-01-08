@@ -20,3 +20,4 @@ function os2web_breaking_news_page_alter(&$page) {
 function os2web_breaking_news_init() {
   drupal_add_js(drupal_get_path('module', 'os2web_breaking_news') . '/js/jquery.marquee.js');
 }
+
