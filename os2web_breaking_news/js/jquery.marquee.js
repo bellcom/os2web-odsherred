@@ -103,7 +103,7 @@ $j(document).ready(function($){
             var $marquee = $(this),
                 width = $marquee.attr('width') || $marquee.width(),
                 height = 24,
-                $marqueeRedux = $marquee.after('<div ' + (klass ? 'class="' + klass + '" ' : '') + 'style="display: block-inline; width: ' + width + 'px; overflow: hidden;"><div style="float: left; white-space: nowrap;">' + $marquee.html() + '</div></div>').next(),
+                $marqueeRedux = $marquee.after('<div ' + (klass ? 'class="' + klass + '" ' : '') + 'style="display: block-inline; width: 100%; overflow: hidden;"><div style="float: left; white-space: nowrap;">' + $marquee.html() + '</div></div>').next(),
                 marqueeRedux = $marqueeRedux.get(0),
                 hitedge = 0,
                 direction = ($marquee.attr('direction') || 'left').toLowerCase(),
