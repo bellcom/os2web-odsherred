@@ -493,7 +493,8 @@ function os2web_indholdstyper_field_group_info() {
       1 => 'field_lead_image',
       2 => 'field_resume_long',
       3 => 'field_site_structure',
-      4 => 'title',
+      4 => 'field_newstype',
+      5 => 'title',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
