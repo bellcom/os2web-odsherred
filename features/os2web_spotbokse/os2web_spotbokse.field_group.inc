@@ -57,6 +57,7 @@ function os2web_spotbokse_field_group_info() {
     'children' => array(
       0 => 'field_url',
       1 => 'field_text',
+      2 => 'field_reference',
     ),
     'format_type' => 'htab',
     'format_settings' => array(

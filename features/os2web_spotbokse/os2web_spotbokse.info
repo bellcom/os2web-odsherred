@@ -27,6 +27,7 @@ features[field][] = node-spotbox-field_lead_image
 features[field][] = node-spotbox-field_organization
 features[field][] = node-spotbox-field_politics
 features[field][] = node-spotbox-field_promoteto
+features[field][] = node-spotbox-field_reference
 features[field][] = node-spotbox-field_site_structure
 features[field][] = node-spotbox-field_spotbox_image_tall
 features[field][] = node-spotbox-field_spotbox_video
