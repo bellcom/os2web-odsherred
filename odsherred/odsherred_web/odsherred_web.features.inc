@@ -31,6 +31,13 @@ function odsherred_web_ctools_plugin_api() {
 }
 
 /**
+ * Implements hook_views_api().
+ */
+function odsherred_web_views_api() {
+  return array("version" => "3.0");
+}
+
+/**
  * Implements hook_image_default_styles().
  */
 function odsherred_web_image_default_styles() {
