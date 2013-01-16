@@ -113,6 +113,33 @@ function odsherred_web_default_panels_mini() {
     $pane = new stdClass();
     $pane->pid = 'new-3';
     $pane->panel = 'left';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => 'til borger',
+      'title' => '<none>',
+      'body' => '<p><a href="/borger">Til forside</a></p>',
+      'format' => 'filtered_html',
+      'substitute' => TRUE,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'gaatilforside',
+    );
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-3'] = $pane;
+    $display->panels['left'][0] = 'new-3';
+    $pane = new stdClass();
+    $pane->pid = 'new-4';
+    $pane->panel = 'left';
     $pane->type = 'block';
     $pane->subtype = 'menu_block-8';
     $pane->shown = TRUE;
@@ -127,12 +154,12 @@ function odsherred_web_default_panels_mini() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 0;
+    $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-3'] = $pane;
-    $display->panels['left'][0] = 'new-3';
+    $display->content['new-4'] = $pane;
+    $display->panels['left'][1] = 'new-4';
     $pane = new stdClass();
-    $pane->pid = 'new-4';
+    $pane->pid = 'new-5';
     $pane->panel = 'middle';
     $pane->type = 'views';
     $pane->subtype = 'selvbetjening';
@@ -162,10 +189,10 @@ function odsherred_web_default_panels_mini() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-4'] = $pane;
-    $display->panels['middle'][0] = 'new-4';
+    $display->content['new-5'] = $pane;
+    $display->panels['middle'][0] = 'new-5';
     $pane = new stdClass();
-    $pane->pid = 'new-5';
+    $pane->pid = 'new-6';
     $pane->panel = 'right';
     $pane->type = 'menu_tree';
     $pane->subtype = 'menu-megadd--borger-oss';
@@ -192,10 +219,10 @@ function odsherred_web_default_panels_mini() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-5'] = $pane;
-    $display->panels['right'][0] = 'new-5';
+    $display->content['new-6'] = $pane;
+    $display->panels['right'][0] = 'new-6';
   $display->hide_title = PANELS_TITLE_NONE;
-  $display->title_pane = 'new-3';
+  $display->title_pane = 'new-4';
   $mini->display = $display;
   $export['forside_mini_borger_muligheder'] = $mini;
 
@@ -226,7 +253,7 @@ function odsherred_web_default_panels_mini() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-6';
+    $pane->pid = 'new-7';
     $pane->panel = 'col1';
     $pane->type = 'views_panes';
     $pane->subtype = 'aktuelt-panel_pane_4';
@@ -245,10 +272,10 @@ function odsherred_web_default_panels_mini() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-6'] = $pane;
-    $display->panels['col1'][0] = 'new-6';
+    $display->content['new-7'] = $pane;
+    $display->panels['col1'][0] = 'new-7';
     $pane = new stdClass();
-    $pane->pid = 'new-7';
+    $pane->pid = 'new-8';
     $pane->panel = 'col2';
     $pane->type = 'views_panes';
     $pane->subtype = 'aktuelt-panel_pane_5';
@@ -267,10 +294,10 @@ function odsherred_web_default_panels_mini() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-7'] = $pane;
-    $display->panels['col2'][0] = 'new-7';
+    $display->content['new-8'] = $pane;
+    $display->panels['col2'][0] = 'new-8';
   $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = 'new-6';
+  $display->title_pane = 'new-7';
   $mini->display = $display;
   $export['forside_mini_erhverv'] = $mini;
 
@@ -300,7 +327,34 @@ function odsherred_web_default_panels_mini() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-8';
+    $pane->pid = 'new-9';
+    $pane->panel = 'left';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => 'Gå til forside',
+      'title' => '<none>',
+      'body' => '<p><a href="/erhverv">Til forside</a></p>',
+      'format' => 'filtered_html',
+      'substitute' => TRUE,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'gaatilforside',
+    );
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-9'] = $pane;
+    $display->panels['left'][0] = 'new-9';
+    $pane = new stdClass();
+    $pane->pid = 'new-10';
     $pane->panel = 'left';
     $pane->type = 'block';
     $pane->subtype = 'menu_block-9';
@@ -314,14 +368,17 @@ function odsherred_web_default_panels_mini() {
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => '',
+    );
     $pane->extras = array();
-    $pane->position = 0;
+    $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-8'] = $pane;
-    $display->panels['left'][0] = 'new-8';
+    $display->content['new-10'] = $pane;
+    $display->panels['left'][1] = 'new-10';
     $pane = new stdClass();
-    $pane->pid = 'new-9';
+    $pane->pid = 'new-11';
     $pane->panel = 'middle';
     $pane->type = 'views';
     $pane->subtype = 'selvbetjening';
@@ -351,8 +408,8 @@ function odsherred_web_default_panels_mini() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-9'] = $pane;
-    $display->panels['middle'][0] = 'new-9';
+    $display->content['new-11'] = $pane;
+    $display->panels['middle'][0] = 'new-11';
   $display->hide_title = PANELS_TITLE_NONE;
   $display->title_pane = '0';
   $mini->display = $display;
@@ -385,7 +442,7 @@ function odsherred_web_default_panels_mini() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-10';
+    $pane->pid = 'new-12';
     $pane->panel = 'col1';
     $pane->type = 'views_panes';
     $pane->subtype = 'aktuelt-panel_pane_4';
@@ -404,10 +461,10 @@ function odsherred_web_default_panels_mini() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-10'] = $pane;
-    $display->panels['col1'][0] = 'new-10';
+    $display->content['new-12'] = $pane;
+    $display->panels['col1'][0] = 'new-12';
     $pane = new stdClass();
-    $pane->pid = 'new-11';
+    $pane->pid = 'new-13';
     $pane->panel = 'col2';
     $pane->type = 'views_panes';
     $pane->subtype = 'aktuelt-panel_pane_5';
@@ -426,10 +483,10 @@ function odsherred_web_default_panels_mini() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-11'] = $pane;
-    $display->panels['col2'][0] = 'new-11';
+    $display->content['new-13'] = $pane;
+    $display->panels['col2'][0] = 'new-13';
   $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = 'new-10';
+  $display->title_pane = 'new-12';
   $mini->display = $display;
   $export['forside_mini_politik'] = $mini;
 
@@ -459,7 +516,34 @@ function odsherred_web_default_panels_mini() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-12';
+    $pane->pid = 'new-14';
+    $pane->panel = 'left';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => 'Gå til forside',
+      'title' => '<none>',
+      'body' => '<p><a href="/politik">Til forside</a></p>',
+      'format' => 'filtered_html',
+      'substitute' => TRUE,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'gaatilforside',
+    );
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-14'] = $pane;
+    $display->panels['left'][0] = 'new-14';
+    $pane = new stdClass();
+    $pane->pid = 'new-15';
     $pane->panel = 'left';
     $pane->type = 'block';
     $pane->subtype = 'menu_block-10';
@@ -475,12 +559,12 @@ function odsherred_web_default_panels_mini() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 0;
+    $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-12'] = $pane;
-    $display->panels['left'][0] = 'new-12';
+    $display->content['new-15'] = $pane;
+    $display->panels['left'][1] = 'new-15';
     $pane = new stdClass();
-    $pane->pid = 'new-13';
+    $pane->pid = 'new-16';
     $pane->panel = 'middle';
     $pane->type = 'views';
     $pane->subtype = 'selvbetjening';
@@ -510,8 +594,8 @@ function odsherred_web_default_panels_mini() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-13'] = $pane;
-    $display->panels['middle'][0] = 'new-13';
+    $display->content['new-16'] = $pane;
+    $display->panels['middle'][0] = 'new-16';
   $display->hide_title = PANELS_TITLE_NONE;
   $display->title_pane = '0';
   $mini->display = $display;
@@ -544,7 +628,7 @@ function odsherred_web_default_panels_mini() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-14';
+    $pane->pid = 'new-17';
     $pane->panel = 'stack1';
     $pane->type = 'block';
     $pane->subtype = 'quicktabs-borger';
@@ -562,10 +646,10 @@ function odsherred_web_default_panels_mini() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-14'] = $pane;
-    $display->panels['stack1'][0] = 'new-14';
+    $display->content['new-17'] = $pane;
+    $display->panels['stack1'][0] = 'new-17';
     $pane = new stdClass();
-    $pane->pid = 'new-15';
+    $pane->pid = 'new-18';
     $pane->panel = 'stack2';
     $pane->type = 'block';
     $pane->subtype = 'quicktabs-erhverv';
@@ -583,10 +667,10 @@ function odsherred_web_default_panels_mini() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-15'] = $pane;
-    $display->panels['stack2'][0] = 'new-15';
+    $display->content['new-18'] = $pane;
+    $display->panels['stack2'][0] = 'new-18';
     $pane = new stdClass();
-    $pane->pid = 'new-16';
+    $pane->pid = 'new-19';
     $pane->panel = 'stack3';
     $pane->type = 'block';
     $pane->subtype = 'quicktabs-politik';
@@ -604,8 +688,8 @@ function odsherred_web_default_panels_mini() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-16'] = $pane;
-    $display->panels['stack3'][0] = 'new-16';
+    $display->content['new-19'] = $pane;
+    $display->panels['stack3'][0] = 'new-19';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $mini->display = $display;
@@ -641,7 +725,7 @@ function odsherred_web_default_panels_mini() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-17';
+    $pane->pid = 'new-20';
     $pane->panel = 'kol1';
     $pane->type = 'menu_tree';
     $pane->subtype = 'menu-mega-menu-borger';
@@ -668,10 +752,10 @@ function odsherred_web_default_panels_mini() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-17'] = $pane;
-    $display->panels['kol1'][0] = 'new-17';
+    $display->content['new-20'] = $pane;
+    $display->panels['kol1'][0] = 'new-20';
     $pane = new stdClass();
-    $pane->pid = 'new-18';
+    $pane->pid = 'new-21';
     $pane->panel = 'kol2';
     $pane->type = 'views';
     $pane->subtype = 'selvbetjening';
@@ -701,10 +785,10 @@ function odsherred_web_default_panels_mini() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-18'] = $pane;
-    $display->panels['kol2'][0] = 'new-18';
+    $display->content['new-21'] = $pane;
+    $display->panels['kol2'][0] = 'new-21';
     $pane = new stdClass();
-    $pane->pid = 'new-19';
+    $pane->pid = 'new-22';
     $pane->panel = 'kol4';
     $pane->type = 'views_panes';
     $pane->subtype = 'megadd_news-panel_pane_1';
@@ -723,8 +807,8 @@ function odsherred_web_default_panels_mini() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-19'] = $pane;
-    $display->panels['kol4'][0] = 'new-19';
+    $display->content['new-22'] = $pane;
+    $display->panels['kol4'][0] = 'new-22';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $mini->display = $display;

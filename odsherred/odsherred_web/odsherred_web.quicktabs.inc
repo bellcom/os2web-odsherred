@@ -33,6 +33,12 @@ function odsherred_web_quicktabs_default_quicktabs() {
       'weight' => '-99',
       'type' => 'block',
     ),
+    2 => array(
+      'path' => 'borger',
+      'title' => 'Borger',
+      'weight' => '-98',
+      'type' => 'callback',
+    ),
   );
   $quicktabs->renderer = 'quicktabs';
   $quicktabs->style = 'default';
