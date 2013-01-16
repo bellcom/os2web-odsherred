@@ -155,8 +155,8 @@ function nyheder_views_default_views() {
   $handler->display->display_options['filters']['field_newstypedato_value']['default_date'] = 'now';
   $handler->display->display_options['path'] = 'moedekalender';
 
-  /* Display: Content pane */
-  $handler = $view->new_display('panel_pane', 'Content pane', 'panel_pane_1');
+  /* Display: MegaDD */
+  $handler = $view->new_display('panel_pane', 'MegaDD', 'panel_pane_1');
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   $translatables['nyheder_moedekalender'] = array(
@@ -178,7 +178,7 @@ function nyheder_views_default_views() {
     t('term fra field_newstype'),
     t('Page'),
     t('Type (field_newstype)'),
-    t('Content pane'),
+    t('MegaDD'),
     t('View panes'),
   );
   $export['nyheder_moedekalender'] = $view;
