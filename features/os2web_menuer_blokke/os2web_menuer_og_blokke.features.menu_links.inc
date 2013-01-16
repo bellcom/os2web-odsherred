@@ -78,7 +78,7 @@ function os2web_menuer_og_blokke_menu_default_menu_links() {
     'router_path' => 'taxonomy/term/%',
     'link_title' => 'Erhverv',
     'options' => array(
-      'minipanel' => 'mega_menu_for_erhverv',
+      'minipanel' => 'odsherred_erhverv',
       'menu_minipanels_hover' => array(
         'position' => array(
           'target' => 'custom',
