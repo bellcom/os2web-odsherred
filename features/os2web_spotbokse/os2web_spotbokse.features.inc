@@ -102,6 +102,50 @@ function os2web_spotbokse_image_default_styles() {
     ),
   );
 
+  // Exported image style: spotbox_portal.
+  $styles['spotbox_portal'] = array(
+    'name' => 'spotbox_portal',
+    'effects' => array(
+      1 => array(
+        'label' => 'Skalér og beskær',
+        'help' => 'Skalering og beskæring bevarer billedets højde-bredde-forhold og beskærer derefter den største dimension. Det er nyttigt til at generere kvadratiske thumbnails uden at forvrænge billedet.',
+        'effect callback' => 'image_scale_and_crop_effect',
+        'dimensions callback' => 'image_resize_dimensions',
+        'form callback' => 'image_resize_form',
+        'summary theme' => 'image_resize_summary',
+        'module' => 'image',
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => '210',
+          'height' => '169',
+        ),
+        'weight' => '1',
+      ),
+    ),
+  );
+
+  // Exported image style: spotbox_portal_uden_links.
+  $styles['spotbox_portal_uden_links'] = array(
+    'name' => 'spotbox_portal_uden_links',
+    'effects' => array(
+      2 => array(
+        'label' => 'Skalér og beskær',
+        'help' => 'Skalering og beskæring bevarer billedets højde-bredde-forhold og beskærer derefter den største dimension. Det er nyttigt til at generere kvadratiske thumbnails uden at forvrænge billedet.',
+        'effect callback' => 'image_scale_and_crop_effect',
+        'dimensions callback' => 'image_resize_dimensions',
+        'form callback' => 'image_resize_form',
+        'summary theme' => 'image_resize_summary',
+        'module' => 'image',
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => '210',
+          'height' => '106',
+        ),
+        'weight' => '1',
+      ),
+    ),
+  );
+
   // Exported image style: spotbox_right.
   $styles['spotbox_right'] = array(
     'name' => 'spotbox_right',
