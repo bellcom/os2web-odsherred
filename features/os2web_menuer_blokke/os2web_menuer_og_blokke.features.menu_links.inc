@@ -424,12 +424,10 @@ function os2web_menuer_og_blokke_menu_default_menu_links() {
     'link_title' => '+indhold',
     'options' => array(
       'minipanel' => '',
-      'attributes' => array(
-        'title' => '',
-      ),
+      'attributes' => array(),
     ),
     'module' => 'menu',
-    'hidden' => '0',
+    'hidden' => '1',
     'external' => '0',
     'has_children' => '0',
     'expanded' => '0',
@@ -481,12 +479,10 @@ function os2web_menuer_og_blokke_menu_default_menu_links() {
     'link_title' => '+galleri',
     'options' => array(
       'minipanel' => '',
-      'attributes' => array(
-        'title' => '',
-      ),
+      'attributes' => array(),
     ),
     'module' => 'menu',
-    'hidden' => '0',
+    'hidden' => '1',
     'external' => '0',
     'has_children' => '0',
     'expanded' => '0',
@@ -499,12 +495,10 @@ function os2web_menuer_og_blokke_menu_default_menu_links() {
     'router_path' => 'node/add/iframe-selvbetjeningsl-sning-mm',
     'link_title' => '+iframe/selvbetjeningsløsning m.m.',
     'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
+      'attributes' => array(),
     ),
     'module' => 'menu',
-    'hidden' => '0',
+    'hidden' => '1',
     'external' => '0',
     'has_children' => '0',
     'expanded' => '0',
@@ -517,12 +511,10 @@ function os2web_menuer_og_blokke_menu_default_menu_links() {
     'router_path' => 'node/add/kontaktblok',
     'link_title' => '+kontaktblok',
     'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
+      'attributes' => array(),
     ),
     'module' => 'menu',
-    'hidden' => '0',
+    'hidden' => '1',
     'external' => '0',
     'has_children' => '0',
     'expanded' => '0',
@@ -536,12 +528,10 @@ function os2web_menuer_og_blokke_menu_default_menu_links() {
     'link_title' => '+nyhed',
     'options' => array(
       'minipanel' => '',
-      'attributes' => array(
-        'title' => '',
-      ),
+      'attributes' => array(),
     ),
     'module' => 'menu',
-    'hidden' => '0',
+    'hidden' => '1',
     'external' => '0',
     'has_children' => '0',
     'expanded' => '0',
@@ -555,12 +545,10 @@ function os2web_menuer_og_blokke_menu_default_menu_links() {
     'link_title' => '+billedkarrusel',
     'options' => array(
       'minipanel' => '',
-      'attributes' => array(
-        'title' => '',
-      ),
+      'attributes' => array(),
     ),
     'module' => 'menu',
-    'hidden' => '0',
+    'hidden' => '1',
     'external' => '0',
     'has_children' => '0',
     'expanded' => '0',
@@ -573,12 +561,10 @@ function os2web_menuer_og_blokke_menu_default_menu_links() {
     'router_path' => 'node/add/spotbox',
     'link_title' => '+spotboks',
     'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
+      'attributes' => array(),
     ),
     'module' => 'menu',
-    'hidden' => '0',
+    'hidden' => '1',
     'external' => '0',
     'has_children' => '0',
     'expanded' => '0',
