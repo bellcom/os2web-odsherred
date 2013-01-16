@@ -585,7 +585,7 @@ example.org';
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'menu_block_12_depth';
-  $strongarm->value = '6';
+  $strongarm->value = '0';
   $export['menu_block_12_depth'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -599,7 +599,7 @@ example.org';
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'menu_block_12_follow';
-  $strongarm->value = 0;
+  $strongarm->value = 'active';
   $export['menu_block_12_follow'] = $strongarm;
 
   $strongarm = new stdClass();
