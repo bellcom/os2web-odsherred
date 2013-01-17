@@ -60,9 +60,7 @@ function os2web_menuer_og_blokke_menu_default_menu_links() {
         ),
         'mlid' => '782',
       ),
-      'attributes' => array(
-        'title' => '',
-      ),
+      'attributes' => array(),
     ),
     'module' => 'menu',
     'hidden' => '0',
@@ -121,9 +119,7 @@ function os2web_menuer_og_blokke_menu_default_menu_links() {
         ),
         'mlid' => '783',
       ),
-      'attributes' => array(
-        'title' => '',
-      ),
+      'attributes' => array(),
     ),
     'module' => 'menu',
     'hidden' => '0',
@@ -182,9 +178,7 @@ function os2web_menuer_og_blokke_menu_default_menu_links() {
         ),
         'mlid' => '784',
       ),
-      'attributes' => array(
-        'title' => '',
-      ),
+      'attributes' => array(),
     ),
     'module' => 'menu',
     'hidden' => '0',
@@ -200,9 +194,7 @@ function os2web_menuer_og_blokke_menu_default_menu_links() {
     'router_path' => 'contact',
     'link_title' => 'Kontakt',
     'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
+      'attributes' => array(),
     ),
     'module' => 'menu',
     'hidden' => '0',
@@ -218,9 +210,7 @@ function os2web_menuer_og_blokke_menu_default_menu_links() {
     'router_path' => 'job-opslag',
     'link_title' => 'Job',
     'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
+      'attributes' => array(),
     ),
     'module' => 'menu',
     'hidden' => '0',
@@ -236,9 +226,7 @@ function os2web_menuer_og_blokke_menu_default_menu_links() {
     'router_path' => 'node/%',
     'link_title' => 'Om Kommunen',
     'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
+      'attributes' => array(),
     ),
     'module' => 'menu',
     'hidden' => '0',
@@ -254,9 +242,7 @@ function os2web_menuer_og_blokke_menu_default_menu_links() {
     'router_path' => 'nyheder',
     'link_title' => 'Nyheder',
     'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
+      'attributes' => array(),
     ),
     'module' => 'menu',
     'hidden' => '0',
@@ -272,9 +258,7 @@ function os2web_menuer_og_blokke_menu_default_menu_links() {
     'router_path' => 'selvbetjening',
     'link_title' => 'Selvbetjening',
     'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
+      'attributes' => array(),
     ),
     'module' => 'menu',
     'hidden' => '0',
@@ -348,9 +332,7 @@ function os2web_menuer_og_blokke_menu_default_menu_links() {
     'link_title' => 'Læs højt',
     'options' => array(
       'minipanel' => '',
-      'attributes' => array(
-        'title' => '',
-      ),
+      'attributes' => array(),
     ),
     'module' => 'menu',
     'hidden' => '0',
@@ -367,9 +349,7 @@ function os2web_menuer_og_blokke_menu_default_menu_links() {
     'link_title' => 'Cookies',
     'options' => array(
       'minipanel' => '',
-      'attributes' => array(
-        'title' => '',
-      ),
+      'attributes' => array(),
     ),
     'module' => 'menu',
     'hidden' => '0',
@@ -386,9 +366,7 @@ function os2web_menuer_og_blokke_menu_default_menu_links() {
     'link_title' => 'Log ud',
     'options' => array(
       'minipanel' => '',
-      'attributes' => array(
-        'title' => '',
-      ),
+      'attributes' => array(),
     ),
     'module' => 'menu',
     'hidden' => '0',
@@ -405,9 +383,7 @@ function os2web_menuer_og_blokke_menu_default_menu_links() {
     'link_title' => 'Workbench',
     'options' => array(
       'minipanel' => '',
-      'attributes' => array(
-        'title' => '',
-      ),
+      'attributes' => array(),
     ),
     'module' => 'menu',
     'hidden' => '0',
@@ -441,9 +417,7 @@ function os2web_menuer_og_blokke_menu_default_menu_links() {
     'link_title' => 'Opret ESDH dokument',
     'options' => array(
       'minipanel' => '',
-      'attributes' => array(
-        'title' => '',
-      ),
+      'attributes' => array(),
     ),
     'module' => 'menu',
     'hidden' => '1',
@@ -460,9 +434,7 @@ function os2web_menuer_og_blokke_menu_default_menu_links() {
     'link_title' => 'Opret ESDH sag',
     'options' => array(
       'minipanel' => '',
-      'attributes' => array(
-        'title' => '',
-      ),
+      'attributes' => array(),
     ),
     'module' => 'menu',
     'hidden' => '1',
