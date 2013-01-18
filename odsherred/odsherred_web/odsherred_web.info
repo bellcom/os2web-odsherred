@@ -42,6 +42,7 @@ features[panels_mini][] = forside_mini_politik_muligheder
 features[panels_mini][] = forside_minipanel
 features[panels_mini][] = odsherred_borger
 features[panels_mini][] = odsherred_erhverv
+features[panels_mini][] = odsherred_politik
 features[quicktabs][] = borger
 features[quicktabs][] = erhverv
 features[quicktabs][] = politik
