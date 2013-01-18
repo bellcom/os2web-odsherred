@@ -22,7 +22,7 @@ function nyheder_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'Nyheder - Mødekalender';
+  $handler->display->display_options['title'] = 'Mødekalender';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['use_more_text'] = 'mere';
   $handler->display->display_options['access']['type'] = 'perm';
@@ -161,7 +161,7 @@ function nyheder_views_default_views() {
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   $translatables['nyheder_moedekalender'] = array(
     t('Master'),
-    t('Nyheder - Mødekalender'),
+    t('Mødekalender'),
     t('mere'),
     t('Udfør'),
     t('Gendan'),
