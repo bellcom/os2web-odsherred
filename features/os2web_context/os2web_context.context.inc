@@ -43,12 +43,6 @@ function os2web_context_context_default_contexts() {
           'region' => 'sidebar_first',
           'weight' => '-10',
         ),
-        'superfish-2' => array(
-          'module' => 'superfish',
-          'delta' => 2,
-          'region' => 'sidebar_first',
-          'weight' => '9',
-        ),
       ),
     ),
   );
@@ -94,12 +88,6 @@ function os2web_context_context_default_contexts() {
           'delta' => 'sitestuktur-block_3',
           'region' => 'sidebar_first',
           'weight' => '-74',
-        ),
-        'superfish-1' => array(
-          'module' => 'superfish',
-          'delta' => 1,
-          'region' => 'sidebar_first',
-          'weight' => '16',
         ),
       ),
     ),
@@ -269,12 +257,6 @@ function os2web_context_context_default_contexts() {
           'delta' => 'sitestuktur-block_4',
           'region' => 'sidebar_first',
           'weight' => '-10',
-        ),
-        'superfish-3' => array(
-          'module' => 'superfish',
-          'delta' => 3,
-          'region' => 'sidebar_first',
-          'weight' => '9',
         ),
       ),
     ),
