@@ -73,7 +73,7 @@ function os2web_grund_paneler_default_page_manager_handlers() {
     ),
   );
   $display = new panels_display();
-  $display->layout = 'os2web_3stack';
+  $display->layout = 'odsherred_3stack';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
@@ -205,7 +205,7 @@ function os2web_grund_paneler_default_page_manager_handlers() {
     $pane->panel = 'stack2';
     $pane->type = 'custom';
     $pane->subtype = 'custom';
-    $pane->shown = TRUE;
+    $pane->shown = FALSE;
     $pane->access = array();
     $pane->configuration = array(
       'admin_title' => '',
