@@ -1214,22 +1214,13 @@ function odsherred_web_default_panels_mini() {
     $pane = new stdClass();
     $pane->pid = 'new-37';
     $pane->panel = 'kol1';
-    $pane->type = 'menu_tree';
-    $pane->subtype = 'menu-mega-menu-borger';
+    $pane->type = 'block';
+    $pane->subtype = 'menu_block-10';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'menu_name' => 'menu-mega-menu-borger',
-      'parent_mlid' => 'menu-mega-menu-borger:0',
-      'title_link' => 0,
-      'admin_title' => 'Sider under borger...',
-      'level' => '1',
-      'follow' => 0,
-      'depth' => '1',
-      'expanded' => 0,
-      'sort' => 0,
       'override_title' => 1,
-      'override_title_text' => 'Sider under borger...',
+      'override_title_text' => 'Sider under Politik...',
     );
     $pane->cache = array();
     $pane->style = array(
