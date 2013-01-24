@@ -342,7 +342,8 @@ function os2web_grund_paneler_views_default_views() {
   $handler->display->display_options['fields']['field_resume_long']['alter']['text'] = '<span class="title">[title]</span>
 <span class="text">[field_resume_long]</span>';
   $handler->display->display_options['fields']['field_resume_long']['alter']['make_link'] = TRUE;
-  $handler->display->display_options['fields']['field_resume_long']['alter']['path'] = '/node/[nid]';
+  $handler->display->display_options['fields']['field_resume_long']['alter']['path'] = 'node/[nid]';
+  $handler->display->display_options['fields']['field_resume_long']['alter']['absolute'] = TRUE;
   $handler->display->display_options['fields']['field_resume_long']['element_type'] = 'span';
   $handler->display->display_options['fields']['field_resume_long']['element_class'] = 'overlay';
   $handler->display->display_options['fields']['field_resume_long']['element_label_colon'] = FALSE;
