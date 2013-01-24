@@ -468,7 +468,7 @@ function odsherred_web_default_panels_mini() {
     $pane->access = array();
     $pane->configuration = array(
       'arguments' => array(
-        'field_site_structure_tid' => '4',
+        'field_site_structure_tid' => '6',
       ),
     );
     $pane->cache = array();
@@ -490,7 +490,7 @@ function odsherred_web_default_panels_mini() {
     $pane->access = array();
     $pane->configuration = array(
       'arguments' => array(
-        'field_site_structure_tid' => '4',
+        'field_site_structure_tid' => '6',
       ),
     );
     $pane->cache = array();
