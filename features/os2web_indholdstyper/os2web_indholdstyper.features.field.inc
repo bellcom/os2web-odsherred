@@ -182,7 +182,7 @@ function os2web_indholdstyper_field_default_fields() {
         'file_extensions' => 'png gif jpg jpeg',
         'max_filesize' => '',
         'max_resolution' => '',
-        'min_resolution' => '470x230',
+        'min_resolution' => '690x340',
         'title_field' => 0,
         'title_field_required' => 1,
         'user_register_form' => FALSE,
@@ -197,11 +197,14 @@ function os2web_indholdstyper_field_default_fields() {
           ),
           'allowed_types' => array(
             'audio' => 0,
-            'default' => 0,
+            'document' => 0,
             'image' => 'image',
             'video' => 0,
           ),
-          'browser_plugins' => array(),
+          'browser_plugins' => array(
+            'media_internet' => 0,
+            'upload' => 0,
+          ),
           'progress_indicator' => 'throbber',
         ),
         'type' => 'media_generic',
@@ -504,131 +507,6 @@ function os2web_indholdstyper_field_default_fields() {
         ),
         'type' => 'node_reference_autocomplete',
         'weight' => '13',
-      ),
-    ),
-  );
-
-  // Exported field: 'node-contentpage-field_lead_image'.
-  $fields['node-contentpage-field_lead_image'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '-1',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_lead_image',
-      'foreign keys' => array(
-        'fid' => array(
-          'columns' => array(
-            'fid' => 'fid',
-          ),
-          'table' => 'file_managed',
-        ),
-      ),
-      'indexes' => array(
-        'fid' => array(
-          0 => 'fid',
-        ),
-      ),
-      'locked' => '0',
-      'module' => 'image',
-      'settings' => array(
-        'default_image' => 0,
-        'uri_scheme' => 'public',
-      ),
-      'translatable' => '1',
-      'type' => 'image',
-    ),
-    'field_instance' => array(
-      'bundle' => 'contentpage',
-      'deleted' => '0',
-      'description' => 'Brug ikke dette felt, brug i stedet det andet billedfelt. Du behøver ikke slette billeder der ikke skal ændres fra dette felt.',
-      'display' => array(
-        'default' => array(
-          'label' => 'hidden',
-          'module' => 'field_slideshow',
-          'settings' => array(
-            'slideshow_caption' => '',
-            'slideshow_caption_link' => '',
-            'slideshow_carousel_circular' => 0,
-            'slideshow_carousel_image_style' => '',
-            'slideshow_carousel_scroll' => '1',
-            'slideshow_carousel_speed' => '500',
-            'slideshow_carousel_vertical' => 0,
-            'slideshow_carousel_visible' => '3',
-            'slideshow_colorbox_image_style' => '',
-            'slideshow_colorbox_slideshow' => '',
-            'slideshow_colorbox_slideshow_speed' => '4000',
-            'slideshow_colorbox_speed' => '350',
-            'slideshow_colorbox_transition' => 'elastic',
-            'slideshow_controls' => 0,
-            'slideshow_field_collection_image' => '',
-            'slideshow_fx' => 'fade',
-            'slideshow_image_style' => 'indholdsside',
-            'slideshow_link' => '',
-            'slideshow_order' => '',
-            'slideshow_pager' => '',
-            'slideshow_pager_image_style' => '',
-            'slideshow_pause' => 1,
-            'slideshow_speed' => '9000',
-            'slideshow_timeout' => '4000',
-          ),
-          'type' => 'slideshow',
-          'weight' => '0',
-        ),
-        'related_block' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-        'teaser' => array(
-          'label' => 'hidden',
-          'module' => 'image',
-          'settings' => array(
-            'image_link' => '',
-            'image_style' => 'thumbnail',
-          ),
-          'type' => 'image',
-          'weight' => '0',
-        ),
-      ),
-      'ds_extras_field_template' => '',
-      'entity_type' => 'node',
-      'field_name' => 'field_lead_image',
-      'label' => 'Billeder og video',
-      'required' => 0,
-      'settings' => array(
-        'alt_field' => 0,
-        'alt_field_required' => 1,
-        'default_image' => 0,
-        'file_directory' => '',
-        'file_extensions' => 'png gif jpg jpeg swf',
-        'max_filesize' => '',
-        'max_resolution' => '',
-        'min_resolution' => '460x260',
-        'title_field' => 0,
-        'title_field_required' => 0,
-        'user_register_form' => FALSE,
-      ),
-      'widget' => array(
-        'active' => 1,
-        'module' => 'media',
-        'settings' => array(
-          'allowed_schemes' => array(
-            'public' => 'public',
-          ),
-          'allowed_types' => array(
-            'image' => 'image',
-            'video' => 'video',
-            0 => 0,
-            'audio' => 0,
-            'default' => 0,
-          ),
-          'browser_plugins' => array(),
-          'progress_indicator' => 'throbber',
-        ),
-        'type' => 'media_generic',
-        'weight' => '-2',
       ),
     ),
   );
@@ -6698,8 +6576,6 @@ function os2web_indholdstyper_field_default_fields() {
   // Included for use with string extractors like potx.
   t('Billede');
   t('Billeder');
-  t('Billeder og video');
-  t('Brug ikke dette felt, brug i stedet det andet billedfelt. Du behøver ikke slette billeder der ikke skal ændres fra dette felt.');
   t('Dato');
   t('Dato for event og møde. Bruges hvor der skal angives en dato for start.');
   t('Det der vises med sort');
