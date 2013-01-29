@@ -53,10 +53,16 @@ function odsherred_web_default_page_manager_handlers() {
     $pane->pid = 'new-1';
     $pane->panel = 'lead';
     $pane->type = 'views_panes';
-    $pane->subtype = 'spotboxe-panel_pane_12';
+    $pane->subtype = 'newslist-panel_pane_4';
     $pane->shown = TRUE;
     $pane->access = array();
-    $pane->configuration = array();
+    $pane->configuration = array(
+      'more_link' => 0,
+      'use_pager' => 0,
+      'pager_id' => '0',
+      'override_title' => 1,
+      'override_title_text' => '',
+    );
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
