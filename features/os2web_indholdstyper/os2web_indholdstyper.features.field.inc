@@ -984,7 +984,12 @@ function os2web_indholdstyper_field_default_fields() {
     ),
     'field_instance' => array(
       'bundle' => 'contentpage',
-      'default_value' => NULL,
+      'default_value' => array(
+        0 => array(
+          'value' => '',
+          'summary' => '',
+        ),
+      ),
       'deleted' => '0',
       'description' => '',
       'display' => array(
@@ -1008,20 +1013,55 @@ function os2web_indholdstyper_field_default_fields() {
           'weight' => '12',
         ),
       ),
+      'ds_extras_field_template' => '',
       'entity_type' => 'node',
       'field_name' => 'field_resume_long',
-      'label' => 'Intro / Resume (maks 2 linier!)',
+      'label' => 'Intro',
       'required' => 0,
       'settings' => array(
+        'better_formats' => array(
+          'allowed_formats' => array(
+            'blokindhold' => 0,
+            'filtered_html' => 'filtered_html',
+            'full_html' => 0,
+            'php_code' => 0,
+            'plain_text' => 0,
+            'raw' => 0,
+          ),
+          'allowed_formats_toggle' => 1,
+          'default_order_toggle' => 0,
+          'default_order_wrapper' => array(
+            'formats' => array(
+              'blokindhold' => array(
+                'weight' => '-7',
+              ),
+              'filtered_html' => array(
+                'weight' => '-10',
+              ),
+              'full_html' => array(
+                'weight' => '-9',
+              ),
+              'php_code' => array(
+                'weight' => '-6',
+              ),
+              'plain_text' => array(
+                'weight' => '-8',
+              ),
+              'raw' => array(
+                'weight' => '0',
+              ),
+            ),
+          ),
+        ),
         'display_summary' => 0,
-        'text_processing' => '0',
+        'text_processing' => '1',
         'user_register_form' => FALSE,
       ),
       'widget' => array(
         'active' => 1,
         'module' => 'text',
         'settings' => array(
-          'rows' => '2',
+          'rows' => '6',
           'summary_rows' => 5,
         ),
         'type' => 'text_textarea_with_summary',
@@ -6590,7 +6630,6 @@ function os2web_indholdstyper_field_default_fields() {
   t('Indhold');
   t('Indløb / Udløb');
   t('Intro');
-  t('Intro / Resume (maks 2 linier!)');
   t('KL Emneord');
   t('Kan bruges for flere typer indhold. Ved nyheder, så vises nyheden ikke efter denne dato. Ved Udbud og Høringer er det den dato denne slutter.');
   t('Kilde');
