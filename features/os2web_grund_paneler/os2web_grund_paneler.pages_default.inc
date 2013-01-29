@@ -636,7 +636,7 @@ function os2web_grund_paneler_default_page_manager_handlers() {
     $pane->pid = 'new-14';
     $pane->panel = 'stack1';
     $pane->type = 'entity_field';
-    $pane->subtype = 'node:field_resume_long';
+    $pane->subtype = 'node:field_text';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
@@ -768,8 +768,14 @@ function os2web_grund_paneler_default_page_manager_handlers() {
       'delta_reversed' => FALSE,
       'formatter_settings' => array(),
       'context' => 'argument_entity_id:node_1',
-      'override_title' => 0,
+      'override_title' => 1,
       'override_title_text' => '',
+      'links' => 1,
+      'no_extras' => 0,
+      'identifier' => '',
+      'link' => 0,
+      'leave_node_title' => 0,
+      'build_mode' => 'full',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -780,7 +786,7 @@ function os2web_grund_paneler_default_page_manager_handlers() {
       'css_class' => 'node-body',
     );
     $pane->extras = array();
-    $pane->position = 0;
+    $pane->position = 1;
     $pane->locks = array();
     $display->content['new-18'] = $pane;
     $display->panels['stack3'][0] = 'new-18';
