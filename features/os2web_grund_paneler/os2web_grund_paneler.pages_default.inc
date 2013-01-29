@@ -186,7 +186,7 @@ function os2web_grund_paneler_default_page_manager_handlers() {
       'delta_offset' => '0',
       'delta_reversed' => 0,
       'formatter_settings' => array(
-        'slideshow_image_style' => 'indholdsside',
+        'slideshow_image_style' => '',
         'slideshow_link' => '',
         'slideshow_caption' => 'title',
         'slideshow_caption_link' => 'content',
