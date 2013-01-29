@@ -45,6 +45,9 @@ function os2web_context_context_default_contexts() {
         ),
       ),
     ),
+    'theme_html' => array(
+      'class' => 'borgersider',
+    ),
   );
   $context->condition_mode = 1;
 
@@ -90,6 +93,9 @@ function os2web_context_context_default_contexts() {
           'weight' => '-74',
         ),
       ),
+    ),
+    'theme_html' => array(
+      'class' => 'erhvervssider',
     ),
   );
   $context->condition_mode = 1;
@@ -259,6 +265,9 @@ function os2web_context_context_default_contexts() {
           'weight' => '-10',
         ),
       ),
+    ),
+    'theme_html' => array(
+      'class' => 'politiksider',
     ),
   );
   $context->condition_mode = 1;
