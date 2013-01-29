@@ -90,7 +90,7 @@ function os2web_context_context_default_contexts() {
           'module' => 'views',
           'delta' => 'sitestuktur-block_3',
           'region' => 'sidebar_first',
-          'weight' => '-74',
+          'weight' => '-10',
         ),
       ),
     ),
