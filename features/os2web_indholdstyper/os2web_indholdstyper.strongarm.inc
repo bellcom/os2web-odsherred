@@ -411,6 +411,9 @@ function os2web_indholdstyper_strongarm() {
       'revision' => array(
         'custom_settings' => FALSE,
       ),
+      'meeting_detail_view' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(

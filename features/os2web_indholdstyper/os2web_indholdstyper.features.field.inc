@@ -2692,7 +2692,7 @@ function os2web_indholdstyper_field_default_fields() {
             'width' => '700',
           ),
           'type' => 'balk_custom_iframe',
-          'weight' => '2',
+          'weight' => '0',
         ),
         'related_block' => array(
           'label' => 'above',
@@ -3083,10 +3083,9 @@ function os2web_indholdstyper_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'hidden',
-          'module' => 'taxonomy',
           'settings' => array(),
-          'type' => 'taxonomy_term_reference_link',
-          'weight' => '3',
+          'type' => 'hidden',
+          'weight' => '2',
         ),
         'related_block' => array(
           'label' => 'above',
@@ -3157,10 +3156,9 @@ function os2web_indholdstyper_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'hidden',
-          'module' => 'text',
           'settings' => array(),
-          'type' => 'text_default',
-          'weight' => '0',
+          'type' => 'hidden',
+          'weight' => '3',
         ),
         'related_block' => array(
           'label' => 'above',
