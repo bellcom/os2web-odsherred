@@ -1397,6 +1397,7 @@ return $field==1?true:false;';
     'image_style' => '455_265',
     'image_link' => 'content',
   );
+  $handler->display->display_options['fields']['field_lead_image']['delta_limit'] = '1';
   $handler->display->display_options['fields']['field_lead_image']['delta_offset'] = '0';
   /* Felt: Indhold: Titel */
   $handler->display->display_options['fields']['title']['id'] = 'title';
