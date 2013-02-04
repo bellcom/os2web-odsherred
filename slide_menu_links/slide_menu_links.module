@@ -1,0 +1,59 @@
+<?php
+/**
+ * @file
+ */
+
+/*
+ * Implements hook_page_alter()
+ */
+function slide_menu_links_page_alter(&$page) {
+
+}
+
+/*
+ * Implements hook_init()
+ */
+function slide_menu_links_init() {
+  drupal_add_js(drupal_get_path('module', 'slide_menu_links') . '/js/jquery.animate-enhanced.min.js');
+  drupal_add_js(drupal_get_path('module', 'slide_menu_links') . '/js/jquery.slide_menu_links.js');
+
+  $slide_right_link = variable_get('slide_right_link', '<notset>'); 
+  $slide_left_link = variable_get('slide_left_link', '<notset');
+
+  drupal_add_js(array('slide_menu_links' => array('slide_left_link' => $slide_left_link, 'slide_right_link' => $slide_right_link)), 'setting');
+
+}
+
+/*
+ * Implements hook_menu()
+ */
+function slide_menu_links_menu() {
+  $items['admin/config/user-interface/slide_menu_links'] = array(
+    'title' => 'slide_menu_links settings',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('slide_menu_links_admin_menu_form'),
+    'access callback' => TRUE,
+    'type' => MENU_LOCAL_TASK,
+  );
+
+  return $items;
+}
+
+/*
+ * form for configuration
+ */
+function slide_menu_links_admin_menu_form() {
+  $form = array();
+
+  $form['slide_left_link'] = array(
+    '#title' => 'Slide left link',
+    '#type' => 'textfield',
+    '#default_value' => variable_get('slide_left_link'),
+  );
+  $form['slide_right_link'] = array(
+    '#title' => 'Slide right link',
+    '#type' => 'textfield',
+    '#default_value' => variable_get('slide_right_link'),
+  );
+  return system_settings_form($form);
+}
