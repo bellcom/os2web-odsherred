@@ -118,7 +118,10 @@ function odsherred_web_default_page_manager_pages() {
   $page->admin_title = 'Odsherred Forside';
   $page->admin_description = '';
   $page->path = 'odherred-forside';
-  $page->access = array();
+  $page->access = array(
+    'type' => 'none',
+    'settings' => NULL,
+  );
   $page->menu = array();
   $page->arguments = array();
   $page->conf = array(

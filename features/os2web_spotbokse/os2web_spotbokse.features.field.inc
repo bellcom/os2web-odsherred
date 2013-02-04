@@ -636,7 +636,7 @@ function os2web_spotbokse_field_default_fields() {
           'borgerservices' => 0,
           'bullet_point' => 0,
           'bullet_point_attachment' => 0,
-          'contentpage' => 'contentpage',
+          'contentpage' => 0,
           'esdh_dokument' => 0,
           'esdh_sag' => 0,
           'files' => 0,

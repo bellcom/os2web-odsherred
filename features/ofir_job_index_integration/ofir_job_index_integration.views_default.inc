@@ -92,7 +92,7 @@ function ofir_job_index_integration_views_default_views() {
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Jobs i Syddjurs Kommune';
+  $handler->display->display_options['title'] = 'Jobs i kommunen';
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['defaults']['header'] = FALSE;
   /* Overskrift: Global: Tekstområde */
@@ -135,7 +135,7 @@ function ofir_job_index_integration_views_default_views() {
     t('næste ›'),
     t('sidste »'),
     t('Page'),
-    t('Jobs i Syddjurs Kommune'),
+    t('Jobs i kommunen'),
     t('Jobagent - header link'),
     t('<p style="padding-top:20px; padding-bottom:20px">Ønsker du at få tilsendt fremtidige stillingsopslag pr. e-mail? <a href="http://job.ofir.dk/Templates/Advertiser.asp?aguid=7DAE0E45-E8C0-43EF-9D3C-350F69BE5C9B&method=jobagent">Klik her for at oprette en jobagent.</a></p><br /><br />'),
     t('Block'),
