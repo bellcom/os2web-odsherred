@@ -16,11 +16,14 @@ function slide_menu_links_page_alter(&$page) {
 function slide_menu_links_init() {
   drupal_add_js(drupal_get_path('module', 'slide_menu_links') . '/js/jquery.animate-enhanced.min.js');
   drupal_add_js(drupal_get_path('module', 'slide_menu_links') . '/js/jquery.slide_menu_links.js');
-
+  drupal_add_js(drupal_get_path('module', 'slide_menu_links') . '/js/jquery.ba-hashchange.min.js');
   $slide_right_link = variable_get('slide_right_link', '<notset>'); 
+  $slide_right_text = variable_get('slide_right_text', '<notset>'); 
   $slide_left_link = variable_get('slide_left_link', '<notset');
+  $slide_left_text = variable_get('slide_left_text', '<notset');
 
   drupal_add_js(array('slide_menu_links' => array('slide_left_link' => $slide_left_link, 'slide_right_link' => $slide_right_link)), 'setting');
+  drupal_add_js(array('slide_menu_links' => array('slide_left_text' => $slide_left_text, 'slide_right_text' => $slide_right_text)), 'setting');
 
 }
 
@@ -30,10 +33,11 @@ function slide_menu_links_init() {
 function slide_menu_links_menu() {
   $items['admin/config/user-interface/slide_menu_links'] = array(
     'title' => 'slide_menu_links settings',
+    'description' => 'change settings for slide menu links',
     'page callback' => 'drupal_get_form',
     'page arguments' => array('slide_menu_links_admin_menu_form'),
     'access callback' => TRUE,
-    'type' => MENU_LOCAL_TASK,
+  'type' => MENU_NORMAL_ITEM,
   );
 
   return $items;
@@ -44,16 +48,27 @@ function slide_menu_links_menu() {
  */
 function slide_menu_links_admin_menu_form() {
   $form = array();
-
+ 
   $form['slide_left_link'] = array(
     '#title' => 'Slide left link',
     '#type' => 'textfield',
     '#default_value' => variable_get('slide_left_link'),
   );
+  $form['slide_left_text'] = array(
+    '#title' => 'Slide left text',
+    '#type' => 'textfield',
+    '#default_value' => variable_get('slide_left_text'),
+  );
+
   $form['slide_right_link'] = array(
     '#title' => 'Slide right link',
     '#type' => 'textfield',
     '#default_value' => variable_get('slide_right_link'),
+  );
+  $form['slide_right_text'] = array(
+    '#title' => 'Slide right text',
+    '#type' => 'textfield',
+    '#default_value' => variable_get('slide_right_text'),
   );
   return system_settings_form($form);
 }

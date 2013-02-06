@@ -1,24 +1,43 @@
 $j(document).ready(function($){
-  var width = $(window).width();
-  var height = $(window).height();
-  var currentPage = '#page_1';
+  var width = $(window).width(),
+      height = $(window).height(),
+      page1 = Drupal.settings.slide_menu_links.slide_left_text,
+      page2 = Drupal.settings.slide_menu_links.slide_left_link,
+      currentPage = "#page_1";
 
-  function slidePage(element, element2, direction){
-    var pageTop = $('#page_1').position().top;
-    
-    $(element2).css({"display" : "block", "top": pageTop});
-    $(element).css({"position" : "relative"});
-    $(element).animate({"left": direction+width}, 700);
-    $(element2).animate({"left": direction+width}, 700);
-    setTimeout(function(){updateAfterSlide(element2, element);}, 700);
-  }
-
-  function updateAfterSlide(element, element2)
+  if(location.hash) 
   {
-    $(element).removeAttr('style');
-    $(element2).hide();
+    location.href = "";
   }
 
+  function slidePage(from, to, direction){
+    var pageTop = $('#page_1').position().top;
+    if(direction === 'left')
+    {
+      $(to).css({ "position" : "absolute", "width" : width, "height" : height, "float" : "left", "top" : pageTop, "left" : width, "display" :"block" });
+      direction = '-=';
+    }
+    else
+    {
+      $(to).css({ "position" : "absolute", "width" : width, "height" : height, "float" : "left", "top" : pageTop, "left" : -width,"display" : "block"  });
+      direction = '+=';
+    }
+     
+    $(currentPage).css({"position" : "relative"});
+    $(currentPage).animate({"left": direction+width}, 700);
+    $(to).animate({"left": direction+width}, 700);
+    setTimeout(function(){updateAfterSlide(to, currentPage);}, 710);
+  }
+
+  function updateAfterSlide(to, from)
+  {
+    $(to).removeAttr('style');
+    $(from).removeAttr('style');
+    $(from).hide();
+    currentPage = to;
+  }
+
+  // Wrap all content in body
   $('body').html('<div class="page_container"><div class="pages"><div id="page_1">' + $('body').html() +'</div></div></div>');
 
   var left_link = Drupal.settings.slide_menu_links.slide_left_link + " #page";
@@ -27,32 +46,53 @@ $j(document).ready(function($){
   if (Drupal.settings.slide_menu_links.slide_left_link !== '<notset>')
   {
     $('<div data-role="page" id="page_2">').insertBefore('#page_1');
-    $('#page_2').css({ "position" : "absolute", "width" : width, "height" : height, "float" : "left", "left" : width,"display" : "none"  });
+    $('#page_2').css({ "display" : "none"  });
     $('#page_2').load(left_link); 
-    $('body').append('<div class="slide slide_right" id="slide_1">');
+    $('body').append('<div class="slider slider_left"><a class="slider_link" href="'+page1+'"><i class="link"></a></div>');
   }
 
 
   if (Drupal.settings.slide_menu_links.slide_right_link !== '<notset>')
   {
     $('<div data-role="page" id="page_3">').insertBefore('#page_1');
-    $('#page_3').css({ "position" : "absolute", "width" : width, "height" : height, "float" : "left", "left" : -width,"display" : "none"  });
+    $('#page_3').css({ "display" : "none"  });
     $('#page_3').load(right_link); 
-    $('body').append('<div class="slide slide_left" id="slide_2">');
+    $('body').append('<div class="slider slider_right"><a class="slider_link" href="'+page2+'"><i class="link"></a></div>');
   }
 
-  $('#slide_1').click(function(e){
-    $('.slide').remove();
-    slidePage(currentPage, '#page_2', '-=');
-    $('body').append('<div class="slide slide_back" id="slide_back">');
-  });
+  // Handle links
+  $(window).hashchange(function(e){
+    
+    var $sliderLink = "";
+    
+    switch(location.hash)
+    {
+      case page1:
+        $('.slider_right').hide();
+        $('.slider_left').addClass('slider_back');
+        $sliderLink = $('.slider_left').find('a');
+        $sliderLink.attr('href', '#');
+        slidePage('#page_1', '#page_2', 'right');
+        break;
 
-  $('#slide_2').click(function(e){
-    $('.slide').remove();
-    slidePage(currentPage, '#page_3', '+=');
-    $('body').append('<div class="slide slide_back" id="slide_back">');
+      case page2:
+        $('.slider_right').hide();
+        $('.slider_left').addClass('slider_back');
+        $sliderLink = $('.slider_left').find('a');
+        $sliderLink.attr('href', '#');
+        slidePage('#page_1', '#page_3', 'left');
+        break;
+
+      default:
+        $('.slider_left').removeClass('slider_back');
+        $('.slider').show();
+        $sliderLink = $('.slider_left').find('a');
+        $sliderLink.attr('href', page1);
+        slidePage('#page_3', '#page_1', 'right');
+        break;
+    }
+
   });
- 
 
 
 
