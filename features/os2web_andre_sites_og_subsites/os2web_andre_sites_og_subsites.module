@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the OS2Web - Andre sites og subsites feature.
+ */
+
+include_once 'os2web_andre_sites_og_subsites.features.inc';
