@@ -1,8 +1,8 @@
-$j(document).ready(function($){
+jQuery(document).ready(function($){
   var width = $(window).width(),
       height = $(window).height(),
-      page1 = Drupal.settings.slide_menu_links.slide_left_text,
-      page2 = Drupal.settings.slide_menu_links.slide_left_link,
+      page1 = '#'+Drupal.settings.slide_menu_links.slide_left_text,
+      page2 = '#'+Drupal.settings.slide_menu_links.slide_left_link,
       currentPage = "#page_1";
 
   if(location.hash) 
@@ -23,7 +23,7 @@ $j(document).ready(function($){
       direction = '+=';
     }
      
-    $(currentPage).css({"position" : "relative"});
+    $(currentPage).css({"position" : "relative", "height": height});
     $(currentPage).animate({"left": direction+width}, 700);
     $(to).animate({"left": direction+width}, 700);
     setTimeout(function(){updateAfterSlide(to, currentPage);}, 710);
@@ -40,14 +40,14 @@ $j(document).ready(function($){
   // Wrap all content in body
   $('body').html('<div class="page_container"><div class="pages"><div id="page_1">' + $('body').html() +'</div></div></div>');
 
-  var left_link = Drupal.settings.slide_menu_links.slide_left_link + " #page";
+  var left_link = Drupal.settings.slide_menu_links.slide_left_link + "#page";
   var right_link = Drupal.settings.slide_menu_links.slide_right_link + " #page";
 
   if (Drupal.settings.slide_menu_links.slide_left_link !== '<notset>')
   {
     $('<div data-role="page" id="page_2">').insertBefore('#page_1');
     $('#page_2').css({ "display" : "none"  });
-    $('#page_2').load(left_link); 
+    $('#page_2').load(left_link+', #page'); 
     $('body').append('<div class="slider slider_left"><a class="slider_link" href="'+page1+'"><i class="link"></a></div>');
   }
 
@@ -56,12 +56,12 @@ $j(document).ready(function($){
   {
     $('<div data-role="page" id="page_3">').insertBefore('#page_1');
     $('#page_3').css({ "display" : "none"  });
-    $('#page_3').load(right_link); 
+    $('#page_3').load(right_link+', #page'); 
     $('body').append('<div class="slider slider_right"><a class="slider_link" href="'+page2+'"><i class="link"></a></div>');
   }
 
   // Handle links
-  $(window).hashchange(function(e){
+  $(window).bind('hashchange', function(e){
     
     var $sliderLink = "";
     
