@@ -8,8 +8,7 @@ jQuery(document).ready(function($){
       right_link = Drupal.settings.slide_menu_links.slide_right_link,
       backDirection = '';
 
-  // Wrap all content in body
-  $('body').html('<div class="page_container"><div class="pages"><div id="page_1">' + $('body').html() +'</div></div></div>');
+  $('#page').attr('id', 'page_1');
 
   if (Drupal.settings.slide_menu_links.slide_left_link !== '<notset>')
   {
@@ -78,7 +77,8 @@ jQuery(document).ready(function($){
     if (from !== to )
     {
       $(from).hide();
-    }currentPage = to;
+    }
+    currentPage = to;
   }
 
   // Handle links
@@ -93,8 +93,8 @@ jQuery(document).ready(function($){
         $sliderLink = $('.slider_back').find('a');
         $sliderLink.attr('href', '#');
         backDirection = 'left';
+        Drupal.viewsSlideshow.action({ "action": 'pause', "slideshowID": 'aktuelt-panel_pane_3', "force": true });
         slidePage('#page_1', '#page_2', 'right', left_link);
-        $.vegas('pause');
         $('.vegas-background').fadeOut();
         break;
 
@@ -104,8 +104,8 @@ jQuery(document).ready(function($){
         $sliderLink = $('.slider_back').find('a');
         $sliderLink.attr('href', '#');
         backDirection = 'right';
+        Drupal.viewsSlideshow.action({ "action": 'pause', "slideshowID": 'aktuelt-panel_pane_3', "force": true });
         slidePage('#page_1', '#page_3', 'left', right_link);
-        $.vegas('pause');
         $('.vegas-background').fadeOut();
         break;
 
@@ -116,8 +116,8 @@ jQuery(document).ready(function($){
         $sliderLink.attr('href', page1);
         $sliderLink = $('.slider_right').find('a');
         $sliderLink.attr('href', page2);
+        Drupal.viewsSlideshow.action({ "action": 'start', "slideshowID": 'aktuelt-panel_pane_3', "force": true });
         slidePage('#page_3', '#page_1', backDirection);
-        $.vegas('pause');
         $('.vegas-background').fadeIn();
         break;
     }
