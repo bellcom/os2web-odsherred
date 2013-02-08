@@ -5,7 +5,8 @@ jQuery(document).ready(function($){
       page2 = '#'+Drupal.settings.slide_menu_links.slide_right_text,
       currentPage = "#page_1",
       left_link = Drupal.settings.slide_menu_links.slide_left_link,
-      right_link = Drupal.settings.slide_menu_links.slide_right_link;
+      right_link = Drupal.settings.slide_menu_links.slide_right_link,
+      backDirection = '';
 
   // Wrap all content in body
   $('body').html('<div class="page_container"><div class="pages"><div id="page_1">' + $('body').html() +'</div></div></div>');
@@ -87,20 +88,22 @@ jQuery(document).ready(function($){
     switch(location.hash)
     {
       case page1:
-        $('.slider_right').hide();
-        $('.slider_left').addClass('slider_back');
-        $sliderLink = $('.slider_left').find('a');
+        $('.slider_left').fadeOut();
+        $('.slider_right').addClass('slider_back');
+        $sliderLink = $('.slider_back').find('a');
         $sliderLink.attr('href', '#');
+        backDirection = 'left';
         slidePage('#page_1', '#page_2', 'right', left_link);
         $.vegas('pause');
         $('.vegas-background').fadeOut();
         break;
 
       case page2:
-        $('.slider_right').hide();
+        $('.slider_right').fadeOut();
         $('.slider_left').addClass('slider_back');
-        $sliderLink = $('.slider_left').find('a');
+        $sliderLink = $('.slider_back').find('a');
         $sliderLink.attr('href', '#');
+        backDirection = 'right';
         slidePage('#page_1', '#page_3', 'left', right_link);
         $.vegas('pause');
         $('.vegas-background').fadeOut();
@@ -108,10 +111,12 @@ jQuery(document).ready(function($){
 
       default:
         $('.slider_left').removeClass('slider_back');
-        $('.slider').show();
+        $('.slider').fadeIn();
         $sliderLink = $('.slider_left').find('a');
         $sliderLink.attr('href', page1);
-        slidePage('#page_3', '#page_1', 'right');
+        $sliderLink = $('.slider_right').find('a');
+        $sliderLink.attr('href', page2);
+        slidePage('#page_3', '#page_1', backDirection);
         $.vegas('pause');
         $('.vegas-background').fadeIn();
         break;
