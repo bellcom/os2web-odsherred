@@ -51,10 +51,11 @@ function os2web_grund_paneler_views_default_views() {
   $handler->display->display_options['style_options']['widgets']['top']['views_slideshow_pager']['weight'] = '1';
   $handler->display->display_options['style_options']['widgets']['top']['views_slideshow_pager']['type'] = 'views_slideshow_pager_fields';
   $handler->display->display_options['style_options']['widgets']['top']['views_slideshow_pager']['views_slideshow_pager_fields_fields'] = array(
-    'field_site_structure_1' => 0,
+    'tid_2' => 0,
+    'tid_1' => 0,
+    'tid' => 0,
     'title' => 0,
     'field_resume_long' => 0,
-    'field_site_structure' => 0,
     'field_lead_image' => 0,
   );
   $handler->display->display_options['style_options']['widgets']['top']['views_slideshow_controls']['weight'] = '1';
@@ -64,8 +65,9 @@ function os2web_grund_paneler_views_default_views() {
   $handler->display->display_options['style_options']['widgets']['bottom']['views_slideshow_pager']['weight'] = '1';
   $handler->display->display_options['style_options']['widgets']['bottom']['views_slideshow_pager']['type'] = 'views_slideshow_pager_fields';
   $handler->display->display_options['style_options']['widgets']['bottom']['views_slideshow_pager']['views_slideshow_pager_fields_fields'] = array(
-    'field_site_structure' => 'field_site_structure',
-    'field_site_structure_1' => 0,
+    'tid' => 'tid',
+    'tid_2' => 0,
+    'tid_1' => 0,
     'title' => 0,
     'field_resume_long' => 0,
     'field_lead_image' => 0,
@@ -209,15 +211,49 @@ function os2web_grund_paneler_views_default_views() {
   /* Display: Aktuelt - forside slideshow */
   $handler = $view->new_display('panel_pane', 'Aktuelt - forside slideshow', 'panel_pane_3');
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Forbindelse: Indhold: Portalkategori (field_site_structure) */
+  $handler->display->display_options['relationships']['field_site_structure_tid']['id'] = 'field_site_structure_tid';
+  $handler->display->display_options['relationships']['field_site_structure_tid']['table'] = 'field_data_field_site_structure';
+  $handler->display->display_options['relationships']['field_site_structure_tid']['field'] = 'field_site_structure_tid';
+  /* Forbindelse: Ord i ordforråd: Overordnet term */
+  $handler->display->display_options['relationships']['parent']['id'] = 'parent';
+  $handler->display->display_options['relationships']['parent']['table'] = 'taxonomy_term_hierarchy';
+  $handler->display->display_options['relationships']['parent']['field'] = 'parent';
+  $handler->display->display_options['relationships']['parent']['relationship'] = 'field_site_structure_tid';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Felt: Indhold: Portalkategori */
-  $handler->display->display_options['fields']['field_site_structure_1']['id'] = 'field_site_structure_1';
-  $handler->display->display_options['fields']['field_site_structure_1']['table'] = 'field_data_field_site_structure';
-  $handler->display->display_options['fields']['field_site_structure_1']['field'] = 'field_site_structure';
-  $handler->display->display_options['fields']['field_site_structure_1']['label'] = '';
-  $handler->display->display_options['fields']['field_site_structure_1']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_site_structure_1']['alter']['strip_tags'] = TRUE;
-  $handler->display->display_options['fields']['field_site_structure_1']['element_label_colon'] = FALSE;
+  /* Felt: Ord i ordforråd: Term ID */
+  $handler->display->display_options['fields']['tid_2']['id'] = 'tid_2';
+  $handler->display->display_options['fields']['tid_2']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['fields']['tid_2']['field'] = 'tid';
+  $handler->display->display_options['fields']['tid_2']['relationship'] = 'field_site_structure_tid';
+  $handler->display->display_options['fields']['tid_2']['label'] = '';
+  $handler->display->display_options['fields']['tid_2']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['tid_2']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['tid_2']['separator'] = '';
+  /* Felt: Ord i ordforråd: Term ID */
+  $handler->display->display_options['fields']['tid_1']['id'] = 'tid_1';
+  $handler->display->display_options['fields']['tid_1']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['fields']['tid_1']['field'] = 'tid';
+  $handler->display->display_options['fields']['tid_1']['relationship'] = 'parent';
+  $handler->display->display_options['fields']['tid_1']['label'] = '';
+  $handler->display->display_options['fields']['tid_1']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['tid_1']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['tid_1']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['tid_1']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['tid_1']['empty'] = '[tid_2]';
+  $handler->display->display_options['fields']['tid_1']['empty_zero'] = TRUE;
+  $handler->display->display_options['fields']['tid_1']['separator'] = '';
+  /* Felt: Ord i ordforråd: Term ID */
+  $handler->display->display_options['fields']['tid']['id'] = 'tid';
+  $handler->display->display_options['fields']['tid']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['fields']['tid']['field'] = 'tid';
+  $handler->display->display_options['fields']['tid']['relationship'] = 'parent';
+  $handler->display->display_options['fields']['tid']['label'] = '';
+  $handler->display->display_options['fields']['tid']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['tid']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['tid']['alter']['text'] = '<i class="bullet term-[tid_1]"></i>';
+  $handler->display->display_options['fields']['tid']['element_label_colon'] = FALSE;
   /* Felt: Indhold: Titel */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -226,7 +262,7 @@ function os2web_grund_paneler_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['title']['element_wrapper_class'] = '[field_site_structure_1]';
+  $handler->display->display_options['fields']['title']['element_wrapper_class'] = 'term-[tid_1]';
   /* Felt: Indhold: Resume - lang overskrift */
   $handler->display->display_options['fields']['field_resume_long']['id'] = 'field_resume_long';
   $handler->display->display_options['fields']['field_resume_long']['table'] = 'field_data_field_resume_long';
@@ -237,17 +273,7 @@ function os2web_grund_paneler_views_default_views() {
   $handler->display->display_options['fields']['field_resume_long']['alter']['trim'] = TRUE;
   $handler->display->display_options['fields']['field_resume_long']['element_type'] = 'span';
   $handler->display->display_options['fields']['field_resume_long']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_resume_long']['element_wrapper_class'] = '[field_site_structure_1]';
-  /* Felt: Indhold: Portalkategori */
-  $handler->display->display_options['fields']['field_site_structure']['id'] = 'field_site_structure';
-  $handler->display->display_options['fields']['field_site_structure']['table'] = 'field_data_field_site_structure';
-  $handler->display->display_options['fields']['field_site_structure']['field'] = 'field_site_structure';
-  $handler->display->display_options['fields']['field_site_structure']['label'] = '';
-  $handler->display->display_options['fields']['field_site_structure']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_site_structure']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_site_structure']['alter']['text'] = '<i class="bullet [field_site_structure_1]"></i>';
-  $handler->display->display_options['fields']['field_site_structure']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_site_structure']['type'] = 'taxonomy_term_reference_plain';
+  $handler->display->display_options['fields']['field_resume_long']['element_wrapper_class'] = 'term-[tid_1]';
   /* Felt: Indhold: Primære billede */
   $handler->display->display_options['fields']['field_lead_image']['id'] = 'field_lead_image';
   $handler->display->display_options['fields']['field_lead_image']['table'] = 'field_data_field_lead_image';
@@ -264,6 +290,7 @@ function os2web_grund_paneler_views_default_views() {
     'image_link' => '',
   );
   $handler->display->display_options['fields']['field_lead_image']['delta_offset'] = '0';
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
 
   /* Display: Blok */
   $handler = $view->new_display('block', 'Blok', 'block_1');
@@ -342,8 +369,7 @@ function os2web_grund_paneler_views_default_views() {
   $handler->display->display_options['fields']['field_resume_long']['alter']['text'] = '<span class="title">[title]</span>
 <span class="text">[field_resume_long]</span>';
   $handler->display->display_options['fields']['field_resume_long']['alter']['make_link'] = TRUE;
-  $handler->display->display_options['fields']['field_resume_long']['alter']['path'] = 'node/[nid]';
-  $handler->display->display_options['fields']['field_resume_long']['alter']['absolute'] = TRUE;
+  $handler->display->display_options['fields']['field_resume_long']['alter']['path'] = '/node/[nid]';
   $handler->display->display_options['fields']['field_resume_long']['element_type'] = 'span';
   $handler->display->display_options['fields']['field_resume_long']['element_class'] = 'overlay';
   $handler->display->display_options['fields']['field_resume_long']['element_label_colon'] = FALSE;
@@ -458,6 +484,73 @@ function os2web_grund_paneler_views_default_views() {
       'label' => 'Portalkategori ID',
     ),
   );
+
+  /* Display: Aktuelt - breaking news */
+  $handler = $view->new_display('panel_pane', 'Aktuelt - breaking news', 'panel_pane_6');
+  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_options']['row_class_special'] = FALSE;
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Felt: Indhold: Resume - lang overskrift */
+  $handler->display->display_options['fields']['field_resume_long']['id'] = 'field_resume_long';
+  $handler->display->display_options['fields']['field_resume_long']['table'] = 'field_data_field_resume_long';
+  $handler->display->display_options['fields']['field_resume_long']['field'] = 'field_resume_long';
+  $handler->display->display_options['fields']['field_resume_long']['label'] = '';
+  $handler->display->display_options['fields']['field_resume_long']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_resume_long']['element_label_colon'] = FALSE;
+  /* Felt: Indhold: Titel */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = 'Breaking news';
+  $handler->display->display_options['fields']['title']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['title']['alter']['text'] = '[field_resume_long] ';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filterkriterie: Indhold: Udgivet */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filterkriterie: Indhold: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'news' => 'news',
+  );
+  $handler->display->display_options['filters']['type']['group'] = 1;
+  /* Filterkriterie: Indhold: Forfrem til (field_promoteto) */
+  $handler->display->display_options['filters']['field_promoteto_tid']['id'] = 'field_promoteto_tid';
+  $handler->display->display_options['filters']['field_promoteto_tid']['table'] = 'field_data_field_promoteto';
+  $handler->display->display_options['filters']['field_promoteto_tid']['field'] = 'field_promoteto_tid';
+  $handler->display->display_options['filters']['field_promoteto_tid']['value'] = array(
+    0 => '25751',
+  );
+  $handler->display->display_options['filters']['field_promoteto_tid']['expose']['operator_id'] = 'field_promoteto_tid_op';
+  $handler->display->display_options['filters']['field_promoteto_tid']['expose']['label'] = 'Forfrem til (field_promoteto)';
+  $handler->display->display_options['filters']['field_promoteto_tid']['expose']['operator'] = 'field_promoteto_tid_op';
+  $handler->display->display_options['filters']['field_promoteto_tid']['expose']['identifier'] = 'field_promoteto_tid';
+  $handler->display->display_options['filters']['field_promoteto_tid']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    6 => 0,
+    4 => 0,
+    7 => 0,
+    3 => 0,
+    5 => 0,
+  );
+  $handler->display->display_options['filters']['field_promoteto_tid']['vocabulary'] = 'forfrem_til';
+  $handler->display->display_options['filters']['field_promoteto_tid']['error_message'] = FALSE;
   $translatables['aktuelt'] = array(
     t('Master'),
     t('mere'),
@@ -471,13 +564,22 @@ function os2web_grund_paneler_views_default_views() {
     t('CMS Theme'),
     t('Aktuelt - Portalforside'),
     t('Aktuelt - forside slideshow'),
-    t('<i class="bullet [field_site_structure_1]"></i>'),
+    t('term fra field_site_structure'),
+    t('Overordnet element'),
+    t('.'),
+    t('[tid_2]'),
+    t('<i class="bullet term-[tid_1]"></i>'),
+    t(','),
     t('View panes'),
     t('Blok'),
     t('Forside - Portalnyhed - 1'),
     t('<span class="title">[title]</span>
 <span class="text">[field_resume_long]</span>'),
     t('Forside - Portalnyhed - 2-5'),
+    t('Aktuelt - breaking news'),
+    t('Breaking news'),
+    t('[field_resume_long] '),
+    t('Forfrem til (field_promoteto)'),
   );
   $export['aktuelt'] = $view;
 
