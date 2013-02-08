@@ -23,9 +23,8 @@ function os2web_indholdstyper_field_group_info() {
     'label' => 'Billeder og filer',
     'weight' => '5',
     'children' => array(
-      0 => 'field_lead_image',
-      1 => 'field_mediafile',
-      2 => 'field_billede',
+      0 => 'field_mediafile',
+      1 => 'field_billede',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
@@ -97,7 +96,7 @@ function os2web_indholdstyper_field_group_info() {
   $field_group->entity_type = 'node';
   $field_group->bundle = 'contentpage';
   $field_group->mode = 'form';
-  $field_group->parent_name = 'group_indholdsside';
+  $field_group->parent_name = 'group_hidden';
   $field_group->data = array(
     'label' => 'Sager og dokumenter',
     'weight' => '6',
@@ -224,6 +223,7 @@ function os2web_indholdstyper_field_group_info() {
     'children' => array(
       0 => 'field_source_id',
       1 => 'field_site_structure',
+      2 => 'group_esdh',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -310,10 +310,9 @@ function os2web_indholdstyper_field_group_info() {
     'weight' => '2',
     'children' => array(
       0 => 'group_billeder',
-      1 => 'group_esdh',
-      2 => 'group_extras',
-      3 => 'group_general',
-      4 => 'group_gruppe3',
+      1 => 'group_extras',
+      2 => 'group_general',
+      3 => 'group_gruppe3',
     ),
     'format_type' => 'htabs',
     'format_settings' => array(
