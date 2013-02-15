@@ -58,6 +58,12 @@ function os2web_spotbokse_field_default_fields() {
           'type' => 'text_default',
           'weight' => '9',
         ),
+        'jquerymobile_teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
         'related_block' => array(
           'label' => 'above',
           'settings' => array(),
@@ -141,6 +147,12 @@ function os2web_spotbokse_field_default_fields() {
           'type' => 'taxonomy_term_reference_link',
           'weight' => '5',
         ),
+        'jquerymobile_teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
         'related_block' => array(
           'label' => 'above',
           'settings' => array(),
@@ -219,6 +231,12 @@ function os2web_spotbokse_field_default_fields() {
           ),
           'type' => 'image',
           'weight' => '14',
+        ),
+        'jquerymobile_teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
         ),
         'related_block' => array(
           'label' => 'above',
@@ -312,6 +330,12 @@ function os2web_spotbokse_field_default_fields() {
           ),
           'type' => 'image',
           'weight' => '10',
+        ),
+        'jquerymobile_teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
         ),
         'related_block' => array(
           'label' => 'above',
@@ -409,6 +433,12 @@ function os2web_spotbokse_field_default_fields() {
           'type' => 'taxonomy_term_reference_link',
           'weight' => '4',
         ),
+        'jquerymobile_teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
         'related_block' => array(
           'label' => 'above',
           'settings' => array(),
@@ -490,6 +520,12 @@ function os2web_spotbokse_field_default_fields() {
           'settings' => array(),
           'type' => 'taxonomy_term_reference_link',
           'weight' => '6',
+        ),
+        'jquerymobile_teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
         ),
         'related_block' => array(
           'label' => 'above',
@@ -573,6 +609,12 @@ function os2web_spotbokse_field_default_fields() {
           'settings' => array(),
           'type' => 'taxonomy_term_reference_link',
           'weight' => '8',
+        ),
+        'jquerymobile_teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
         ),
         'related_block' => array(
           'label' => 'above',
@@ -687,6 +729,12 @@ function os2web_spotbokse_field_default_fields() {
           'type' => 'node_reference_default',
           'weight' => 15,
         ),
+        'jquerymobile_teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
         'related_block' => array(
           'label' => 'above',
           'settings' => array(),
@@ -770,6 +818,12 @@ function os2web_spotbokse_field_default_fields() {
           'type' => 'taxonomy_term_reference_link',
           'weight' => '3',
         ),
+        'jquerymobile_teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
         'related_block' => array(
           'label' => 'above',
           'settings' => array(),
@@ -844,6 +898,12 @@ function os2web_spotbokse_field_default_fields() {
           ),
           'type' => 'image',
           'weight' => '11',
+        ),
+        'jquerymobile_teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
         ),
         'related_block' => array(
           'label' => 'above',
@@ -937,6 +997,12 @@ function os2web_spotbokse_field_default_fields() {
           ),
           'type' => 'image',
           'weight' => '12',
+        ),
+        'jquerymobile_teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
         ),
         'related_block' => array(
           'label' => 'above',
@@ -1042,6 +1108,12 @@ function os2web_spotbokse_field_default_fields() {
           'type' => 'image',
           'weight' => '13',
         ),
+        'jquerymobile_teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
         'related_block' => array(
           'label' => 'above',
           'settings' => array(),
@@ -1138,6 +1210,12 @@ function os2web_spotbokse_field_default_fields() {
           'type' => 'taxonomy_term_reference_link',
           'weight' => 2,
         ),
+        'jquerymobile_teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
         'related_block' => array(
           'label' => 'above',
           'settings' => array(),
@@ -1220,6 +1298,12 @@ function os2web_spotbokse_field_default_fields() {
           'type' => 'taxonomy_term_reference_link',
           'weight' => 6,
         ),
+        'jquerymobile_teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
         'related_block' => array(
           'label' => 'above',
           'settings' => array(),
@@ -1293,6 +1377,12 @@ function os2web_spotbokse_field_default_fields() {
           'settings' => array(),
           'type' => 'text_default',
           'weight' => 11,
+        ),
+        'jquerymobile_teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
         ),
         'related_block' => array(
           'label' => 'above',
@@ -1368,6 +1458,12 @@ function os2web_spotbokse_field_default_fields() {
           'settings' => array(),
           'type' => 'text_default',
           'weight' => 4,
+        ),
+        'jquerymobile_teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
         ),
         'related_block' => array(
           'label' => 'above',
