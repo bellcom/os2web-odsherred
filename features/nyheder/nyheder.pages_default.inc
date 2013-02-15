@@ -33,9 +33,8 @@ function nyheder_default_page_manager_handlers() {
         'keyword' => 'terms',
         'name' => 'terms_from_node',
         'vocabulary' => array(
-          'site_struktur' => 'site_struktur',
           'kle' => 'kle',
-          'nyhedstype' => 'nyhedstype',
+          'site_struktur' => 0,
           'acadremmcomittee' => 0,
           'egennavne_stednavne' => 0,
           'organisation' => 0,
@@ -50,6 +49,7 @@ function nyheder_default_page_manager_handlers() {
           'tags' => 0,
           'user_position' => 0,
           'media_folders' => 0,
+          'nyhedstype' => 0,
         ),
         'concatenator' => '+',
         'context' => 'argument_entity_id:node_1',
@@ -119,6 +119,33 @@ function nyheder_default_page_manager_handlers() {
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
+      'admin_title' => '',
+      'title' => '',
+      'body' => '<p>Oprettet&nbsp;%node:changed af&nbsp;%node:author</p>',
+      'format' => 'filtered_html',
+      'substitute' => 1,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'node-date',
+    );
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-1'] = $pane;
+    $display->panels['stack1'][0] = 'new-1';
+    $pane = new stdClass();
+    $pane->pid = 'new-2';
+    $pane->panel = 'stack1';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
       'admin_title' => 'Undskriv',
       'title' => '',
       'body' => '<a href="/print/%node:nid" target="_blank" title="Undskriv">Udskriv</a>',
@@ -134,12 +161,12 @@ function nyheder_default_page_manager_handlers() {
       'css_class' => 'float-right del-udskriv',
     );
     $pane->extras = array();
-    $pane->position = 0;
+    $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-1'] = $pane;
-    $display->panels['stack1'][0] = 'new-1';
+    $display->content['new-2'] = $pane;
+    $display->panels['stack1'][1] = 'new-2';
     $pane = new stdClass();
-    $pane->pid = 'new-2';
+    $pane->pid = 'new-3';
     $pane->panel = 'stack1';
     $pane->type = 'block';
     $pane->subtype = 'addtoany-addtoany_button';
@@ -158,12 +185,12 @@ function nyheder_default_page_manager_handlers() {
       'css_class' => 'float-right del-udskriv',
     );
     $pane->extras = array();
-    $pane->position = 1;
+    $pane->position = 2;
     $pane->locks = array();
-    $display->content['new-2'] = $pane;
-    $display->panels['stack1'][1] = 'new-2';
+    $display->content['new-3'] = $pane;
+    $display->panels['stack1'][2] = 'new-3';
     $pane = new stdClass();
-    $pane->pid = 'new-3';
+    $pane->pid = 'new-4';
     $pane->panel = 'stack1';
     $pane->type = 'node_title';
     $pane->subtype = 'node_title';
@@ -184,12 +211,12 @@ function nyheder_default_page_manager_handlers() {
       'css_class' => 'sidetitel %parent_term:tid',
     );
     $pane->extras = array();
-    $pane->position = 2;
+    $pane->position = 3;
     $pane->locks = array();
-    $display->content['new-3'] = $pane;
-    $display->panels['stack1'][2] = 'new-3';
+    $display->content['new-4'] = $pane;
+    $display->panels['stack1'][3] = 'new-4';
     $pane = new stdClass();
-    $pane->pid = 'new-4';
+    $pane->pid = 'new-5';
     $pane->panel = 'stack1';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_lead_image';
@@ -204,7 +231,7 @@ function nyheder_default_page_manager_handlers() {
       'formatter_settings' => array(
         'slideshow_image_style' => 'indholdsside',
         'slideshow_link' => '',
-        'slideshow_caption' => 'title',
+        'slideshow_caption' => '',
         'slideshow_caption_link' => '',
         'slideshow_fx' => 'fade',
         'slideshow_speed' => '1000',
@@ -240,12 +267,12 @@ function nyheder_default_page_manager_handlers() {
       'css_class' => 'no-padding nyhedsbillede',
     );
     $pane->extras = array();
-    $pane->position = 3;
+    $pane->position = 4;
     $pane->locks = array();
-    $display->content['new-4'] = $pane;
-    $display->panels['stack1'][3] = 'new-4';
+    $display->content['new-5'] = $pane;
+    $display->panels['stack1'][4] = 'new-5';
     $pane = new stdClass();
-    $pane->pid = 'new-5';
+    $pane->pid = 'new-6';
     $pane->panel = 'stack1';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_resume_long';
@@ -271,12 +298,12 @@ function nyheder_default_page_manager_handlers() {
       'css_class' => 'node-body',
     );
     $pane->extras = array();
-    $pane->position = 4;
+    $pane->position = 5;
     $pane->locks = array();
-    $display->content['new-5'] = $pane;
-    $display->panels['stack1'][4] = 'new-5';
+    $display->content['new-6'] = $pane;
+    $display->panels['stack1'][5] = 'new-6';
     $pane = new stdClass();
-    $pane->pid = 'new-6';
+    $pane->pid = 'new-7';
     $pane->panel = 'stack1';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:body';
@@ -302,12 +329,12 @@ function nyheder_default_page_manager_handlers() {
       'css_class' => 'node-body',
     );
     $pane->extras = array();
-    $pane->position = 5;
+    $pane->position = 6;
     $pane->locks = array();
-    $display->content['new-6'] = $pane;
-    $display->panels['stack1'][5] = 'new-6';
+    $display->content['new-7'] = $pane;
+    $display->panels['stack1'][6] = 'new-7';
     $pane = new stdClass();
-    $pane->pid = 'new-7';
+    $pane->pid = 'new-8';
     $pane->panel = 'stack2';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_additional_info';
@@ -332,10 +359,10 @@ function nyheder_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-7'] = $pane;
-    $display->panels['stack2'][0] = 'new-7';
+    $display->content['new-8'] = $pane;
+    $display->panels['stack2'][0] = 'new-8';
     $pane = new stdClass();
-    $pane->pid = 'new-8';
+    $pane->pid = 'new-9';
     $pane->panel = 'stack2';
     $pane->type = 'views_panes';
     $pane->subtype = 'kle_lonks_boks-panel_pane_1';
@@ -361,10 +388,10 @@ function nyheder_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-8'] = $pane;
-    $display->panels['stack2'][1] = 'new-8';
+    $display->content['new-9'] = $pane;
+    $display->panels['stack2'][1] = 'new-9';
     $pane = new stdClass();
-    $pane->pid = 'new-9';
+    $pane->pid = 'new-10';
     $pane->panel = 'stack2';
     $pane->type = 'custom';
     $pane->subtype = 'custom';
@@ -385,10 +412,10 @@ function nyheder_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 2;
     $pane->locks = array();
-    $display->content['new-9'] = $pane;
-    $display->panels['stack2'][2] = 'new-9';
+    $display->content['new-10'] = $pane;
+    $display->panels['stack2'][2] = 'new-10';
   $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = 'new-3';
+  $display->title_pane = 'new-4';
   $handler->conf['display'] = $display;
   $export['node_view_panel_context_7'] = $handler;
 
