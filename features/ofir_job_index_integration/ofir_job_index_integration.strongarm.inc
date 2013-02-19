@@ -14,7 +14,7 @@ function ofir_job_index_integration_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'additional_settings__active_tab_ofir_job';
-  $strongarm->value = 'edit-display';
+  $strongarm->value = 'edit-workflow';
   $export['additional_settings__active_tab_ofir_job'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -100,9 +100,7 @@ function ofir_job_index_integration_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'node_options_ofir_job';
-  $strongarm->value = array(
-    0 => 'status',
-  );
+  $strongarm->value = array();
   $export['node_options_ofir_job'] = $strongarm;
 
   $strongarm = new stdClass();

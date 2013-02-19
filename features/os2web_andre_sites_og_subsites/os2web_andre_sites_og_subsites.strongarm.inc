@@ -87,8 +87,7 @@ function os2web_andre_sites_og_subsites_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'node_options_subsites_og_sites';
   $strongarm->value = array(
-    0 => 'status',
-    1 => 'promote',
+    0 => 'promote',
   );
   $export['node_options_subsites_og_sites'] = $strongarm;
 

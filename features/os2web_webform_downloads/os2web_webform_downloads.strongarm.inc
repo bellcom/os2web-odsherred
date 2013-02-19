@@ -14,7 +14,7 @@ function os2web_webform_downloads_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'additional_settings__active_tab_webform';
-  $strongarm->value = 'edit-print';
+  $strongarm->value = 'edit-workflow';
   $export['additional_settings__active_tab_webform'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -152,9 +152,7 @@ function os2web_webform_downloads_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'node_options_webform';
-  $strongarm->value = array(
-    0 => 'status',
-  );
+  $strongarm->value = array();
   $export['node_options_webform'] = $strongarm;
 
   $strongarm = new stdClass();

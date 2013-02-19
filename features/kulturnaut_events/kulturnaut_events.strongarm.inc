@@ -14,7 +14,7 @@ function kulturnaut_events_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'additional_settings__active_tab_knactivity';
-  $strongarm->value = 'edit-print';
+  $strongarm->value = 'edit-workflow';
   $export['additional_settings__active_tab_knactivity'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -42,9 +42,7 @@ function kulturnaut_events_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'node_options_knactivity';
-  $strongarm->value = array(
-    0 => 'status',
-  );
+  $strongarm->value = array();
   $export['node_options_knactivity'] = $strongarm;
 
   $strongarm = new stdClass();
