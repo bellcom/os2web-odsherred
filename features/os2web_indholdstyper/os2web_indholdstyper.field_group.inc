@@ -99,7 +99,7 @@ function os2web_indholdstyper_field_group_info() {
   $field_group->parent_name = 'group_hidden';
   $field_group->data = array(
     'label' => 'Sager og dokumenter',
-    'weight' => '6',
+    'weight' => '53',
     'children' => array(
       0 => 'field_case',
       1 => 'field_doc',
@@ -221,9 +221,10 @@ function os2web_indholdstyper_field_group_info() {
     'label' => 'Skjult',
     'weight' => '18',
     'children' => array(
-      0 => 'field_source_id',
-      1 => 'field_site_structure',
-      2 => 'group_esdh',
+      0 => 'field_lead_image',
+      1 => 'field_source_id',
+      2 => 'field_site_structure',
+      3 => 'group_esdh',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(

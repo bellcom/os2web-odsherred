@@ -65,7 +65,7 @@ function os2web_menuer_og_blokke_menu_default_menu_links() {
     'module' => 'menu',
     'hidden' => '0',
     'external' => '0',
-    'has_children' => '0',
+    'has_children' => '1',
     'expanded' => '0',
     'weight' => '0',
   );
@@ -217,23 +217,7 @@ function os2web_menuer_og_blokke_menu_default_menu_links() {
     'external' => '0',
     'has_children' => '0',
     'expanded' => '0',
-    'weight' => '-47',
-  );
-  // Exported menu link: menu-erhverv-genveje:node/2212
-  $menu_links['menu-erhverv-genveje:node/2212'] = array(
-    'menu_name' => 'menu-erhverv-genveje',
-    'link_path' => 'node/2212',
-    'router_path' => 'node/%',
-    'link_title' => 'Om Kommunen',
-    'options' => array(
-      'attributes' => array(),
-    ),
-    'module' => 'menu',
-    'hidden' => '0',
-    'external' => '0',
-    'has_children' => '0',
-    'expanded' => '0',
-    'weight' => '-45',
+    'weight' => '-46',
   );
   // Exported menu link: menu-erhverv-genveje:nyheder
   $menu_links['menu-erhverv-genveje:nyheder'] = array(
@@ -265,7 +249,7 @@ function os2web_menuer_og_blokke_menu_default_menu_links() {
     'external' => '0',
     'has_children' => '0',
     'expanded' => '0',
-    'weight' => '-48',
+    'weight' => '-47',
   );
   // Exported menu link: menu-indholdsmenu:taxonomy/term/4
   $menu_links['menu-indholdsmenu:taxonomy/term/4'] = array(
@@ -310,7 +294,7 @@ function os2web_menuer_og_blokke_menu_default_menu_links() {
     'menu_name' => 'menu-indholdsmenu',
     'link_path' => 'taxonomy/term/6',
     'router_path' => 'taxonomy/term/%',
-    'link_title' => 'Politik & planer',
+    'link_title' => 'Politik',
     'options' => array(
       'minipanel' => '',
       'attributes' => array(
@@ -340,23 +324,6 @@ function os2web_menuer_og_blokke_menu_default_menu_links() {
     'has_children' => '0',
     'expanded' => '0',
     'weight' => '-49',
-  );
-  // Exported menu link: menu-top-menu:node/2942
-  $menu_links['menu-top-menu:node/2942'] = array(
-    'menu_name' => 'menu-top-menu',
-    'link_path' => 'node/2942',
-    'router_path' => 'node/%',
-    'link_title' => 'Cookies',
-    'options' => array(
-      'minipanel' => '',
-      'attributes' => array(),
-    ),
-    'module' => 'menu',
-    'hidden' => '0',
-    'external' => '0',
-    'has_children' => '0',
-    'expanded' => '0',
-    'weight' => '0',
   );
   // Exported menu link: menu-top-menu:user/logout
   $menu_links['menu-top-menu:user/logout'] = array(
@@ -408,7 +375,6 @@ function os2web_menuer_og_blokke_menu_default_menu_links() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Borger');
-  t('Cookies');
   t('Erhverv');
   t('Job');
   t('Kontakt');
@@ -416,9 +382,7 @@ function os2web_menuer_og_blokke_menu_default_menu_links() {
   t('Log ud');
   t('Læs højt');
   t('Nyheder');
-  t('Om Kommunen');
   t('Politik');
-  t('Politik & planer');
   t('Selvbetjening');
   t('User account');
 

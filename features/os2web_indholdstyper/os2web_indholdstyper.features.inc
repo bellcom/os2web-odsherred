@@ -36,7 +36,7 @@ function os2web_indholdstyper_image_default_styles() {
   $styles['indholdsside'] = array(
     'name' => 'indholdsside',
     'effects' => array(
-      8 => array(
+      5 => array(
         'label' => 'Skalér og beskær',
         'help' => 'Skalering og beskæring bevarer billedets højde-bredde-forhold og beskærer derefter den største dimension. Det er nyttigt til at generere kvadratiske thumbnails uden at forvrænge billedet.',
         'effect callback' => 'image_scale_and_crop_effect',

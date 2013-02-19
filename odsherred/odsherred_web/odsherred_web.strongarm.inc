@@ -73,7 +73,7 @@ function odsherred_web_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'site_map_show_front';
-  $strongarm->value = 1;
+  $strongarm->value = 0;
   $export['site_map_show_front'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -113,7 +113,7 @@ function odsherred_web_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'site_map_show_rss_links';
-  $strongarm->value = '1';
+  $strongarm->value = '0';
   $export['site_map_show_rss_links'] = $strongarm;
 
   $strongarm = new stdClass();
