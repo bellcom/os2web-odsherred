@@ -291,6 +291,31 @@ function os2web_grund_paneler_views_default_views() {
   );
   $handler->display->display_options['fields']['field_lead_image']['delta_offset'] = '0';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filterkriterie: Indhold: Udgivet */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filterkriterie: Indhold: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'news' => 'news',
+  );
+  $handler->display->display_options['filters']['type']['group'] = 1;
+  /* Filterkriterie: Indhold: Forfrem til (field_promoteto) */
+  $handler->display->display_options['filters']['field_promoteto_tid']['id'] = 'field_promoteto_tid';
+  $handler->display->display_options['filters']['field_promoteto_tid']['table'] = 'field_data_field_promoteto';
+  $handler->display->display_options['filters']['field_promoteto_tid']['field'] = 'field_promoteto_tid';
+  $handler->display->display_options['filters']['field_promoteto_tid']['value'] = array(
+    0 => '12264',
+  );
+  $handler->display->display_options['filters']['field_promoteto_tid']['vocabulary'] = 'forfrem_til';
 
   /* Display: Blok */
   $handler = $view->new_display('block', 'Blok', 'block_1');
