@@ -233,7 +233,7 @@ function os2web_andre_sites_og_subsites_field_default_fields() {
           'module' => 'image',
           'settings' => array(
             'image_link' => '',
-            'image_style' => 'grid3',
+            'image_style' => '',
           ),
           'type' => 'image',
           'weight' => '1',
@@ -249,7 +249,7 @@ function os2web_andre_sites_og_subsites_field_default_fields() {
           'module' => 'image',
           'settings' => array(
             'image_link' => '',
-            'image_style' => 'grid3',
+            'image_style' => '',
           ),
           'type' => 'image',
           'weight' => '1',
