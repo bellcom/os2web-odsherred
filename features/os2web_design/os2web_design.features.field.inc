@@ -49,7 +49,7 @@ function os2web_design_field_default_fields() {
           'label' => 'hidden',
           'module' => 'lightbox2',
           'settings' => array(),
-          'type' => 'lightbox2__lightbox__indholdsside__fullscreen',
+          'type' => 'lightbox2__lightbox__medium__original',
           'weight' => '0',
         ),
         'related_block' => array(

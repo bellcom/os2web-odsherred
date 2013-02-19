@@ -36,6 +36,7 @@ features[field][] = node-contentpage-field_case
 features[field][] = node-contentpage-field_doc
 features[field][] = node-contentpage-field_editortags
 features[field][] = node-contentpage-field_indholdsside_spotboxe
+features[field][] = node-contentpage-field_lead_image
 features[field][] = node-contentpage-field_mediafile
 features[field][] = node-contentpage-field_node_reference_kontaktblok
 features[field][] = node-contentpage-field_noderef_selvbtjn

@@ -274,10 +274,10 @@ function os2web_indholdstyper_strongarm() {
         'custom_settings' => FALSE,
       ),
       'search_index' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
       'search_result' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
       'print' => array(
         'custom_settings' => FALSE,
@@ -293,7 +293,22 @@ function os2web_indholdstyper_strongarm() {
       ),
     ),
     'extra_fields' => array(
-      'display' => array(),
+      'display' => array(
+        'webform' => array(
+          'default' => array(
+            'weight' => '10',
+            'visible' => TRUE,
+          ),
+          'search_index' => array(
+            'weight' => '10',
+            'visible' => TRUE,
+          ),
+          'search_result' => array(
+            'weight' => '4',
+            'visible' => FALSE,
+          ),
+        ),
+      ),
       'form' => array(
         'title' => array(
           'weight' => '-5',

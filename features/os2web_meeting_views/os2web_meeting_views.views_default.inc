@@ -1269,7 +1269,7 @@ echo \'<span class="bullet-point-print-link"></span>\';
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'Dagsordner og referater i Syddjurs Kommune';
+  $handler->display->display_options['title'] = 'Dagsordner og referater i Odsherred Kommune';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['use_more_text'] = 'mere';
   $handler->display->display_options['group_by'] = TRUE;
@@ -1425,7 +1425,7 @@ echo \'<span class="bullet-point-print-link"></span>\';
   $handler->display->display_options['sitename_title'] = 0;
   $translatables['meeting_feeds'] = array(
     t('Master'),
-    t('Dagsordner og referater i Syddjurs Kommune'),
+    t('Dagsordner og referater i Odsherred Kommune'),
     t('mere'),
     t('Udfør'),
     t('Gendan'),
