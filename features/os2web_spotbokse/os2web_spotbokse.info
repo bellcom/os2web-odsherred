@@ -38,6 +38,7 @@ features[field][] = node-spotbox-field_text
 features[field][] = node-spotbox-field_url
 features[field_group][] = group_billeder|node|spotbox|form
 features[field_group][] = group_links|node|spotbox|form
+features[field_group][] = group_spotbilleder|node|spotbox|form
 features[field_group][] = group_spotbox|node|spotbox|form
 features[field_group][] = group_taksonomi|node|spotbox|form
 features[field_group][] = group_tekst|node|spotbox|form
