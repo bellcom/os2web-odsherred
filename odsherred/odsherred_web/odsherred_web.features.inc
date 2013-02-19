@@ -28,6 +28,10 @@ function odsherred_web_ctools_plugin_api() {
   if ($module == "quicktabs" && $api == "quicktabs") {
     return array("version" => "1");
   }
+  list($module, $api) = func_get_args();
+  if ($module == "strongarm" && $api == "strongarm") {
+    return array("version" => "1");
+  }
 }
 
 /**
