@@ -72,6 +72,8 @@ function os2web_a2aa_index_views_default_views() {
   $handler->display->display_options['arguments']['title']['table'] = 'node';
   $handler->display->display_options['arguments']['title']['field'] = 'title';
   $handler->display->display_options['arguments']['title']['exception']['title'] = 'Alle';
+  $handler->display->display_options['arguments']['title']['title_enable'] = TRUE;
+  $handler->display->display_options['arguments']['title']['title'] = 'Index - %1';
   $handler->display->display_options['arguments']['title']['default_argument_type'] = 'fixed';
   $handler->display->display_options['arguments']['title']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['title']['summary']['format'] = 'default_summary';
@@ -117,6 +119,7 @@ function os2web_a2aa_index_views_default_views() {
     t('sidste »'),
     t('<a href="/a-aa-index">Alle</a> - <a href="/a-aa-index/a">A</a> - <a href="/a-aa-index/b">B</a> - <a href="/a-aa-index/c,d">CD</a> - <a href="/a-aa-index/e">E</a> - <a href="/a-aa-index/f">F</a> - <a href="/a-aa-index/g">G</a> - <a href="/a-aa-index/h">H</a> - <a href="/a-aa-index/i">I</a> - <a href="/a-aa-index/j">J</a> - <a href="/a-aa-index/k">K</a> - <a href="/a-aa-index/l">L</a> - <a href="/a-aa-index/m">M</a> - <a href="/a-aa-index/n">N</a> - <a href="/a-aa-index/o">O</a> - <a href="/a-aa-index/p">P</a> - <a href="/a-aa-index/q,r">QR</a> - <a href="/a-aa-index/s">S</a> - <a href="/a-aa-index/t">T</a> - <a href="/a-aa-index/u,v,w">UVW</a> - <a href="/a-aa-index/x,y,z,æ,ø,å">XYZÆØÅ</a>'),
     t('Alle'),
+    t('Index - %1'),
     t('Page'),
   );
   $export['a_aa_index'] = $view;
