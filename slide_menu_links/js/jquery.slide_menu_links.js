@@ -18,7 +18,7 @@ jQuery(document).ready(function($){
     {
       $('#page_2').load(left_link + " , #page");
     }
-    $('body').append('<div class="slider slider_left"><a class="slider_link" href="'+page1+'"><i class="link"></a></div>');
+    $('<div class="slider slider_left"><a class="slider_link" href="'+page1+'"><i class="link"></a></div>').appendTo('body');
   }
 
   if (Drupal.settings.slide_menu_links.slide_right_link !== '<notset>')
@@ -29,7 +29,7 @@ jQuery(document).ready(function($){
     {
       $('#page_3').load(right_link + " , #page");
     }
-    $('body').append('<div class="slider slider_right"><a class="slider_link" href="'+page2+'"><i class="link"></a></div>');
+    $('<div class="slider slider_right"><a class="slider_link" href="'+page2+'"><i class="link"></a></div>').appendTo('body');
   }
 
   if(location.hash) 
