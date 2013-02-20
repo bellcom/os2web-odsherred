@@ -121,6 +121,15 @@ function nyheder_views_default_views() {
     'news' => 'news',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
+  /* Filterkriterie: Indhold: Forfrem til (field_promoteto) */
+  $handler->display->display_options['filters']['field_promoteto_tid']['id'] = 'field_promoteto_tid';
+  $handler->display->display_options['filters']['field_promoteto_tid']['table'] = 'field_data_field_promoteto';
+  $handler->display->display_options['filters']['field_promoteto_tid']['field'] = 'field_promoteto_tid';
+  $handler->display->display_options['filters']['field_promoteto_tid']['operator'] = 'not';
+  $handler->display->display_options['filters']['field_promoteto_tid']['value'] = array(
+    0 => '25767',
+  );
+  $handler->display->display_options['filters']['field_promoteto_tid']['vocabulary'] = 'forfrem_til';
 
   /* Display: list 1 top */
   $handler = $view->new_display('panel_pane', 'list 1 top', 'panel_pane_1');
@@ -484,6 +493,15 @@ function nyheder_views_default_views() {
   );
   $handler->display->display_options['filters']['field_newstype_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_newstype_tid']['vocabulary'] = 'nyhedstype';
+  /* Filterkriterie: Indhold: Forfrem til (field_promoteto) */
+  $handler->display->display_options['filters']['field_promoteto_tid']['id'] = 'field_promoteto_tid';
+  $handler->display->display_options['filters']['field_promoteto_tid']['table'] = 'field_data_field_promoteto';
+  $handler->display->display_options['filters']['field_promoteto_tid']['field'] = 'field_promoteto_tid';
+  $handler->display->display_options['filters']['field_promoteto_tid']['operator'] = 'not';
+  $handler->display->display_options['filters']['field_promoteto_tid']['value'] = array(
+    0 => '25767',
+  );
+  $handler->display->display_options['filters']['field_promoteto_tid']['vocabulary'] = 'forfrem_til';
 
   /* Display: Mødeaktiviteter */
   $handler = $view->new_display('block', 'Mødeaktiviteter', 'block_2');
@@ -570,6 +588,15 @@ function nyheder_views_default_views() {
     0 => '25766',
   );
   $handler->display->display_options['filters']['field_newstype_tid']['vocabulary'] = 'nyhedstype';
+  /* Filterkriterie: Indhold: Forfrem til (field_promoteto) */
+  $handler->display->display_options['filters']['field_promoteto_tid']['id'] = 'field_promoteto_tid';
+  $handler->display->display_options['filters']['field_promoteto_tid']['table'] = 'field_data_field_promoteto';
+  $handler->display->display_options['filters']['field_promoteto_tid']['field'] = 'field_promoteto_tid';
+  $handler->display->display_options['filters']['field_promoteto_tid']['operator'] = 'not';
+  $handler->display->display_options['filters']['field_promoteto_tid']['value'] = array(
+    0 => '25767',
+  );
+  $handler->display->display_options['filters']['field_promoteto_tid']['vocabulary'] = 'forfrem_til';
 
   /* Display: Udbud */
   $handler = $view->new_display('block', 'Udbud', 'block_3');
@@ -656,6 +683,15 @@ function nyheder_views_default_views() {
     0 => '25765',
   );
   $handler->display->display_options['filters']['field_newstype_tid']['vocabulary'] = 'nyhedstype';
+  /* Filterkriterie: Indhold: Forfrem til (field_promoteto) */
+  $handler->display->display_options['filters']['field_promoteto_tid']['id'] = 'field_promoteto_tid';
+  $handler->display->display_options['filters']['field_promoteto_tid']['table'] = 'field_data_field_promoteto';
+  $handler->display->display_options['filters']['field_promoteto_tid']['field'] = 'field_promoteto_tid';
+  $handler->display->display_options['filters']['field_promoteto_tid']['operator'] = 'not';
+  $handler->display->display_options['filters']['field_promoteto_tid']['value'] = array(
+    0 => '25767',
+  );
+  $handler->display->display_options['filters']['field_promoteto_tid']['vocabulary'] = 'forfrem_til';
   $translatables['news_page_views'] = array(
     t('Master'),
     t('mere'),
