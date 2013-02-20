@@ -288,7 +288,7 @@ function os2web_menuer_og_blokke_menu_default_menu_links() {
     'external' => '0',
     'has_children' => '1',
     'expanded' => '0',
-    'weight' => '-49',
+    'weight' => '-48',
   );
   // Exported menu link: menu-indholdsmenu:taxonomy/term/6
   $menu_links['menu-indholdsmenu:taxonomy/term/6'] = array(
@@ -307,7 +307,7 @@ function os2web_menuer_og_blokke_menu_default_menu_links() {
     'external' => '0',
     'has_children' => '1',
     'expanded' => '0',
-    'weight' => '-48',
+    'weight' => '-47',
   );
   // Exported menu link: menu-top-menu:http://www.adgangforalle.dk/
   $menu_links['menu-top-menu:http://www.adgangforalle.dk/'] = array(
