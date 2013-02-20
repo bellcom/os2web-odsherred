@@ -222,13 +222,6 @@ function os2web_grund_paneler_views_default_views() {
   $handler->display->display_options['relationships']['parent']['field'] = 'parent';
   $handler->display->display_options['relationships']['parent']['relationship'] = 'field_site_structure_tid';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Felt: Indhold: Link */
-  $handler->display->display_options['fields']['view_node']['id'] = 'view_node';
-  $handler->display->display_options['fields']['view_node']['table'] = 'views_entity_node';
-  $handler->display->display_options['fields']['view_node']['field'] = 'view_node';
-  $handler->display->display_options['fields']['view_node']['label'] = '';
-  $handler->display->display_options['fields']['view_node']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['view_node']['element_label_colon'] = FALSE;
   /* Felt: Ord i ordforråd: Term ID */
   $handler->display->display_options['fields']['tid_2']['id'] = 'tid_2';
   $handler->display->display_options['fields']['tid_2']['table'] = 'taxonomy_term_data';
@@ -275,9 +268,6 @@ function os2web_grund_paneler_views_default_views() {
   $handler->display->display_options['fields']['field_resume_long']['table'] = 'field_data_field_resume_long';
   $handler->display->display_options['fields']['field_resume_long']['field'] = 'field_resume_long';
   $handler->display->display_options['fields']['field_resume_long']['label'] = '';
-  $handler->display->display_options['fields']['field_resume_long']['alter']['make_link'] = TRUE;
-  $handler->display->display_options['fields']['field_resume_long']['alter']['path'] = '[view_node]';
-  $handler->display->display_options['fields']['field_resume_long']['alter']['alt'] = 'Læs nyheden';
   $handler->display->display_options['fields']['field_resume_long']['alter']['max_length'] = '70';
   $handler->display->display_options['fields']['field_resume_long']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['field_resume_long']['alter']['trim'] = TRUE;
@@ -323,7 +313,7 @@ function os2web_grund_paneler_views_default_views() {
   $handler->display->display_options['filters']['field_promoteto_tid']['table'] = 'field_data_field_promoteto';
   $handler->display->display_options['filters']['field_promoteto_tid']['field'] = 'field_promoteto_tid';
   $handler->display->display_options['filters']['field_promoteto_tid']['value'] = array(
-    0 => '25767',
+    0 => '25768',
   );
   $handler->display->display_options['filters']['field_promoteto_tid']['vocabulary'] = 'forfrem_til';
 
@@ -605,7 +595,6 @@ function os2web_grund_paneler_views_default_views() {
     t('[tid_2]'),
     t('<i class="bullet term-[tid_1]"></i>'),
     t(','),
-    t('Læs nyheden'),
     t('View panes'),
     t('Blok'),
     t('Forside - Portalnyhed - 1'),
