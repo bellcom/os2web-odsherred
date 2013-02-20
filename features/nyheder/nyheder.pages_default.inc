@@ -642,7 +642,7 @@ function nyheder_default_page_manager_pages() {
     $pane->configuration = array(
       'admin_title' => '',
       'title' => '',
-      'body' => '<div class="header">Nyheder &amp; Presse</div>',
+      'body' => '<div class="header">Nyheder og Presse</div>',
       'format' => 'filtered_html',
       'substitute' => TRUE,
     );
