@@ -224,8 +224,9 @@ function os2web_menuer_og_blokke_menu_default_menu_links() {
     'menu_name' => 'menu-erhverv-genveje',
     'link_path' => 'nyheder',
     'router_path' => 'nyheder',
-    'link_title' => 'Nyheder',
+    'link_title' => 'Nyheder og Presse',
     'options' => array(
+      'minipanel' => '',
       'attributes' => array(),
     ),
     'module' => 'menu',
@@ -381,7 +382,7 @@ function os2web_menuer_og_blokke_menu_default_menu_links() {
   t('Log out');
   t('Log ud');
   t('Læs højt');
-  t('Nyheder');
+  t('Nyheder og Presse');
   t('Politik');
   t('Selvbetjening');
   t('User account');
