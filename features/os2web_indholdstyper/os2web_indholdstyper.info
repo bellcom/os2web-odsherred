@@ -43,7 +43,6 @@ features[field][] = node-contentpage-field_node_reference_kontaktblok
 features[field][] = node-contentpage-field_noderef_selvbtjn
 features[field][] = node-contentpage-field_organization
 features[field][] = node-contentpage-field_politics
-features[field][] = node-contentpage-field_reference
 features[field][] = node-contentpage-field_resume_long
 features[field][] = node-contentpage-field_rotate_publish
 features[field][] = node-contentpage-field_site_structure
