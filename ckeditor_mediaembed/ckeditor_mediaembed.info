@@ -1,0 +1,3 @@
+name = MediaEmbed for ckeditor
+description = adds mediaembed plugin for ckeditor
+core = 7.x

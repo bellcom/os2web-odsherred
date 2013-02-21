@@ -37,6 +37,9 @@ function os2web_indholdstyper_wysiwyg_default_profiles() {
         'linkit' => array(
           'linkit' => 1,
         ),
+        'mediaembed' => array(
+          'MediaEmbed' => 1,
+        ),
         'drupal' => array(
           'media' => 1,
         ),
@@ -94,6 +97,9 @@ Telefonnummer = telefonnummer',
         ),
         'linkit' => array(
           'linkit' => 1,
+        ),
+        'mediaembed' => array(
+          'MediaEmbed' => 1,
         ),
         'drupal' => array(
           'media' => 1,
@@ -181,8 +187,10 @@ Telefonnummer = telefonnummer',
         'linkit' => array(
           'linkit' => 1,
         ),
+        'mediaembed' => array(
+          'MediaEmbed' => 1,
+        ),
         'drupal' => array(
-          'media' => 1,
           'break' => 1,
         ),
       ),
