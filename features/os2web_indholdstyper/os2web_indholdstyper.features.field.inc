@@ -242,7 +242,7 @@ function os2web_indholdstyper_field_default_fields() {
         'max_resolution' => '',
         'min_resolution' => '690x340',
         'title_field' => 1,
-        'title_field_required' => 1,
+        'title_field_required' => 0,
         'user_register_form' => FALSE,
       ),
       'widget' => array(
