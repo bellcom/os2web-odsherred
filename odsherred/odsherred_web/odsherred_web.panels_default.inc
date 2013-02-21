@@ -146,7 +146,7 @@ function odsherred_web_default_panels_mini() {
     $pane->access = array();
     $pane->configuration = array(
       'override_title' => 1,
-      'override_title_text' => 'Emner under borger...',
+      'override_title_text' => 'Sider under Borger',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -362,7 +362,7 @@ function odsherred_web_default_panels_mini() {
     $pane->access = array();
     $pane->configuration = array(
       'override_title' => 1,
-      'override_title_text' => 'Sider under erhverv...',
+      'override_title_text' => 'Sider under Erhverv',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -569,7 +569,7 @@ function odsherred_web_default_panels_mini() {
     $pane->access = array();
     $pane->configuration = array(
       'override_title' => 1,
-      'override_title_text' => 'Sider under politik...',
+      'override_title_text' => 'Sider under Politik',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -781,7 +781,7 @@ function odsherred_web_default_panels_mini() {
     $pane->access = array();
     $pane->configuration = array(
       'override_title' => 1,
-      'override_title_text' => 'Sider under borger',
+      'override_title_text' => 'Sider under Borger',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -954,7 +954,7 @@ function odsherred_web_default_panels_mini() {
     $pane->access = array();
     $pane->configuration = array(
       'override_title' => 1,
-      'override_title_text' => 'Sider under erhverv...',
+      'override_title_text' => 'Sider under Erhverv',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -1133,7 +1133,7 @@ function odsherred_web_default_panels_mini() {
     $pane->access = array();
     $pane->configuration = array(
       'override_title' => 1,
-      'override_title_text' => 'Sider under Politik...',
+      'override_title_text' => 'Sider under Politik',
     );
     $pane->cache = array();
     $pane->style = array(
