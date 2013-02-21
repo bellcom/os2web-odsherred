@@ -9,7 +9,6 @@ jQuery(document).ready(function($){
       backDirection = '';
 
   $('#page').attr('id', 'page_1');
-
   if (Drupal.settings.slide_menu_links.slide_left_link !== '<notset>')
   {
     $('<div data-role="page" id="page_2">').insertBefore('#page_1');
@@ -18,7 +17,8 @@ jQuery(document).ready(function($){
     {
       $('#page_2').load(left_link + " , #page");
     }
-    $('body').append('<div class="slider slider_left"><a class="slider_link" href="'+page1+'"><i class="link"></a></div>');
+    var sliderLeftHtml = '<div class="slider slider_left"><a class="slider_link" href="'+page1+'"><i class="link"></i></a></div>';
+    $(sliderLeftHtml).insertAfter('#page_1');
   }
 
   if (Drupal.settings.slide_menu_links.slide_right_link !== '<notset>')
@@ -29,7 +29,8 @@ jQuery(document).ready(function($){
     {
       $('#page_3').load(right_link + " , #page");
     }
-    $('body').append('<div class="slider slider_right"><a class="slider_link" href="'+page2+'"><i class="link"></a></div>');
+    var sliderRightHtml = '<div class="slider slider_right"><a class="slider_link" href="'+page2+'"><i class="link"></i></a></div>';
+    $(sliderRightHtml).insertAfter('#page_1');
   }
 
   if(location.hash) 
