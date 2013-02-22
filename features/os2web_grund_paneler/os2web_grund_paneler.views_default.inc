@@ -222,6 +222,14 @@ function os2web_grund_paneler_views_default_views() {
   $handler->display->display_options['relationships']['parent']['field'] = 'parent';
   $handler->display->display_options['relationships']['parent']['relationship'] = 'field_site_structure_tid';
   $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Felt: Indhold: Nid */
+  $handler->display->display_options['fields']['nid']['id'] = 'nid';
+  $handler->display->display_options['fields']['nid']['table'] = 'node';
+  $handler->display->display_options['fields']['nid']['field'] = 'nid';
+  $handler->display->display_options['fields']['nid']['label'] = '';
+  $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['nid']['element_default_classes'] = FALSE;
   /* Felt: Ord i ordforråd: Term ID */
   $handler->display->display_options['fields']['tid_2']['id'] = 'tid_2';
   $handler->display->display_options['fields']['tid_2']['table'] = 'taxonomy_term_data';
@@ -268,6 +276,9 @@ function os2web_grund_paneler_views_default_views() {
   $handler->display->display_options['fields']['field_resume_long']['table'] = 'field_data_field_resume_long';
   $handler->display->display_options['fields']['field_resume_long']['field'] = 'field_resume_long';
   $handler->display->display_options['fields']['field_resume_long']['label'] = '';
+  $handler->display->display_options['fields']['field_resume_long']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['field_resume_long']['alter']['path'] = 'node/[nid]';
+  $handler->display->display_options['fields']['field_resume_long']['alter']['absolute'] = TRUE;
   $handler->display->display_options['fields']['field_resume_long']['alter']['max_length'] = '70';
   $handler->display->display_options['fields']['field_resume_long']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['field_resume_long']['alter']['trim'] = TRUE;
@@ -279,6 +290,7 @@ function os2web_grund_paneler_views_default_views() {
   $handler->display->display_options['fields']['field_lead_image']['table'] = 'field_data_field_lead_image';
   $handler->display->display_options['fields']['field_lead_image']['field'] = 'field_lead_image';
   $handler->display->display_options['fields']['field_lead_image']['label'] = '';
+  $handler->display->display_options['fields']['field_lead_image']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_lead_image']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_lead_image']['element_wrapper_type'] = 'div';
   $handler->display->display_options['fields']['field_lead_image']['element_wrapper_class'] = 'background-images';
@@ -286,10 +298,25 @@ function os2web_grund_paneler_views_default_views() {
   $handler->display->display_options['fields']['field_lead_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_lead_image']['type'] = 'image_url';
   $handler->display->display_options['fields']['field_lead_image']['settings'] = array(
-    'image_style' => 'fullscreen',
+    'image_style' => '',
     'image_link' => '',
   );
   $handler->display->display_options['fields']['field_lead_image']['delta_offset'] = '0';
+  /* Felt: Indhold: Baggrundsbillede */
+  $handler->display->display_options['fields']['field_side_baggrungsbillede']['id'] = 'field_side_baggrungsbillede';
+  $handler->display->display_options['fields']['field_side_baggrungsbillede']['table'] = 'field_data_field_side_baggrungsbillede';
+  $handler->display->display_options['fields']['field_side_baggrungsbillede']['field'] = 'field_side_baggrungsbillede';
+  $handler->display->display_options['fields']['field_side_baggrungsbillede']['label'] = '';
+  $handler->display->display_options['fields']['field_side_baggrungsbillede']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_side_baggrungsbillede']['element_wrapper_type'] = 'div';
+  $handler->display->display_options['fields']['field_side_baggrungsbillede']['element_wrapper_class'] = 'background-images';
+  $handler->display->display_options['fields']['field_side_baggrungsbillede']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_side_baggrungsbillede']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_side_baggrungsbillede']['type'] = 'image_url';
+  $handler->display->display_options['fields']['field_side_baggrungsbillede']['settings'] = array(
+    'image_style' => 'fullscreen',
+    'image_link' => '',
+  );
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
@@ -308,14 +335,21 @@ function os2web_grund_paneler_views_default_views() {
     'news' => 'news',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-  /* Filterkriterie: Indhold: Forfrem til (field_promoteto) */
-  $handler->display->display_options['filters']['field_promoteto_tid']['id'] = 'field_promoteto_tid';
-  $handler->display->display_options['filters']['field_promoteto_tid']['table'] = 'field_data_field_promoteto';
-  $handler->display->display_options['filters']['field_promoteto_tid']['field'] = 'field_promoteto_tid';
-  $handler->display->display_options['filters']['field_promoteto_tid']['value'] = array(
-    0 => '25768',
+  /* Filterkriterie: Indhold: Type (field_newstype) */
+  $handler->display->display_options['filters']['field_newstype_tid']['id'] = 'field_newstype_tid';
+  $handler->display->display_options['filters']['field_newstype_tid']['table'] = 'field_data_field_newstype';
+  $handler->display->display_options['filters']['field_newstype_tid']['field'] = 'field_newstype_tid';
+  $handler->display->display_options['filters']['field_newstype_tid']['value'] = array(
+    25769 => '25769',
   );
-  $handler->display->display_options['filters']['field_promoteto_tid']['vocabulary'] = 'forfrem_til';
+  $handler->display->display_options['filters']['field_newstype_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_newstype_tid']['vocabulary'] = 'nyhedstype';
+  $handler->display->display_options['filters']['field_newstype_tid']['hierarchy'] = 1;
+  /* Filterkriterie: Indhold: Baggrundsbillede (field_side_baggrungsbillede:alt) */
+  $handler->display->display_options['filters']['field_side_baggrungsbillede_alt']['id'] = 'field_side_baggrungsbillede_alt';
+  $handler->display->display_options['filters']['field_side_baggrungsbillede_alt']['table'] = 'field_data_field_side_baggrungsbillede';
+  $handler->display->display_options['filters']['field_side_baggrungsbillede_alt']['field'] = 'field_side_baggrungsbillede_alt';
+  $handler->display->display_options['filters']['field_side_baggrungsbillede_alt']['operator'] = 'not empty';
 
   /* Display: Blok */
   $handler = $view->new_display('block', 'Blok', 'block_1');

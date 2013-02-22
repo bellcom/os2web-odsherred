@@ -844,7 +844,7 @@ function odsherred_web_default_panels_mini() {
       'expanded' => 0,
       'sort' => 0,
       'override_title' => 1,
-      'override_title_text' => 'Ofte stille spørgsmål...',
+      'override_title_text' => 'Ofte stille spørgsmål',
     );
     $pane->cache = array();
     $pane->style = array(

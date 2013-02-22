@@ -55,7 +55,7 @@ function odsherred_web_context_default_contexts() {
           'module' => 'delta_blocks',
           'delta' => 'breadcrumb',
           'region' => 'sidebar_first',
-          'weight' => '-10',
+          'weight' => '-11',
         ),
         'search-form' => array(
           'module' => 'search',

@@ -710,7 +710,7 @@ function nyheder_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'I udbud lige nu...';
+  $handler->display->display_options['title'] = 'I høring lige nu';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['use_more_text'] = 'mere';
   $handler->display->display_options['access']['type'] = 'perm';
@@ -796,19 +796,10 @@ function nyheder_views_default_views() {
   $handler->display->display_options['filters']['field_newstype_tid']['table'] = 'field_data_field_newstype';
   $handler->display->display_options['filters']['field_newstype_tid']['field'] = 'field_newstype_tid';
   $handler->display->display_options['filters']['field_newstype_tid']['value'] = array(
-    25755 => '25755',
+    25752 => '25752',
   );
   $handler->display->display_options['filters']['field_newstype_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_newstype_tid']['vocabulary'] = 'nyhedstype';
-  /* Filterkriterie: Indhold: Portalkategori (field_site_structure) */
-  $handler->display->display_options['filters']['field_site_structure_tid']['id'] = 'field_site_structure_tid';
-  $handler->display->display_options['filters']['field_site_structure_tid']['table'] = 'field_data_field_site_structure';
-  $handler->display->display_options['filters']['field_site_structure_tid']['field'] = 'field_site_structure_tid';
-  $handler->display->display_options['filters']['field_site_structure_tid']['value'] = array(
-    6 => '6',
-  );
-  $handler->display->display_options['filters']['field_site_structure_tid']['type'] = 'select';
-  $handler->display->display_options['filters']['field_site_structure_tid']['vocabulary'] = 'site_struktur';
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
@@ -834,7 +825,7 @@ function nyheder_views_default_views() {
   $handler->display->display_options['filters']['field_newstype_tid']['table'] = 'field_data_field_newstype';
   $handler->display->display_options['filters']['field_newstype_tid']['field'] = 'field_newstype_tid';
   $handler->display->display_options['filters']['field_newstype_tid']['value'] = array(
-    25755 => '25755',
+    25752 => '25752',
   );
   $handler->display->display_options['filters']['field_newstype_tid']['expose']['operator_id'] = 'field_newstype_tid_op';
   $handler->display->display_options['filters']['field_newstype_tid']['expose']['label'] = 'Type (field_newstype)';
@@ -856,7 +847,7 @@ function nyheder_views_default_views() {
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   $translatables['nyheder_hoeringer'] = array(
     t('Master'),
-    t('I udbud lige nu...'),
+    t('I høring lige nu'),
     t('mere'),
     t('Udfør'),
     t('Gendan'),
@@ -1261,7 +1252,7 @@ function nyheder_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'I udbud lige nu...';
+  $handler->display->display_options['title'] = 'I udbud lige nu';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['use_more_text'] = 'mere';
   $handler->display->display_options['access']['type'] = 'perm';
@@ -1385,7 +1376,7 @@ function nyheder_views_default_views() {
   $handler->display->display_options['filters']['field_newstype_tid']['table'] = 'field_data_field_newstype';
   $handler->display->display_options['filters']['field_newstype_tid']['field'] = 'field_newstype_tid';
   $handler->display->display_options['filters']['field_newstype_tid']['value'] = array(
-    25754 => '25754',
+    25755 => '25755',
   );
   $handler->display->display_options['filters']['field_newstype_tid']['expose']['operator_id'] = 'field_newstype_tid_op';
   $handler->display->display_options['filters']['field_newstype_tid']['expose']['label'] = 'Type (field_newstype)';
@@ -1407,7 +1398,7 @@ function nyheder_views_default_views() {
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   $translatables['nyheder_udbud'] = array(
     t('Master'),
-    t('I udbud lige nu...'),
+    t('I udbud lige nu'),
     t('mere'),
     t('Udfør'),
     t('Gendan'),
