@@ -2700,6 +2700,13 @@ return $field==1?true:false;';
   $handler->display->display_options['filters']['type']['value'] = array(
     'selvbetjeningslinks' => 'selvbetjeningslinks',
   );
+  /* Filterkriterie: Indhold: Type (field_selvbetjeningslink_type) */
+  $handler->display->display_options['filters']['field_selvbetjeningslink_type_value']['id'] = 'field_selvbetjeningslink_type_value';
+  $handler->display->display_options['filters']['field_selvbetjeningslink_type_value']['table'] = 'field_data_field_selvbetjeningslink_type';
+  $handler->display->display_options['filters']['field_selvbetjeningslink_type_value']['field'] = 'field_selvbetjeningslink_type_value';
+  $handler->display->display_options['filters']['field_selvbetjeningslink_type_value']['value'] = array(
+    'megamenu' => 'megamenu',
+  );
 
   /* Display: SB-block-forside-att-1 */
   $handler = $view->new_display('block', 'SB-block-forside-att-1', 'sb_block_forside_att_1');
@@ -3582,6 +3589,55 @@ return $field==1?true:false;';
   $handler->display->display_options['filters']['type']['value'] = array(
     'selvbetjeningslinks' => 'selvbetjeningslinks',
   );
+
+  /* Display: References */
+  $handler = $view->new_display('references', 'References', 'references_1');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'references_style';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'references_fields';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Felt: Indhold: Titel */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['title']['alter']['path'] = '[field_selvbetjening_direkte]';
+  $handler->display->display_options['fields']['title']['alter']['alt'] = '[title]';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filterkriterie: Indhold: Udgivet */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filterkriterie: Indhold: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'selvbetjeningslinks' => 'selvbetjeningslinks',
+  );
+  /* Filterkriterie: Indhold: Type (field_selvbetjeningslink_type) */
+  $handler->display->display_options['filters']['field_selvbetjeningslink_type_value']['id'] = 'field_selvbetjeningslink_type_value';
+  $handler->display->display_options['filters']['field_selvbetjeningslink_type_value']['table'] = 'field_data_field_selvbetjeningslink_type';
+  $handler->display->display_options['filters']['field_selvbetjeningslink_type_value']['field'] = 'field_selvbetjeningslink_type_value';
+  $handler->display->display_options['filters']['field_selvbetjeningslink_type_value']['value'] = array(
+    'liste' => 'liste',
+  );
   $translatables['selvbetjening'] = array(
     t('Master'),
     t('Selvbetjening'),
@@ -3634,6 +3690,7 @@ return $field==1?true:false;';
     t('<a href="node/[field_attached_node]" title="[title] ">[title]</a>'),
     t('<a href="[field_selvbetjening_direkte]" title="[title]">[title]</a>'),
     t('<a href="[field_attached_node_1]" title="[title]">[title]</a>'),
+    t('References'),
   );
   $export['selvbetjening'] = $view;
 
