@@ -528,7 +528,7 @@ function os2web_indholdstyper_strongarm() {
           'weight' => '-5',
         ),
         'path' => array(
-          'weight' => '45',
+          'weight' => '46',
         ),
         'workbench_access' => array(
           'weight' => '0',

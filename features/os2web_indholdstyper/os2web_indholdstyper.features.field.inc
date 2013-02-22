@@ -4608,7 +4608,7 @@ function os2web_indholdstyper_field_default_fields() {
       ),
       'widget' => array(
         'active' => 1,
-        'module' => 'image',
+        'module' => 'imagefield_crop',
         'settings' => array(
           'allowed_schemes' => array(
             0 => 'public',
@@ -4637,7 +4637,7 @@ function os2web_indholdstyper_field_default_fields() {
           'progress_indicator' => 'throbber',
           'resolution' => '214x116',
         ),
-        'type' => 'image_image',
+        'type' => 'imagefield_crop_widget',
         'weight' => '0',
       ),
     ),
@@ -5346,6 +5346,114 @@ function os2web_indholdstyper_field_default_fields() {
         ),
         'type' => 'text_textarea_with_summary',
         'weight' => '-2',
+      ),
+    ),
+  );
+
+  // Exported field: 'node-news-field_side_baggrungsbillede'.
+  $fields['node-news-field_side_baggrungsbillede'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_side_baggrungsbillede',
+      'foreign keys' => array(
+        'fid' => array(
+          'columns' => array(
+            'fid' => 'fid',
+          ),
+          'table' => 'file_managed',
+        ),
+      ),
+      'indexes' => array(
+        'fid' => array(
+          0 => 'fid',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'image',
+      'settings' => array(
+        'default_image' => 0,
+        'uri_scheme' => 'public',
+      ),
+      'translatable' => '0',
+      'type' => 'image',
+    ),
+    'field_instance' => array(
+      'bundle' => 'news',
+      'deleted' => '0',
+      'description' => 'Bruges til baggrund hvis nyheden vises på forsiden.',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'image',
+          'settings' => array(
+            'image_link' => '',
+            'image_style' => '',
+          ),
+          'type' => 'image',
+          'weight' => 18,
+        ),
+        'related_block' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_side_baggrungsbillede',
+      'label' => 'Baggrundsbillede',
+      'required' => 0,
+      'settings' => array(
+        'alt_field' => 1,
+        'alt_field_required' => 1,
+        'default_image' => 0,
+        'file_directory' => '',
+        'file_extensions' => 'png gif jpg jpeg',
+        'max_filesize' => '',
+        'max_resolution' => '1600x1200',
+        'min_resolution' => '1600x1200',
+        'title_field' => 1,
+        'title_field_required' => 0,
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'image',
+        'settings' => array(
+          'filefield_sources' => array(
+            'filefield_sources' => array(
+              'attach' => 0,
+              'clipboard' => 0,
+              'plupload' => 0,
+              'reference' => 0,
+              'remote' => 0,
+            ),
+            'source_attach' => array(
+              'absolute' => '0',
+              'attach_mode' => 'move',
+              'path' => 'file_attach',
+            ),
+            'source_imce' => array(
+              'imce_mode' => 0,
+            ),
+            'source_reference' => array(
+              'autocomplete' => '0',
+            ),
+          ),
+          'preview_image_style' => 'thumbnail',
+          'progress_indicator' => 'throbber',
+        ),
+        'type' => 'image_image',
+        'weight' => '45',
       ),
     ),
   );
@@ -7023,10 +7131,12 @@ function os2web_indholdstyper_field_default_fields() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('Baggrundsbillede');
   t('Billede');
   t('Billeder');
   t('Billeder og video');
   t('Brug ikke dette felt, brug i stedet det andet billedfelt. Du behøver ikke slette billeder der ikke skal ændres fra dette felt.');
+  t('Bruges til baggrund hvis nyheden vises på forsiden.');
   t('Dato');
   t('Dato for event og møde. Bruges hvor der skal angives en dato for start.');
   t('Det der vises med sort');

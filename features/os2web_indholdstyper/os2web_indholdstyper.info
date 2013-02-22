@@ -90,6 +90,7 @@ features[field][] = node-news-field_promoteto
 features[field][] = node-news-field_related
 features[field][] = node-news-field_related_tema
 features[field][] = node-news-field_resume_long
+features[field][] = node-news-field_side_baggrungsbillede
 features[field][] = node-news-field_site_structure
 features[field][] = node-news-field_source_id
 features[field][] = node-news-field_termref_kle
