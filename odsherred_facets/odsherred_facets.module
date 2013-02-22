@@ -1,0 +1,20 @@
+<?php
+
+/**
+ * @file
+ */
+
+function odsherred_facets_facetapi_widgets() {
+  return array(
+    'example' => array(
+      'handler' => array(
+        'label' => t('Links with classes'),
+        'class' => 'OdsherredFacetApiWidget',
+        'query types' => array('term', 'news type'),
+      ),
+    ),
+  );
+}
+
+
+
