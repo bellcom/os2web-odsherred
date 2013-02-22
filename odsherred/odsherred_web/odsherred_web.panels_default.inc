@@ -120,7 +120,7 @@ function odsherred_web_default_panels_mini() {
     $pane->configuration = array(
       'admin_title' => 'til borger',
       'title' => '<none>',
-      'body' => '<p><a href="/borger">Til forside</a></p>',
+      'body' => '<p><a href="/borger">Gå til Borger-sider</a></p>',
       'format' => 'filtered_html',
       'substitute' => TRUE,
     );
@@ -336,7 +336,7 @@ function odsherred_web_default_panels_mini() {
     $pane->configuration = array(
       'admin_title' => 'Gå til forside',
       'title' => '<none>',
-      'body' => '<p><a href="/erhverv">Til forside</a></p>',
+      'body' => '<p><a href="/erhverv">Gå til Erhvervs-sider</a></p>',
       'format' => 'filtered_html',
       'substitute' => TRUE,
     );
@@ -543,7 +543,7 @@ function odsherred_web_default_panels_mini() {
     $pane->configuration = array(
       'admin_title' => 'Gå til forside',
       'title' => '<none>',
-      'body' => '<p><a href="/politik">Til forside</a></p>',
+      'body' => '<p><a href="/politik">Gå til Politik-sider</a></p>',
       'format' => 'filtered_html',
       'substitute' => TRUE,
     );
