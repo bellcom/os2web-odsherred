@@ -1,10 +1,16 @@
 <?php
+/**
+ * @class OdsherredFacetApiWidget
+ *
+ * @author Thomas Thune Hansen <tth@bellcom.dk >
+ * @TODO
+ *  clean up code, implement drupal render arrays properly 
+ */
+
 class OdsherredFacetApiWidget extends FacetapiWidget {
   
   public function execute(){
     $elements = &$this->build[$this->facet['field alias']];
-    error_log(__FILE__.':'.__LINE__. print_r($elements, 1)); // tth@bellcom.dk debugging
-    error_log(__FILE__.':'.__LINE__. print_r($this->facet['field alias'], 1)); // tth@bellcom.dk debugging
 
     $markup = '<ul class="'.$this->facet['field alias'].' custom-facet">';
 

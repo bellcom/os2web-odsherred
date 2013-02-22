@@ -1,5 +1,5 @@
 name = Odsherred Search Facets
-description = Provides Odsherred search facets for ApacheSolr search.
+description = Provides custom facet widget for ApacheSolr search.
 dependencies[] = facetapi
 files[] = lib/class.odsherredFacetApiWidget.php
 core = 7.x
