@@ -642,8 +642,8 @@ function nyheder_default_page_manager_pages() {
     $pane->configuration = array(
       'admin_title' => '',
       'title' => '',
-      'body' => '<div class="header">Nyheder og Presse</div>',
-      'format' => 'filtered_html',
+      'body' => '<div class="header">Nyheder og Presse<div class="relative-container"><div class="filter-container"><ul class="facetapi-date-range facetapi-facet-changed facetapi-processed" id="facetapi-facet-apachesolrlocalhost-block-changed"><li><span class="facet-date-label">Sorter efter:</span></li><li class="leaf first"><a href="/search/news/?f[0]=im_field_site_structure%3A4" rel="nofollow">borger</a></li><li class="leaf"><a href="/search/news/?f[0]=im_field_site_structure%3A5" rel="nofollow">erhverv</a></li><li class="leaf"><a href="/search/news/?f[0]=im_field_site_structure%3A6" rel="nofollow">politik</a></li></ul><ul class="facetapi-date-range facetapi-facet-changed facetapi-processed" id="facetapi-facet-apachesolrlocalhost-block-changed"><li><span class="facet-date-label">Tidspunkt:</span></li><li class="leaf first"><a href="/search/news/?f[0]=ds_changed%3Apast_24_hours" rel="nofollow">Sidste 24 timer.</a></li><li class="leaf"><a href="/search/news/?f[0]=ds_changed%3Apast_hour" rel="nofollow">Sidste time.</a></li><li class="leaf"><a href="/search/news/?f[0]=ds_changed%3Apast_month" rel="nofollow">Sidste måned.</a></li><li class="leaf"><a href="/search/news/?f[0]=ds_changed%3Apast_week" rel="nofollow">Sidste uge.</a></li><li class="leaf last"><a href="/search/news/?f[0]=ds_changed%3Apast_year" rel="nofollow">Sidste år.</a></li></ul></div></div></div>',
+      'format' => 'full_html',
       'substitute' => TRUE,
     );
     $pane->cache = array();
