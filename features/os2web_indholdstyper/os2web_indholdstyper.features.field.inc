@@ -4608,7 +4608,7 @@ function os2web_indholdstyper_field_default_fields() {
       ),
       'widget' => array(
         'active' => 1,
-        'module' => 'media',
+        'module' => 'image',
         'settings' => array(
           'allowed_schemes' => array(
             0 => 'public',
@@ -4637,7 +4637,7 @@ function os2web_indholdstyper_field_default_fields() {
           'progress_indicator' => 'throbber',
           'resolution' => '214x116',
         ),
-        'type' => 'media_generic',
+        'type' => 'image_image',
         'weight' => '0',
       ),
     ),
