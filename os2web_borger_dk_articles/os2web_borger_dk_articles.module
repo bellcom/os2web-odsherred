@@ -31,7 +31,7 @@ function os2web_borger_dk_articles_menu() {
     'file' => 'os2web_borger_dk_articles.admin.inc',
   );
 
-  $items['import/borger-dk-article/autocomplete/%'] = array(
+  $items['import/borger-dk-article/autocomplete'] = array(
     'page callback' => '_os2web_borger_dk_articles_autocomplete_callback',
     'page arguments' => array(3),
     'access arguments' => array('create borger_dk_article content'),
@@ -186,7 +186,7 @@ function os2web_borger_dk_articles_autocomplete_form(&$form, $form_state) {
       '#type' => 'textfield',
       '#title' => t('Borger.dk Article title'),
       '#default_value' => (isset($form_state['values']['os2web_borger_dk_article_title_text'])) ? $form_state['values']['os2web_borger_dk_article_title_text'] : '',
-      '#autocomplete_path' => 'import/borger-dk-article/autocomplete/%',
+      '#autocomplete_path' => 'import/borger-dk-article/autocomplete',
       '#size' => 60,
       '#maxlength' => 255,
       '#attributes' => array('class' => array('auto_submit')),

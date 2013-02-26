@@ -34,7 +34,7 @@ function os2web_borger_dk_articles_settings_form($form, $form_state) {
     $newdata[$type] = t($item['label']);
   }
   $form_display = variable_get('os2web_borger_dk_articles_display');
-
+  
   $selected = array();
   if (isset($form_display) && !empty($form_display)) {
     $selected = $form_display;
