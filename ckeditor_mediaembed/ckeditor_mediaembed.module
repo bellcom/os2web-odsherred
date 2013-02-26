@@ -12,12 +12,12 @@
 /*
  * implements hook_mediaembed_wysiwyg_plugin()
  */
-function wysiwyg_mediaembed_wysiwyg_plugin($editor, $version) {
+function ckeditor_mediaembed_wysiwyg_plugin($editor, $version) {
   switch ($editor) {
     case 'ckeditor':
       return array(
           'mediaembed' => array(
-          'path' => drupal_get_path('module', 'ckeditor_mediaembed') . '/MediaEmbed/mediaembed',
+          'path' => libraries_get_path('mediaembed') . '/mediaembed',
           'buttons' => array(
           'MediaEmbed' => t('MediaEmbed'),
           ),

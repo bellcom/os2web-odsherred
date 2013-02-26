@@ -1,3 +1,5 @@
 name = MediaEmbed for ckeditor
-description = adds mediaembed plugin for ckeditor
+description = Adds mediaembed plugin for ckeditor
 core = 7.x
+dependencies[] = libraries
+dependencies[] = wysiwyg
