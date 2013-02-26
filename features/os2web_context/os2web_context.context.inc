@@ -288,7 +288,7 @@ function os2web_context_context_default_contexts() {
       'values' => array(
         'borger' => 'borger',
         'erhverv' => 'erhverv',
-        'politik-og-planer' => 'politik-og-planer',
+        'politik' => 'politik',
       ),
     ),
   );
@@ -303,7 +303,7 @@ function os2web_context_context_default_contexts() {
         ),
         'menu_block-11' => array(
           'module' => 'menu_block',
-          'delta' => 11,
+          'delta' => '11',
           'region' => 'sidebar_first',
           'weight' => '-9',
         ),
