@@ -267,6 +267,8 @@ function os2web_grund_paneler_views_default_views() {
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['title']['alter']['text'] = '<span class="text-container">[title]</span>';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
@@ -276,6 +278,8 @@ function os2web_grund_paneler_views_default_views() {
   $handler->display->display_options['fields']['field_resume_long']['table'] = 'field_data_field_resume_long';
   $handler->display->display_options['fields']['field_resume_long']['field'] = 'field_resume_long';
   $handler->display->display_options['fields']['field_resume_long']['label'] = '';
+  $handler->display->display_options['fields']['field_resume_long']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_resume_long']['alter']['text'] = '<span class="text-container">[field_resume_long-value]</span>';
   $handler->display->display_options['fields']['field_resume_long']['alter']['make_link'] = TRUE;
   $handler->display->display_options['fields']['field_resume_long']['alter']['path'] = 'node/[nid]';
   $handler->display->display_options['fields']['field_resume_long']['alter']['absolute'] = TRUE;
@@ -629,6 +633,8 @@ function os2web_grund_paneler_views_default_views() {
     t('[tid_2]'),
     t('<i class="bullet term-[tid_1]"></i>'),
     t(','),
+    t('<span class="text-container">[title]</span>'),
+    t('<span class="text-container">[field_resume_long-value]</span>'),
     t('View panes'),
     t('Blok'),
     t('Forside - Portalnyhed - 1'),
@@ -1725,6 +1731,10 @@ return $field==1?true:false;';
   $handler->display->display_options['fields']['type']['id'] = 'type';
   $handler->display->display_options['fields']['type']['table'] = 'node';
   $handler->display->display_options['fields']['type']['field'] = 'type';
+  /* Felt: Workbench Access: Sektion */
+  $handler->display->display_options['fields']['section']['id'] = 'section';
+  $handler->display->display_options['fields']['section']['table'] = 'workbench_access';
+  $handler->display->display_options['fields']['section']['field'] = 'section';
   /* Sorteringskriterie: Indhold: Oprettelsesdato */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
@@ -1773,6 +1783,7 @@ return $field==1?true:false;';
     t('Titel'),
     t('Indløb / Udløb'),
     t('Type'),
+    t('Sektion'),
     t('Alle'),
     t('Block'),
   );
