@@ -107,5 +107,93 @@ function nyheder_context_default_contexts() {
   $context->condition_mode = 1;
   $export['news-page'] = $context;
 
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
+  $context->name = 'news_node_view';
+  $context->description = 'News node view';
+  $context->tag = '';
+  $context->conditions = array(
+    'node' => array(
+      'values' => array(
+        'news' => 'news',
+      ),
+      'options' => array(
+        'node_form' => '1',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'block-11' => array(
+          'module' => 'block',
+          'delta' => '11',
+          'region' => 'sidebar_first',
+          'weight' => '-10',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('News node view');
+  $export['news_node_view'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
+  $context->name = 'news_search';
+  $context->description = 'search page context';
+  $context->tag = '';
+  $context->conditions = array(
+    'path' => array(
+      'values' => array(
+        'search/news*' => 'search/news*',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'apachesolr_search-sort' => array(
+          'module' => 'apachesolr_search',
+          'delta' => 'sort',
+          'region' => 'content',
+          'weight' => '-99',
+        ),
+        'facetapi-LT2dFnd8cMmZGLVNO9fmhxRE08mqPGTJ' => array(
+          'module' => 'facetapi',
+          'delta' => 'LT2dFnd8cMmZGLVNO9fmhxRE08mqPGTJ',
+          'region' => 'content',
+          'weight' => '-98',
+        ),
+        'facetapi-XgsLAqEUP0cGkgFM1lxSV1QvzvRgCRT4' => array(
+          'module' => 'facetapi',
+          'delta' => 'XgsLAqEUP0cGkgFM1lxSV1QvzvRgCRT4',
+          'region' => 'sidebar_first',
+          'weight' => '-8',
+        ),
+        'facetapi-OPDwFS26TeVgxxmByLy4OUj2pkORtZs0' => array(
+          'module' => 'facetapi',
+          'delta' => 'OPDwFS26TeVgxxmByLy4OUj2pkORtZs0',
+          'region' => 'sidebar_first',
+          'weight' => '5',
+        ),
+      ),
+    ),
+    'delta' => array(
+      'delta_template' => 'portalforside',
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('search page context');
+  $export['news_search'] = $context;
+
   return $export;
 }

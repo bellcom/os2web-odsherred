@@ -847,9 +847,7 @@ function os2web_spotbokse_field_default_fields() {
       'widget' => array(
         'active' => 1,
         'module' => 'options',
-        'settings' => array(
-          'content_taxonomy_opt_groups' => FALSE,
-        ),
+        'settings' => array(),
         'type' => 'options_select',
         'weight' => '1',
       ),
