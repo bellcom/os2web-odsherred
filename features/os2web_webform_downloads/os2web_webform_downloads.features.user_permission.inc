@@ -28,6 +28,8 @@ function os2web_webform_downloads_user_default_permissions() {
       0 => 'Administrator',
       1 => 'Editor',
       2 => 'Webmaster',
+      3 => 'Webredaktør',
+      4 => 'authenticated user',
     ),
     'module' => 'webform',
   );

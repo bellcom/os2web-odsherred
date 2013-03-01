@@ -286,8 +286,7 @@ function os2web_webform_downloads_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'webform_node_types';
   $strongarm->value = array(
-    0 => 'contentpage',
-    1 => 'webform',
+    0 => 'webform',
   );
   $export['webform_node_types'] = $strongarm;
 
