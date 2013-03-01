@@ -90,7 +90,7 @@ function os2web_design_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'job_scheduler_rebuild_all';
-  $strongarm->value = TRUE;
+  $strongarm->value = FALSE;
   $export['job_scheduler_rebuild_all'] = $strongarm;
 
   $strongarm = new stdClass();
