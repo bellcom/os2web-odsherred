@@ -186,9 +186,7 @@ function os2web_andre_sites_og_subsites_field_default_fields() {
       'widget' => array(
         'active' => 1,
         'module' => 'options',
-        'settings' => array(
-          'content_taxonomy_opt_groups' => FALSE,
-        ),
+        'settings' => array(),
         'type' => 'options_select',
         'weight' => '38',
       ),

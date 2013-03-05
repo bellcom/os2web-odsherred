@@ -62,7 +62,7 @@ function borgerdk_visning_default_page_manager_handlers() {
           'name' => 'node_type',
           'settings' => array(
             'type' => array(
-              'borger_dk_article' => 'borger_dk_article',
+              'os2web_borger_dk_article' => 'os2web_borger_dk_article',
             ),
           ),
           'context' => 'argument_entity_id:node_1',
@@ -177,11 +177,11 @@ function borgerdk_visning_default_page_manager_handlers() {
     $pane->pid = 'new-4';
     $pane->panel = 'stack1';
     $pane->type = 'entity_field';
-    $pane->subtype = 'node:field_os2web_header';
+    $pane->subtype = 'node:field_os2web_borger_dk_header';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'label' => 'hidden',
+      'label' => 'title',
       'formatter' => 'text_default',
       'delta_limit' => 0,
       'delta_offset' => '0',
@@ -189,7 +189,7 @@ function borgerdk_visning_default_page_manager_handlers() {
       'formatter_settings' => array(),
       'context' => 'argument_entity_id:node_1',
       'override_title' => 1,
-      'override_title_text' => '',
+      'override_title_text' => '<none>',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -205,19 +205,22 @@ function borgerdk_visning_default_page_manager_handlers() {
     $pane->pid = 'new-5';
     $pane->panel = 'stack1';
     $pane->type = 'entity_field';
-    $pane->subtype = 'node:field_os2web_pre_text';
+    $pane->subtype = 'node:field_billede';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
       'label' => 'hidden',
-      'formatter' => 'text_default',
-      'delta_limit' => 0,
+      'formatter' => 'image',
+      'delta_limit' => '0',
       'delta_offset' => '0',
-      'delta_reversed' => FALSE,
-      'formatter_settings' => array(),
+      'delta_reversed' => 0,
+      'formatter_settings' => array(
+        'image_style' => 'borger_dk_image',
+        'image_link' => '',
+      ),
       'context' => 'argument_entity_id:node_1',
       'override_title' => 1,
-      'override_title_text' => '',
+      'override_title_text' => '<none>',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -231,6 +234,34 @@ function borgerdk_visning_default_page_manager_handlers() {
     $display->panels['stack1'][4] = 'new-5';
     $pane = new stdClass();
     $pane->pid = 'new-6';
+    $pane->panel = 'stack2';
+    $pane->type = 'entity_field';
+    $pane->subtype = 'node:field_os2web_borger_dk_selfservi';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'label' => 'hidden',
+      'formatter' => 'text_default',
+      'delta_limit' => 0,
+      'delta_offset' => '0',
+      'delta_reversed' => FALSE,
+      'formatter_settings' => array(),
+      'context' => 'argument_entity_id:node_1',
+      'override_title' => 1,
+      'override_title_text' => '<none>',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-6'] = $pane;
+    $display->panels['stack2'][0] = 'new-6';
+    $pane = new stdClass();
+    $pane->pid = 'new-7';
     $pane->panel = 'stack2';
     $pane->type = 'views_panes';
     $pane->subtype = 'kle_lonks_boks-panel_pane_1';
@@ -247,34 +278,6 @@ function borgerdk_visning_default_page_manager_handlers() {
         0 => 'relationship_terms_from_node_1',
         1 => 'argument_entity_id:node_1',
       ),
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $display->content['new-6'] = $pane;
-    $display->panels['stack2'][0] = 'new-6';
-    $pane = new stdClass();
-    $pane->pid = 'new-7';
-    $pane->panel = 'stack2';
-    $pane->type = 'entity_field';
-    $pane->subtype = 'node:field_os2web_selfservice';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'label' => 'hidden',
-      'formatter' => 'text_default',
-      'delta_limit' => 0,
-      'delta_offset' => '0',
-      'delta_reversed' => FALSE,
-      'formatter_settings' => array(),
-      'context' => 'argument_entity_id:node_1',
-      'override_title' => 1,
-      'override_title_text' => '',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -321,11 +324,11 @@ function borgerdk_visning_default_page_manager_handlers() {
     $pane->pid = 'new-9';
     $pane->panel = 'stack3';
     $pane->type = 'entity_field';
-    $pane->subtype = 'node:field_os2web_post_text';
+    $pane->subtype = 'node:field_os2web_borger_dk_legislati';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'label' => 'hidden',
+      'label' => 'title',
       'formatter' => 'text_default',
       'delta_limit' => 0,
       'delta_offset' => '0',
@@ -333,7 +336,7 @@ function borgerdk_visning_default_page_manager_handlers() {
       'formatter_settings' => array(),
       'context' => 'argument_entity_id:node_1',
       'override_title' => 1,
-      'override_title_text' => '',
+      'override_title_text' => '<none>',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -349,11 +352,11 @@ function borgerdk_visning_default_page_manager_handlers() {
     $pane->pid = 'new-10';
     $pane->panel = 'stack4';
     $pane->type = 'entity_field';
-    $pane->subtype = 'node:field_os2web_recommended';
+    $pane->subtype = 'node:field_os2web_borger_dk_shortlist';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'label' => 'hidden',
+      'label' => 'title',
       'formatter' => 'text_default',
       'delta_limit' => 0,
       'delta_offset' => '0',
@@ -361,7 +364,7 @@ function borgerdk_visning_default_page_manager_handlers() {
       'formatter_settings' => array(),
       'context' => 'argument_entity_id:node_1',
       'override_title' => 1,
-      'override_title_text' => '',
+      'override_title_text' => '<none>',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -377,11 +380,11 @@ function borgerdk_visning_default_page_manager_handlers() {
     $pane->pid = 'new-11';
     $pane->panel = 'stack4';
     $pane->type = 'entity_field';
-    $pane->subtype = 'node:field_os2web_legislation';
+    $pane->subtype = 'node:field_os2web_borger_dk_recommend';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'label' => 'hidden',
+      'label' => 'title',
       'formatter' => 'text_default',
       'delta_limit' => 0,
       'delta_offset' => '0',
@@ -389,7 +392,7 @@ function borgerdk_visning_default_page_manager_handlers() {
       'formatter_settings' => array(),
       'context' => 'argument_entity_id:node_1',
       'override_title' => 1,
-      'override_title_text' => '',
+      'override_title_text' => '<none>',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -401,34 +404,6 @@ function borgerdk_visning_default_page_manager_handlers() {
     $pane->locks = array();
     $display->content['new-11'] = $pane;
     $display->panels['stack4'][1] = 'new-11';
-    $pane = new stdClass();
-    $pane->pid = 'new-12';
-    $pane->panel = 'stack4';
-    $pane->type = 'entity_field';
-    $pane->subtype = 'node:field_os2web_shortlist';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'label' => 'hidden',
-      'formatter' => 'text_default',
-      'delta_limit' => 0,
-      'delta_offset' => '0',
-      'delta_reversed' => FALSE,
-      'formatter_settings' => array(),
-      'context' => 'argument_entity_id:node_1',
-      'override_title' => 1,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 2;
-    $pane->locks = array();
-    $display->content['new-12'] = $pane;
-    $display->panels['stack4'][2] = 'new-12';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = 'new-3';
   $handler->conf['display'] = $display;

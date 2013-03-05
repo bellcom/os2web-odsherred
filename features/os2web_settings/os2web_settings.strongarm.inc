@@ -210,14 +210,14 @@ function os2web_settings_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'delta_blocks_breadcrumb_current';
-  $strongarm->value = TRUE;
+  $strongarm->value = 0;
   $export['delta_blocks_breadcrumb_current'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'delta_blocks_breadcrumb_title_hidden';
-  $strongarm->value = TRUE;
+  $strongarm->value = 1;
   $export['delta_blocks_breadcrumb_title_hidden'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -606,7 +606,7 @@ example.org';
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'menu_block_12_level';
-  $strongarm->value = '2';
+  $strongarm->value = '1';
   $export['menu_block_12_level'] = $strongarm;
 
   $strongarm = new stdClass();

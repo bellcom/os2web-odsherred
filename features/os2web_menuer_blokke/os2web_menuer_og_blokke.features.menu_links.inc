@@ -215,7 +215,7 @@ function os2web_menuer_og_blokke_menu_default_menu_links() {
     'module' => 'menu',
     'hidden' => '0',
     'external' => '0',
-    'has_children' => '0',
+    'has_children' => '1',
     'expanded' => '0',
     'weight' => '-46',
   );
@@ -228,6 +228,7 @@ function os2web_menuer_og_blokke_menu_default_menu_links() {
     'options' => array(
       'minipanel' => '',
       'attributes' => array(),
+      'alter' => FALSE,
     ),
     'module' => 'menu',
     'hidden' => '0',

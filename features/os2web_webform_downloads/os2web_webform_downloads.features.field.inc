@@ -394,9 +394,7 @@ function os2web_webform_downloads_field_default_fields() {
       'widget' => array(
         'active' => 1,
         'module' => 'options',
-        'settings' => array(
-          'content_taxonomy_opt_groups' => FALSE,
-        ),
+        'settings' => array(),
         'type' => 'options_select',
         'weight' => '7',
       ),

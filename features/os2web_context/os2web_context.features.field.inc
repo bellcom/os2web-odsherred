@@ -468,9 +468,7 @@ function os2web_context_field_default_fields() {
       'widget' => array(
         'active' => 1,
         'module' => 'options',
-        'settings' => array(
-          'content_taxonomy_opt_groups' => FALSE,
-        ),
+        'settings' => array(),
         'type' => 'options_select',
         'weight' => '3',
       ),
@@ -1337,9 +1335,7 @@ function os2web_context_field_default_fields() {
       'widget' => array(
         'active' => 1,
         'module' => 'options',
-        'settings' => array(
-          'content_taxonomy_opt_groups' => FALSE,
-        ),
+        'settings' => array(),
         'type' => 'options_select',
         'weight' => '3',
       ),
@@ -2031,9 +2027,7 @@ function os2web_context_field_default_fields() {
       'widget' => array(
         'active' => 1,
         'module' => 'options',
-        'settings' => array(
-          'content_taxonomy_opt_groups' => FALSE,
-        ),
+        'settings' => array(),
         'type' => 'options_select',
         'weight' => '12',
       ),
@@ -2516,9 +2510,7 @@ function os2web_context_field_default_fields() {
       'widget' => array(
         'active' => 1,
         'module' => 'options',
-        'settings' => array(
-          'content_taxonomy_opt_groups' => FALSE,
-        ),
+        'settings' => array(),
         'type' => 'options_select',
         'weight' => '7',
       ),
@@ -2596,9 +2588,7 @@ function os2web_context_field_default_fields() {
       'widget' => array(
         'active' => 1,
         'module' => 'options',
-        'settings' => array(
-          'content_taxonomy_opt_groups' => FALSE,
-        ),
+        'settings' => array(),
         'type' => 'options_select',
         'weight' => '8',
       ),

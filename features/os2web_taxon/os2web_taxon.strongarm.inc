@@ -63,14 +63,14 @@ function os2web_taxon_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'taxon_taxonomy_taxonomy_name';
-  $strongarm->value = 'kle';
+  $strongarm->value = 'kle-syddjurs_lookup.json';
   $export['taxon_taxonomy_taxonomy_name'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'taxon_taxonomy_taxon_url';
-  $strongarm->value = '10.1.1.182/Taxon/taxon-ws.php';
+  $strongarm->value = 'odsherred.bellcom.dk/Taxon/web-service/taxon-ws.php';
   $export['taxon_taxonomy_taxon_url'] = $strongarm;
 
   $strongarm = new stdClass();
