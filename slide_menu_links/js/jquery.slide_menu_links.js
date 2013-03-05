@@ -117,17 +117,20 @@ jQuery(document).ready(function($){
         break;
 
       default:
-        $('.slider_left').removeClass('slider_back');
-        $('.slider').fadeIn();
-        $sliderLink = $('.slider_left').find('a');
-        $sliderLink.attr('href', page1);
-        $sliderLink = $('.slider_right').find('a');
-        $sliderLink.attr('href', page2);
-        slidePage('#page_3', '#page_1', backDirection);
-        $('.vegas-background').fadeIn();
-        if($('.pane-aktuelt-panel-pane-3').length !== 0)
+        if(location.hash === "")
         {
-          Drupal.viewsSlideshow.action({ "action": 'start', "slideshowID": 'aktuelt-panel_pane_3', "force": true });
+          $('.slider_left').removeClass('slider_back');
+          $('.slider').fadeIn();
+          $sliderLink = $('.slider_left').find('a');
+          $sliderLink.attr('href', page1);
+          $sliderLink = $('.slider_right').find('a');
+          $sliderLink.attr('href', page2);
+          slidePage('#page_3', '#page_1', backDirection);
+          $('.vegas-background').fadeIn();
+          if($('.pane-aktuelt-panel-pane-3').length !== 0)
+          {
+            Drupal.viewsSlideshow.action({ "action": 'start', "slideshowID": 'aktuelt-panel_pane_3', "force": true });
+          }
         }
         break;
     }

@@ -26,7 +26,7 @@ function slide_menu_links_init() {
  */
 function slide_menu_links_menu() {
   $items['admin/config/user-interface/slide_menu_links'] = array(
-    'title' => 'slide_menu_links settings',
+    'title' => 'Slide menu links settings',
     'description' => 'change settings for slide menu links',
     'page callback' => 'drupal_get_form',
     'page arguments' => array('slide_menu_links_admin_menu_form'),
@@ -44,25 +44,29 @@ function slide_menu_links_admin_menu_form() {
   $form = array();
  
   $form['slide_left_link'] = array(
-    '#title' => 'Slide left link',
+    '#title' => t('Slide left link'),
     '#type' => 'textfield',
     '#default_value' => variable_get('slide_left_link'),
+    '#description' => t('Link for right slider. If the page is external prepend with http://'),
   );
   $form['slide_left_text'] = array(
-    '#title' => 'Slide left text',
+    '#title' => t('Slide left text'),
     '#type' => 'textfield',
     '#default_value' => variable_get('slide_left_text'),
+    '#description' => t('Hashtag text for left slider'),
   );
 
   $form['slide_right_link'] = array(
-    '#title' => 'Slide right link',
+    '#title' => t('Slide right link'),
     '#type' => 'textfield',
     '#default_value' => variable_get('slide_right_link'),
+    '#description' => t('Link for right slider. If the page is external prepend with http://'),
   );
   $form['slide_right_text'] = array(
-    '#title' => 'Slide right text',
+    '#title' => t('Slide right text'),
     '#type' => 'textfield',
     '#default_value' => variable_get('slide_right_text'),
+    '#description' => t('Hashtag text for right slider'),
   );
   return system_settings_form($form);
 }
