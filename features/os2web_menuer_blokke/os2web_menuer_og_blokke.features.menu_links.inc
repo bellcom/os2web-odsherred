@@ -29,7 +29,7 @@ function os2web_menuer_og_blokke_menu_default_menu_links() {
           ),
         ),
         'show' => array(
-          'delay' => '0',
+          'delay' => '100',
           'when' => array(
             'event' => 'mouseover',
           ),
@@ -60,7 +60,9 @@ function os2web_menuer_og_blokke_menu_default_menu_links() {
         ),
         'mlid' => '782',
       ),
-      'attributes' => array(),
+      'attributes' => array(
+        'title' => '',
+      ),
     ),
     'module' => 'menu',
     'hidden' => '0',

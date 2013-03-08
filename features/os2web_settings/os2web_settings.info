@@ -12,6 +12,7 @@ dependencies[] = features
 dependencies[] = fontyourface
 dependencies[] = htmlpurifier
 dependencies[] = jquery_ui
+dependencies[] = lightbox2
 dependencies[] = locale
 dependencies[] = media_internet
 dependencies[] = media_youtube

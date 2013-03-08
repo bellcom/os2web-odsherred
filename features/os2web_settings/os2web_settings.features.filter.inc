@@ -49,7 +49,33 @@ function os2web_settings_filter_default_formats() {
     'cache' => '1',
     'status' => '1',
     'weight' => '-9',
-    'filters' => array(),
+    'filters' => array(
+      'lightbox2_filter' => array(
+        'weight' => '0',
+        'status' => '1',
+        'settings' => array(),
+      ),
+      'lightbox_iframe_filter' => array(
+        'weight' => '0',
+        'status' => '1',
+        'settings' => array(),
+      ),
+      'lightbox_modal_filter' => array(
+        'weight' => '0',
+        'status' => '1',
+        'settings' => array(),
+      ),
+      'lightbox_video_filter' => array(
+        'weight' => '0',
+        'status' => '1',
+        'settings' => array(),
+      ),
+      'media_filter' => array(
+        'weight' => '2',
+        'status' => '1',
+        'settings' => array(),
+      ),
+    ),
   );
 
   return $formats;
