@@ -209,7 +209,7 @@ function odsherred_web_default_panels_mini() {
       'expanded' => 0,
       'sort' => 0,
       'override_title' => 1,
-      'override_title_text' => 'Ofte stillede spørgsmål...',
+      'override_title_text' => 'svarparat.nu',
     );
     $pane->cache = array();
     $pane->style = array(

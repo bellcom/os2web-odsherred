@@ -3367,6 +3367,13 @@ function os2web_spotbokse_views_default_views() {
   $handler->display->display_options['relationships']['parent']['field'] = 'parent';
   $handler->display->display_options['relationships']['parent']['relationship'] = 'field_site_structure_tid';
   $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Felt: Indhold: Nid */
+  $handler->display->display_options['fields']['nid']['id'] = 'nid';
+  $handler->display->display_options['fields']['nid']['table'] = 'node';
+  $handler->display->display_options['fields']['nid']['field'] = 'nid';
+  $handler->display->display_options['fields']['nid']['label'] = '';
+  $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
   /* Felt: Indhold: URL */
   $handler->display->display_options['fields']['field_url']['id'] = 'field_url';
   $handler->display->display_options['fields']['field_url']['table'] = 'field_data_field_url';
@@ -3532,7 +3539,7 @@ function os2web_spotbokse_views_default_views() {
   $handler->display->display_options['fields']['field_reference_1']['field'] = 'field_reference';
   $handler->display->display_options['fields']['field_reference_1']['label'] = '';
   $handler->display->display_options['fields']['field_reference_1']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_reference_1']['alter']['text'] = '<div class="border selvbetjening"></div>[field_reference][field_fokus_sektionsforside]';
+  $handler->display->display_options['fields']['field_reference_1']['alter']['text'] = '<div class="border selvbetjening listevisning"></div>[field_reference][field_fokus_sektionsforside]';
   $handler->display->display_options['fields']['field_reference_1']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_reference_1']['empty'] = '<div class="goto-wrapper"><a href="[field_url]"><i class="goto  term-[tid] term-[tid_1]"></i></a></div><div class="border term-[tid] term-[tid_1]"></div>[field_fokus_sektionsforside_1]<div class="text">[body]</div>';
   $handler->display->display_options['fields']['field_reference_1']['hide_alter_empty'] = FALSE;
@@ -3914,10 +3921,11 @@ function os2web_spotbokse_views_default_views() {
     t('Overordnet element'),
     t('<i class="show-links"></div>[field_reference]'),
     t('Portal spotbox'),
-    t('<div class="border selvbetjening"></div>[field_reference][field_fokus_sektionsforside]'),
+    t('<div class="border selvbetjening listevisning"></div>[field_reference][field_fokus_sektionsforside]'),
     t('<div class="goto-wrapper"><a href="[field_url]"><i class="goto  term-[tid] term-[tid_1]"></i></a></div><div class="border term-[tid] term-[tid_1]"></div>[field_fokus_sektionsforside_1]<div class="text">[body]</div>'),
     t('Spotboxe 3 på node'),
     t('field_indholdsside_spotboxe'),
+    t('<div class="border selvbetjening"></div>[field_reference][field_fokus_sektionsforside]'),
     t('<div class="goto-wrapper"><a href="[field_url]"><i class="goto term-[tid] term-[tid_1]"></i></a></div><div class="border term-[tid] term-[tid_1]"></div>[field_fokus_sektionsforside_1]<div class="text">[body]</div>'),
   );
   $export['spotboxe'] = $view;
