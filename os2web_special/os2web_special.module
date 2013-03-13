@@ -20,7 +20,7 @@ function os2web_special_field_formatter_info() {
  * Implements hook_field_formatter_view()
  **/
 function os2web_special_field_formatter_view($obj_type, $object, $field, $instance, $langcode, $items, $display) {
-  $markup = '<ul>';
+  $markup = '<div class="item-list"><ul>';
   if ( !empty($items) ) {
     foreach($items as $item) {
       $node = node_load($item['nid']);
@@ -35,7 +35,7 @@ function os2web_special_field_formatter_view($obj_type, $object, $field, $instan
       $markup .= '<li>' . l($title, $url) . '</li>';
     }
   }
-  $markup .= '</ul>';
+  $markup .= '</ul></div>';
 
   $element[0] = array(
     '#markup' => $markup,
