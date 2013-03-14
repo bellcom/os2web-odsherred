@@ -55,7 +55,7 @@ function os2web_node_feedback_field_default_fields() {
       ),
       'entity_type' => 'feedback',
       'field_name' => 'field_feedback_email',
-      'label' => 'Email',
+      'label' => 'E-mail',
       'required' => 1,
       'settings' => array(
         'better_formats' => array(
@@ -63,6 +63,7 @@ function os2web_node_feedback_field_default_fields() {
             'blokindhold' => 'blokindhold',
             'filtered_html' => 'filtered_html',
             'full_html' => 'full_html',
+            'full_html_iframe' => 0,
             'php_code' => 'php_code',
             'plain_text' => 'plain_text',
             'raw' => 'raw',
@@ -79,6 +80,9 @@ function os2web_node_feedback_field_default_fields() {
               ),
               'full_html' => array(
                 'weight' => '-9',
+              ),
+              'full_html_iframe' => array(
+                'weight' => '0',
               ),
               'php_code' => array(
                 'weight' => '-6',
@@ -214,7 +218,7 @@ function os2web_node_feedback_field_default_fields() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Email');
+  t('E-mail');
   t('Navn');
 
   return $fields;
