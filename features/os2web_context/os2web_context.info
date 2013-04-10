@@ -13,7 +13,6 @@ dependencies[] = field_group
 dependencies[] = menu
 dependencies[] = menu_block
 dependencies[] = os2web_indholdstyper
-dependencies[] = os2web_meeting_views
 dependencies[] = os2web_sektionssider
 dependencies[] = os2web_webform_downloads
 dependencies[] = panels_mini
