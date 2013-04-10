@@ -1674,7 +1674,10 @@ return $field==1?true:false;';
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '1';
   $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_options']['default_row_class'] = FALSE;
+  $handler->display->display_options['style_options']['row_class_special'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
   /* Forbindelse: Indhold: Forfatter */
   $handler->display->display_options['relationships']['uid']['id'] = 'uid';
   $handler->display->display_options['relationships']['uid']['table'] = 'node';
@@ -1683,22 +1686,29 @@ return $field==1?true:false;';
   $handler->display->display_options['fields']['uid']['id'] = 'uid';
   $handler->display->display_options['fields']['uid']['table'] = 'node';
   $handler->display->display_options['fields']['uid']['field'] = 'uid';
+  $handler->display->display_options['fields']['uid']['label'] = 'Forfatter';
   /* Felt: Bruger: Full name */
   $handler->display->display_options['fields']['field_user_full_name']['id'] = 'field_user_full_name';
   $handler->display->display_options['fields']['field_user_full_name']['table'] = 'field_data_field_user_full_name';
   $handler->display->display_options['fields']['field_user_full_name']['field'] = 'field_user_full_name';
   $handler->display->display_options['fields']['field_user_full_name']['relationship'] = 'uid';
   $handler->display->display_options['fields']['field_user_full_name']['label'] = 'Fulde navn';
+  $handler->display->display_options['fields']['field_user_full_name']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_user_full_name']['hide_empty'] = TRUE;
   /* Felt: Bruger: Navn */
   $handler->display->display_options['fields']['name']['id'] = 'name';
   $handler->display->display_options['fields']['name']['table'] = 'users';
   $handler->display->display_options['fields']['name']['field'] = 'name';
   $handler->display->display_options['fields']['name']['relationship'] = 'uid';
+  $handler->display->display_options['fields']['name']['label'] = '/';
+  $handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
   /* Felt: Bruger: E-mail */
   $handler->display->display_options['fields']['mail']['id'] = 'mail';
   $handler->display->display_options['fields']['mail']['table'] = 'users';
   $handler->display->display_options['fields']['mail']['field'] = 'mail';
   $handler->display->display_options['fields']['mail']['relationship'] = 'uid';
+  $handler->display->display_options['fields']['mail']['element_wrapper_type'] = 'p';
+  $handler->display->display_options['fields']['mail']['element_default_classes'] = FALSE;
   /* Felt: Bruger: Seneste login */
   $handler->display->display_options['fields']['login']['id'] = 'login';
   $handler->display->display_options['fields']['login']['table'] = 'users';
@@ -1713,13 +1723,18 @@ return $field==1?true:false;';
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_wrapper_type'] = 'h3';
+  $handler->display->display_options['fields']['title']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
   /* Felt: Indhold: Indløb / Udløb */
   $handler->display->display_options['fields']['field_rotate_publish']['id'] = 'field_rotate_publish';
   $handler->display->display_options['fields']['field_rotate_publish']['table'] = 'field_data_field_rotate_publish';
   $handler->display->display_options['fields']['field_rotate_publish']['field'] = 'field_rotate_publish';
+  $handler->display->display_options['fields']['field_rotate_publish']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_rotate_publish']['settings'] = array(
     'format_type' => 'short',
     'fromto' => 'both',
@@ -1731,16 +1746,18 @@ return $field==1?true:false;';
   $handler->display->display_options['fields']['type']['id'] = 'type';
   $handler->display->display_options['fields']['type']['table'] = 'node';
   $handler->display->display_options['fields']['type']['field'] = 'type';
-  /* Felt: Handler mangler eller er i stykker */
-  $handler->display->display_options['fields']['section']['id'] = 'section';
-  $handler->display->display_options['fields']['section']['table'] = 'workbench_access';
-  $handler->display->display_options['fields']['section']['field'] = 'section';
-  $handler->display->display_options['fields']['section']['label'] = 'Sektion';
-  /* Sorteringskriterie: Indhold: Oprettelsesdato */
-  $handler->display->display_options['sorts']['created']['id'] = 'created';
-  $handler->display->display_options['sorts']['created']['table'] = 'node';
-  $handler->display->display_options['sorts']['created']['field'] = 'created';
-  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+  $handler->display->display_options['fields']['type']['element_wrapper_type'] = 'p';
+  $handler->display->display_options['fields']['type']['element_default_classes'] = FALSE;
+  /* Felt: Indhold: Publish link */
+  $handler->display->display_options['fields']['publishcontent']['id'] = 'publishcontent';
+  $handler->display->display_options['fields']['publishcontent']['table'] = 'node';
+  $handler->display->display_options['fields']['publishcontent']['field'] = 'publishcontent';
+  $handler->display->display_options['fields']['publishcontent']['label'] = '';
+  $handler->display->display_options['fields']['publishcontent']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['publishcontent']['element_wrapper_type'] = 'h4';
+  $handler->display->display_options['fields']['publishcontent']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['publishcontent']['unpublish'] = 'Denne side er synlig - Afpublicer';
+  $handler->display->display_options['fields']['publishcontent']['publish'] = 'Denne side er ikke synlig - Pubicer nu';
   /* Kontekstuelt filter: Indhold: Nid */
   $handler->display->display_options['arguments']['nid']['id'] = 'nid';
   $handler->display->display_options['arguments']['nid']['table'] = 'node';
@@ -1754,13 +1771,6 @@ return $field==1?true:false;';
   $handler->display->display_options['arguments']['nid']['specify_validation'] = TRUE;
   $handler->display->display_options['arguments']['nid']['validate']['type'] = 'node';
   $handler->display->display_options['arguments']['nid']['validate']['fail'] = 'empty';
-  /* Filterkriterie: Indhold: Udgivet */
-  $handler->display->display_options['filters']['status']['id'] = 'status';
-  $handler->display->display_options['filters']['status']['table'] = 'node';
-  $handler->display->display_options['filters']['status']['field'] = 'status';
-  $handler->display->display_options['filters']['status']['value'] = 1;
-  $handler->display->display_options['filters']['status']['group'] = 1;
-  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block');
@@ -1775,16 +1785,16 @@ return $field==1?true:false;';
     t('Stigende'),
     t('Faldende'),
     t('forfatter'),
-    t('Forfatter uid'),
+    t('Forfatter'),
     t('Fulde navn'),
-    t('Navn'),
+    t('/'),
     t('E-mail'),
     t('Seneste login'),
     t('Seneste tilgang'),
-    t('Titel'),
     t('Indløb / Udløb'),
     t('Type'),
-    t('Sektion'),
+    t('Denne side er synlig - Afpublicer'),
+    t('Denne side er ikke synlig - Pubicer nu'),
     t('Alle'),
     t('Block'),
   );
@@ -2715,6 +2725,11 @@ return $field==1?true:false;';
   $handler->display->display_options['fields']['field_selvbetjening_direkte']['empty_zero'] = TRUE;
   $handler->display->display_options['fields']['field_selvbetjening_direkte']['hide_alter_empty'] = FALSE;
   $handler->display->display_options['fields']['field_selvbetjening_direkte']['type'] = 'text_plain';
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sorteringskriterie: Vægt: Vægt */
+  $handler->display->display_options['sorts']['weight']['id'] = 'weight';
+  $handler->display->display_options['sorts']['weight']['table'] = 'weight_weights';
+  $handler->display->display_options['sorts']['weight']['field'] = 'weight';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Kontekstuelt filter: Indhold: Portalkategori (field_site_structure) */
   $handler->display->display_options['arguments']['field_site_structure_tid']['id'] = 'field_site_structure_tid';

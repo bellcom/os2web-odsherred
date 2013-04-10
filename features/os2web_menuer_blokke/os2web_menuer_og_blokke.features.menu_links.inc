@@ -29,7 +29,7 @@ function os2web_menuer_og_blokke_menu_default_menu_links() {
           ),
         ),
         'show' => array(
-          'delay' => '100',
+          'delay' => '200',
           'when' => array(
             'event' => 'mouseover',
           ),
@@ -90,7 +90,7 @@ function os2web_menuer_og_blokke_menu_default_menu_links() {
           ),
         ),
         'show' => array(
-          'delay' => '0',
+          'delay' => '200',
           'when' => array(
             'event' => 'mouseover',
           ),
@@ -121,7 +121,9 @@ function os2web_menuer_og_blokke_menu_default_menu_links() {
         ),
         'mlid' => '783',
       ),
-      'attributes' => array(),
+      'attributes' => array(
+        'title' => '',
+      ),
     ),
     'module' => 'menu',
     'hidden' => '0',
@@ -149,7 +151,7 @@ function os2web_menuer_og_blokke_menu_default_menu_links() {
           ),
         ),
         'show' => array(
-          'delay' => '0',
+          'delay' => '200',
           'when' => array(
             'event' => 'mouseover',
           ),
@@ -180,7 +182,9 @@ function os2web_menuer_og_blokke_menu_default_menu_links() {
         ),
         'mlid' => '784',
       ),
-      'attributes' => array(),
+      'attributes' => array(
+        'title' => '',
+      ),
     ),
     'module' => 'menu',
     'hidden' => '0',
@@ -226,11 +230,12 @@ function os2web_menuer_og_blokke_menu_default_menu_links() {
     'menu_name' => 'menu-erhverv-genveje',
     'link_path' => 'nyheder',
     'router_path' => 'nyheder',
-    'link_title' => 'Nyheder og Presse',
+    'link_title' => 'Nyheder og presse',
     'options' => array(
       'minipanel' => '',
-      'attributes' => array(),
-      'alter' => FALSE,
+      'attributes' => array(
+        'title' => '',
+      ),
     ),
     'module' => 'menu',
     'hidden' => '0',
@@ -385,7 +390,7 @@ function os2web_menuer_og_blokke_menu_default_menu_links() {
   t('Log out');
   t('Log ud');
   t('Læs højt');
-  t('Nyheder og Presse');
+  t('Nyheder og presse');
   t('Politik');
   t('Selvbetjening');
   t('User account');

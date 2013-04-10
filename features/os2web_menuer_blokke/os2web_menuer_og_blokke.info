@@ -20,7 +20,6 @@ features[ctools][] = context:context:3
 features[ctools][] = views:views_default:3.0
 features[features_api][] = api:1
 features[menu_custom][] = main-menu
-features[menu_custom][] = menu-andre-netsteder
 features[menu_custom][] = menu-erhverv-genveje
 features[menu_custom][] = menu-indholdsmenu
 features[menu_custom][] = user-menu
