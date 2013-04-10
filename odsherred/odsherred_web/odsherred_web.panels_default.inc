@@ -622,7 +622,7 @@ function odsherred_web_default_panels_mini() {
     $pane->panel = 'right';
     $pane->type = 'views_panes';
     $pane->subtype = 'spotbox_megadd-panel_pane_1';
-    $pane->shown = TRUE;
+    $pane->shown = FALSE;
     $pane->access = array();
     $pane->configuration = array();
     $pane->cache = array();
