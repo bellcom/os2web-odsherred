@@ -20,7 +20,7 @@ function os2web_kontaktblok_get_block() {
       $ent = taxonomy_term_load($path[2]);
       $field = field_get_items('taxonomy_term', $ent, 'field_node_reference_kontaktblok');
     }
-    elseif ($path[0] === 'node') {
+    elseif ($path[0] === 'node' && $path[1] !== 'add') {
       $ent = node_load($path[1]);
       $field = field_get_items('node', $ent, 'field_node_reference_kontaktblok');
     }
