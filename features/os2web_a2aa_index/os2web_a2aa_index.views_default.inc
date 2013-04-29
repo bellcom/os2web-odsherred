@@ -99,7 +99,6 @@ function os2web_a2aa_index_views_default_views() {
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
-  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['path'] = 'a-aa-index';
   $translatables['a_aa_index'] = array(
     t('Master'),

@@ -196,8 +196,10 @@ function os2web_indholdstyper_field_default_fields() {
             'slideshow_caption' => 'alt',
             'slideshow_caption_link' => '',
             'slideshow_carousel_circular' => 0,
+            'slideshow_carousel_follow' => 0,
             'slideshow_carousel_image_style' => '',
             'slideshow_carousel_scroll' => '1',
+            'slideshow_carousel_skin' => '',
             'slideshow_carousel_speed' => '500',
             'slideshow_carousel_vertical' => 0,
             'slideshow_carousel_visible' => '3',
@@ -207,6 +209,8 @@ function os2web_indholdstyper_field_default_fields() {
             'slideshow_colorbox_speed' => '350',
             'slideshow_colorbox_transition' => 'elastic',
             'slideshow_controls' => 0,
+            'slideshow_controls_pause' => 0,
+            'slideshow_controls_position' => 'after',
             'slideshow_field_collection_image' => '',
             'slideshow_fx' => 'fade',
             'slideshow_image_style' => 'indholdsside',
@@ -214,8 +218,10 @@ function os2web_indholdstyper_field_default_fields() {
             'slideshow_order' => '',
             'slideshow_pager' => '',
             'slideshow_pager_image_style' => '',
+            'slideshow_pager_position' => 'after',
             'slideshow_pause' => 0,
             'slideshow_speed' => '1000',
+            'slideshow_start_on_hover' => 0,
             'slideshow_timeout' => '4000',
           ),
           'type' => 'slideshow',
@@ -1290,7 +1296,9 @@ function os2web_indholdstyper_field_default_fields() {
       'widget' => array(
         'active' => 1,
         'module' => 'options',
-        'settings' => array(),
+        'settings' => array(
+          'content_taxonomy_opt_groups' => FALSE,
+        ),
         'type' => 'options_select',
         'weight' => '54',
       ),
@@ -2441,7 +2449,9 @@ function os2web_indholdstyper_field_default_fields() {
       'widget' => array(
         'active' => 1,
         'module' => 'options',
-        'settings' => array(),
+        'settings' => array(
+          'content_taxonomy_opt_groups' => FALSE,
+        ),
         'type' => 'options_select',
         'weight' => '1',
       ),
@@ -3927,7 +3937,9 @@ function os2web_indholdstyper_field_default_fields() {
       'widget' => array(
         'active' => 1,
         'module' => 'options',
-        'settings' => array(),
+        'settings' => array(
+          'content_taxonomy_opt_groups' => FALSE,
+        ),
         'type' => 'options_select',
         'weight' => '11',
       ),
@@ -4317,15 +4329,15 @@ function os2web_indholdstyper_field_default_fields() {
       'label' => 'Primære billede',
       'required' => 1,
       'settings' => array(
-        'alt_field' => 1,
-        'alt_field_required' => 1,
+        'alt_field' => 0,
+        'alt_field_required' => 0,
         'default_image' => 0,
         'file_directory' => '',
         'file_extensions' => 'png gif jpg jpeg',
         'max_filesize' => '10 MB',
         'max_resolution' => '800x600',
         'min_resolution' => '690x340',
-        'title_field' => 1,
+        'title_field' => 0,
         'title_field_required' => 0,
         'user_register_form' => FALSE,
       ),
@@ -4424,7 +4436,9 @@ function os2web_indholdstyper_field_default_fields() {
       'widget' => array(
         'active' => 1,
         'module' => 'options',
-        'settings' => array(),
+        'settings' => array(
+          'content_taxonomy_opt_groups' => FALSE,
+        ),
         'type' => 'options_select',
         'weight' => '-4',
       ),
@@ -5233,7 +5247,9 @@ function os2web_indholdstyper_field_default_fields() {
       'widget' => array(
         'active' => 1,
         'module' => 'options',
-        'settings' => array(),
+        'settings' => array(
+          'content_taxonomy_opt_groups' => FALSE,
+        ),
         'type' => 'options_select',
         'weight' => '-3',
       ),
@@ -6069,7 +6085,9 @@ function os2web_indholdstyper_field_default_fields() {
       'widget' => array(
         'active' => 1,
         'module' => 'options',
-        'settings' => array(),
+        'settings' => array(
+          'content_taxonomy_opt_groups' => FALSE,
+        ),
         'type' => 'options_select',
         'weight' => '1',
       ),
@@ -6478,7 +6496,9 @@ function os2web_indholdstyper_field_default_fields() {
       'widget' => array(
         'active' => 1,
         'module' => 'options',
-        'settings' => array(),
+        'settings' => array(
+          'content_taxonomy_opt_groups' => FALSE,
+        ),
         'type' => 'options_select',
         'weight' => '1',
       ),
@@ -6557,7 +6577,9 @@ function os2web_indholdstyper_field_default_fields() {
       'widget' => array(
         'active' => 1,
         'module' => 'options',
-        'settings' => array(),
+        'settings' => array(
+          'content_taxonomy_opt_groups' => FALSE,
+        ),
         'type' => 'options_select',
         'weight' => '5',
       ),

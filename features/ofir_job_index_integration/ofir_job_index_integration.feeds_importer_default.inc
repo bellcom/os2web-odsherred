@@ -66,7 +66,6 @@ function ofir_job_index_integration_feeds_importer_default() {
     'processor' => array(
       'plugin_key' => 'FeedsNodeProcessor',
       'config' => array(
-        'content_type' => 'ofir_job',
         'expire' => '31536000',
         'author' => '1',
         'mappings' => array(
@@ -103,6 +102,7 @@ function ofir_job_index_integration_feeds_importer_default() {
         ),
         'update_existing' => '2',
         'input_format' => 'full_html',
+        'bundle' => 'ofir_job',
       ),
     ),
     'content_type' => '',

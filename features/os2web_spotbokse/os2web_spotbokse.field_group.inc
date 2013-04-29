@@ -82,9 +82,7 @@ function os2web_spotbokse_field_group_info() {
     'label' => 'Billeder',
     'weight' => '2',
     'children' => array(
-      0 => 'field_lead_image',
-      1 => 'field_spotbox_image_tall',
-      2 => 'field_stort_billede_spot5',
+      0 => 'field_fokus_sektionsforside',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
@@ -111,9 +109,9 @@ function os2web_spotbokse_field_group_info() {
     'label' => 'Spotbox',
     'weight' => '0',
     'children' => array(
-      0 => 'group_spotbilleder',
-      1 => 'group_billeder',
-      2 => 'group_links',
+      0 => 'group_billeder',
+      1 => 'group_links',
+      2 => 'group_spotbilleder',
       3 => 'group_taksonomi',
       4 => 'group_tekst',
     ),
@@ -140,11 +138,14 @@ function os2web_spotbokse_field_group_info() {
     'label' => 'Emneord',
     'weight' => '5',
     'children' => array(
-      0 => 'field_termref_sted',
-      1 => 'field_organization',
-      2 => 'field_editortags',
-      3 => 'field_politics',
-      4 => 'field_promoteto',
+      0 => 'field_lead_image',
+      1 => 'field_termref_sted',
+      2 => 'field_organization',
+      3 => 'field_editortags',
+      4 => 'field_politics',
+      5 => 'field_promoteto',
+      6 => 'field_spotbox_image_tall',
+      7 => 'field_stort_billede_spot5',
     ),
     'format_type' => 'htab',
     'format_settings' => array(

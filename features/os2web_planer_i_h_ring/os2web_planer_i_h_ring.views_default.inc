@@ -281,7 +281,6 @@ function os2web_planer_i_h_ring_views_default_views() {
     t('<span class="foroffase"><a href="/foroffentlighed">> I foroffentlighedsfase</a></span><span class="vedtagne"><a href="/lokalplaner">> Vedtagne</a></span><span class="alle"><a href="/planforslag">> Se alle</a></span>'),
     t('Titel'),
     t('[title] - [field_slutdato] '),
-    t('_blank'),
     t('[created]'),
     t('Startdato'),
     t('Dato fra-til'),

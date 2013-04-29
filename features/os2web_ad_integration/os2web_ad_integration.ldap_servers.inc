@@ -27,6 +27,7 @@ function os2web_ad_integration_default_ldap_servers() {
     0 => 'OU=syddjurs,DC=intern,DC=syddjurs,DC=dk',
   );
   $ldap_servers_conf->user_attr = 'sAMAccountName';
+  $ldap_servers_conf->account_name_attr = '';
   $ldap_servers_conf->mail_attr = 'mail';
   $ldap_servers_conf->mail_template = '';
   $ldap_servers_conf->allow_conflicting_drupal_accts = FALSE;

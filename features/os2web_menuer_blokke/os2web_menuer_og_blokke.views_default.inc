@@ -71,7 +71,6 @@ function os2web_menuer_og_blokke_views_default_views() {
 
   /* Display: Vis preface */
   $handler = $view->new_display('block', 'Vis preface', 'block_1');
-  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Felt: Indhold: Titel */
   $handler->display->display_options['fields']['title']['id'] = 'title';
@@ -96,7 +95,6 @@ function os2web_menuer_og_blokke_views_default_views() {
 
   /* Display: Skjul preface */
   $handler = $view->new_display('block', 'Skjul preface', 'block_2');
-  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Felt: Indhold: Titel */
   $handler->display->display_options['fields']['title']['id'] = 'title';

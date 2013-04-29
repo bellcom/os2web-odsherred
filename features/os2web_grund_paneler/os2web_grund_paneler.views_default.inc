@@ -3685,7 +3685,6 @@ return $field==1?true:false;';
   /* Display: References */
   $handler = $view->new_display('references', 'References', 'references_1');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'references_style';

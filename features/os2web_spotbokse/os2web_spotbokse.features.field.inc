@@ -227,7 +227,7 @@ function os2web_spotbokse_field_default_fields() {
           'module' => 'image',
           'settings' => array(
             'image_link' => '',
-            'image_style' => 'spotbox-300',
+            'image_style' => 'spotbox_portal_uden_links',
           ),
           'type' => 'image',
           'weight' => '14',
@@ -253,7 +253,7 @@ function os2web_spotbokse_field_default_fields() {
       ),
       'entity_type' => 'node',
       'field_name' => 'field_fokus_sektionsforside',
-      'label' => 'Fokus sektionsforside',
+      'label' => 'Billede',
       'required' => 0,
       'settings' => array(
         'alt_field' => 1,
@@ -380,7 +380,7 @@ function os2web_spotbokse_field_default_fields() {
           'resolution' => '230x115',
         ),
         'type' => 'imagefield_crop_widget',
-        'weight' => '3',
+        'weight' => '22',
       ),
     ),
   );
@@ -727,7 +727,7 @@ function os2web_spotbokse_field_default_fields() {
           'module' => 'node_reference',
           'settings' => array(),
           'type' => 'node_reference_default',
-          'weight' => 15,
+          'weight' => '15',
         ),
         'jquerymobile_teaser' => array(
           'label' => 'above',
@@ -847,7 +847,9 @@ function os2web_spotbokse_field_default_fields() {
       'widget' => array(
         'active' => 1,
         'module' => 'options',
-        'settings' => array(),
+        'settings' => array(
+          'content_taxonomy_opt_groups' => FALSE,
+        ),
         'type' => 'options_select',
         'weight' => '1',
       ),
@@ -937,8 +939,16 @@ function os2web_spotbokse_field_default_fields() {
       ),
       'widget' => array(
         'active' => 1,
-        'module' => 'imagefield_crop',
+        'module' => 'media',
         'settings' => array(
+          'allowed_schemes' => array(
+            0 => 'public',
+            1 => 'private',
+          ),
+          'allowed_types' => array(
+            0 => 'image',
+          ),
+          'browser_plugins' => array(),
           'collapsible' => '3',
           'croparea' => '500x500',
           'enforce_minimum' => 1,
@@ -947,8 +957,8 @@ function os2web_spotbokse_field_default_fields() {
           'progress_indicator' => 'throbber',
           'resolution' => '230x337',
         ),
-        'type' => 'imagefield_crop_widget',
-        'weight' => '4',
+        'type' => 'media_generic',
+        'weight' => '23',
       ),
     ),
   );
@@ -1157,7 +1167,7 @@ function os2web_spotbokse_field_default_fields() {
           'resolution' => '300x261',
         ),
         'type' => 'imagefield_crop_widget',
-        'weight' => '5',
+        'weight' => '24',
       ),
     ),
   );
@@ -1208,7 +1218,7 @@ function os2web_spotbokse_field_default_fields() {
           'module' => 'taxonomy',
           'settings' => array(),
           'type' => 'taxonomy_term_reference_link',
-          'weight' => 2,
+          'weight' => '2',
         ),
         'jquerymobile_teaser' => array(
           'label' => 'above',
@@ -1296,7 +1306,7 @@ function os2web_spotbokse_field_default_fields() {
           'module' => 'taxonomy',
           'settings' => array(),
           'type' => 'taxonomy_term_reference_link',
-          'weight' => 6,
+          'weight' => '6',
         ),
         'jquerymobile_teaser' => array(
           'label' => 'above',
@@ -1376,7 +1386,7 @@ function os2web_spotbokse_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => 11,
+          'weight' => '11',
         ),
         'jquerymobile_teaser' => array(
           'label' => 'above',
@@ -1457,7 +1467,7 @@ function os2web_spotbokse_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => 4,
+          'weight' => '4',
         ),
         'jquerymobile_teaser' => array(
           'label' => 'above',
@@ -1502,7 +1512,6 @@ function os2web_spotbokse_field_default_fields() {
   // Included for use with string extractors like potx.
   t('Billede');
   t('Egenavne / Stednavne');
-  t('Fokus sektionsforside');
   t('Forfrem til');
   t('Højt billede');
   t('KL Emneord');

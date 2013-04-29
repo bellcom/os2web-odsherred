@@ -358,7 +358,6 @@ hjemmeside med søgningen i toppen, eller få en oversigt over de forskellige om
     t('Faldende'),
     t('Ingen sites'),
     t('[title]'),
-    t('_blank'),
     t('Rediger'),
     t('Alle'),
     t('%1'),

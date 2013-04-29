@@ -98,7 +98,6 @@ function os2web_borgerservices_views_default_views() {
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block');
-  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['block_description'] = 'Populære borgerservices';
   $translatables['borgerservices'] = array(
     t('Master'),

@@ -845,7 +845,6 @@ function nyheder_views_default_views() {
 
   /* Display: Blok */
   $handler = $view->new_display('block', 'Blok', 'block_1');
-  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $translatables['nyheder_hoeringer'] = array(
     t('Master'),
     t('I høring lige nu'),
@@ -1024,7 +1023,6 @@ function nyheder_views_default_views() {
 
   /* Display: Blok */
   $handler = $view->new_display('block', 'Blok', 'block_1');
-  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $translatables['nyheder_moedekalender'] = array(
     t('Master'),
     t('Mødekalender'),
@@ -1406,7 +1404,6 @@ function nyheder_views_default_views() {
 
   /* Display: Blok */
   $handler = $view->new_display('block', 'Blok', 'block_1');
-  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $translatables['nyheder_udbud'] = array(
     t('Master'),
     t('I udbud lige nu'),

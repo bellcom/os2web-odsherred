@@ -841,6 +841,7 @@ function taxonomies_and_taxonomy_importers_field_default_fields() {
         'module' => 'options',
         'settings' => array(
           'autocomplete_path' => 'taxonomy/autocomplete',
+          'content_taxonomy_opt_groups' => FALSE,
           'size' => 60,
         ),
         'type' => 'options_select',
