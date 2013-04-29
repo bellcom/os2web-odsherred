@@ -20,21 +20,21 @@ function nyheder_quicktabs_default_quicktabs() {
   $quicktabs->title = 'news page tabs';
   $quicktabs->tabs = array(
     0 => array(
-      'bid' => 'views_delta_news_page_views-block_1',
+      'bid' => 'views_delta_nyheder_hoeringer-block_1',
       'hide_title' => 1,
       'title' => 'Høringer',
       'weight' => '-100',
       'type' => 'block',
     ),
     1 => array(
-      'bid' => 'views_delta_news_page_views-block_2',
+      'bid' => 'views_delta_nyheder_moedekalender-block_1',
       'hide_title' => 1,
       'title' => 'Mødeaktiviteter',
       'weight' => '-99',
       'type' => 'block',
     ),
     2 => array(
-      'bid' => 'views_delta_news_page_views-block_3',
+      'bid' => 'views_delta_nyheder_udbud-block_1',
       'hide_title' => 1,
       'title' => 'Udbud',
       'weight' => '-98',

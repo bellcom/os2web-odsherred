@@ -156,6 +156,7 @@ function os2web_context_context_default_contexts() {
         'galleri' => 'galleri',
         'iframe_selvbetjeningsl_sning_mm' => 'iframe_selvbetjeningsl_sning_mm',
         'news' => 'news',
+        'os2web_borger_dk_article' => 'os2web_borger_dk_article',
         'sektionsside' => 'sektionsside',
       ),
       'options' => array(
@@ -172,21 +173,21 @@ function os2web_context_context_default_contexts() {
           'region' => 'content',
           'weight' => '-10',
         ),
-        'menu-menu-top-menu' => array(
-          'module' => 'menu',
-          'delta' => 'menu-top-menu',
-          'region' => 'user_second',
-          'weight' => '-10',
-        ),
         'delta_blocks-action-links' => array(
           'module' => 'delta_blocks',
           'delta' => 'action-links',
           'region' => 'user_second',
           'weight' => '-10',
         ),
+        'menu-menu-top-menu' => array(
+          'module' => 'menu',
+          'delta' => 'menu-top-menu',
+          'region' => 'user_second',
+          'weight' => '-10',
+        ),
         'menu_block-12' => array(
           'module' => 'menu_block',
-          'delta' => 12,
+          'delta' => '12',
           'region' => 'sidebar_first',
           'weight' => '-7',
         ),

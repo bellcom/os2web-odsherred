@@ -118,6 +118,11 @@ function os2web_grund_paneler_views_default_views() {
     'image_link' => '',
   );
   $handler->display->display_options['fields']['field_lead_image']['delta_offset'] = '0';
+  /* Sorteringskriterie: Indhold: Klæbrig */
+  $handler->display->display_options['sorts']['sticky']['id'] = 'sticky';
+  $handler->display->display_options['sorts']['sticky']['table'] = 'node';
+  $handler->display->display_options['sorts']['sticky']['field'] = 'sticky';
+  $handler->display->display_options['sorts']['sticky']['order'] = 'DESC';
   /* Sorteringskriterie: Indhold: Oprettelsesdato */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
@@ -283,9 +288,9 @@ function os2web_grund_paneler_views_default_views() {
   $handler->display->display_options['fields']['field_resume_long']['alter']['make_link'] = TRUE;
   $handler->display->display_options['fields']['field_resume_long']['alter']['path'] = 'node/[nid]';
   $handler->display->display_options['fields']['field_resume_long']['alter']['absolute'] = TRUE;
-  $handler->display->display_options['fields']['field_resume_long']['alter']['max_length'] = '70';
-  $handler->display->display_options['fields']['field_resume_long']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['field_resume_long']['alter']['max_length'] = '100';
   $handler->display->display_options['fields']['field_resume_long']['alter']['trim'] = TRUE;
+  $handler->display->display_options['fields']['field_resume_long']['alter']['html'] = TRUE;
   $handler->display->display_options['fields']['field_resume_long']['element_type'] = 'span';
   $handler->display->display_options['fields']['field_resume_long']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_resume_long']['element_wrapper_class'] = 'term-[tid_1]';
@@ -1597,6 +1602,31 @@ return $field==1?true:false;';
   $handler->display->display_options['fields']['field_resume_long_1']['alter']['trim'] = TRUE;
   $handler->display->display_options['fields']['field_resume_long_1']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_resume_long_1']['element_default_classes'] = FALSE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filterkriterie: Indhold: Udgivet */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filterkriterie: Indhold: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'news' => 'news',
+  );
+  /* Filterkriterie: Indhold: Forfrem til (field_promoteto) */
+  $handler->display->display_options['filters']['field_promoteto_tid']['id'] = 'field_promoteto_tid';
+  $handler->display->display_options['filters']['field_promoteto_tid']['table'] = 'field_data_field_promoteto';
+  $handler->display->display_options['filters']['field_promoteto_tid']['field'] = 'field_promoteto_tid';
+  $handler->display->display_options['filters']['field_promoteto_tid']['value'] = array(
+    12265 => '12265',
+  );
+  $handler->display->display_options['filters']['field_promoteto_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_promoteto_tid']['vocabulary'] = 'forfrem_til';
   $handler->display->display_options['allow']['use_pager'] = 'use_pager';
   $handler->display->display_options['allow']['items_per_page'] = 0;
   $handler->display->display_options['allow']['offset'] = 0;

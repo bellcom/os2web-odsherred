@@ -236,21 +236,21 @@ function os2web_webform_downloads_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'webform_default_from_address';
-  $strongarm->value = 'hjemmeside@syddjurs.dk';
+  $strongarm->value = 'hjemmeside@odsherred.dk';
   $export['webform_default_from_address'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'webform_default_from_name';
-  $strongarm->value = 'Syddjurs Kommune';
+  $strongarm->value = 'Odsherred Kommune';
   $export['webform_default_from_name'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'webform_default_subject';
-  $strongarm->value = 'Form submission from: %title';
+  $strongarm->value = 'Webformular indsendelse fra: %title';
   $export['webform_default_subject'] = $strongarm;
 
   $strongarm = new stdClass();

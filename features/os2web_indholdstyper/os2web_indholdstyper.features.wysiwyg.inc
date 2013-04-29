@@ -44,6 +44,9 @@ function os2web_indholdstyper_wysiwyg_default_profiles() {
         'drupal' => array(
           'media' => 1,
         ),
+        'media_crop_ckeditor' => array(
+          'media_crop_edit_instance' => 1,
+        ),
       ),
       'toolbar_loc' => 'top',
       'toolbar_align' => 'left',
@@ -99,6 +102,7 @@ Adresse=adress',
           'TextColor' => 1,
           'PasteFromWord' => 1,
           'ShowBlocks' => 1,
+          'RemoveFormat' => 1,
           'Format' => 1,
           'Table' => 1,
           'SpellChecker' => 1,
@@ -178,6 +182,9 @@ Adresse=adress',
         ),
         'drupal' => array(
           'media' => 1,
+        ),
+        'media_crop_ckeditor' => array(
+          'media_crop_edit_instance' => 1,
         ),
       ),
       'toolbar_loc' => 'top',

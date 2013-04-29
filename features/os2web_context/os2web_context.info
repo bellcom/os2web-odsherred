@@ -12,6 +12,7 @@ dependencies[] = delta_blocks
 dependencies[] = field_group
 dependencies[] = menu
 dependencies[] = menu_block
+dependencies[] = os2web_borger_dk
 dependencies[] = os2web_indholdstyper
 dependencies[] = os2web_sektionssider
 dependencies[] = os2web_webform_downloads

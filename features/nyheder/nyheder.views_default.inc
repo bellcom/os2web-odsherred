@@ -93,7 +93,6 @@ function nyheder_views_default_views() {
   $handler->display->display_options['fields']['field_resume_long']['field'] = 'field_resume_long';
   $handler->display->display_options['fields']['field_resume_long']['label'] = '';
   $handler->display->display_options['fields']['field_resume_long']['alter']['max_length'] = '130';
-  $handler->display->display_options['fields']['field_resume_long']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['field_resume_long']['alter']['trim'] = TRUE;
   $handler->display->display_options['fields']['field_resume_long']['element_label_colon'] = FALSE;
   /* Sorteringskriterie: Indhold: Oprettelsesdato */
@@ -394,7 +393,6 @@ function nyheder_views_default_views() {
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['max_length'] = '30';
-  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['trim'] = TRUE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   /* Felt: Indhold: Resume - lang overskrift */
@@ -402,8 +400,7 @@ function nyheder_views_default_views() {
   $handler->display->display_options['fields']['field_resume_long']['table'] = 'field_data_field_resume_long';
   $handler->display->display_options['fields']['field_resume_long']['field'] = 'field_resume_long';
   $handler->display->display_options['fields']['field_resume_long']['label'] = '';
-  $handler->display->display_options['fields']['field_resume_long']['alter']['max_length'] = '60';
-  $handler->display->display_options['fields']['field_resume_long']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['field_resume_long']['alter']['max_length'] = '65';
   $handler->display->display_options['fields']['field_resume_long']['alter']['trim'] = TRUE;
   $handler->display->display_options['fields']['field_resume_long']['element_label_colon'] = FALSE;
 
@@ -839,12 +836,16 @@ function nyheder_views_default_views() {
   $handler->display->display_options['filters']['field_newstypedato_value']['field'] = 'field_newstypedato_value';
   $handler->display->display_options['filters']['field_newstypedato_value']['operator'] = '>';
   $handler->display->display_options['filters']['field_newstypedato_value']['default_date'] = 'now';
-  $handler->display->display_options['path'] = 'udbud';
+  $handler->display->display_options['path'] = 'hoeringer';
 
   /* Display: MegaDD */
   $handler = $view->new_display('panel_pane', 'MegaDD', 'panel_pane_1');
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
+
+  /* Display: Blok */
+  $handler = $view->new_display('block', 'Blok', 'block_1');
+  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $translatables['nyheder_hoeringer'] = array(
     t('Master'),
     t('I høring lige nu'),
@@ -867,6 +868,7 @@ function nyheder_views_default_views() {
     t('Type (field_newstype)'),
     t('MegaDD'),
     t('View panes'),
+    t('Blok'),
   );
   $export['nyheder_hoeringer'] = $view;
 
@@ -961,7 +963,7 @@ function nyheder_views_default_views() {
   $handler->display->display_options['filters']['field_newstype_tid']['table'] = 'field_data_field_newstype';
   $handler->display->display_options['filters']['field_newstype_tid']['field'] = 'field_newstype_tid';
   $handler->display->display_options['filters']['field_newstype_tid']['value'] = array(
-    25752 => '25752',
+    25757 => '25757',
   );
   $handler->display->display_options['filters']['field_newstype_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_newstype_tid']['vocabulary'] = 'nyhedstype';
@@ -999,7 +1001,7 @@ function nyheder_views_default_views() {
   $handler->display->display_options['filters']['field_newstype_tid']['table'] = 'field_data_field_newstype';
   $handler->display->display_options['filters']['field_newstype_tid']['field'] = 'field_newstype_tid';
   $handler->display->display_options['filters']['field_newstype_tid']['value'] = array(
-    25752 => '25752',
+    25757 => '25757',
   );
   $handler->display->display_options['filters']['field_newstype_tid']['expose']['operator_id'] = 'field_newstype_tid_op';
   $handler->display->display_options['filters']['field_newstype_tid']['expose']['label'] = 'Type (field_newstype)';
@@ -1019,6 +1021,10 @@ function nyheder_views_default_views() {
   $handler = $view->new_display('panel_pane', 'MegaDD', 'panel_pane_1');
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
+
+  /* Display: Blok */
+  $handler = $view->new_display('block', 'Blok', 'block_1');
+  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $translatables['nyheder_moedekalender'] = array(
     t('Master'),
     t('Mødekalender'),
@@ -1040,6 +1046,7 @@ function nyheder_views_default_views() {
     t('Type (field_newstype)'),
     t('MegaDD'),
     t('View panes'),
+    t('Blok'),
   );
   $export['nyheder_moedekalender'] = $view;
 
@@ -1281,7 +1288,7 @@ function nyheder_views_default_views() {
   $handler->display->display_options['empty']['area']['table'] = 'views';
   $handler->display->display_options['empty']['area']['field'] = 'area';
   $handler->display->display_options['empty']['area']['empty'] = TRUE;
-  $handler->display->display_options['empty']['area']['content'] = 'Der er i øjeblikket ingen udbud.';
+  $handler->display->display_options['empty']['area']['content'] = '<p class="views-row">Der er i øjeblikket ingen udbud.</p>';
   $handler->display->display_options['empty']['area']['format'] = 'filtered_html';
   /* Forbindelse: Indhold: Type (field_newstype) */
   $handler->display->display_options['relationships']['field_newstype_tid']['id'] = 'field_newstype_tid';
@@ -1338,7 +1345,7 @@ function nyheder_views_default_views() {
   $handler->display->display_options['filters']['field_newstype_tid']['table'] = 'field_data_field_newstype';
   $handler->display->display_options['filters']['field_newstype_tid']['field'] = 'field_newstype_tid';
   $handler->display->display_options['filters']['field_newstype_tid']['value'] = array(
-    25754 => '25754',
+    25755 => '25755',
   );
   $handler->display->display_options['filters']['field_newstype_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_newstype_tid']['vocabulary'] = 'nyhedstype';
@@ -1396,6 +1403,10 @@ function nyheder_views_default_views() {
   $handler = $view->new_display('panel_pane', 'MegaDD', 'panel_pane_1');
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
+
+  /* Display: Blok */
+  $handler = $view->new_display('block', 'Blok', 'block_1');
+  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $translatables['nyheder_udbud'] = array(
     t('Master'),
     t('I udbud lige nu'),
@@ -1412,12 +1423,13 @@ function nyheder_views_default_views() {
     t('‹ forrige'),
     t('næste ›'),
     t('sidste »'),
-    t('Der er i øjeblikket ingen udbud.'),
+    t('<p class="views-row">Der er i øjeblikket ingen udbud.</p>'),
     t('term fra field_newstype'),
     t('Page'),
     t('Type (field_newstype)'),
     t('MegaDD'),
     t('View panes'),
+    t('Blok'),
   );
   $export['nyheder_udbud'] = $view;
 
