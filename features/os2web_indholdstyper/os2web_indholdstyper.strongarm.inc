@@ -635,8 +635,10 @@ function os2web_indholdstyper_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'menu_options_contentpage';
   $strongarm->value = array(
-    0 => 'menu-erhverv-genveje',
-    1 => 'menu-indholdsmenu',
+    0 => 'menu-indhold',
+    1 => 'menu-erhverv-genveje',
+    2 => 'menu-erhverv',
+    3 => 'menu-politik',
   );
   $export['menu_options_contentpage'] = $strongarm;
 

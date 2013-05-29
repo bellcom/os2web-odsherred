@@ -36,88 +36,10 @@ function odsherred_search_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'apachesolr_index_last';
   $strongarm->value = array(
-    'solr' => array(
-      'node' => array(
-        'last_changed' => '1361188400',
-        'last_entity_id' => '892922',
-      ),
-      'feedback' => array(
-        'last_changed' => 0,
-        'last_entity_id' => 0,
-      ),
-      'fieldable_panels_pane' => array(
-        'last_changed' => 0,
-        'last_entity_id' => 0,
-      ),
-      'search_api_server' => array(
-        'last_changed' => 0,
-        'last_entity_id' => 0,
-      ),
-      'search_api_index' => array(
-        'last_changed' => 0,
-        'last_entity_id' => 0,
-      ),
-      'file' => array(
-        'last_changed' => 0,
-        'last_entity_id' => 0,
-      ),
-      'taxonomy_term' => array(
-        'last_changed' => 0,
-        'last_entity_id' => 0,
-      ),
-      'taxonomy_vocabulary' => array(
-        'last_changed' => 0,
-        'last_entity_id' => 0,
-      ),
-      'user' => array(
-        'last_changed' => 0,
-        'last_entity_id' => 0,
-      ),
-      'wysiwyg_profile' => array(
-        'last_changed' => 0,
-        'last_entity_id' => 0,
-      ),
-      'rules_config' => array(
-        'last_changed' => 0,
-        'last_entity_id' => 0,
-      ),
-    ),
     'localhost' => array(
-      'feedback' => array(
-        'last_changed' => 0,
-        'last_entity_id' => 0,
-      ),
-      'fieldable_panels_pane' => array(
-        'last_changed' => 0,
-        'last_entity_id' => 0,
-      ),
       'node' => array(
-        'last_changed' => '1361198850',
-        'last_entity_id' => '892953',
-      ),
-      'file' => array(
-        'last_changed' => 0,
-        'last_entity_id' => 0,
-      ),
-      'taxonomy_term' => array(
-        'last_changed' => 0,
-        'last_entity_id' => 0,
-      ),
-      'taxonomy_vocabulary' => array(
-        'last_changed' => 0,
-        'last_entity_id' => 0,
-      ),
-      'user' => array(
-        'last_changed' => 0,
-        'last_entity_id' => 0,
-      ),
-      'wysiwyg_profile' => array(
-        'last_changed' => 0,
-        'last_entity_id' => 0,
-      ),
-      'rules_config' => array(
-        'last_changed' => 0,
-        'last_entity_id' => 0,
+        'last_changed' => '1369821434',
+        'last_entity_id' => '894201',
       ),
     ),
   );
@@ -129,7 +51,7 @@ function odsherred_search_strongarm() {
   $strongarm->name = 'apachesolr_index_updated';
   $strongarm->value = array(
     'solr' => 1361193125,
-    'localhost' => 1361265922,
+    'localhost' => 1369831312,
   );
   $export['apachesolr_index_updated'] = $strongarm;
 
@@ -137,7 +59,7 @@ function odsherred_search_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'apachesolr_last_optimize';
-  $strongarm->value = 1361173313;
+  $strongarm->value = 1369749601;
   $export['apachesolr_last_optimize'] = $strongarm;
 
   $strongarm = new stdClass();

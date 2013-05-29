@@ -47,7 +47,7 @@ function os2web_indholdstyper_image_default_styles() {
         'name' => 'image_scale_and_crop',
         'data' => array(
           'width' => '690',
-          'height' => '340',
+          'height' => '237',
         ),
         'weight' => '1',
       ),

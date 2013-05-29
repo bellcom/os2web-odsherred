@@ -93,6 +93,48 @@ function os2web_indholdstyper_field_default_fields() {
       'label' => 'Indhold',
       'required' => 0,
       'settings' => array(
+        'better_formats' => array(
+          'allowed_formats' => array(
+            'blokindhold' => 0,
+            'filtered_html' => 'filtered_html',
+            'full_html' => 'full_html',
+            'full_html_iframe' => 'full_html_iframe',
+            'php_code' => 0,
+            'plain_text' => 0,
+            'raw' => 0,
+            'standard' => 0,
+          ),
+          'allowed_formats_toggle' => 1,
+          'default_order_toggle' => 0,
+          'default_order_wrapper' => array(
+            'formats' => array(
+              'blokindhold' => array(
+                'weight' => '-7',
+              ),
+              'filtered_html' => array(
+                'weight' => '-10',
+              ),
+              'full_html' => array(
+                'weight' => '-9',
+              ),
+              'full_html_iframe' => array(
+                'weight' => '0',
+              ),
+              'php_code' => array(
+                'weight' => '-6',
+              ),
+              'plain_text' => array(
+                'weight' => '-8',
+              ),
+              'raw' => array(
+                'weight' => '0',
+              ),
+              'standard' => array(
+                'weight' => '0',
+              ),
+            ),
+          ),
+        ),
         'display_summary' => 0,
         'text_processing' => '1',
         'user_register_form' => FALSE,
@@ -106,6 +148,105 @@ function os2web_indholdstyper_field_default_fields() {
         ),
         'type' => 'text_textarea_with_summary',
         'weight' => '2',
+      ),
+    ),
+  );
+
+  // Exported field: 'node-contentpage-field_alternativt_billede'.
+  $fields['node-contentpage-field_alternativt_billede'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_alternativt_billede',
+      'foreign keys' => array(
+        'fid' => array(
+          'columns' => array(
+            'fid' => 'fid',
+          ),
+          'table' => 'file_managed',
+        ),
+      ),
+      'indexes' => array(
+        'fid' => array(
+          0 => 'fid',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'image',
+      'settings' => array(
+        'default_image' => 0,
+        'uri_scheme' => 'public',
+      ),
+      'translatable' => '0',
+      'type' => 'image',
+    ),
+    'field_instance' => array(
+      'bundle' => 'contentpage',
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'image',
+          'settings' => array(
+            'image_link' => '',
+            'image_style' => '',
+          ),
+          'type' => 'image',
+          'weight' => 18,
+        ),
+        'related_block' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'search_index' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'search_result' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_alternativt_billede',
+      'label' => 'Alternativt billede',
+      'required' => 0,
+      'settings' => array(
+        'alt_field' => 1,
+        'alt_field_required' => 1,
+        'default_image' => 0,
+        'file_directory' => '',
+        'file_extensions' => 'png gif jpg jpeg',
+        'max_filesize' => '',
+        'max_resolution' => '',
+        'min_resolution' => '316x237',
+        'title_field' => 1,
+        'title_field_required' => 0,
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'imagefield_crop',
+        'settings' => array(
+          'collapsible' => '2',
+          'croparea' => '500x500',
+          'enforce_minimum' => 1,
+          'enforce_ratio' => 1,
+          'preview_image_style' => '316x237',
+          'progress_indicator' => 'throbber',
+          'resolution' => '316x237',
+        ),
+        'type' => 'imagefield_crop_widget',
+        'weight' => '11',
       ),
     ),
   );
@@ -246,7 +387,7 @@ function os2web_indholdstyper_field_default_fields() {
         'file_extensions' => 'png gif jpg jpeg',
         'max_filesize' => '',
         'max_resolution' => '',
-        'min_resolution' => '690x340',
+        'min_resolution' => '690x237',
         'title_field' => 1,
         'title_field_required' => 0,
         'user_register_form' => FALSE,
@@ -256,12 +397,12 @@ function os2web_indholdstyper_field_default_fields() {
         'module' => 'imagefield_crop',
         'settings' => array(
           'collapsible' => '2',
-          'croparea' => '690x340',
+          'croparea' => '690x400',
           'enforce_minimum' => 1,
           'enforce_ratio' => 1,
           'preview_image_style' => 'thumbnail',
           'progress_indicator' => 'throbber',
-          'resolution' => '690x340',
+          'resolution' => '690x237',
         ),
         'type' => 'imagefield_crop_widget',
         'weight' => '-3',
@@ -478,7 +619,7 @@ function os2web_indholdstyper_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'node_reference_autocomplete',
-        'weight' => '13',
+        'weight' => '7',
       ),
     ),
   );
@@ -693,7 +834,7 @@ function os2web_indholdstyper_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'node_reference_autocomplete',
-        'weight' => '15',
+        'weight' => '9',
       ),
     ),
   );
@@ -818,7 +959,7 @@ function os2web_indholdstyper_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'node_reference_autocomplete',
-        'weight' => '14',
+        'weight' => '8',
       ),
     ),
   );
@@ -1032,8 +1173,9 @@ function os2web_indholdstyper_field_default_fields() {
       'bundle' => 'contentpage',
       'default_value' => array(
         0 => array(
-          'value' => '',
           'summary' => '',
+          'value' => '',
+          'format' => 'filtered_html',
         ),
       ),
       'deleted' => '0',
@@ -1082,11 +1224,13 @@ function os2web_indholdstyper_field_default_fields() {
         'better_formats' => array(
           'allowed_formats' => array(
             'blokindhold' => 0,
-            'filtered_html' => 'filtered_html',
+            'filtered_html' => 0,
             'full_html' => 0,
+            'full_html_iframe' => 0,
             'php_code' => 0,
             'plain_text' => 0,
             'raw' => 0,
+            'standard' => 'standard',
           ),
           'allowed_formats_toggle' => 1,
           'default_order_toggle' => 0,
@@ -1101,6 +1245,9 @@ function os2web_indholdstyper_field_default_fields() {
               'full_html' => array(
                 'weight' => '-9',
               ),
+              'full_html_iframe' => array(
+                'weight' => '0',
+              ),
               'php_code' => array(
                 'weight' => '-6',
               ),
@@ -1108,6 +1255,9 @@ function os2web_indholdstyper_field_default_fields() {
                 'weight' => '-8',
               ),
               'raw' => array(
+                'weight' => '0',
+              ),
+              'standard' => array(
                 'weight' => '0',
               ),
             ),
@@ -1213,7 +1363,7 @@ function os2web_indholdstyper_field_default_fields() {
           'year_range' => '-3:+3',
         ),
         'type' => 'date_popup',
-        'weight' => '16',
+        'weight' => '10',
       ),
     ),
   );
@@ -4329,16 +4479,16 @@ function os2web_indholdstyper_field_default_fields() {
       'label' => 'Primære billede',
       'required' => 1,
       'settings' => array(
-        'alt_field' => 0,
-        'alt_field_required' => 0,
+        'alt_field' => 1,
+        'alt_field_required' => 1,
         'default_image' => 0,
         'file_directory' => '',
         'file_extensions' => 'png gif jpg jpeg',
         'max_filesize' => '10 MB',
         'max_resolution' => '800x600',
-        'min_resolution' => '690x340',
-        'title_field' => 0,
-        'title_field_required' => 0,
+        'min_resolution' => '690x237',
+        'title_field' => 1,
+        'title_field_required' => 1,
         'user_register_form' => FALSE,
       ),
       'widget' => array(
@@ -4346,12 +4496,12 @@ function os2web_indholdstyper_field_default_fields() {
         'module' => 'imagefield_crop',
         'settings' => array(
           'collapsible' => '2',
-          'croparea' => '500x500',
+          'croparea' => '690x400',
           'enforce_minimum' => 1,
           'enforce_ratio' => 1,
           'preview_image_style' => 'thumbnail',
           'progress_indicator' => 'throbber',
-          'resolution' => '690x340',
+          'resolution' => '690x237',
         ),
         'type' => 'imagefield_crop_widget',
         'weight' => 0,
@@ -6857,6 +7007,7 @@ function os2web_indholdstyper_field_default_fields() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('Alternativt billede');
   t('Baggrundsbillede');
   t('Billede');
   t('Billeder');

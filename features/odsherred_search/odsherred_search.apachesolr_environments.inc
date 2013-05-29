@@ -14,29 +14,59 @@ function odsherred_search_apachesolr_environments() {
   $environment->api_version = 1;
   $environment->env_id = 'localhost';
   $environment->name = 'Localhost';
-  $environment->url = 'http://localhost:8080/solr';
+  $environment->url = 'http://localhost:8983/solr';
   $environment->service_class = '';
   $environment->conf = array(
+    'apachesolr_index_last' => array(
+      'feedback' => array(
+        'last_changed' => 0,
+        'last_entity_id' => 0,
+      ),
+      'fieldable_panels_pane' => array(
+        'last_changed' => 0,
+        'last_entity_id' => 0,
+      ),
+      'node' => array(
+        'last_changed' => '1369649375',
+        'last_entity_id' => '894154',
+      ),
+      'file' => array(
+        'last_changed' => 0,
+        'last_entity_id' => 0,
+      ),
+      'taxonomy_term' => array(
+        'last_changed' => 0,
+        'last_entity_id' => 0,
+      ),
+      'taxonomy_vocabulary' => array(
+        'last_changed' => 0,
+        'last_entity_id' => 0,
+      ),
+      'user' => array(
+        'last_changed' => 0,
+        'last_entity_id' => 0,
+      ),
+      'wysiwyg_profile' => array(
+        'last_changed' => 0,
+        'last_entity_id' => 0,
+      ),
+      'rules_config' => array(
+        'last_changed' => 0,
+        'last_entity_id' => 0,
+      ),
+    ),
+    'apachesolr_index_updated' => 1369656001,
+    'apachesolr_last_optimize' => 1369641601,
     'apachesolr_read_only' => '0',
-    'apachesolr_search_facet_pages' => '',
+    'apachesolr_search_facet_pages' => '/search/*',
   );
   $environment->index_bundles = array(
     'node' => array(
-      0 => 'andre_sider',
-      1 => 'arp_case',
-      2 => 'arp_document',
-      3 => 'borgerservices',
-      4 => 'borger_dk_article',
-      5 => 'contentpage',
-      6 => 'hoering',
-      7 => 'local_plan',
-      8 => 'meeting',
-      9 => 'news',
-      10 => 'politician',
-      11 => 'sektionsside',
-      12 => 'selvbetjeningslinks',
-      13 => 'spotbox',
-      14 => 'subsites_og_sites',
+      0 => 'contentpage',
+      1 => 'iframe_selvbetjeningsl_sning_mm',
+      2 => 'news',
+      3 => 'os2web_borger_dk_article',
+      4 => 'subsites_og_sites',
     ),
   );
   $export['localhost'] = $environment;

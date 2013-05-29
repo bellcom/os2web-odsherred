@@ -50,6 +50,12 @@ function os2web_menuer_og_blokke_context_default_contexts() {
           'region' => 'user_second',
           'weight' => '-69',
         ),
+        'menu_block-19' => array(
+          'module' => 'menu_block',
+          'delta' => '19',
+          'region' => 'user_second',
+          'weight' => '-10',
+        ),
         'views-os2web_diverse-block_2' => array(
           'module' => 'views',
           'delta' => 'os2web_diverse-block_2',

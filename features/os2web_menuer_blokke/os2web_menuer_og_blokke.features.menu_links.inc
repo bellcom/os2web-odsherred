@@ -209,22 +209,6 @@ function os2web_menuer_og_blokke_menu_default_menu_links() {
     'expanded' => '0',
     'weight' => '-50',
   );
-  // Exported menu link: menu-erhverv-genveje:job-opslag/ofir
-  $menu_links['menu-erhverv-genveje:job-opslag/ofir'] = array(
-    'menu_name' => 'menu-erhverv-genveje',
-    'link_path' => 'job-opslag/ofir',
-    'router_path' => 'job-opslag',
-    'link_title' => 'Job',
-    'options' => array(
-      'attributes' => array(),
-    ),
-    'module' => 'menu',
-    'hidden' => '0',
-    'external' => '0',
-    'has_children' => '0',
-    'expanded' => '0',
-    'weight' => '-46',
-  );
   // Exported menu link: menu-erhverv-genveje:nyheder
   $menu_links['menu-erhverv-genveje:nyheder'] = array(
     'menu_name' => 'menu-erhverv-genveje',
@@ -385,7 +369,6 @@ function os2web_menuer_og_blokke_menu_default_menu_links() {
   // Included for use with string extractors like potx.
   t('Borger');
   t('Erhverv');
-  t('Job');
   t('Kontakt');
   t('Log out');
   t('Log ud');

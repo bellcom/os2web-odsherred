@@ -665,56 +665,906 @@ function taxonomies_and_taxonomy_importers_field_default_fields() {
     ),
   );
 
-  // Exported field: 'taxonomy_term-organisation-field_discontinued'.
-  $fields['taxonomy_term-organisation-field_discontinued'] = array(
+  // Exported field: 'taxonomy_term-organisation-field_org_aabnings'.
+  $fields['taxonomy_term-organisation-field_org_aabnings'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '-1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_org_aabnings',
+      'foreign keys' => array(
+        'format' => array(
+          'columns' => array(
+            'format' => 'format',
+          ),
+          'table' => 'filter_format',
+        ),
+      ),
+      'indexes' => array(
+        'format' => array(
+          0 => 'format',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'text',
+      'settings' => array(
+        'max_length' => '255',
+      ),
+      'translatable' => '0',
+      'type' => 'text',
+    ),
+    'field_instance' => array(
+      'bundle' => 'organisation',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'text',
+          'settings' => array(),
+          'type' => 'text_default',
+          'weight' => 8,
+        ),
+      ),
+      'entity_type' => 'taxonomy_term',
+      'field_name' => 'field_org_aabnings',
+      'label' => 'Org åbnings',
+      'required' => 0,
+      'settings' => array(
+        'better_formats' => array(
+          'allowed_formats' => array(
+            'blokindhold' => 'blokindhold',
+            'filtered_html' => 'filtered_html',
+            'full_html' => 'full_html',
+            'full_html_iframe' => 'full_html_iframe',
+            'php_code' => 'php_code',
+            'plain_text' => 'plain_text',
+            'raw' => 'raw',
+            'standard' => 'standard',
+          ),
+          'allowed_formats_toggle' => 0,
+          'default_order_toggle' => 0,
+          'default_order_wrapper' => array(
+            'formats' => array(
+              'blokindhold' => array(
+                'weight' => '-7',
+              ),
+              'filtered_html' => array(
+                'weight' => '-10',
+              ),
+              'full_html' => array(
+                'weight' => '-9',
+              ),
+              'full_html_iframe' => array(
+                'weight' => '0',
+              ),
+              'php_code' => array(
+                'weight' => '-6',
+              ),
+              'plain_text' => array(
+                'weight' => '-8',
+              ),
+              'raw' => array(
+                'weight' => '0',
+              ),
+              'standard' => array(
+                'weight' => '0',
+              ),
+            ),
+          ),
+        ),
+        'linkit' => array(
+          'enable' => 0,
+          'insert_plugin' => '',
+        ),
+        'text_processing' => '0',
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'text',
+        'settings' => array(
+          'size' => '60',
+        ),
+        'type' => 'text_textfield',
+        'weight' => '36',
+      ),
+    ),
+  );
+
+  // Exported field: 'taxonomy_term-organisation-field_org_adresse'.
+  $fields['taxonomy_term-organisation-field_org_adresse'] = array(
     'field_config' => array(
       'active' => '1',
       'cardinality' => '1',
       'deleted' => '0',
       'entity_types' => array(),
-      'field_name' => 'field_discontinued',
-      'foreign keys' => array(),
-      'indexes' => array(),
+      'field_name' => 'field_org_adresse',
+      'foreign keys' => array(
+        'format' => array(
+          'columns' => array(
+            'format' => 'format',
+          ),
+          'table' => 'filter_format',
+        ),
+      ),
+      'indexes' => array(
+        'format' => array(
+          0 => 'format',
+        ),
+      ),
       'locked' => '0',
-      'module' => 'number',
-      'settings' => array(),
+      'module' => 'text',
+      'settings' => array(
+        'max_length' => '255',
+      ),
       'translatable' => '0',
-      'type' => 'number_integer',
+      'type' => 'text',
     ),
     'field_instance' => array(
       'bundle' => 'organisation',
       'default_value' => array(
         0 => array(
-          'value' => '0',
+          'value' => '',
+          'format' => 'standard',
         ),
       ),
       'deleted' => '0',
       'description' => '',
       'display' => array(
         'default' => array(
-          'label' => 'hidden',
+          'label' => 'above',
+          'module' => 'text',
           'settings' => array(),
-          'type' => 'hidden',
-          'weight' => '1',
+          'type' => 'text_default',
+          'weight' => 3,
         ),
       ),
       'entity_type' => 'taxonomy_term',
-      'field_name' => 'field_discontinued',
-      'label' => 'Udgået',
+      'field_name' => 'field_org_adresse',
+      'label' => 'Org Adresse',
       'required' => 0,
       'settings' => array(
-        'max' => '1',
-        'min' => '0',
-        'prefix' => '',
-        'suffix' => '',
+        'better_formats' => array(
+          'allowed_formats' => array(
+            'blokindhold' => 0,
+            'filtered_html' => 0,
+            'full_html' => 0,
+            'full_html_iframe' => 0,
+            'php_code' => 0,
+            'plain_text' => 0,
+            'raw' => 0,
+            'standard' => 'standard',
+          ),
+          'allowed_formats_toggle' => 1,
+          'default_order_toggle' => 0,
+          'default_order_wrapper' => array(
+            'formats' => array(
+              'blokindhold' => array(
+                'weight' => '-7',
+              ),
+              'filtered_html' => array(
+                'weight' => '-10',
+              ),
+              'full_html' => array(
+                'weight' => '-9',
+              ),
+              'full_html_iframe' => array(
+                'weight' => '0',
+              ),
+              'php_code' => array(
+                'weight' => '-6',
+              ),
+              'plain_text' => array(
+                'weight' => '-8',
+              ),
+              'raw' => array(
+                'weight' => '0',
+              ),
+              'standard' => array(
+                'weight' => '0',
+              ),
+            ),
+          ),
+        ),
+        'linkit' => array(
+          'enable' => 0,
+          'insert_plugin' => '',
+        ),
+        'text_processing' => '1',
         'user_register_form' => FALSE,
       ),
       'widget' => array(
+        'active' => 1,
+        'module' => 'text',
+        'settings' => array(
+          'size' => '60',
+        ),
+        'type' => 'text_textfield',
+        'weight' => '31',
+      ),
+    ),
+  );
+
+  // Exported field: 'taxonomy_term-organisation-field_org_ean'.
+  $fields['taxonomy_term-organisation-field_org_ean'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '-1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_org_ean',
+      'foreign keys' => array(
+        'format' => array(
+          'columns' => array(
+            'format' => 'format',
+          ),
+          'table' => 'filter_format',
+        ),
+      ),
+      'indexes' => array(
+        'format' => array(
+          0 => 'format',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'text',
+      'settings' => array(
+        'max_length' => '255',
+      ),
+      'translatable' => '0',
+      'type' => 'text',
+    ),
+    'field_instance' => array(
+      'bundle' => 'organisation',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'text',
+          'settings' => array(),
+          'type' => 'text_default',
+          'weight' => 5,
+        ),
+      ),
+      'entity_type' => 'taxonomy_term',
+      'field_name' => 'field_org_ean',
+      'label' => 'Org EAN',
+      'required' => 0,
+      'settings' => array(
+        'better_formats' => array(
+          'allowed_formats' => array(
+            'blokindhold' => 'blokindhold',
+            'filtered_html' => 'filtered_html',
+            'full_html' => 'full_html',
+            'full_html_iframe' => 'full_html_iframe',
+            'php_code' => 'php_code',
+            'plain_text' => 'plain_text',
+            'raw' => 'raw',
+            'standard' => 'standard',
+          ),
+          'allowed_formats_toggle' => 0,
+          'default_order_toggle' => 0,
+          'default_order_wrapper' => array(
+            'formats' => array(
+              'blokindhold' => array(
+                'weight' => '-7',
+              ),
+              'filtered_html' => array(
+                'weight' => '-10',
+              ),
+              'full_html' => array(
+                'weight' => '-9',
+              ),
+              'full_html_iframe' => array(
+                'weight' => '0',
+              ),
+              'php_code' => array(
+                'weight' => '-6',
+              ),
+              'plain_text' => array(
+                'weight' => '-8',
+              ),
+              'raw' => array(
+                'weight' => '0',
+              ),
+              'standard' => array(
+                'weight' => '0',
+              ),
+            ),
+          ),
+        ),
+        'linkit' => array(
+          'enable' => 0,
+          'insert_plugin' => '',
+        ),
+        'text_processing' => '0',
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'text',
+        'settings' => array(
+          'size' => '60',
+        ),
+        'type' => 'text_textfield',
+        'weight' => '33',
+      ),
+    ),
+  );
+
+  // Exported field: 'taxonomy_term-organisation-field_org_email'.
+  $fields['taxonomy_term-organisation-field_org_email'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_org_email',
+      'foreign keys' => array(
+        'format' => array(
+          'columns' => array(
+            'format' => 'format',
+          ),
+          'table' => 'filter_format',
+        ),
+      ),
+      'indexes' => array(
+        'format' => array(
+          0 => 'format',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'text',
+      'settings' => array(
+        'max_length' => '255',
+      ),
+      'translatable' => '0',
+      'type' => 'text',
+    ),
+    'field_instance' => array(
+      'bundle' => 'organisation',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'text',
+          'settings' => array(),
+          'type' => 'text_default',
+          'weight' => 6,
+        ),
+      ),
+      'entity_type' => 'taxonomy_term',
+      'field_name' => 'field_org_email',
+      'label' => 'Org email',
+      'required' => 0,
+      'settings' => array(
+        'better_formats' => array(
+          'allowed_formats' => array(
+            'blokindhold' => 'blokindhold',
+            'filtered_html' => 'filtered_html',
+            'full_html' => 'full_html',
+            'full_html_iframe' => 'full_html_iframe',
+            'php_code' => 'php_code',
+            'plain_text' => 'plain_text',
+            'raw' => 'raw',
+            'standard' => 'standard',
+          ),
+          'allowed_formats_toggle' => 0,
+          'default_order_toggle' => 0,
+          'default_order_wrapper' => array(
+            'formats' => array(
+              'blokindhold' => array(
+                'weight' => '-7',
+              ),
+              'filtered_html' => array(
+                'weight' => '-10',
+              ),
+              'full_html' => array(
+                'weight' => '-9',
+              ),
+              'full_html_iframe' => array(
+                'weight' => '0',
+              ),
+              'php_code' => array(
+                'weight' => '-6',
+              ),
+              'plain_text' => array(
+                'weight' => '-8',
+              ),
+              'raw' => array(
+                'weight' => '0',
+              ),
+              'standard' => array(
+                'weight' => '0',
+              ),
+            ),
+          ),
+        ),
+        'linkit' => array(
+          'enable' => 0,
+          'insert_plugin' => '',
+        ),
+        'text_processing' => '0',
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'text',
+        'settings' => array(
+          'size' => '60',
+        ),
+        'type' => 'text_textfield',
+        'weight' => '34',
+      ),
+    ),
+  );
+
+  // Exported field: 'taxonomy_term-organisation-field_org_kort_billede'.
+  $fields['taxonomy_term-organisation-field_org_kort_billede'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_org_kort_billede',
+      'foreign keys' => array(
+        'fid' => array(
+          'columns' => array(
+            'fid' => 'fid',
+          ),
+          'table' => 'file_managed',
+        ),
+      ),
+      'indexes' => array(
+        'fid' => array(
+          0 => 'fid',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'image',
+      'settings' => array(
+        'default_image' => 0,
+        'uri_scheme' => 'public',
+      ),
+      'translatable' => '0',
+      'type' => 'image',
+    ),
+    'field_instance' => array(
+      'bundle' => 'organisation',
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'image',
+          'settings' => array(
+            'image_link' => '',
+            'image_style' => '',
+          ),
+          'type' => 'image',
+          'weight' => 10,
+        ),
+      ),
+      'entity_type' => 'taxonomy_term',
+      'field_name' => 'field_org_kort_billede',
+      'label' => 'Org - kort billede',
+      'required' => 0,
+      'settings' => array(
+        'alt_field' => 0,
+        'alt_field_required' => 0,
+        'default_image' => 0,
+        'file_directory' => '',
+        'file_extensions' => 'png gif jpg jpeg',
+        'max_filesize' => '',
+        'max_resolution' => '',
+        'min_resolution' => '',
+        'title_field' => 0,
+        'title_field_required' => 0,
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'imagefield_crop',
+        'settings' => array(
+          'collapsible' => '2',
+          'croparea' => '500x500',
+          'enforce_minimum' => 1,
+          'enforce_ratio' => 1,
+          'preview_image_style' => 'thumbnail',
+          'progress_indicator' => 'throbber',
+          'resolution' => '200x150',
+        ),
+        'type' => 'imagefield_crop_widget',
+        'weight' => '38',
+      ),
+    ),
+  );
+
+  // Exported field: 'taxonomy_term-organisation-field_org_leder'.
+  $fields['taxonomy_term-organisation-field_org_leder'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_org_leder',
+      'foreign keys' => array(
+        'node' => array(
+          'columns' => array(
+            'target_id' => 'nid',
+          ),
+          'table' => 'node',
+        ),
+      ),
+      'indexes' => array(
+        'target_id' => array(
+          0 => 'target_id',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'entityreference',
+      'settings' => array(
+        'handler' => 'base',
+        'handler_settings' => array(
+          'behaviors' => array(
+            'views-select-list' => array(
+              'status' => 0,
+            ),
+          ),
+          'sort' => array(
+            'type' => 'none',
+          ),
+          'target_bundles' => array(
+            'person' => 'person',
+          ),
+        ),
+        'target_type' => 'node',
+      ),
+      'translatable' => '0',
+      'type' => 'entityreference',
+    ),
+    'field_instance' => array(
+      'bundle' => 'organisation',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'entityreference',
+          'settings' => array(
+            'link' => FALSE,
+          ),
+          'type' => 'entityreference_label',
+          'weight' => 11,
+        ),
+      ),
+      'entity_type' => 'taxonomy_term',
+      'field_name' => 'field_org_leder',
+      'label' => 'Org leder',
+      'required' => 0,
+      'settings' => array(
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'options',
+        'settings' => array(
+          'content_taxonomy_opt_groups' => FALSE,
+        ),
+        'type' => 'options_select',
+        'weight' => '39',
+      ),
+    ),
+  );
+
+  // Exported field: 'taxonomy_term-organisation-field_org_link_til_kort'.
+  $fields['taxonomy_term-organisation-field_org_link_til_kort'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_org_link_til_kort',
+      'foreign keys' => array(),
+      'indexes' => array(),
+      'locked' => '0',
+      'module' => 'link',
+      'settings' => array(
+        'attributes' => array(
+          'class' => '',
+          'rel' => '',
+          'target' => 'default',
+        ),
+        'display' => array(
+          'url_cutoff' => 80,
+        ),
+        'enable_tokens' => 1,
+        'title' => 'optional',
+        'title_maxlength' => 128,
+        'title_value' => '',
+        'url' => 0,
+      ),
+      'translatable' => '0',
+      'type' => 'link_field',
+    ),
+    'field_instance' => array(
+      'bundle' => 'organisation',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'link',
+          'settings' => array(),
+          'type' => 'link_default',
+          'weight' => 9,
+        ),
+      ),
+      'entity_type' => 'taxonomy_term',
+      'field_name' => 'field_org_link_til_kort',
+      'label' => 'Org - Link til kort',
+      'required' => 0,
+      'settings' => array(
+        'attributes' => array(
+          'class' => '',
+          'configurable_title' => 0,
+          'rel' => '',
+          'target' => '_blank',
+          'title' => '',
+        ),
+        'display' => array(
+          'url_cutoff' => '80',
+        ),
+        'enable_tokens' => 1,
+        'linkit' => array(
+          'enable' => 0,
+          'insert_plugin' => '',
+        ),
+        'rel_remove' => 'default',
+        'title' => 'required',
+        'title_maxlength' => '128',
+        'title_value' => '',
+        'url' => 0,
+        'user_register_form' => FALSE,
+        'validate_url' => 1,
+      ),
+      'widget' => array(
         'active' => 0,
-        'module' => 'number',
+        'module' => 'link',
         'settings' => array(),
-        'type' => 'number',
-        'weight' => '3',
+        'type' => 'link_field',
+        'weight' => '37',
+      ),
+    ),
+  );
+
+  // Exported field: 'taxonomy_term-organisation-field_org_post_adresse'.
+  $fields['taxonomy_term-organisation-field_org_post_adresse'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_org_post_adresse',
+      'foreign keys' => array(
+        'format' => array(
+          'columns' => array(
+            'format' => 'format',
+          ),
+          'table' => 'filter_format',
+        ),
+      ),
+      'indexes' => array(
+        'format' => array(
+          0 => 'format',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'text',
+      'settings' => array(
+        'max_length' => '255',
+      ),
+      'translatable' => '0',
+      'type' => 'text',
+    ),
+    'field_instance' => array(
+      'bundle' => 'organisation',
+      'default_value' => array(
+        0 => array(
+          'value' => '',
+        ),
+      ),
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'text',
+          'settings' => array(),
+          'type' => 'text_default',
+          'weight' => 4,
+        ),
+      ),
+      'entity_type' => 'taxonomy_term',
+      'field_name' => 'field_org_post_adresse',
+      'label' => 'Org post adresse',
+      'required' => 0,
+      'settings' => array(
+        'better_formats' => array(
+          'allowed_formats' => array(
+            'blokindhold' => 0,
+            'filtered_html' => 0,
+            'full_html' => 0,
+            'full_html_iframe' => 0,
+            'php_code' => 0,
+            'plain_text' => 'plain_text',
+            'raw' => 0,
+            'standard' => 0,
+          ),
+          'allowed_formats_toggle' => 1,
+          'default_order_toggle' => 0,
+          'default_order_wrapper' => array(
+            'formats' => array(
+              'blokindhold' => array(
+                'weight' => '-7',
+              ),
+              'filtered_html' => array(
+                'weight' => '-10',
+              ),
+              'full_html' => array(
+                'weight' => '-9',
+              ),
+              'full_html_iframe' => array(
+                'weight' => '0',
+              ),
+              'php_code' => array(
+                'weight' => '-6',
+              ),
+              'plain_text' => array(
+                'weight' => '-8',
+              ),
+              'raw' => array(
+                'weight' => '0',
+              ),
+              'standard' => array(
+                'weight' => '0',
+              ),
+            ),
+          ),
+        ),
+        'linkit' => array(
+          'enable' => 0,
+          'insert_plugin' => '',
+        ),
+        'text_processing' => '1',
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'text',
+        'settings' => array(
+          'size' => '60',
+        ),
+        'type' => 'text_textfield',
+        'weight' => '32',
+      ),
+    ),
+  );
+
+  // Exported field: 'taxonomy_term-organisation-field_org_telefon'.
+  $fields['taxonomy_term-organisation-field_org_telefon'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_org_telefon',
+      'foreign keys' => array(
+        'format' => array(
+          'columns' => array(
+            'format' => 'format',
+          ),
+          'table' => 'filter_format',
+        ),
+      ),
+      'indexes' => array(
+        'format' => array(
+          0 => 'format',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'text',
+      'settings' => array(
+        'max_length' => '255',
+      ),
+      'translatable' => '0',
+      'type' => 'text',
+    ),
+    'field_instance' => array(
+      'bundle' => 'organisation',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'text',
+          'settings' => array(),
+          'type' => 'text_default',
+          'weight' => 7,
+        ),
+      ),
+      'entity_type' => 'taxonomy_term',
+      'field_name' => 'field_org_telefon',
+      'label' => 'Org telefon',
+      'required' => 0,
+      'settings' => array(
+        'better_formats' => array(
+          'allowed_formats' => array(
+            'blokindhold' => 'blokindhold',
+            'filtered_html' => 'filtered_html',
+            'full_html' => 'full_html',
+            'full_html_iframe' => 'full_html_iframe',
+            'php_code' => 'php_code',
+            'plain_text' => 'plain_text',
+            'raw' => 'raw',
+            'standard' => 'standard',
+          ),
+          'allowed_formats_toggle' => 0,
+          'default_order_toggle' => 0,
+          'default_order_wrapper' => array(
+            'formats' => array(
+              'blokindhold' => array(
+                'weight' => '-7',
+              ),
+              'filtered_html' => array(
+                'weight' => '-10',
+              ),
+              'full_html' => array(
+                'weight' => '-9',
+              ),
+              'full_html_iframe' => array(
+                'weight' => '0',
+              ),
+              'php_code' => array(
+                'weight' => '-6',
+              ),
+              'plain_text' => array(
+                'weight' => '-8',
+              ),
+              'raw' => array(
+                'weight' => '0',
+              ),
+              'standard' => array(
+                'weight' => '0',
+              ),
+            ),
+          ),
+        ),
+        'linkit' => array(
+          'enable' => 0,
+          'insert_plugin' => '',
+        ),
+        'text_processing' => '0',
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'text',
+        'settings' => array(
+          'size' => '60',
+        ),
+        'type' => 'text_textfield',
+        'weight' => '35',
       ),
     ),
   );
@@ -1184,6 +2034,15 @@ function taxonomies_and_taxonomy_importers_field_default_fields() {
   t('KLE stikord');
   t('Kontaktblok');
   t('Lovhenvisninger');
+  t('Org - Link til kort');
+  t('Org - kort billede');
+  t('Org Adresse');
+  t('Org EAN');
+  t('Org email');
+  t('Org leder');
+  t('Org post adresse');
+  t('Org telefon');
+  t('Org åbnings');
   t('Priority');
   t('Systemid');
   t('Søgeord');

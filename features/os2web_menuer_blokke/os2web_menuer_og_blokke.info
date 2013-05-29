@@ -27,7 +27,6 @@ features[menu_links][] = main-menu:taxonomy/term/4
 features[menu_links][] = main-menu:taxonomy/term/5
 features[menu_links][] = main-menu:taxonomy/term/6
 features[menu_links][] = menu-erhverv-genveje:contact
-features[menu_links][] = menu-erhverv-genveje:job-opslag/ofir
 features[menu_links][] = menu-erhverv-genveje:nyheder
 features[menu_links][] = menu-erhverv-genveje:selvbetjening
 features[menu_links][] = menu-indholdsmenu:taxonomy/term/4

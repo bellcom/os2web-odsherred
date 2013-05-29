@@ -26,29 +26,23 @@ function odsherred_search_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'apachesolr_search-sort' => array(
-          'module' => 'apachesolr_search',
-          'delta' => 'sort',
-          'region' => 'content',
-          'weight' => '-99',
-        ),
         'facetapi-LT2dFnd8cMmZGLVNO9fmhxRE08mqPGTJ' => array(
           'module' => 'facetapi',
           'delta' => 'LT2dFnd8cMmZGLVNO9fmhxRE08mqPGTJ',
           'region' => 'content',
-          'weight' => '-98',
+          'weight' => '-93',
         ),
-        'facetapi-XgsLAqEUP0cGkgFM1lxSV1QvzvRgCRT4' => array(
-          'module' => 'facetapi',
-          'delta' => 'XgsLAqEUP0cGkgFM1lxSV1QvzvRgCRT4',
-          'region' => 'sidebar_first',
-          'weight' => '-10',
-        ),
-        'apachesolr_search-mlt-001' => array(
+        'apachesolr_search-sort' => array(
           'module' => 'apachesolr_search',
-          'delta' => 'mlt-001',
+          'delta' => 'sort',
+          'region' => 'content',
+          'weight' => '-93',
+        ),
+        'facetapi-tWCrGXAGLKyRv1Hha469kKDo0BGurs8p' => array(
+          'module' => 'facetapi',
+          'delta' => 'tWCrGXAGLKyRv1Hha469kKDo0BGurs8p',
           'region' => 'sidebar_first',
-          'weight' => '-9',
+          'weight' => '-4',
         ),
       ),
     ),

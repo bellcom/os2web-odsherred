@@ -274,14 +274,9 @@ function os2web_settings_user_default_permissions() {
     'name' => 'edit own news content',
     'roles' => array(
       0 => 'Administrator',
-      1 => 'Borger - Bolig og byggeri',
-      2 => 'Borger - Børn',
-      3 => 'Borger - Kultur og fritid',
-      4 => 'Borger - Unge',
-      5 => 'Borger - Ældre',
-      6 => 'Editor',
-      7 => 'Erhverv',
-      8 => 'Webmaster',
+      1 => 'Editor',
+      2 => 'Erhverv',
+      3 => 'Webmaster',
     ),
     'module' => 'node',
   );

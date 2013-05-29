@@ -17,7 +17,7 @@ function borgerdk_visning_default_page_manager_handlers() {
   $handler->task = 'node_view';
   $handler->subtask = '';
   $handler->handler = 'panel_context';
-  $handler->weight = 7;
+  $handler->weight = -30;
   $handler->conf = array(
     'title' => 'Borger.dk',
     'no_blocks' => 0,
@@ -104,7 +104,7 @@ function borgerdk_visning_default_page_manager_handlers() {
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'admin_title' => 'Undskriv',
+      'admin_title' => 'Udskriv',
       'title' => '',
       'body' => '<a href="/print/%node:nid" target="_blank" title="Undskriv">Udskriv</a>',
       'format' => 'php_code',

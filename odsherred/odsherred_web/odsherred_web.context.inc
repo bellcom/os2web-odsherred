@@ -63,16 +63,22 @@ function odsherred_web_context_default_contexts() {
           'region' => 'header_first',
           'weight' => '-10',
         ),
-        'menu-menu-erhverv-genveje' => array(
-          'module' => 'menu',
-          'delta' => 'menu-erhverv-genveje',
+        'menu_block-19' => array(
+          'module' => 'menu_block',
+          'delta' => '19',
           'region' => 'header_second',
+          'weight' => '-10',
+        ),
+        'panels_mini-footer_menuer' => array(
+          'module' => 'panels_mini',
+          'delta' => 'footer_menuer',
+          'region' => 'footer_second',
           'weight' => '-10',
         ),
       ),
     ),
   );
-  $context->condition_mode = 0;
+  $context->condition_mode = 1;
   $export['odsherred_generelt'] = $context;
 
   return $export;

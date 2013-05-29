@@ -17,7 +17,7 @@ function os2web_portal_politik_og_planer_default_page_manager_handlers() {
   $handler->task = 'term_view';
   $handler->subtask = '';
   $handler->handler = 'panel_context';
-  $handler->weight = -28;
+  $handler->weight = -27;
   $handler->conf = array(
     'title' => 'Politik og planer',
     'no_blocks' => 0,

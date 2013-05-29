@@ -17,7 +17,7 @@ function os2web_portal_erhverv_default_page_manager_handlers() {
   $handler->task = 'term_view';
   $handler->subtask = '';
   $handler->handler = 'panel_context';
-  $handler->weight = -23;
+  $handler->weight = -24;
   $handler->conf = array(
     'title' => 'Ervherv Portalforside',
     'no_blocks' => 0,

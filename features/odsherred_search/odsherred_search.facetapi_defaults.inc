@@ -63,16 +63,21 @@ function odsherred_search_facetapi_default_facet_settings() {
   $facet->facet = 'im_field_site_structure';
   $facet->enabled = FALSE;
   $facet->settings = array(
-    'operator' => 'and',
+    'operator' => 'or',
     'hard_limit' => '50',
     'dependencies' => array(
       'roles' => array(),
+      'bundle' => 'none',
+      'bundle_selected' => array(),
+      'facets' => array(),
+      'force_deactivation' => TRUE,
+      'regex' => FALSE,
     ),
-    'facet_mincount' => '1',
+    'facet_mincount' => '0',
     'facet_missing' => 0,
     'flatten' => '0',
     'query_type' => 'term',
-    'pretty_paths_alias' => 'im_field_site_structure',
+    'pretty_paths_alias' => 'portalkategori',
   );
   $export['apachesolr@localhost::im_field_site_structure'] = $facet;
 

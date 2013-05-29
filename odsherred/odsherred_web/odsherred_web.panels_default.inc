@@ -209,7 +209,7 @@ function odsherred_web_default_panels_mini() {
       'expanded' => 0,
       'sort' => 0,
       'override_title' => 1,
-      'override_title_text' => 'svarparat.nu',
+      'override_title_text' => 'Svar parat',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -417,7 +417,10 @@ function odsherred_web_default_panels_mini() {
     $pane->subtype = 'nyheder_udbud-panel_pane_1';
     $pane->shown = TRUE;
     $pane->access = array();
-    $pane->configuration = array();
+    $pane->configuration = array(
+      'override_title' => 0,
+      'override_title_text' => 'I udbud lige nu..',
+    );
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
@@ -814,7 +817,7 @@ function odsherred_web_default_panels_mini() {
       'url' => '',
       'display' => 'block_1',
       'override_title' => 1,
-      'override_title_text' => 'Hvis du skal...',
+      'override_title_text' => 'Hvis du vil...',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -987,7 +990,7 @@ function odsherred_web_default_panels_mini() {
       'url' => '',
       'display' => 'block_1',
       'override_title' => 1,
-      'override_title_text' => 'Hvis du skal...',
+      'override_title_text' => 'Hvis du vil...',
     );
     $pane->cache = array();
     $pane->style = array(
