@@ -38,8 +38,8 @@ function odsherred_search_strongarm() {
   $strongarm->value = array(
     'localhost' => array(
       'node' => array(
-        'last_changed' => '1369821434',
-        'last_entity_id' => '894201',
+        'last_changed' => '1369896788',
+        'last_entity_id' => '894202',
       ),
     ),
   );
@@ -51,7 +51,7 @@ function odsherred_search_strongarm() {
   $strongarm->name = 'apachesolr_index_updated';
   $strongarm->value = array(
     'solr' => 1361193125,
-    'localhost' => 1369831312,
+    'localhost' => 1369897201,
   );
   $export['apachesolr_index_updated'] = $strongarm;
 
@@ -59,7 +59,7 @@ function odsherred_search_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'apachesolr_last_optimize';
-  $strongarm->value = 1369749601;
+  $strongarm->value = 1369839601;
   $export['apachesolr_last_optimize'] = $strongarm;
 
   $strongarm = new stdClass();
