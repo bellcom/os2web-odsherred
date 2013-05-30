@@ -68,3 +68,9 @@ features[views_view][] = rotating_image_view
 features[views_view][] = selvbetjening
 features[views_view][] = sitestuktur
 timestamp = 1353326099
+
+;Added by OS2Web 2013-05-30
+project=OS2Web
+version=1.11
+timestamp=1369904058
+

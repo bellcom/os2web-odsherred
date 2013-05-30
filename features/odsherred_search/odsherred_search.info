@@ -31,3 +31,9 @@ features[variable][] = apachesolr_last_optimize
 features[variable][] = apachesolr_search_default_search_page
 features[variable][] = apachesolr_search_mlt_blocks
 features[variable][] = apachesolr_set_nodeapi_messages
+
+;Added by OS2Web 2013-05-30
+project=OS2Web
+version=1.11
+timestamp=1369904058
+

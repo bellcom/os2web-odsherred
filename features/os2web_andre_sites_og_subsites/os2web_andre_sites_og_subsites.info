@@ -39,3 +39,9 @@ features[variable][] = node_preview_subsites_og_sites
 features[variable][] = node_submitted_subsites_og_sites
 features[views_view][] = andre_sider
 features[views_view][] = subsites_og_sites
+
+;Added by OS2Web 2013-05-30
+project=OS2Web
+version=1.11
+timestamp=1369904058
+
