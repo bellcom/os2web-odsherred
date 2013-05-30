@@ -70,12 +70,13 @@ function os2web_grund_paneler_default_panels_mini() {
   $mini->contexts = array();
   $mini->relationships = array();
   $display = new panels_display();
-  $display->layout = 'flexible';
+  $display->layout = 'onecol';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
       'default' => NULL,
       'center' => NULL,
+      'middle' => NULL,
     ),
   );
   $display->cache = array();
@@ -84,7 +85,7 @@ function os2web_grund_paneler_default_panels_mini() {
   $display->panels = array();
     $pane = new stdClass();
     $pane->pid = 'new-2';
-    $pane->panel = 'center';
+    $pane->panel = 'middle';
     $pane->type = 'block';
     $pane->subtype = 'menu_block-8';
     $pane->shown = TRUE;
@@ -99,16 +100,16 @@ function os2web_grund_paneler_default_panels_mini() {
     );
     $pane->css = array(
       'css_id' => '',
-      'css_class' => 'grid-2 alpha',
+      'css_class' => 'grid-3 alpha',
     );
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
     $display->content['new-2'] = $pane;
-    $display->panels['center'][0] = 'new-2';
+    $display->panels['middle'][0] = 'new-2';
     $pane = new stdClass();
     $pane->pid = 'new-3';
-    $pane->panel = 'center';
+    $pane->panel = 'middle';
     $pane->type = 'block';
     $pane->subtype = 'menu_block-9';
     $pane->shown = TRUE;
@@ -124,16 +125,16 @@ function os2web_grund_paneler_default_panels_mini() {
     );
     $pane->css = array(
       'css_id' => '',
-      'css_class' => 'grid-2',
+      'css_class' => 'grid-3',
     );
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
     $display->content['new-3'] = $pane;
-    $display->panels['center'][1] = 'new-3';
+    $display->panels['middle'][1] = 'new-3';
     $pane = new stdClass();
     $pane->pid = 'new-4';
-    $pane->panel = 'center';
+    $pane->panel = 'middle';
     $pane->type = 'block';
     $pane->subtype = 'menu_block-10';
     $pane->shown = TRUE;
@@ -148,35 +149,23 @@ function os2web_grund_paneler_default_panels_mini() {
     );
     $pane->css = array(
       'css_id' => '',
-      'css_class' => 'grid-2',
+      'css_class' => 'grid-3',
     );
     $pane->extras = array();
     $pane->position = 2;
     $pane->locks = array();
     $display->content['new-4'] = $pane;
-    $display->panels['center'][2] = 'new-4';
+    $display->panels['middle'][2] = 'new-4';
     $pane = new stdClass();
     $pane->pid = 'new-5';
-    $pane->panel = 'center';
-    $pane->type = 'views';
-    $pane->subtype = 'selvbetjening';
+    $pane->panel = 'middle';
+    $pane->type = 'block';
+    $pane->subtype = 'menu-menu-erhverv-genveje';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'override_pager_settings' => 0,
-      'use_pager' => 1,
-      'nodes_per_page' => '10',
-      'pager_id' => '0',
-      'offset' => '0',
-      'more_link' => 0,
-      'feed_icons' => 0,
-      'panel_args' => 0,
-      'link_to_view' => 0,
-      'args' => '',
-      'url' => '',
-      'display' => 'block_3',
       'override_title' => 1,
-      'override_title_text' => 'SELVBETJENING',
+      'override_title_text' => 'Om kommunen',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -184,13 +173,13 @@ function os2web_grund_paneler_default_panels_mini() {
     );
     $pane->css = array(
       'css_id' => '',
-      'css_class' => 'grid-2 omega',
+      'css_class' => 'grid-3 omega',
     );
     $pane->extras = array();
     $pane->position = 3;
     $pane->locks = array();
     $display->content['new-5'] = $pane;
-    $display->panels['center'][3] = 'new-5';
+    $display->panels['middle'][3] = 'new-5';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = 'new-3';
   $mini->display = $display;

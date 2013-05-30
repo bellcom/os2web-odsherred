@@ -1,0 +1,9 @@
+name = Slide menu links
+description = "slide to other pages"
+core = 7.x
+
+;Added by OS2Web 2013-05-30
+project=OS2Web
+version=1.11
+timestamp=1369904058
+

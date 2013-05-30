@@ -14,7 +14,7 @@ function os2web_spotbokse_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'additional_settings__active_tab_spotbox';
-  $strongarm->value = 'edit-scheduler';
+  $strongarm->value = 'edit-workflow';
   $export['additional_settings__active_tab_spotbox'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -90,9 +90,7 @@ function os2web_spotbokse_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'node_options_spotbox';
-  $strongarm->value = array(
-    0 => 'status',
-  );
+  $strongarm->value = array();
   $export['node_options_spotbox'] = $strongarm;
 
   $strongarm = new stdClass();

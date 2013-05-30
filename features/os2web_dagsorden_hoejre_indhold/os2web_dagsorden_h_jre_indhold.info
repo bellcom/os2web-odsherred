@@ -15,3 +15,9 @@ features[ctools][] = panels_mini:panels_default:1
 features[features_api][] = api:1
 features[panels_mini][] = hoejre_blokke_ved_dagsordener
 timestamp = 1353326099
+
+;Added by OS2Web 2013-05-30
+project=OS2Web
+version=1.11
+timestamp=1369904058
+

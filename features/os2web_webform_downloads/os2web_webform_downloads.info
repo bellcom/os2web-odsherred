@@ -47,7 +47,6 @@ features[variable][] = comment_form_location_webform
 features[variable][] = comment_preview_webform
 features[variable][] = comment_subject_field_webform
 features[variable][] = comment_webform
-features[variable][] = custom_search_advanced_type_webform_display
 features[variable][] = field_bundle_settings_node__webform
 features[variable][] = language_content_type_webform
 features[variable][] = menu_options_webform
@@ -77,3 +76,9 @@ features[variable][] = webform_submission_access_control
 features[variable][] = webform_use_cookies
 features[variable][] = workbench_access_node_type_webform
 timestamp = 1353326099
+
+;Added by OS2Web 2013-05-30
+project=OS2Web
+version=1.11
+timestamp=1369904058
+

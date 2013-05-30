@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Borgerdk visning feature.
+ */
+
+include_once 'borgerdk_visning.features.inc';

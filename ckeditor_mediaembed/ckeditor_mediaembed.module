@@ -1,0 +1,29 @@
+<?php
+/**
+ * module for implementing ckeditor_media embed in drupal
+ *
+ * All credit goes to MediaEmbed source:
+ *  https://github.com/frozenman/MediaEmbed
+ *
+ * as all this module does is implement a hook
+ * @author Thomas Thune Hansen <tth@bellcom.dk>
+ **/
+
+/*
+ * implements hook_mediaembed_wysiwyg_plugin()
+ */
+function ckeditor_mediaembed_wysiwyg_plugin($editor, $version) {
+  switch ($editor) {
+    case 'ckeditor':
+      return array(
+          'mediaembed' => array(
+          'path' => libraries_get_path('mediaembed') . '/mediaembed',
+          'buttons' => array(
+          'MediaEmbed' => t('MediaEmbed'),
+          ),
+          'load' => TRUE,
+        ),
+      );
+      break;
+  }
+}

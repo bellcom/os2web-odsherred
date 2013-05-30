@@ -36,7 +36,7 @@ function os2web_indholdstyper_image_default_styles() {
   $styles['indholdsside'] = array(
     'name' => 'indholdsside',
     'effects' => array(
-      1 => array(
+      5 => array(
         'label' => 'Skalér og beskær',
         'help' => 'Skalering og beskæring bevarer billedets højde-bredde-forhold og beskærer derefter den største dimension. Det er nyttigt til at generere kvadratiske thumbnails uden at forvrænge billedet.',
         'effect callback' => 'image_scale_and_crop_effect',
@@ -46,8 +46,8 @@ function os2web_indholdstyper_image_default_styles() {
         'module' => 'image',
         'name' => 'image_scale_and_crop',
         'data' => array(
-          'width' => '470',
-          'height' => '230',
+          'width' => '690',
+          'height' => '237',
         ),
         'weight' => '1',
       ),

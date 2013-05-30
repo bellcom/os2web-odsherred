@@ -27,6 +27,7 @@ function os2web_context_context_default_contexts() {
         'contentpage' => 'contentpage',
         'galleri' => 'galleri',
         'iframe_selvbetjeningsl_sning_mm' => 'iframe_selvbetjeningsl_sning_mm',
+        'os2web_borger_dk_article' => 'os2web_borger_dk_article',
         'sektionsside' => 'sektionsside',
       ),
       'options' => array(
@@ -43,13 +44,16 @@ function os2web_context_context_default_contexts() {
           'region' => 'sidebar_first',
           'weight' => '-10',
         ),
-        'superfish-2' => array(
-          'module' => 'superfish',
-          'delta' => 2,
+        'menu_block-17' => array(
+          'module' => 'menu_block',
+          'delta' => '17',
           'region' => 'sidebar_first',
-          'weight' => '9',
+          'weight' => '-8',
         ),
       ),
+    ),
+    'theme_html' => array(
+      'class' => 'borgersider',
     ),
   );
   $context->condition_mode = 1;
@@ -77,6 +81,7 @@ function os2web_context_context_default_contexts() {
         'galleri' => 'galleri',
         'iframe_selvbetjeningsl_sning_mm' => 'iframe_selvbetjeningsl_sning_mm',
         'local_plan' => 'local_plan',
+        'os2web_borger_dk_article' => 'os2web_borger_dk_article',
         'referat' => 'referat',
         'sektionsside' => 'sektionsside',
         'webform' => 'webform',
@@ -93,15 +98,18 @@ function os2web_context_context_default_contexts() {
           'module' => 'views',
           'delta' => 'sitestuktur-block_3',
           'region' => 'sidebar_first',
-          'weight' => '-74',
+          'weight' => '-10',
         ),
-        'superfish-1' => array(
-          'module' => 'superfish',
-          'delta' => 1,
+        'menu_block-15' => array(
+          'module' => 'menu_block',
+          'delta' => '15',
           'region' => 'sidebar_first',
-          'weight' => '16',
+          'weight' => '-9',
         ),
       ),
+    ),
+    'theme_html' => array(
+      'class' => 'erhvervssider',
     ),
   );
   $context->condition_mode = 1;
@@ -162,6 +170,7 @@ function os2web_context_context_default_contexts() {
         'galleri' => 'galleri',
         'iframe_selvbetjeningsl_sning_mm' => 'iframe_selvbetjeningsl_sning_mm',
         'news' => 'news',
+        'os2web_borger_dk_article' => 'os2web_borger_dk_article',
         'sektionsside' => 'sektionsside',
       ),
       'options' => array(
@@ -178,21 +187,21 @@ function os2web_context_context_default_contexts() {
           'region' => 'content',
           'weight' => '-10',
         ),
-        'menu-menu-top-menu' => array(
-          'module' => 'menu',
-          'delta' => 'menu-top-menu',
-          'region' => 'user_second',
-          'weight' => '-10',
-        ),
         'delta_blocks-action-links' => array(
           'module' => 'delta_blocks',
           'delta' => 'action-links',
           'region' => 'user_second',
           'weight' => '-10',
         ),
+        'menu-menu-top-menu' => array(
+          'module' => 'menu',
+          'delta' => 'menu-top-menu',
+          'region' => 'user_second',
+          'weight' => '-10',
+        ),
         'menu_block-12' => array(
           'module' => 'menu_block',
-          'delta' => 12,
+          'delta' => '12',
           'region' => 'sidebar_first',
           'weight' => '-7',
         ),
@@ -201,12 +210,6 @@ function os2web_context_context_default_contexts() {
           'delta' => 'selvbetjening-block_6',
           'region' => 'sidebar_second',
           'weight' => '-69',
-        ),
-        'views-kontaktblok-block' => array(
-          'module' => 'views',
-          'delta' => 'kontaktblok-block',
-          'region' => 'sidebar_second',
-          'weight' => '-68',
         ),
         'views-spot_view-block_1' => array(
           'module' => 'views',
@@ -219,12 +222,6 @@ function os2web_context_context_default_contexts() {
           'delta' => 'kle_lonks_boks-kle_links_boks',
           'region' => 'sidebar_second',
           'weight' => '-66',
-        ),
-        'menu-menu-erhverv-genveje' => array(
-          'module' => 'menu',
-          'delta' => 'menu-erhverv-genveje',
-          'region' => 'header_second',
-          'weight' => '-10',
         ),
       ),
     ),
@@ -254,6 +251,7 @@ function os2web_context_context_default_contexts() {
         'galleri' => 'galleri',
         'iframe_selvbetjeningsl_sning_mm' => 'iframe_selvbetjeningsl_sning_mm',
         'local_plan' => 'local_plan',
+        'os2web_borger_dk_article' => 'os2web_borger_dk_article',
         'sektionsside' => 'sektionsside',
       ),
       'options' => array(
@@ -270,13 +268,16 @@ function os2web_context_context_default_contexts() {
           'region' => 'sidebar_first',
           'weight' => '-10',
         ),
-        'superfish-3' => array(
-          'module' => 'superfish',
-          'delta' => 3,
+        'menu_block-16' => array(
+          'module' => 'menu_block',
+          'delta' => '16',
           'region' => 'sidebar_first',
-          'weight' => '9',
+          'weight' => '-9',
         ),
       ),
+    ),
+    'theme_html' => array(
+      'class' => 'politiksider',
     ),
   );
   $context->condition_mode = 1;
@@ -297,7 +298,7 @@ function os2web_context_context_default_contexts() {
       'values' => array(
         'borger' => 'borger',
         'erhverv' => 'erhverv',
-        'politik-og-planer' => 'politik-og-planer',
+        'politik' => 'politik',
       ),
     ),
   );
@@ -312,7 +313,7 @@ function os2web_context_context_default_contexts() {
         ),
         'menu_block-11' => array(
           'module' => 'menu_block',
-          'delta' => 11,
+          'delta' => '11',
           'region' => 'sidebar_first',
           'weight' => '-9',
         ),

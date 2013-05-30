@@ -1,0 +1,11 @@
+name = MediaEmbed for ckeditor
+description = Adds mediaembed plugin for ckeditor
+core = 7.x
+dependencies[] = libraries
+dependencies[] = wysiwyg
+
+;Added by OS2Web 2013-05-30
+project=OS2Web
+version=1.11
+timestamp=1369904058
+

@@ -300,18 +300,14 @@ function os2web_context_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'node_options_esdh_dokument';
-  $strongarm->value = array(
-    0 => 'status',
-  );
+  $strongarm->value = array();
   $export['node_options_esdh_dokument'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'node_options_esdh_sag';
-  $strongarm->value = array(
-    0 => 'status',
-  );
+  $strongarm->value = array();
   $export['node_options_esdh_sag'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -319,8 +315,7 @@ function os2web_context_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'node_options_local_plan';
   $strongarm->value = array(
-    0 => 'status',
-    1 => 'revision',
+    0 => 'revision',
   );
   $export['node_options_local_plan'] = $strongarm;
 
@@ -329,8 +324,7 @@ function os2web_context_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'node_options_referat';
   $strongarm->value = array(
-    0 => 'status',
-    1 => 'revision',
+    0 => 'revision',
   );
   $export['node_options_referat'] = $strongarm;
 

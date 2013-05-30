@@ -2,3 +2,9 @@ name = OS2WEB breaking news
 description = "Adds breaking news marquee on frontpage"
 core = 7.x
 package = OS2Web - Struktur
+
+;Added by OS2Web 2013-05-30
+project=OS2Web
+version=1.11
+timestamp=1369904058
+

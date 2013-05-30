@@ -17,7 +17,7 @@ function borger_dk_integration_default_page_manager_handlers() {
   $handler->task = 'term_view';
   $handler->subtask = '';
   $handler->handler = 'panel_context';
-  $handler->weight = 0;
+  $handler->weight = -23;
   $handler->conf = array(
     'title' => 'Section taxonomy term page',
     'no_blocks' => 0,
@@ -107,7 +107,7 @@ function borger_dk_integration_default_page_manager_handlers() {
   $handler->task = 'term_view';
   $handler->subtask = '';
   $handler->handler = 'panel_context';
-  $handler->weight = 1;
+  $handler->weight = -22;
   $handler->conf = array(
     'title' => 'News taxonomy term page',
     'no_blocks' => 0,

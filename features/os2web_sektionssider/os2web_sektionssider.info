@@ -2,8 +2,8 @@ name = OS2Web Sektionssider
 core = 7.x
 package = OS2Web - Struktur
 php = 5.2.4
-version = 7.x-1.10
-project = OS2Web
+version = 7.x-1.11
+project = os2web_sektionssider
 dependencies[] = borger_dk_integration
 dependencies[] = ctools
 dependencies[] = features
@@ -27,3 +27,9 @@ features[variable][] = node_options_sektionsside
 features[variable][] = node_preview_sektionsside
 features[variable][] = node_submitted_sektionsside
 timestamp = 1353326099
+
+;Added by OS2Web 2013-05-30
+project=OS2Web
+version=1.11
+timestamp=1369904058
+

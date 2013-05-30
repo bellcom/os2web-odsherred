@@ -58,6 +58,12 @@ function os2web_spotbokse_field_default_fields() {
           'type' => 'text_default',
           'weight' => '9',
         ),
+        'jquerymobile_teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
         'related_block' => array(
           'label' => 'above',
           'settings' => array(),
@@ -141,6 +147,12 @@ function os2web_spotbokse_field_default_fields() {
           'type' => 'taxonomy_term_reference_link',
           'weight' => '5',
         ),
+        'jquerymobile_teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
         'related_block' => array(
           'label' => 'above',
           'settings' => array(),
@@ -215,10 +227,16 @@ function os2web_spotbokse_field_default_fields() {
           'module' => 'image',
           'settings' => array(
             'image_link' => '',
-            'image_style' => 'spotbox-300',
+            'image_style' => 'spotbox_portal_uden_links',
           ),
           'type' => 'image',
           'weight' => '14',
+        ),
+        'jquerymobile_teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
         ),
         'related_block' => array(
           'label' => 'above',
@@ -235,7 +253,7 @@ function os2web_spotbokse_field_default_fields() {
       ),
       'entity_type' => 'node',
       'field_name' => 'field_fokus_sektionsforside',
-      'label' => 'Fokus sektionsforside',
+      'label' => 'Billede',
       'required' => 0,
       'settings' => array(
         'alt_field' => 1,
@@ -313,6 +331,12 @@ function os2web_spotbokse_field_default_fields() {
           'type' => 'image',
           'weight' => '10',
         ),
+        'jquerymobile_teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
         'related_block' => array(
           'label' => 'above',
           'settings' => array(),
@@ -356,7 +380,7 @@ function os2web_spotbokse_field_default_fields() {
           'resolution' => '230x115',
         ),
         'type' => 'imagefield_crop_widget',
-        'weight' => '3',
+        'weight' => '22',
       ),
     ),
   );
@@ -408,6 +432,12 @@ function os2web_spotbokse_field_default_fields() {
           'settings' => array(),
           'type' => 'taxonomy_term_reference_link',
           'weight' => '4',
+        ),
+        'jquerymobile_teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
         ),
         'related_block' => array(
           'label' => 'above',
@@ -490,6 +520,12 @@ function os2web_spotbokse_field_default_fields() {
           'settings' => array(),
           'type' => 'taxonomy_term_reference_link',
           'weight' => '6',
+        ),
+        'jquerymobile_teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
         ),
         'related_block' => array(
           'label' => 'above',
@@ -574,6 +610,12 @@ function os2web_spotbokse_field_default_fields() {
           'type' => 'taxonomy_term_reference_link',
           'weight' => '8',
         ),
+        'jquerymobile_teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
         'related_block' => array(
           'label' => 'above',
           'settings' => array(),
@@ -600,6 +642,129 @@ function os2web_spotbokse_field_default_fields() {
         'settings' => array(),
         'type' => 'options_buttons',
         'weight' => '21',
+      ),
+    ),
+  );
+
+  // Exported field: 'node-spotbox-field_reference'.
+  $fields['node-spotbox-field_reference'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '6',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_reference',
+      'foreign keys' => array(
+        'nid' => array(
+          'columns' => array(
+            'nid' => 'nid',
+          ),
+          'table' => 'node',
+        ),
+      ),
+      'indexes' => array(
+        'nid' => array(
+          0 => 'nid',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'node_reference',
+      'settings' => array(
+        'referenceable_types' => array(
+          'arp_case' => 0,
+          'arp_document' => 0,
+          'baggrund' => 0,
+          'borger_dk_permalink' => 0,
+          'borgerservices' => 0,
+          'bullet_point' => 0,
+          'bullet_point_attachment' => 0,
+          'contentpage' => 0,
+          'esdh_dokument' => 0,
+          'esdh_sag' => 0,
+          'files' => 0,
+          'galleri' => 0,
+          'hoering' => 0,
+          'iframe_selvbetjeningsl_sning_mm' => 'iframe_selvbetjeningsl_sning_mm',
+          'institution' => 0,
+          'knactivity' => 0,
+          'kontaktblok' => 0,
+          'local_plan' => 0,
+          'media' => 0,
+          'meeting' => 0,
+          'news' => 0,
+          'ofir_job' => 0,
+          'os2web_meeting_search_status' => 0,
+          'panel' => 0,
+          'person' => 0,
+          'politician' => 0,
+          'referat' => 0,
+          'right_column' => 0,
+          'rotating_image' => 0,
+          'sektionsside' => 0,
+          'selvbetjeningslinks' => 'selvbetjeningslinks',
+          'speaker_paper' => 0,
+          'spotbox' => 0,
+          'tema' => 0,
+          'webform' => 0,
+        ),
+        'view' => array(
+          'args' => array(),
+          'display_name' => '',
+          'view_name' => '',
+        ),
+      ),
+      'translatable' => '0',
+      'type' => 'node_reference',
+    ),
+    'field_instance' => array(
+      'bundle' => 'spotbox',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'node_reference',
+          'settings' => array(),
+          'type' => 'node_reference_default',
+          'weight' => '15',
+        ),
+        'jquerymobile_teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'related_block' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_reference',
+      'label' => 'Reference',
+      'required' => 0,
+      'settings' => array(
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'node_reference',
+        'settings' => array(
+          'autocomplete_match' => 'contains',
+          'autocomplete_path' => 'node_reference/autocomplete',
+          'size' => '60',
+        ),
+        'type' => 'node_reference_autocomplete',
+        'weight' => '14',
       ),
     ),
   );
@@ -653,6 +818,12 @@ function os2web_spotbokse_field_default_fields() {
           'type' => 'taxonomy_term_reference_link',
           'weight' => '3',
         ),
+        'jquerymobile_teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
         'related_block' => array(
           'label' => 'above',
           'settings' => array(),
@@ -676,7 +847,9 @@ function os2web_spotbokse_field_default_fields() {
       'widget' => array(
         'active' => 1,
         'module' => 'options',
-        'settings' => array(),
+        'settings' => array(
+          'content_taxonomy_opt_groups' => FALSE,
+        ),
         'type' => 'options_select',
         'weight' => '1',
       ),
@@ -728,6 +901,12 @@ function os2web_spotbokse_field_default_fields() {
           'type' => 'image',
           'weight' => '11',
         ),
+        'jquerymobile_teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
         'related_block' => array(
           'label' => 'above',
           'settings' => array(),
@@ -760,8 +939,16 @@ function os2web_spotbokse_field_default_fields() {
       ),
       'widget' => array(
         'active' => 1,
-        'module' => 'imagefield_crop',
+        'module' => 'media',
         'settings' => array(
+          'allowed_schemes' => array(
+            0 => 'public',
+            1 => 'private',
+          ),
+          'allowed_types' => array(
+            0 => 'image',
+          ),
+          'browser_plugins' => array(),
           'collapsible' => '3',
           'croparea' => '500x500',
           'enforce_minimum' => 1,
@@ -770,8 +957,8 @@ function os2web_spotbokse_field_default_fields() {
           'progress_indicator' => 'throbber',
           'resolution' => '230x337',
         ),
-        'type' => 'imagefield_crop_widget',
-        'weight' => '4',
+        'type' => 'media_generic',
+        'weight' => '23',
       ),
     ),
   );
@@ -820,6 +1007,12 @@ function os2web_spotbokse_field_default_fields() {
           ),
           'type' => 'image',
           'weight' => '12',
+        ),
+        'jquerymobile_teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
         ),
         'related_block' => array(
           'label' => 'above',
@@ -925,6 +1118,12 @@ function os2web_spotbokse_field_default_fields() {
           'type' => 'image',
           'weight' => '13',
         ),
+        'jquerymobile_teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
         'related_block' => array(
           'label' => 'above',
           'settings' => array(),
@@ -968,7 +1167,7 @@ function os2web_spotbokse_field_default_fields() {
           'resolution' => '300x261',
         ),
         'type' => 'imagefield_crop_widget',
-        'weight' => '5',
+        'weight' => '24',
       ),
     ),
   );
@@ -1019,7 +1218,13 @@ function os2web_spotbokse_field_default_fields() {
           'module' => 'taxonomy',
           'settings' => array(),
           'type' => 'taxonomy_term_reference_link',
-          'weight' => 2,
+          'weight' => '2',
+        ),
+        'jquerymobile_teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
         ),
         'related_block' => array(
           'label' => 'above',
@@ -1101,7 +1306,13 @@ function os2web_spotbokse_field_default_fields() {
           'module' => 'taxonomy',
           'settings' => array(),
           'type' => 'taxonomy_term_reference_link',
-          'weight' => 6,
+          'weight' => '6',
+        ),
+        'jquerymobile_teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
         ),
         'related_block' => array(
           'label' => 'above',
@@ -1175,7 +1386,13 @@ function os2web_spotbokse_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => 11,
+          'weight' => '11',
+        ),
+        'jquerymobile_teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
         ),
         'related_block' => array(
           'label' => 'above',
@@ -1250,7 +1467,13 @@ function os2web_spotbokse_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => 4,
+          'weight' => '4',
+        ),
+        'jquerymobile_teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
         ),
         'related_block' => array(
           'label' => 'above',
@@ -1289,7 +1512,6 @@ function os2web_spotbokse_field_default_fields() {
   // Included for use with string extractors like potx.
   t('Billede');
   t('Egenavne / Stednavne');
-  t('Fokus sektionsforside');
   t('Forfrem til');
   t('Højt billede');
   t('KL Emneord');
@@ -1297,6 +1519,7 @@ function os2web_spotbokse_field_default_fields() {
   t('Organisation');
   t('Politik');
   t('Portalkategori');
+  t('Reference');
   t('Stikord');
   t('Stort billede');
   t('Tekst');

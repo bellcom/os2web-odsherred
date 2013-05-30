@@ -28,6 +28,7 @@ function os2web_settings_user_default_permissions() {
       1 => 'Editor',
       2 => 'Kommunikation',
       3 => 'Webmaster',
+      4 => 'Webredaktør',
     ),
     'module' => 'node',
   );
@@ -38,6 +39,7 @@ function os2web_settings_user_default_permissions() {
     'roles' => array(
       0 => 'Administrator',
       1 => 'Webmaster',
+      2 => 'Webredaktør',
     ),
     'module' => 'media_internet',
   );
@@ -74,9 +76,7 @@ function os2web_settings_user_default_permissions() {
   // Exported permission: create galleri content.
   $permissions['create galleri content'] = array(
     'name' => 'create galleri content',
-    'roles' => array(
-      0 => 'authenticated user',
-    ),
+    'roles' => array(),
     'module' => 'node',
   );
 
@@ -84,7 +84,9 @@ function os2web_settings_user_default_permissions() {
   $permissions['create news content'] = array(
     'name' => 'create news content',
     'roles' => array(
-      0 => 'authenticated user',
+      0 => 'Administrator',
+      1 => 'Editor',
+      2 => 'Webmaster',
     ),
     'module' => 'node',
   );
@@ -115,11 +117,7 @@ function os2web_settings_user_default_permissions() {
   // Exported permission: delete any galleri content.
   $permissions['delete any galleri content'] = array(
     'name' => 'delete any galleri content',
-    'roles' => array(
-      0 => 'Administrator',
-      1 => 'Editor',
-      2 => 'Webmaster',
-    ),
+    'roles' => array(),
     'module' => 'node',
   );
 
@@ -137,12 +135,7 @@ function os2web_settings_user_default_permissions() {
   // Exported permission: delete any rotating_image content.
   $permissions['delete any rotating_image content'] = array(
     'name' => 'delete any rotating_image content',
-    'roles' => array(
-      0 => 'Administrator',
-      1 => 'Editor',
-      2 => 'Kommunikation',
-      3 => 'Webmaster',
-    ),
+    'roles' => array(),
     'module' => 'node',
   );
 
@@ -154,6 +147,8 @@ function os2web_settings_user_default_permissions() {
       1 => 'Editor',
       2 => 'Kommunikation',
       3 => 'Webmaster',
+      4 => 'Webredaktør',
+      5 => 'authenticated user',
     ),
     'module' => 'node',
   );
@@ -161,30 +156,21 @@ function os2web_settings_user_default_permissions() {
   // Exported permission: delete own esdh_dokument content.
   $permissions['delete own esdh_dokument content'] = array(
     'name' => 'delete own esdh_dokument content',
-    'roles' => array(
-      0 => 'Administrator',
-    ),
+    'roles' => array(),
     'module' => 'node',
   );
 
   // Exported permission: delete own esdh_sag content.
   $permissions['delete own esdh_sag content'] = array(
     'name' => 'delete own esdh_sag content',
-    'roles' => array(
-      0 => 'Administrator',
-    ),
+    'roles' => array(),
     'module' => 'node',
   );
 
   // Exported permission: delete own galleri content.
   $permissions['delete own galleri content'] = array(
     'name' => 'delete own galleri content',
-    'roles' => array(
-      0 => 'Administrator',
-      1 => 'Editor',
-      2 => 'Kommunikation',
-      3 => 'Webmaster',
-    ),
+    'roles' => array(),
     'module' => 'node',
   );
 
@@ -192,7 +178,9 @@ function os2web_settings_user_default_permissions() {
   $permissions['delete own news content'] = array(
     'name' => 'delete own news content',
     'roles' => array(
-      0 => 'authenticated user',
+      0 => 'Administrator',
+      1 => 'Editor',
+      2 => 'Webmaster',
     ),
     'module' => 'node',
   );
@@ -200,12 +188,7 @@ function os2web_settings_user_default_permissions() {
   // Exported permission: delete own rotating_image content.
   $permissions['delete own rotating_image content'] = array(
     'name' => 'delete own rotating_image content',
-    'roles' => array(
-      0 => 'Administrator',
-      1 => 'Editor',
-      2 => 'Kommunikation',
-      3 => 'Webmaster',
-    ),
+    'roles' => array(),
     'module' => 'node',
   );
 
@@ -234,11 +217,7 @@ function os2web_settings_user_default_permissions() {
   // Exported permission: edit any galleri content.
   $permissions['edit any galleri content'] = array(
     'name' => 'edit any galleri content',
-    'roles' => array(
-      0 => 'Administrator',
-      1 => 'Editor',
-      2 => 'Webmaster',
-    ),
+    'roles' => array(),
     'module' => 'node',
   );
 
@@ -256,12 +235,7 @@ function os2web_settings_user_default_permissions() {
   // Exported permission: edit any rotating_image content.
   $permissions['edit any rotating_image content'] = array(
     'name' => 'edit any rotating_image content',
-    'roles' => array(
-      0 => 'Administrator',
-      1 => 'Editor',
-      2 => 'Kommunikation',
-      3 => 'Webmaster',
-    ),
+    'roles' => array(),
     'module' => 'node',
   );
 
@@ -277,27 +251,21 @@ function os2web_settings_user_default_permissions() {
   // Exported permission: edit own esdh_dokument content.
   $permissions['edit own esdh_dokument content'] = array(
     'name' => 'edit own esdh_dokument content',
-    'roles' => array(
-      0 => 'Administrator',
-    ),
+    'roles' => array(),
     'module' => 'node',
   );
 
   // Exported permission: edit own esdh_sag content.
   $permissions['edit own esdh_sag content'] = array(
     'name' => 'edit own esdh_sag content',
-    'roles' => array(
-      0 => 'Administrator',
-    ),
+    'roles' => array(),
     'module' => 'node',
   );
 
   // Exported permission: edit own galleri content.
   $permissions['edit own galleri content'] = array(
     'name' => 'edit own galleri content',
-    'roles' => array(
-      0 => 'authenticated user',
-    ),
+    'roles' => array(),
     'module' => 'node',
   );
 
@@ -305,7 +273,10 @@ function os2web_settings_user_default_permissions() {
   $permissions['edit own news content'] = array(
     'name' => 'edit own news content',
     'roles' => array(
-      0 => 'authenticated user',
+      0 => 'Administrator',
+      1 => 'Editor',
+      2 => 'Erhverv',
+      3 => 'Webmaster',
     ),
     'module' => 'node',
   );
@@ -313,12 +284,7 @@ function os2web_settings_user_default_permissions() {
   // Exported permission: edit own rotating_image content.
   $permissions['edit own rotating_image content'] = array(
     'name' => 'edit own rotating_image content',
-    'roles' => array(
-      0 => 'Administrator',
-      1 => 'Editor',
-      2 => 'Kommunikation',
-      3 => 'Webmaster',
-    ),
+    'roles' => array(),
     'module' => 'node',
   );
 
@@ -328,6 +294,7 @@ function os2web_settings_user_default_permissions() {
     'roles' => array(
       0 => 'Administrator',
       1 => 'Webmaster',
+      2 => 'Webredaktør',
     ),
     'module' => 'media',
   );
@@ -338,6 +305,7 @@ function os2web_settings_user_default_permissions() {
     'roles' => array(
       0 => 'Administrator',
       1 => 'Webmaster',
+      2 => 'Webredaktør',
     ),
     'module' => 'node',
   );
@@ -428,6 +396,7 @@ function os2web_settings_user_default_permissions() {
     'roles' => array(
       0 => 'Administrator',
       1 => 'Webmaster',
+      2 => 'Webredaktør',
     ),
     'module' => 'node',
   );

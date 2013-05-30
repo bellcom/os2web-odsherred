@@ -2,6 +2,8 @@ name = OS2WEB Special
 description = "Tilføjelse diverse ekstra features: Styling til menu_minipanel, JS til søgefelt, SearchAPI"
 core = 7.x
 package = OS2Web - Struktur
+files[] = os2web_special.views.inc
+
 
 ; Information added by drush on 2012-05-18
 version = "dev"
@@ -69,4 +71,10 @@ timestamp=1352802164
 project=OS2Web
 version=7.x-1.10
 timestamp=1353326099
+
+
+;Added by OS2Web 2013-05-30
+project=OS2Web
+version=1.11
+timestamp=1369904058
 

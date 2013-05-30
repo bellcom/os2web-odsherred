@@ -1,0 +1,27 @@
+<?php
+/**
+ * @file
+ *
+ * @author Thomas Thune Hansen <tth@bellcom.dk>
+ * 
+ * Implements a custom widget for facet api, exposing indexed value
+ * as a class for list items
+ */
+
+/**
+ * implements HOOK_facetapi_widgets() 
+ */
+function odsherred_facets_facetapi_widgets() {
+  return array(
+    'example' => array(
+      'handler' => array(
+        'label' => t('Links with classes'),
+        'class' => 'OdsherredFacetApiWidget',
+        'query types' => array('term', 'news type'),
+      ),
+    ),
+  );
+}
+
+
+

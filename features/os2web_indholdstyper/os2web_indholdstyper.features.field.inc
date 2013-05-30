@@ -64,6 +64,20 @@ function os2web_indholdstyper_field_default_fields() {
           'type' => 'hidden',
           'weight' => 0,
         ),
+        'search_index' => array(
+          'label' => 'hidden',
+          'module' => 'text',
+          'settings' => array(),
+          'type' => 'text_default',
+          'weight' => '3',
+        ),
+        'search_result' => array(
+          'label' => 'hidden',
+          'module' => 'text',
+          'settings' => array(),
+          'type' => 'text_default',
+          'weight' => '1',
+        ),
         'teaser' => array(
           'label' => 'hidden',
           'module' => 'text',
@@ -79,6 +93,48 @@ function os2web_indholdstyper_field_default_fields() {
       'label' => 'Indhold',
       'required' => 0,
       'settings' => array(
+        'better_formats' => array(
+          'allowed_formats' => array(
+            'blokindhold' => 0,
+            'filtered_html' => 'filtered_html',
+            'full_html' => 'full_html',
+            'full_html_iframe' => 'full_html_iframe',
+            'php_code' => 0,
+            'plain_text' => 0,
+            'raw' => 0,
+            'standard' => 0,
+          ),
+          'allowed_formats_toggle' => 1,
+          'default_order_toggle' => 0,
+          'default_order_wrapper' => array(
+            'formats' => array(
+              'blokindhold' => array(
+                'weight' => '-7',
+              ),
+              'filtered_html' => array(
+                'weight' => '-10',
+              ),
+              'full_html' => array(
+                'weight' => '-9',
+              ),
+              'full_html_iframe' => array(
+                'weight' => '0',
+              ),
+              'php_code' => array(
+                'weight' => '-6',
+              ),
+              'plain_text' => array(
+                'weight' => '-8',
+              ),
+              'raw' => array(
+                'weight' => '0',
+              ),
+              'standard' => array(
+                'weight' => '0',
+              ),
+            ),
+          ),
+        ),
         'display_summary' => 0,
         'text_processing' => '1',
         'user_register_form' => FALSE,
@@ -92,6 +148,105 @@ function os2web_indholdstyper_field_default_fields() {
         ),
         'type' => 'text_textarea_with_summary',
         'weight' => '2',
+      ),
+    ),
+  );
+
+  // Exported field: 'node-contentpage-field_alternativt_billede'.
+  $fields['node-contentpage-field_alternativt_billede'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_alternativt_billede',
+      'foreign keys' => array(
+        'fid' => array(
+          'columns' => array(
+            'fid' => 'fid',
+          ),
+          'table' => 'file_managed',
+        ),
+      ),
+      'indexes' => array(
+        'fid' => array(
+          0 => 'fid',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'image',
+      'settings' => array(
+        'default_image' => 0,
+        'uri_scheme' => 'public',
+      ),
+      'translatable' => '0',
+      'type' => 'image',
+    ),
+    'field_instance' => array(
+      'bundle' => 'contentpage',
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'image',
+          'settings' => array(
+            'image_link' => '',
+            'image_style' => '',
+          ),
+          'type' => 'image',
+          'weight' => 18,
+        ),
+        'related_block' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'search_index' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'search_result' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_alternativt_billede',
+      'label' => 'Alternativt billede',
+      'required' => 0,
+      'settings' => array(
+        'alt_field' => 1,
+        'alt_field_required' => 1,
+        'default_image' => 0,
+        'file_directory' => '',
+        'file_extensions' => 'png gif jpg jpeg',
+        'max_filesize' => '',
+        'max_resolution' => '',
+        'min_resolution' => '316x237',
+        'title_field' => 1,
+        'title_field_required' => 0,
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'imagefield_crop',
+        'settings' => array(
+          'collapsible' => '2',
+          'croparea' => '500x500',
+          'enforce_minimum' => 1,
+          'enforce_ratio' => 1,
+          'preview_image_style' => '316x237',
+          'progress_indicator' => 'throbber',
+          'resolution' => '316x237',
+        ),
+        'type' => 'imagefield_crop_widget',
+        'weight' => '11',
       ),
     ),
   );
@@ -138,8 +293,10 @@ function os2web_indholdstyper_field_default_fields() {
             'slideshow_caption' => 'alt',
             'slideshow_caption_link' => '',
             'slideshow_carousel_circular' => 0,
+            'slideshow_carousel_follow' => 0,
             'slideshow_carousel_image_style' => '',
             'slideshow_carousel_scroll' => '1',
+            'slideshow_carousel_skin' => '',
             'slideshow_carousel_speed' => '500',
             'slideshow_carousel_vertical' => 0,
             'slideshow_carousel_visible' => '3',
@@ -149,6 +306,8 @@ function os2web_indholdstyper_field_default_fields() {
             'slideshow_colorbox_speed' => '350',
             'slideshow_colorbox_transition' => 'elastic',
             'slideshow_controls' => 0,
+            'slideshow_controls_pause' => 0,
+            'slideshow_controls_position' => 'after',
             'slideshow_field_collection_image' => '',
             'slideshow_fx' => 'fade',
             'slideshow_image_style' => 'indholdsside',
@@ -156,8 +315,10 @@ function os2web_indholdstyper_field_default_fields() {
             'slideshow_order' => '',
             'slideshow_pager' => '',
             'slideshow_pager_image_style' => '',
+            'slideshow_pager_position' => 'after',
             'slideshow_pause' => 0,
             'slideshow_speed' => '1000',
+            'slideshow_start_on_hover' => 0,
             'slideshow_timeout' => '4000',
           ),
           'type' => 'slideshow',
@@ -169,165 +330,82 @@ function os2web_indholdstyper_field_default_fields() {
           'type' => 'hidden',
           'weight' => 0,
         ),
+        'search_index' => array(
+          'label' => 'hidden',
+          'module' => 'field_slideshow',
+          'settings' => array(
+            'slideshow_caption' => 'alt',
+            'slideshow_caption_link' => '',
+            'slideshow_carousel_circular' => 0,
+            'slideshow_carousel_follow' => 0,
+            'slideshow_carousel_image_style' => '',
+            'slideshow_carousel_scroll' => '1',
+            'slideshow_carousel_skin' => '',
+            'slideshow_carousel_speed' => '500',
+            'slideshow_carousel_vertical' => 0,
+            'slideshow_carousel_visible' => '3',
+            'slideshow_colorbox_image_style' => '',
+            'slideshow_colorbox_slideshow' => '',
+            'slideshow_colorbox_slideshow_speed' => '4000',
+            'slideshow_colorbox_speed' => '350',
+            'slideshow_colorbox_transition' => 'elastic',
+            'slideshow_controls' => 0,
+            'slideshow_controls_pause' => 0,
+            'slideshow_controls_position' => 'after',
+            'slideshow_field_collection_image' => '',
+            'slideshow_fx' => 'fade',
+            'slideshow_image_style' => 'indholdsside',
+            'slideshow_link' => '',
+            'slideshow_order' => '',
+            'slideshow_pager' => '',
+            'slideshow_pager_image_style' => '',
+            'slideshow_pager_position' => 'after',
+            'slideshow_pause' => 0,
+            'slideshow_speed' => '1000',
+            'slideshow_start_on_hover' => 0,
+            'slideshow_timeout' => '4000',
+          ),
+          'type' => 'slideshow',
+          'weight' => '1',
+        ),
+        'search_result' => array(
+          'label' => 'hidden',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '7',
+        ),
       ),
       'entity_type' => 'node',
       'field_name' => 'field_billede',
       'label' => 'Billede',
       'required' => 0,
       'settings' => array(
-        'alt_field' => 0,
+        'alt_field' => 1,
         'alt_field_required' => 1,
         'default_image' => 0,
         'file_directory' => '',
         'file_extensions' => 'png gif jpg jpeg',
         'max_filesize' => '',
         'max_resolution' => '',
-        'min_resolution' => '470x230',
-        'title_field' => 0,
-        'title_field_required' => 1,
+        'min_resolution' => '690x237',
+        'title_field' => 1,
+        'title_field_required' => 0,
         'user_register_form' => FALSE,
       ),
       'widget' => array(
         'active' => 1,
-        'module' => 'media',
+        'module' => 'imagefield_crop',
         'settings' => array(
-          'allowed_schemes' => array(
-            'public' => 'public',
-            'youtube' => 0,
-          ),
-          'allowed_types' => array(
-            'audio' => 0,
-            'default' => 0,
-            'image' => 'image',
-            'video' => 0,
-          ),
-          'browser_plugins' => array(),
+          'collapsible' => '2',
+          'croparea' => '690x400',
+          'enforce_minimum' => 1,
+          'enforce_ratio' => 1,
+          'preview_image_style' => 'thumbnail',
           'progress_indicator' => 'throbber',
+          'resolution' => '690x237',
         ),
-        'type' => 'media_generic',
+        'type' => 'imagefield_crop_widget',
         'weight' => '-3',
-      ),
-    ),
-  );
-
-  // Exported field: 'node-contentpage-field_case'.
-  $fields['node-contentpage-field_case'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '1',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_case',
-      'foreign keys' => array(),
-      'indexes' => array(),
-      'locked' => '0',
-      'module' => 'os2web_case_field',
-      'settings' => array(),
-      'translatable' => '0',
-      'type' => 'case_ident',
-    ),
-    'field_instance' => array(
-      'bundle' => 'contentpage',
-      'default_value' => NULL,
-      'deleted' => '0',
-      'description' => '',
-      'display' => array(
-        'default' => array(
-          'label' => 'hidden',
-          'module' => 'os2web_case_field',
-          'settings' => array(),
-          'type' => 'case_ident_formatter',
-          'weight' => '4',
-        ),
-        'related_block' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-        'teaser' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-      ),
-      'entity_type' => 'node',
-      'field_name' => 'field_case',
-      'label' => 'Sag',
-      'required' => 0,
-      'settings' => array(
-        'user_register_form' => FALSE,
-      ),
-      'widget' => array(
-        'active' => 0,
-        'module' => 'os2web_case_field',
-        'settings' => array(),
-        'type' => 'case_ident_widget',
-        'weight' => '51',
-      ),
-    ),
-  );
-
-  // Exported field: 'node-contentpage-field_doc'.
-  $fields['node-contentpage-field_doc'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '1',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_doc',
-      'foreign keys' => array(),
-      'indexes' => array(
-        'doc_ident' => array(
-          0 => 'doc_ident',
-        ),
-      ),
-      'locked' => '0',
-      'module' => 'os2web_doc_field',
-      'settings' => array(),
-      'translatable' => '0',
-      'type' => 'doc_ident',
-    ),
-    'field_instance' => array(
-      'bundle' => 'contentpage',
-      'default_value' => NULL,
-      'deleted' => '0',
-      'description' => '',
-      'display' => array(
-        'default' => array(
-          'label' => 'hidden',
-          'module' => 'os2web_doc_field',
-          'settings' => array(),
-          'type' => 'doc_ident_formatter',
-          'weight' => '5',
-        ),
-        'related_block' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-        'teaser' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-      ),
-      'entity_type' => 'node',
-      'field_name' => 'field_doc',
-      'label' => 'Dokument',
-      'required' => 0,
-      'settings' => array(
-        'user_register_form' => FALSE,
-      ),
-      'widget' => array(
-        'active' => 0,
-        'module' => 'os2web_doc_field',
-        'settings' => array(),
-        'type' => 'doc_ident_widget',
-        'weight' => '52',
       ),
     ),
   );
@@ -387,6 +465,18 @@ function os2web_indholdstyper_field_default_fields() {
           'type' => 'hidden',
           'weight' => 0,
         ),
+        'search_index' => array(
+          'label' => 'inline',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '14',
+        ),
+        'search_result' => array(
+          'label' => 'inline',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '16',
+        ),
       ),
       'entity_type' => 'node',
       'field_name' => 'field_editortags',
@@ -434,35 +524,49 @@ function os2web_indholdstyper_field_default_fields() {
       'module' => 'node_reference',
       'settings' => array(
         'referenceable_types' => array(
+          'andre_sider' => 0,
+          'arp_case' => 0,
+          'arp_document' => 0,
+          'baggrund' => 0,
           'borger_dk_permalink' => 0,
+          'borgerservices' => 0,
+          'bullet_point' => 0,
+          'bullet_point_attachment' => 0,
           'contentpage' => 0,
           'esdh_dokument' => 0,
           'esdh_sag' => 0,
           'files' => 0,
           'galleri' => 0,
+          'hoering' => 0,
           'iframe_selvbetjeningsl_sning_mm' => 0,
           'institution' => 0,
           'knactivity' => 0,
           'kontaktblok' => 0,
           'local_plan' => 0,
           'media' => 0,
+          'meeting' => 0,
           'news' => 0,
           'ofir_job' => 0,
+          'os2web_borger_dk_article' => 0,
+          'os2web_meeting_search_status' => 0,
           'panel' => 0,
           'person' => 0,
           'politician' => 0,
           'referat' => 0,
           'right_column' => 0,
           'rotating_image' => 0,
+          'sektionsside' => 0,
           'selvbetjeningslinks' => 0,
+          'speaker_paper' => 0,
           'spotbox' => 'spotbox',
+          'subsites_og_sites' => 0,
           'tema' => 0,
           'webform' => 0,
         ),
         'view' => array(
           'args' => array(),
-          'display_name' => '',
-          'view_name' => '',
+          'display_name' => 'references_1',
+          'view_name' => 'spotbox_referenceliste',
         ),
       ),
       'translatable' => '0',
@@ -486,6 +590,18 @@ function os2web_indholdstyper_field_default_fields() {
           'type' => 'hidden',
           'weight' => 0,
         ),
+        'search_index' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '10',
+        ),
+        'search_result' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '14',
+        ),
       ),
       'entity_type' => 'node',
       'field_name' => 'field_indholdsside_spotboxe',
@@ -503,132 +619,7 @@ function os2web_indholdstyper_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'node_reference_autocomplete',
-        'weight' => '13',
-      ),
-    ),
-  );
-
-  // Exported field: 'node-contentpage-field_lead_image'.
-  $fields['node-contentpage-field_lead_image'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '-1',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_lead_image',
-      'foreign keys' => array(
-        'fid' => array(
-          'columns' => array(
-            'fid' => 'fid',
-          ),
-          'table' => 'file_managed',
-        ),
-      ),
-      'indexes' => array(
-        'fid' => array(
-          0 => 'fid',
-        ),
-      ),
-      'locked' => '0',
-      'module' => 'image',
-      'settings' => array(
-        'default_image' => 0,
-        'uri_scheme' => 'public',
-      ),
-      'translatable' => '1',
-      'type' => 'image',
-    ),
-    'field_instance' => array(
-      'bundle' => 'contentpage',
-      'deleted' => '0',
-      'description' => 'Brug ikke dette felt, brug i stedet det andet billedfelt. Du behøver ikke slette billeder der ikke skal ændres fra dette felt.',
-      'display' => array(
-        'default' => array(
-          'label' => 'hidden',
-          'module' => 'field_slideshow',
-          'settings' => array(
-            'slideshow_caption' => '',
-            'slideshow_caption_link' => '',
-            'slideshow_carousel_circular' => 0,
-            'slideshow_carousel_image_style' => '',
-            'slideshow_carousel_scroll' => '1',
-            'slideshow_carousel_speed' => '500',
-            'slideshow_carousel_vertical' => 0,
-            'slideshow_carousel_visible' => '3',
-            'slideshow_colorbox_image_style' => '',
-            'slideshow_colorbox_slideshow' => '',
-            'slideshow_colorbox_slideshow_speed' => '4000',
-            'slideshow_colorbox_speed' => '350',
-            'slideshow_colorbox_transition' => 'elastic',
-            'slideshow_controls' => 0,
-            'slideshow_field_collection_image' => '',
-            'slideshow_fx' => 'fade',
-            'slideshow_image_style' => 'indholdsside',
-            'slideshow_link' => '',
-            'slideshow_order' => '',
-            'slideshow_pager' => '',
-            'slideshow_pager_image_style' => '',
-            'slideshow_pause' => 1,
-            'slideshow_speed' => '9000',
-            'slideshow_timeout' => '4000',
-          ),
-          'type' => 'slideshow',
-          'weight' => '0',
-        ),
-        'related_block' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-        'teaser' => array(
-          'label' => 'hidden',
-          'module' => 'image',
-          'settings' => array(
-            'image_link' => '',
-            'image_style' => 'thumbnail',
-          ),
-          'type' => 'image',
-          'weight' => '0',
-        ),
-      ),
-      'ds_extras_field_template' => '',
-      'entity_type' => 'node',
-      'field_name' => 'field_lead_image',
-      'label' => 'Billeder og video',
-      'required' => 0,
-      'settings' => array(
-        'alt_field' => 0,
-        'alt_field_required' => 1,
-        'default_image' => 0,
-        'file_directory' => '',
-        'file_extensions' => 'png gif jpg jpeg swf',
-        'max_filesize' => '',
-        'max_resolution' => '',
-        'min_resolution' => '460x260',
-        'title_field' => 0,
-        'title_field_required' => 0,
-        'user_register_form' => FALSE,
-      ),
-      'widget' => array(
-        'active' => 1,
-        'module' => 'media',
-        'settings' => array(
-          'allowed_schemes' => array(
-            'public' => 'public',
-          ),
-          'allowed_types' => array(
-            'image' => 'image',
-            'video' => 'video',
-            0 => 0,
-            'audio' => 0,
-            'default' => 0,
-          ),
-          'browser_plugins' => array(),
-          'progress_indicator' => 'throbber',
-        ),
-        'type' => 'media_generic',
-        'weight' => '-2',
+        'weight' => '7',
       ),
     ),
   );
@@ -682,6 +673,19 @@ function os2web_indholdstyper_field_default_fields() {
           'type' => 'hidden',
           'weight' => 0,
         ),
+        'search_index' => array(
+          'label' => 'hidden',
+          'module' => 'file',
+          'settings' => array(),
+          'type' => 'file_table',
+          'weight' => '5',
+        ),
+        'search_result' => array(
+          'label' => 'hidden',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '6',
+        ),
         'teaser' => array(
           'label' => 'above',
           'settings' => array(),
@@ -708,11 +712,11 @@ function os2web_indholdstyper_field_default_fields() {
             'public' => 'public',
           ),
           'allowed_types' => array(
-            'audio' => 0,
-            'default' => 'default',
-            0 => 0,
             'image' => 0,
             'video' => 0,
+            0 => 0,
+            'audio' => 0,
+            'default' => 'default',
           ),
           'browser_plugins' => array(),
           'progress_indicator' => 'throbber',
@@ -801,6 +805,18 @@ function os2web_indholdstyper_field_default_fields() {
           'type' => 'hidden',
           'weight' => 0,
         ),
+        'search_index' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '11',
+        ),
+        'search_result' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '15',
+        ),
       ),
       'entity_type' => 'node',
       'field_name' => 'field_node_reference_kontaktblok',
@@ -818,7 +834,7 @@ function os2web_indholdstyper_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'node_reference_autocomplete',
-        'weight' => '15',
+        'weight' => '9',
       ),
     ),
   );
@@ -848,36 +864,49 @@ function os2web_indholdstyper_field_default_fields() {
       'module' => 'node_reference',
       'settings' => array(
         'referenceable_types' => array(
+          'andre_sider' => 0,
+          'arp_case' => 0,
+          'arp_document' => 0,
+          'baggrund' => 0,
+          'borger_dk_article' => 0,
           'borger_dk_permalink' => 0,
           'borgerservices' => 0,
+          'bullet_point' => 0,
+          'bullet_point_attachment' => 0,
           'contentpage' => 0,
           'esdh_dokument' => 0,
           'esdh_sag' => 0,
           'files' => 0,
           'galleri' => 0,
+          'hoering' => 0,
           'iframe_selvbetjeningsl_sning_mm' => 0,
           'institution' => 0,
           'knactivity' => 0,
           'kontaktblok' => 0,
           'local_plan' => 0,
           'media' => 0,
+          'meeting' => 0,
           'news' => 0,
           'ofir_job' => 0,
+          'os2web_meeting_search_status' => 0,
           'panel' => 0,
           'person' => 0,
           'politician' => 0,
           'referat' => 0,
           'right_column' => 0,
           'rotating_image' => 0,
+          'sektionsside' => 0,
           'selvbetjeningslinks' => 'selvbetjeningslinks',
+          'speaker_paper' => 0,
           'spotbox' => 0,
+          'subsites_og_sites' => 0,
           'tema' => 0,
           'webform' => 0,
         ),
         'view' => array(
           'args' => array(),
-          'display_name' => '',
-          'view_name' => '',
+          'display_name' => 'references_1',
+          'view_name' => 'selvbetjening',
         ),
       ),
       'translatable' => '0',
@@ -901,6 +930,18 @@ function os2web_indholdstyper_field_default_fields() {
           'type' => 'hidden',
           'weight' => 0,
         ),
+        'search_index' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '9',
+        ),
+        'search_result' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '13',
+        ),
       ),
       'entity_type' => 'node',
       'field_name' => 'field_noderef_selvbtjn',
@@ -918,7 +959,7 @@ function os2web_indholdstyper_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'node_reference_autocomplete',
-        'weight' => '14',
+        'weight' => '8',
       ),
     ),
   );
@@ -978,10 +1019,22 @@ function os2web_indholdstyper_field_default_fields() {
           'type' => 'hidden',
           'weight' => 0,
         ),
+        'search_index' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '16',
+        ),
+        'search_result' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '18',
+        ),
       ),
       'entity_type' => 'node',
       'field_name' => 'field_organization',
-      'label' => 'Organistation',
+      'label' => 'Organisation',
       'required' => 0,
       'settings' => array(
         'user_register_form' => FALSE,
@@ -1055,6 +1108,18 @@ function os2web_indholdstyper_field_default_fields() {
           'type' => 'hidden',
           'weight' => 0,
         ),
+        'search_index' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '8',
+        ),
+        'search_result' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '12',
+        ),
       ),
       'entity_type' => 'node',
       'field_name' => 'field_politics',
@@ -1106,7 +1171,13 @@ function os2web_indholdstyper_field_default_fields() {
     ),
     'field_instance' => array(
       'bundle' => 'contentpage',
-      'default_value' => NULL,
+      'default_value' => array(
+        0 => array(
+          'summary' => '',
+          'value' => '',
+          'format' => 'filtered_html',
+        ),
+      ),
       'deleted' => '0',
       'description' => '',
       'display' => array(
@@ -1123,6 +1194,20 @@ function os2web_indholdstyper_field_default_fields() {
           'type' => 'hidden',
           'weight' => 0,
         ),
+        'search_index' => array(
+          'label' => 'hidden',
+          'module' => 'text',
+          'settings' => array(),
+          'type' => 'text_default',
+          'weight' => '2',
+        ),
+        'search_result' => array(
+          'label' => 'hidden',
+          'module' => 'text',
+          'settings' => array(),
+          'type' => 'text_default',
+          'weight' => '0',
+        ),
         'teaser' => array(
           'label' => 'above',
           'settings' => array(),
@@ -1130,20 +1215,63 @@ function os2web_indholdstyper_field_default_fields() {
           'weight' => '12',
         ),
       ),
+      'ds_extras_field_template' => '',
       'entity_type' => 'node',
       'field_name' => 'field_resume_long',
-      'label' => 'Intro / Resume (maks 2 linier!)',
+      'label' => 'Intro',
       'required' => 0,
       'settings' => array(
+        'better_formats' => array(
+          'allowed_formats' => array(
+            'blokindhold' => 0,
+            'filtered_html' => 0,
+            'full_html' => 0,
+            'full_html_iframe' => 0,
+            'php_code' => 0,
+            'plain_text' => 0,
+            'raw' => 0,
+            'standard' => 'standard',
+          ),
+          'allowed_formats_toggle' => 1,
+          'default_order_toggle' => 0,
+          'default_order_wrapper' => array(
+            'formats' => array(
+              'blokindhold' => array(
+                'weight' => '-7',
+              ),
+              'filtered_html' => array(
+                'weight' => '-10',
+              ),
+              'full_html' => array(
+                'weight' => '-9',
+              ),
+              'full_html_iframe' => array(
+                'weight' => '0',
+              ),
+              'php_code' => array(
+                'weight' => '-6',
+              ),
+              'plain_text' => array(
+                'weight' => '-8',
+              ),
+              'raw' => array(
+                'weight' => '0',
+              ),
+              'standard' => array(
+                'weight' => '0',
+              ),
+            ),
+          ),
+        ),
         'display_summary' => 0,
-        'text_processing' => '0',
+        'text_processing' => '1',
         'user_register_form' => FALSE,
       ),
       'widget' => array(
         'active' => 1,
         'module' => 'text',
         'settings' => array(
-          'rows' => '2',
+          'rows' => '6',
           'summary_rows' => 5,
         ),
         'type' => 'text_textarea_with_summary',
@@ -1199,6 +1327,18 @@ function os2web_indholdstyper_field_default_fields() {
           'type' => 'hidden',
           'weight' => 0,
         ),
+        'search_index' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '6',
+        ),
+        'search_result' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '10',
+        ),
       ),
       'entity_type' => 'node',
       'field_name' => 'field_rotate_publish',
@@ -1223,7 +1363,7 @@ function os2web_indholdstyper_field_default_fields() {
           'year_range' => '-3:+3',
         ),
         'type' => 'date_popup',
-        'weight' => '16',
+        'weight' => '10',
       ),
     ),
   );
@@ -1282,6 +1422,19 @@ function os2web_indholdstyper_field_default_fields() {
           'type' => 'hidden',
           'weight' => 0,
         ),
+        'search_index' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '12',
+        ),
+        'search_result' => array(
+          'label' => 'inline',
+          'module' => 'taxonomy',
+          'settings' => array(),
+          'type' => 'taxonomy_term_reference_link',
+          'weight' => '3',
+        ),
       ),
       'entity_type' => 'node',
       'field_name' => 'field_site_structure',
@@ -1293,9 +1446,11 @@ function os2web_indholdstyper_field_default_fields() {
       'widget' => array(
         'active' => 1,
         'module' => 'options',
-        'settings' => array(),
+        'settings' => array(
+          'content_taxonomy_opt_groups' => FALSE,
+        ),
         'type' => 'options_select',
-        'weight' => '17',
+        'weight' => '54',
       ),
     ),
   );
@@ -1347,6 +1502,18 @@ function os2web_indholdstyper_field_default_fields() {
           'settings' => array(),
           'type' => 'hidden',
           'weight' => 0,
+        ),
+        'search_index' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '7',
+        ),
+        'search_result' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '11',
         ),
       ),
       'entity_type' => 'node',
@@ -1402,6 +1569,18 @@ function os2web_indholdstyper_field_default_fields() {
           'type' => 'hidden',
           'weight' => 0,
         ),
+        'search_index' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '17',
+        ),
+        'search_result' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '19',
+        ),
         'teaser' => array(
           'label' => 'above',
           'settings' => array(),
@@ -1425,7 +1604,7 @@ function os2web_indholdstyper_field_default_fields() {
         'module' => 'number',
         'settings' => array(),
         'type' => 'number',
-        'weight' => '18',
+        'weight' => '55',
       ),
     ),
   );
@@ -1484,6 +1663,19 @@ function os2web_indholdstyper_field_default_fields() {
           'settings' => array(),
           'type' => 'hidden',
           'weight' => 0,
+        ),
+        'search_index' => array(
+          'label' => 'inline',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '13',
+        ),
+        'search_result' => array(
+          'label' => 'inline',
+          'module' => 'taxonomy',
+          'settings' => array(),
+          'type' => 'taxonomy_term_reference_link',
+          'weight' => '2',
         ),
       ),
       'entity_type' => 'node',
@@ -1561,6 +1753,18 @@ function os2web_indholdstyper_field_default_fields() {
           'settings' => array(),
           'type' => 'hidden',
           'weight' => 0,
+        ),
+        'search_index' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '15',
+        ),
+        'search_result' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '17',
         ),
       ),
       'entity_type' => 'node',
@@ -1792,8 +1996,10 @@ function os2web_indholdstyper_field_default_fields() {
             'slideshow_caption' => '',
             'slideshow_caption_link' => '',
             'slideshow_carousel_circular' => 0,
+            'slideshow_carousel_follow' => 0,
             'slideshow_carousel_image_style' => 'news-cycle-small',
             'slideshow_carousel_scroll' => '1',
+            'slideshow_carousel_skin' => '',
             'slideshow_carousel_speed' => '500',
             'slideshow_carousel_vertical' => 0,
             'slideshow_carousel_visible' => '5',
@@ -1803,6 +2009,8 @@ function os2web_indholdstyper_field_default_fields() {
             'slideshow_colorbox_speed' => '350',
             'slideshow_colorbox_transition' => 'elastic',
             'slideshow_controls' => 0,
+            'slideshow_controls_pause' => 0,
+            'slideshow_controls_position' => 'after',
             'slideshow_field_collection_image' => '',
             'slideshow_fx' => 'fade',
             'slideshow_image_style' => 'medium-content',
@@ -1810,8 +2018,10 @@ function os2web_indholdstyper_field_default_fields() {
             'slideshow_order' => '',
             'slideshow_pager' => 'carousel',
             'slideshow_pager_image_style' => 'square_thumbnail',
+            'slideshow_pager_position' => 'after',
             'slideshow_pause' => 1,
             'slideshow_speed' => '9000',
+            'slideshow_start_on_hover' => 0,
             'slideshow_timeout' => '1000',
           ),
           'type' => 'slideshow',
@@ -2389,7 +2599,9 @@ function os2web_indholdstyper_field_default_fields() {
       'widget' => array(
         'active' => 1,
         'module' => 'options',
-        'settings' => array(),
+        'settings' => array(
+          'content_taxonomy_opt_groups' => FALSE,
+        ),
         'type' => 'options_select',
         'weight' => '1',
       ),
@@ -2774,7 +2986,7 @@ function os2web_indholdstyper_field_default_fields() {
             'width' => '700',
           ),
           'type' => 'balk_custom_iframe',
-          'weight' => '2',
+          'weight' => '0',
         ),
         'related_block' => array(
           'label' => 'above',
@@ -3165,10 +3377,9 @@ function os2web_indholdstyper_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'hidden',
-          'module' => 'taxonomy',
           'settings' => array(),
-          'type' => 'taxonomy_term_reference_link',
-          'weight' => '3',
+          'type' => 'hidden',
+          'weight' => '2',
         ),
         'related_block' => array(
           'label' => 'above',
@@ -3239,10 +3450,9 @@ function os2web_indholdstyper_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'hidden',
-          'module' => 'text',
           'settings' => array(),
-          'type' => 'text_default',
-          'weight' => '0',
+          'type' => 'hidden',
+          'weight' => '3',
         ),
         'related_block' => array(
           'label' => 'above',
@@ -3877,7 +4087,9 @@ function os2web_indholdstyper_field_default_fields() {
       'widget' => array(
         'active' => 1,
         'module' => 'options',
-        'settings' => array(),
+        'settings' => array(
+          'content_taxonomy_opt_groups' => FALSE,
+        ),
         'type' => 'options_select',
         'weight' => '11',
       ),
@@ -4030,7 +4242,7 @@ function os2web_indholdstyper_field_default_fields() {
           'summary_rows' => 5,
         ),
         'type' => 'text_textarea_with_summary',
-        'weight' => '-2',
+        'weight' => '-1',
       ),
     ),
   );
@@ -4189,7 +4401,7 @@ function os2web_indholdstyper_field_default_fields() {
           'size' => 60,
         ),
         'type' => 'taxonomy_autocomplete',
-        'weight' => '43',
+        'weight' => '44',
       ),
     ),
   );
@@ -4267,51 +4479,208 @@ function os2web_indholdstyper_field_default_fields() {
       'label' => 'Primære billede',
       'required' => 1,
       'settings' => array(
-        'alt_field' => 0,
-        'alt_field_required' => 0,
+        'alt_field' => 1,
+        'alt_field_required' => 1,
         'default_image' => 0,
         'file_directory' => '',
         'file_extensions' => 'png gif jpg jpeg',
         'max_filesize' => '10 MB',
         'max_resolution' => '800x600',
-        'min_resolution' => '500x300',
-        'title_field' => 0,
-        'title_field_required' => 0,
+        'min_resolution' => '690x237',
+        'title_field' => 1,
+        'title_field_required' => 1,
         'user_register_form' => FALSE,
       ),
       'widget' => array(
         'active' => 1,
-        'module' => 'media',
+        'module' => 'imagefield_crop',
         'settings' => array(
-          'allowed_schemes' => array(
-            0 => 'public',
-            1 => 'private',
-          ),
-          'allowed_types' => array(
-            0 => 'image',
-          ),
-          'browser_plugins' => array(),
           'collapsible' => '2',
-          'croparea' => '500x500',
+          'croparea' => '690x400',
           'enforce_minimum' => 1,
           'enforce_ratio' => 1,
-          'filefield_sources' => array(
-            'filefield_sources' => array(),
-            'source_attach' => array(
-              'absolute' => 0,
-              'attach_mode' => 'move',
-              'path' => 'file_attach',
-            ),
-            'source_reference' => array(
-              'autocomplete' => '0',
-            ),
-          ),
           'preview_image_style' => 'thumbnail',
           'progress_indicator' => 'throbber',
-          'resolution' => '214x116',
+          'resolution' => '690x237',
         ),
-        'type' => 'media_generic',
-        'weight' => '-1',
+        'type' => 'imagefield_crop_widget',
+        'weight' => 0,
+      ),
+    ),
+  );
+
+  // Exported field: 'node-news-field_newstype'.
+  $fields['node-news-field_newstype'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_newstype',
+      'foreign keys' => array(
+        'tid' => array(
+          'columns' => array(
+            'tid' => 'tid',
+          ),
+          'table' => 'taxonomy_term_data',
+        ),
+      ),
+      'indexes' => array(
+        'tid' => array(
+          0 => 'tid',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'taxonomy',
+      'settings' => array(
+        'allowed_values' => array(
+          0 => array(
+            'vocabulary' => 'nyhedstype',
+            'parent' => '0',
+            'depth' => '',
+          ),
+        ),
+        'options_list_callback' => 'content_taxonomy_allowed_values',
+      ),
+      'translatable' => '0',
+      'type' => 'taxonomy_term_reference',
+    ),
+    'field_instance' => array(
+      'bundle' => 'news',
+      'default_value' => array(
+        0 => array(
+          'tid' => '25753',
+        ),
+      ),
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'taxonomy',
+          'settings' => array(),
+          'type' => 'taxonomy_term_reference_link',
+          'weight' => 15,
+        ),
+        'related_block' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'ds_extras_field_template' => '',
+      'entity_type' => 'node',
+      'field_name' => 'field_newstype',
+      'label' => 'Type',
+      'required' => 0,
+      'settings' => array(
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'options',
+        'settings' => array(
+          'content_taxonomy_opt_groups' => FALSE,
+        ),
+        'type' => 'options_select',
+        'weight' => '-4',
+      ),
+    ),
+  );
+
+  // Exported field: 'node-news-field_newstypedato'.
+  $fields['node-news-field_newstypedato'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_newstypedato',
+      'foreign keys' => array(),
+      'indexes' => array(),
+      'locked' => '0',
+      'module' => 'date',
+      'settings' => array(
+        'cache_count' => '4',
+        'cache_enabled' => 0,
+        'granularity' => array(
+          'day' => 'day',
+          'hour' => 'hour',
+          'minute' => 'minute',
+          'month' => 'month',
+          'second' => 0,
+          'year' => 'year',
+        ),
+        'timezone_db' => 'UTC',
+        'todate' => '',
+        'tz_handling' => 'site',
+      ),
+      'translatable' => '0',
+      'type' => 'datetime',
+    ),
+    'field_instance' => array(
+      'bundle' => 'news',
+      'deleted' => '0',
+      'description' => 'Dato for event og møde. Bruges hvor der skal angives en dato for start.',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'date',
+          'settings' => array(
+            'format_type' => 'long',
+            'fromto' => 'both',
+            'multiple_from' => '',
+            'multiple_number' => '',
+            'multiple_to' => '',
+          ),
+          'type' => 'date_default',
+          'weight' => 16,
+        ),
+        'related_block' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'ds_extras_field_template' => '',
+      'entity_type' => 'node',
+      'field_name' => 'field_newstypedato',
+      'label' => 'Dato',
+      'required' => 0,
+      'settings' => array(
+        'default_value' => 'now',
+        'default_value2' => 'same',
+        'default_value_code' => '',
+        'default_value_code2' => '',
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'date',
+        'settings' => array(
+          'increment' => '15',
+          'input_format' => 'Y-m-d H:i:s',
+          'input_format_custom' => '',
+          'label_position' => 'above',
+          'text_parts' => array(),
+          'year_range' => '-3:+3',
+        ),
+        'type' => 'date_popup',
+        'weight' => '46',
       ),
     ),
   );
@@ -4474,7 +4843,7 @@ function os2web_indholdstyper_field_default_fields() {
           'size' => 60,
         ),
         'type' => 'taxonomy_autocomplete',
-        'weight' => '42',
+        'weight' => '43',
       ),
     ),
   );
@@ -4844,7 +5213,115 @@ function os2web_indholdstyper_field_default_fields() {
           'summary_rows' => 5,
         ),
         'type' => 'text_textarea_with_summary',
-        'weight' => '-3',
+        'weight' => '-2',
+      ),
+    ),
+  );
+
+  // Exported field: 'node-news-field_side_baggrungsbillede'.
+  $fields['node-news-field_side_baggrungsbillede'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_side_baggrungsbillede',
+      'foreign keys' => array(
+        'fid' => array(
+          'columns' => array(
+            'fid' => 'fid',
+          ),
+          'table' => 'file_managed',
+        ),
+      ),
+      'indexes' => array(
+        'fid' => array(
+          0 => 'fid',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'image',
+      'settings' => array(
+        'default_image' => 0,
+        'uri_scheme' => 'public',
+      ),
+      'translatable' => '0',
+      'type' => 'image',
+    ),
+    'field_instance' => array(
+      'bundle' => 'news',
+      'deleted' => '0',
+      'description' => 'Bruges til baggrund hvis nyheden vises på forsiden.',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'image',
+          'settings' => array(
+            'image_link' => '',
+            'image_style' => '',
+          ),
+          'type' => 'image',
+          'weight' => 18,
+        ),
+        'related_block' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_side_baggrungsbillede',
+      'label' => 'Baggrundsbillede',
+      'required' => 0,
+      'settings' => array(
+        'alt_field' => 1,
+        'alt_field_required' => 1,
+        'default_image' => 0,
+        'file_directory' => '',
+        'file_extensions' => 'png gif jpg jpeg',
+        'max_filesize' => '',
+        'max_resolution' => '1600x1200',
+        'min_resolution' => '1600x1200',
+        'title_field' => 1,
+        'title_field_required' => 0,
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'image',
+        'settings' => array(
+          'filefield_sources' => array(
+            'filefield_sources' => array(
+              'attach' => 0,
+              'clipboard' => 0,
+              'plupload' => 0,
+              'reference' => 0,
+              'remote' => 0,
+            ),
+            'source_attach' => array(
+              'absolute' => '0',
+              'attach_mode' => 'move',
+              'path' => 'file_attach',
+            ),
+            'source_imce' => array(
+              'imce_mode' => 0,
+            ),
+            'source_reference' => array(
+              'autocomplete' => '0',
+            ),
+          ),
+          'preview_image_style' => 'thumbnail',
+          'progress_indicator' => 'throbber',
+        ),
+        'type' => 'image_image',
+        'weight' => '45',
       ),
     ),
   );
@@ -4920,9 +5397,11 @@ function os2web_indholdstyper_field_default_fields() {
       'widget' => array(
         'active' => 1,
         'module' => 'options',
-        'settings' => array(),
+        'settings' => array(
+          'content_taxonomy_opt_groups' => FALSE,
+        ),
         'type' => 'options_select',
-        'weight' => '-4',
+        'weight' => '-3',
       ),
     ),
   );
@@ -5153,6 +5632,96 @@ function os2web_indholdstyper_field_default_fields() {
         ),
         'type' => 'taxonomy_autocomplete',
         'weight' => '40',
+      ),
+    ),
+  );
+
+  // Exported field: 'node-news-field_udloebsdato'.
+  $fields['node-news-field_udloebsdato'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_udloebsdato',
+      'foreign keys' => array(),
+      'indexes' => array(),
+      'locked' => '0',
+      'module' => 'date',
+      'settings' => array(
+        'cache_count' => '4',
+        'cache_enabled' => 0,
+        'granularity' => array(
+          'day' => 'day',
+          'hour' => 'hour',
+          'minute' => 'minute',
+          'month' => 'month',
+          'second' => 0,
+          'year' => 'year',
+        ),
+        'timezone_db' => 'UTC',
+        'todate' => '',
+        'tz_handling' => 'site',
+      ),
+      'translatable' => '0',
+      'type' => 'datetime',
+    ),
+    'field_instance' => array(
+      'bundle' => 'news',
+      'deleted' => '0',
+      'description' => 'Kan bruges for flere typer indhold. Ved nyheder, så vises nyheden ikke efter denne dato. Ved Udbud og Høringer er det den dato denne slutter.',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'date',
+          'settings' => array(
+            'format_type' => 'long',
+            'fromto' => 'both',
+            'multiple_from' => '',
+            'multiple_number' => '',
+            'multiple_to' => '',
+          ),
+          'type' => 'date_default',
+          'weight' => 17,
+        ),
+        'related_block' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'ds_extras_field_template' => '',
+      'entity_type' => 'node',
+      'field_name' => 'field_udloebsdato',
+      'label' => 'Udløbsdato',
+      'required' => 0,
+      'settings' => array(
+        'default_value' => 'now',
+        'default_value2' => 'same',
+        'default_value_code' => '',
+        'default_value_code2' => '',
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'date',
+        'settings' => array(
+          'increment' => '15',
+          'input_format' => 'Y-m-d H:i:s',
+          'input_format_custom' => '',
+          'label_position' => 'above',
+          'text_parts' => array(),
+          'year_range' => '-3:+3',
+        ),
+        'type' => 'date_popup',
+        'weight' => '47',
       ),
     ),
   );
@@ -5666,7 +6235,9 @@ function os2web_indholdstyper_field_default_fields() {
       'widget' => array(
         'active' => 1,
         'module' => 'options',
-        'settings' => array(),
+        'settings' => array(
+          'content_taxonomy_opt_groups' => FALSE,
+        ),
         'type' => 'options_select',
         'weight' => '1',
       ),
@@ -6075,7 +6646,9 @@ function os2web_indholdstyper_field_default_fields() {
       'widget' => array(
         'active' => 1,
         'module' => 'options',
-        'settings' => array(),
+        'settings' => array(
+          'content_taxonomy_opt_groups' => FALSE,
+        ),
         'type' => 'options_select',
         'weight' => '1',
       ),
@@ -6154,7 +6727,9 @@ function os2web_indholdstyper_field_default_fields() {
       'widget' => array(
         'active' => 1,
         'module' => 'options',
-        'settings' => array(),
+        'settings' => array(
+          'content_taxonomy_opt_groups' => FALSE,
+        ),
         'type' => 'options_select',
         'weight' => '5',
       ),
@@ -6432,13 +7007,15 @@ function os2web_indholdstyper_field_default_fields() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('Alternativt billede');
+  t('Baggrundsbillede');
   t('Billede');
   t('Billeder');
-  t('Billeder og video');
-  t('Brug ikke dette felt, brug i stedet det andet billedfelt. Du behøver ikke slette billeder der ikke skal ændres fra dette felt.');
+  t('Bruges til baggrund hvis nyheden vises på forsiden.');
+  t('Dato');
+  t('Dato for event og møde. Bruges hvor der skal angives en dato for start.');
   t('Det der vises med sort');
   t('Direkte link');
-  t('Dokument');
   t('Egenavne / stednavne');
   t('Egennavne/stednavne');
   t('Forfrem til');
@@ -6448,8 +7025,8 @@ function os2web_indholdstyper_field_default_fields() {
   t('Indhold');
   t('Indløb / Udløb');
   t('Intro');
-  t('Intro / Resume (maks 2 linier!)');
   t('KL Emneord');
+  t('Kan bruges for flere typer indhold. Ved nyheder, så vises nyheden ikke efter denne dato. Ved Udbud og Høringer er det den dato denne slutter.');
   t('Kilde');
   t('Kontaktblok');
   t('Link');
@@ -6479,7 +7056,6 @@ function os2web_indholdstyper_field_default_fields() {
   t('Primære billede');
   t('Resume (maks 2 linier!)');
   t('Resume - lang overskrift');
-  t('Sag');
   t('Selvbetjeningslinks');
   t('Skal være inkl. <i>http://</i> hvis det er sider uden for sitet. Skal kun bruges til sider ser ikke kan indlejres som indhold via iframe.');
   t('Skjul relaterede links');
@@ -6490,6 +7066,7 @@ function os2web_indholdstyper_field_default_fields() {
   t('Stikord');
   t('Tilføj medie');
   t('Type');
+  t('Udløbsdato');
   t('Unikke relaterede links');
   t('Unikke relaterede temaer');
   t('Unikt indhold');

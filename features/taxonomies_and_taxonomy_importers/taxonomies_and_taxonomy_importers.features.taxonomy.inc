@@ -45,7 +45,7 @@ function taxonomies_and_taxonomy_importers_taxonomy_default_vocabularies() {
       'name' => 'Politik',
       'machine_name' => 'politik',
       'description' => '',
-      'hierarchy' => '0',
+      'hierarchy' => '1',
       'module' => 'taxonomy',
       'weight' => '0',
     ),

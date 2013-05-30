@@ -1,0 +1,47 @@
+name = OS2Web - Andre sites og subsites
+core = 7.x
+package = Features
+php = 5.2.4
+version = 7.x-1.0
+project = os2web_andre_sites_og_subsites
+dependencies[] = context
+dependencies[] = ctools
+dependencies[] = delta
+dependencies[] = entityreference
+dependencies[] = features
+dependencies[] = image
+dependencies[] = options
+dependencies[] = panels_mini
+dependencies[] = strongarm
+dependencies[] = views
+features[context][] = andre_sider_odsherred
+features[context][] = os2web_andre_sider
+features[ctools][] = context:context:3
+features[ctools][] = delta:delta:3
+features[ctools][] = panels_mini:panels_default:1
+features[ctools][] = strongarm:strongarm:1
+features[ctools][] = views:views_default:3.0
+features[delta][] = odsherred_web_ingen_menu
+features[features_api][] = api:1
+features[field][] = node-subsites_og_sites-body
+features[field][] = node-subsites_og_sites-field_sitestruktur
+features[field][] = node-subsites_og_sites-field_subsite_banner
+features[field][] = node-subsites_og_sites-field_url
+features[image][] = grid3
+features[node][] = subsites_og_sites
+features[panels_mini][] = andre_sider_i_odsherred_kommune
+features[variable][] = field_bundle_settings_node__subsites_og_sites
+features[variable][] = language_content_type_subsites_og_sites
+features[variable][] = menu_options_subsites_og_sites
+features[variable][] = menu_parent_subsites_og_sites
+features[variable][] = node_options_subsites_og_sites
+features[variable][] = node_preview_subsites_og_sites
+features[variable][] = node_submitted_subsites_og_sites
+features[views_view][] = andre_sider
+features[views_view][] = subsites_og_sites
+
+;Added by OS2Web 2013-05-30
+project=OS2Web
+version=1.11
+timestamp=1369904058
+

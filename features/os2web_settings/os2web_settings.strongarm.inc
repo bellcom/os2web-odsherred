@@ -14,7 +14,7 @@ function os2web_settings_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'cache_lifetime';
-  $strongarm->value = '300';
+  $strongarm->value = '0';
   $export['cache_lifetime'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -147,7 +147,7 @@ function os2web_settings_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'date_format_medium';
-  $strongarm->value = 'D, d-m-Y H:i';
+  $strongarm->value = 'd. M Y H.i';
   $export['date_format_medium'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -161,7 +161,7 @@ function os2web_settings_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'date_format_short';
-  $strongarm->value = 'd-m-Y H:i';
+  $strongarm->value = 'd.m.y g.i';
   $export['date_format_short'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -210,14 +210,14 @@ function os2web_settings_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'delta_blocks_breadcrumb_current';
-  $strongarm->value = TRUE;
+  $strongarm->value = 0;
   $export['delta_blocks_breadcrumb_current'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'delta_blocks_breadcrumb_title_hidden';
-  $strongarm->value = TRUE;
+  $strongarm->value = 1;
   $export['delta_blocks_breadcrumb_title_hidden'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -501,7 +501,7 @@ example.org';
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'menu_block_10_parent';
-  $strongarm->value = 'menu-indholdsmenu:912';
+  $strongarm->value = 'menu-politik:879114';
   $export['menu_block_10_parent'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -585,7 +585,7 @@ example.org';
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'menu_block_12_depth';
-  $strongarm->value = '6';
+  $strongarm->value = '0';
   $export['menu_block_12_depth'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -599,21 +599,21 @@ example.org';
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'menu_block_12_follow';
-  $strongarm->value = 0;
+  $strongarm->value = 'active';
   $export['menu_block_12_follow'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'menu_block_12_level';
-  $strongarm->value = '3';
+  $strongarm->value = '1';
   $export['menu_block_12_level'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'menu_block_12_parent';
-  $strongarm->value = 'menu-indholdsmenu:0';
+  $strongarm->value = '_active:0';
   $export['menu_block_12_parent'] = $strongarm;
 
   $strongarm = new stdClass();

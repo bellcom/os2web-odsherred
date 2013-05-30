@@ -258,6 +258,49 @@ function os2web_indholdstyper_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'field_bundle_settings_file__image';
+  $strongarm->value = array(
+    'view_modes' => array(
+      'media_link' => array(
+        'custom_settings' => TRUE,
+      ),
+      'media_preview' => array(
+        'custom_settings' => TRUE,
+      ),
+      'media_small' => array(
+        'custom_settings' => TRUE,
+      ),
+      'media_large' => array(
+        'custom_settings' => TRUE,
+      ),
+      'media_original' => array(
+        'custom_settings' => TRUE,
+      ),
+      'token' => array(
+        'custom_settings' => FALSE,
+      ),
+    ),
+    'extra_fields' => array(
+      'form' => array(),
+      'display' => array(
+        'file' => array(
+          'media_small' => array(
+            'weight' => 0,
+            'visible' => FALSE,
+          ),
+          'default' => array(
+            'weight' => '0',
+            'visible' => TRUE,
+          ),
+        ),
+      ),
+    ),
+  );
+  $export['field_bundle_settings_file__image'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'field_bundle_settings_node__contentpage';
   $strongarm->value = array(
     'view_modes' => array(
@@ -274,10 +317,10 @@ function os2web_indholdstyper_strongarm() {
         'custom_settings' => FALSE,
       ),
       'search_index' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
       'search_result' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
       'print' => array(
         'custom_settings' => FALSE,
@@ -293,7 +336,22 @@ function os2web_indholdstyper_strongarm() {
       ),
     ),
     'extra_fields' => array(
-      'display' => array(),
+      'display' => array(
+        'webform' => array(
+          'default' => array(
+            'weight' => '10',
+            'visible' => TRUE,
+          ),
+          'search_index' => array(
+            'weight' => '10',
+            'visible' => TRUE,
+          ),
+          'search_result' => array(
+            'weight' => '4',
+            'visible' => FALSE,
+          ),
+        ),
+      ),
       'form' => array(
         'title' => array(
           'weight' => '-5',
@@ -411,6 +469,9 @@ function os2web_indholdstyper_strongarm() {
       'revision' => array(
         'custom_settings' => FALSE,
       ),
+      'meeting_detail_view' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -467,7 +528,7 @@ function os2web_indholdstyper_strongarm() {
           'weight' => '-5',
         ),
         'path' => array(
-          'weight' => '45',
+          'weight' => '46',
         ),
         'workbench_access' => array(
           'weight' => '0',
@@ -574,8 +635,10 @@ function os2web_indholdstyper_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'menu_options_contentpage';
   $strongarm->value = array(
-    0 => 'menu-erhverv-genveje',
-    1 => 'menu-indholdsmenu',
+    0 => 'menu-indhold',
+    1 => 'menu-erhverv-genveje',
+    2 => 'menu-erhverv',
+    3 => 'menu-politik',
   );
   $export['menu_options_contentpage'] = $strongarm;
 
@@ -700,8 +763,7 @@ function os2web_indholdstyper_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'node_options_contentpage';
   $strongarm->value = array(
-    0 => 'status',
-    1 => 'revision',
+    0 => 'revision',
   );
   $export['node_options_contentpage'] = $strongarm;
 
@@ -709,9 +771,7 @@ function os2web_indholdstyper_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'node_options_galleri';
-  $strongarm->value = array(
-    0 => 'status',
-  );
+  $strongarm->value = array();
   $export['node_options_galleri'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -729,8 +789,7 @@ function os2web_indholdstyper_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'node_options_iframe_selvbetjeningsl_sning_mm';
   $strongarm->value = array(
-    0 => 'status',
-    1 => 'revision',
+    0 => 'revision',
   );
   $export['node_options_iframe_selvbetjeningsl_sning_mm'] = $strongarm;
 
@@ -739,8 +798,7 @@ function os2web_indholdstyper_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'node_options_media';
   $strongarm->value = array(
-    0 => 'status',
-    1 => 'revision',
+    0 => 'revision',
   );
   $export['node_options_media'] = $strongarm;
 
@@ -749,8 +807,7 @@ function os2web_indholdstyper_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'node_options_news';
   $strongarm->value = array(
-    0 => 'status',
-    1 => 'promote',
+    0 => 'promote',
   );
   $export['node_options_news'] = $strongarm;
 
@@ -759,8 +816,7 @@ function os2web_indholdstyper_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'node_options_rotating_image';
   $strongarm->value = array(
-    0 => 'status',
-    1 => 'promote',
+    0 => 'promote',
   );
   $export['node_options_rotating_image'] = $strongarm;
 

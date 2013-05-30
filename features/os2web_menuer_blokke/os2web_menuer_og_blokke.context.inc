@@ -26,11 +26,17 @@ function os2web_menuer_og_blokke_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
+        'block-10' => array(
+          'module' => 'block',
+          'delta' => '10',
+          'region' => 'user_first',
+          'weight' => '-10',
+        ),
         'system-user-menu' => array(
           'module' => 'system',
           'delta' => 'user-menu',
           'region' => 'user_first',
-          'weight' => '-10',
+          'weight' => '-9',
         ),
         'views-os2web_diverse-block_1' => array(
           'module' => 'views',
@@ -44,6 +50,12 @@ function os2web_menuer_og_blokke_context_default_contexts() {
           'region' => 'user_second',
           'weight' => '-69',
         ),
+        'menu_block-19' => array(
+          'module' => 'menu_block',
+          'delta' => '19',
+          'region' => 'user_second',
+          'weight' => '-10',
+        ),
         'views-os2web_diverse-block_2' => array(
           'module' => 'views',
           'delta' => 'os2web_diverse-block_2',
@@ -52,20 +64,14 @@ function os2web_menuer_og_blokke_context_default_contexts() {
         ),
         'nice_menus-1' => array(
           'module' => 'nice_menus',
-          'delta' => 1,
+          'delta' => '1',
           'region' => 'preface_first',
           'weight' => '-70',
         ),
         'block-7' => array(
           'module' => 'block',
-          'delta' => 7,
+          'delta' => '7',
           'region' => 'footer_first',
-          'weight' => '-10',
-        ),
-        'block-6' => array(
-          'module' => 'block',
-          'delta' => 6,
-          'region' => 'footer_third',
           'weight' => '-10',
         ),
       ),

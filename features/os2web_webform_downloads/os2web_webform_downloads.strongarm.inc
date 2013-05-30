@@ -14,7 +14,7 @@ function os2web_webform_downloads_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'additional_settings__active_tab_webform';
-  $strongarm->value = 'edit-print';
+  $strongarm->value = 'edit-workflow';
   $export['additional_settings__active_tab_webform'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -65,13 +65,6 @@ function os2web_webform_downloads_strongarm() {
   $strongarm->name = 'comment_webform';
   $strongarm->value = '1';
   $export['comment_webform'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'custom_search_advanced_type_webform_display';
-  $strongarm->value = 1;
-  $export['custom_search_advanced_type_webform_display'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -152,9 +145,7 @@ function os2web_webform_downloads_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'node_options_webform';
-  $strongarm->value = array(
-    0 => 'status',
-  );
+  $strongarm->value = array();
   $export['node_options_webform'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -238,21 +229,21 @@ function os2web_webform_downloads_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'webform_default_from_address';
-  $strongarm->value = 'hjemmeside@syddjurs.dk';
+  $strongarm->value = 'hjemmeside@odsherred.dk';
   $export['webform_default_from_address'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'webform_default_from_name';
-  $strongarm->value = 'Syddjurs Kommune';
+  $strongarm->value = 'Odsherred Kommune';
   $export['webform_default_from_name'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'webform_default_subject';
-  $strongarm->value = 'Form submission from: %title';
+  $strongarm->value = 'Webformular indsendelse fra: %title';
   $export['webform_default_subject'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -288,8 +279,7 @@ function os2web_webform_downloads_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'webform_node_types';
   $strongarm->value = array(
-    0 => 'contentpage',
-    1 => 'webform',
+    0 => 'webform',
   );
   $export['webform_node_types'] = $strongarm;
 

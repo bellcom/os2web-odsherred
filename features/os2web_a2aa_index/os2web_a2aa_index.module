@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the OS2Web - A-Å index feature.
+ */
+
+include_once 'os2web_a2aa_index.features.inc';

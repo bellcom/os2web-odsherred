@@ -80,7 +80,7 @@ function os2web_planer_i_h_ring_views_default_views() {
     'multiple_from' => '',
     'multiple_to' => '',
   );
-  /* Felt: Indhold: Hjemmeside */
+  /* Felt: Indhold: URL */
   $handler->display->display_options['fields']['field_url']['id'] = 'field_url';
   $handler->display->display_options['fields']['field_url']['table'] = 'field_data_field_url';
   $handler->display->display_options['fields']['field_url']['field'] = 'field_url';
@@ -281,7 +281,6 @@ function os2web_planer_i_h_ring_views_default_views() {
     t('<span class="foroffase"><a href="/foroffentlighed">> I foroffentlighedsfase</a></span><span class="vedtagne"><a href="/lokalplaner">> Vedtagne</a></span><span class="alle"><a href="/planforslag">> Se alle</a></span>'),
     t('Titel'),
     t('[title] - [field_slutdato] '),
-    t('_blank'),
     t('[created]'),
     t('Startdato'),
     t('Dato fra-til'),

@@ -5,6 +5,46 @@
  */
 
 /**
+ * Implements hook_field_formatter_info()
+ **/
+function os2web_special_field_formatter_info() {
+  return array(
+    'os2web_special' => array(
+      'label' => 'selfservice link',
+      'field types' => array('node_reference'),
+    ),
+  );
+}
+
+/**
+ * Implements hook_field_formatter_view()
+ **/
+function os2web_special_field_formatter_view($obj_type, $object, $field, $instance, $langcode, $items, $display) {
+  $markup = '<div class="item-list"><ul>';
+  if ( !empty($items) ) {
+    foreach($items as $item) {
+      $node = node_load($item['nid']);
+
+      $title = $node->title;
+      
+      isset( $node->field_attached_node[LANGUAGE_NONE][0]['nid']) ? $url = drupal_get_path_alias('node/'.$node->field_attached_node[LANGUAGE_NONE][0]['nid']) : false ;
+      
+      isset( $node->field_selvbetjening_direkte[LANGUAGE_NONE][0]['value']) ? $url = $node->field_selvbetjening_direkte[LANGUAGE_NONE][0]['value'] : false;
+      
+      
+      $markup .= '<li>' . l($title, $url) . '</li>';
+    }
+  }
+  $markup .= '</ul></div>';
+
+  $element[0] = array(
+    '#markup' => $markup,
+  );
+
+  return $element;
+}
+
+/**
  * Implements hook_init().
  *
  * Inject additional Javascripts.
@@ -73,4 +113,11 @@ function os2web_special_search_api_ajax_settings() {
   );
 
   return $settings;
+}
+
+function os2web_special_selfservice_links_helper($nid) {
+  if(is_numeric($nid)){
+
+  error_log(__FILE__.':'.__LINE__. print_r(node_load($nid), 1)); // tth@bellcom.dk debugging
+  }
 }
