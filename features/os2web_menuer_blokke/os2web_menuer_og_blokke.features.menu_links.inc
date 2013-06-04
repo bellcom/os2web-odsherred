@@ -228,22 +228,6 @@ function os2web_menuer_og_blokke_menu_default_menu_links() {
     'expanded' => '0',
     'weight' => '-49',
   );
-  // Exported menu link: menu-erhverv-genveje:selvbetjening
-  $menu_links['menu-erhverv-genveje:selvbetjening'] = array(
-    'menu_name' => 'menu-erhverv-genveje',
-    'link_path' => 'selvbetjening',
-    'router_path' => 'selvbetjening',
-    'link_title' => 'Selvbetjening',
-    'options' => array(
-      'attributes' => array(),
-    ),
-    'module' => 'menu',
-    'hidden' => '0',
-    'external' => '0',
-    'has_children' => '0',
-    'expanded' => '0',
-    'weight' => '-47',
-  );
   // Exported menu link: menu-indholdsmenu:taxonomy/term/4
   $menu_links['menu-indholdsmenu:taxonomy/term/4'] = array(
     'menu_name' => 'menu-indholdsmenu',
@@ -375,7 +359,6 @@ function os2web_menuer_og_blokke_menu_default_menu_links() {
   t('Læs højt');
   t('Nyheder og presse');
   t('Politik');
-  t('Selvbetjening');
   t('User account');
 
 
