@@ -17,6 +17,10 @@ function odsherred_web_ctools_plugin_api() {
     return array("version" => "3");
   }
   list($module, $api) = func_get_args();
+  if ($module == "linkit" && $api == "linkit_profiles") {
+    return array("version" => "1");
+  }
+  list($module, $api) = func_get_args();
   if ($module == "page_manager" && $api == "pages_default") {
     return array("version" => "1");
   }
@@ -113,6 +117,50 @@ function odsherred_web_image_default_styles() {
     ),
   );
 
+  // Exported image style: 316x237.
+  $styles['316x237'] = array(
+    'name' => '316x237',
+    'effects' => array(
+      8 => array(
+        'label' => 'Skalér og beskær',
+        'help' => 'Skalering og beskæring bevarer billedets højde-bredde-forhold og beskærer derefter den største dimension. Det er nyttigt til at generere kvadratiske thumbnails uden at forvrænge billedet.',
+        'effect callback' => 'image_scale_and_crop_effect',
+        'dimensions callback' => 'image_resize_dimensions',
+        'form callback' => 'image_resize_form',
+        'summary theme' => 'image_resize_summary',
+        'module' => 'image',
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => '316',
+          'height' => '237',
+        ),
+        'weight' => '1',
+      ),
+    ),
+  );
+
+  // Exported image style: 316x299.
+  $styles['316x299'] = array(
+    'name' => '316x299',
+    'effects' => array(
+      7 => array(
+        'label' => 'Skalér og beskær',
+        'help' => 'Skalering og beskæring bevarer billedets højde-bredde-forhold og beskærer derefter den største dimension. Det er nyttigt til at generere kvadratiske thumbnails uden at forvrænge billedet.',
+        'effect callback' => 'image_scale_and_crop_effect',
+        'dimensions callback' => 'image_resize_dimensions',
+        'form callback' => 'image_resize_form',
+        'summary theme' => 'image_resize_summary',
+        'module' => 'image',
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => '316',
+          'height' => '299',
+        ),
+        'weight' => '1',
+      ),
+    ),
+  );
+
   // Exported image style: 80_60.
   $styles['80_60'] = array(
     'name' => '80_60',
@@ -152,6 +200,28 @@ function odsherred_web_image_default_styles() {
           'width' => '1600',
           'height' => '',
           'upscale' => 1,
+        ),
+        'weight' => '1',
+      ),
+    ),
+  );
+
+  // Exported image style: grid-3.
+  $styles['grid-3'] = array(
+    'name' => 'grid-3',
+    'effects' => array(
+      1 => array(
+        'label' => 'Skalér og beskær',
+        'help' => 'Skalering og beskæring bevarer billedets højde-bredde-forhold og beskærer derefter den største dimension. Det er nyttigt til at generere kvadratiske thumbnails uden at forvrænge billedet.',
+        'effect callback' => 'image_scale_and_crop_effect',
+        'dimensions callback' => 'image_resize_dimensions',
+        'form callback' => 'image_resize_form',
+        'summary theme' => 'image_resize_summary',
+        'module' => 'image',
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => '220',
+          'height' => '130',
         ),
         'weight' => '1',
       ),

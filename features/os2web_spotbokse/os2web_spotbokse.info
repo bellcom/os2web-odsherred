@@ -79,6 +79,7 @@ features[variable][] = scheduler_unpublish_enable_spotbox
 features[variable][] = scheduler_unpublish_required_spotbox
 features[variable][] = scheduler_unpublish_revision_spotbox
 features[views_view][] = spot_view
+features[views_view][] = spotbox_referenceliste
 features[views_view][] = spotboxe
 timestamp = 1353326099
 

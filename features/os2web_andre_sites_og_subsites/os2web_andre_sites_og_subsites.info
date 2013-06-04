@@ -15,6 +15,7 @@ dependencies[] = panels_mini
 dependencies[] = strongarm
 dependencies[] = views
 features[context][] = andre_sider_odsherred
+features[context][] = ods_hvis_top
 features[context][] = os2web_andre_sider
 features[ctools][] = context:context:3
 features[ctools][] = delta:delta:3
@@ -38,6 +39,8 @@ features[variable][] = node_options_subsites_og_sites
 features[variable][] = node_preview_subsites_og_sites
 features[variable][] = node_submitted_subsites_og_sites
 features[views_view][] = andre_sider
+features[views_view][] = andre_sider_liste
+features[views_view][] = subsites
 features[views_view][] = subsites_og_sites
 
 ;Added by OS2Web 2013-05-30

@@ -1027,7 +1027,11 @@ function odsherred_web_default_panels_mini() {
     $pane->subtype = 'spotbox_megadd-panel_pane_1';
     $pane->shown = TRUE;
     $pane->access = array();
-    $pane->configuration = array();
+    $pane->configuration = array(
+      'arguments' => array(
+        'nid' => '893131',
+      ),
+    );
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
@@ -1209,7 +1213,11 @@ function odsherred_web_default_panels_mini() {
     $pane->subtype = 'spotbox_megadd-panel_pane_2';
     $pane->shown = TRUE;
     $pane->access = array();
-    $pane->configuration = array();
+    $pane->configuration = array(
+      'arguments' => array(
+        'nid' => '893849',
+      ),
+    );
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,

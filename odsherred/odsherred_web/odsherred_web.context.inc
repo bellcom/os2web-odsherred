@@ -81,5 +81,29 @@ function odsherred_web_context_default_contexts() {
   $context->condition_mode = 1;
   $export['odsherred_generelt'] = $context;
 
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
+  $context->name = 'vis_sidetitel';
+  $context->description = '';
+  $context->tag = '';
+  $context->conditions = array(
+    'node' => array(
+      'values' => array(
+        'os2web_borger_dk_article' => 'os2web_borger_dk_article',
+      ),
+      'options' => array(
+        'node_form' => '1',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'delta' => array(
+      'delta_template' => 'odsherred_borger_dk_artikler',
+    ),
+  );
+  $context->condition_mode = 0;
+  $export['vis_sidetitel'] = $context;
+
   return $export;
 }
