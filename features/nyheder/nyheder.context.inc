@@ -189,18 +189,6 @@ function nyheder_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'apachesolr_search-sort' => array(
-          'module' => 'apachesolr_search',
-          'delta' => 'sort',
-          'region' => 'content',
-          'weight' => '-10',
-        ),
-        'facetapi-LT2dFnd8cMmZGLVNO9fmhxRE08mqPGTJ' => array(
-          'module' => 'facetapi',
-          'delta' => 'LT2dFnd8cMmZGLVNO9fmhxRE08mqPGTJ',
-          'region' => 'content',
-          'weight' => '-9',
-        ),
         'system-main' => array(
           'module' => 'system',
           'delta' => 'main',
@@ -211,13 +199,19 @@ function nyheder_context_default_contexts() {
           'module' => 'facetapi',
           'delta' => 'XgsLAqEUP0cGkgFM1lxSV1QvzvRgCRT4',
           'region' => 'sidebar_first',
-          'weight' => '33',
+          'weight' => '8',
         ),
         'facetapi-OPDwFS26TeVgxxmByLy4OUj2pkORtZs0' => array(
           'module' => 'facetapi',
           'delta' => 'OPDwFS26TeVgxxmByLy4OUj2pkORtZs0',
           'region' => 'sidebar_first',
-          'weight' => '34',
+          'weight' => '9',
+        ),
+        'facetapi-LT2dFnd8cMmZGLVNO9fmhxRE08mqPGTJ' => array(
+          'module' => 'facetapi',
+          'delta' => 'LT2dFnd8cMmZGLVNO9fmhxRE08mqPGTJ',
+          'region' => 'sidebar_first',
+          'weight' => '10',
         ),
       ),
     ),
