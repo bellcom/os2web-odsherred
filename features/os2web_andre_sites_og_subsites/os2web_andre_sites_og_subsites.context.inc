@@ -45,6 +45,28 @@ function os2web_andre_sites_og_subsites_context_default_contexts() {
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
+  $context->name = 'ods_hvis_top';
+  $context->description = '';
+  $context->tag = '';
+  $context->conditions = array(
+    'path' => array(
+      'values' => array(
+        'andre-sider/*' => 'andre-sider/*',
+        'subsites-og-sites/*' => 'subsites-og-sites/*',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'theme_html' => array(
+      'class' => 'bluenwhite',
+    ),
+  );
+  $context->condition_mode = 0;
+  $export['ods_hvis_top'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
   $context->name = 'os2web_andre_sider';
   $context->description = 'Andre sider og subsites';
   $context->tag = '';
