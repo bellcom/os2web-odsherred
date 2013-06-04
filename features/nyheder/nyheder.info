@@ -20,6 +20,7 @@ dependencies[] = statistics
 dependencies[] = strongarm
 dependencies[] = views
 features[context][] = news-page
+features[context][] = news_edit
 features[context][] = news_node_view
 features[context][] = news_search
 features[ctools][] = context:context:3

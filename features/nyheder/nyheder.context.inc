@@ -110,6 +110,36 @@ function nyheder_context_default_contexts() {
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
+  $context->name = 'news_edit';
+  $context->description = '';
+  $context->tag = '';
+  $context->conditions = array(
+    'node' => array(
+      'values' => array(
+        'news' => 'news',
+      ),
+      'options' => array(
+        'node_form' => '1',
+      ),
+    ),
+    'path' => array(
+      'values' => array(
+        'node/*/edit' => 'node/*/edit',
+        'node/*/add' => 'node/*/add',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'delta' => array(
+      'delta_template' => 'odsherred_web_ingen_menu',
+    ),
+  );
+  $context->condition_mode = 1;
+  $export['news_edit'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
   $context->name = 'news_node_view';
   $context->description = 'News node view';
   $context->tag = '';
@@ -163,19 +193,19 @@ function nyheder_context_default_contexts() {
           'module' => 'apachesolr_search',
           'delta' => 'sort',
           'region' => 'content',
-          'weight' => '-2',
+          'weight' => '-10',
         ),
         'facetapi-LT2dFnd8cMmZGLVNO9fmhxRE08mqPGTJ' => array(
           'module' => 'facetapi',
           'delta' => 'LT2dFnd8cMmZGLVNO9fmhxRE08mqPGTJ',
           'region' => 'content',
-          'weight' => '-2',
+          'weight' => '-9',
         ),
         'system-main' => array(
           'module' => 'system',
           'delta' => 'main',
           'region' => 'content',
-          'weight' => '1',
+          'weight' => '-7',
         ),
         'facetapi-XgsLAqEUP0cGkgFM1lxSV1QvzvRgCRT4' => array(
           'module' => 'facetapi',

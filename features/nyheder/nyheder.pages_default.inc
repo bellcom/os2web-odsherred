@@ -664,10 +664,6 @@ function nyheder_default_page_manager_pages() {
 			<li class="leaf"><a href="/search/news/?f[0]=ds_changed%3Apast_week" rel="nofollow">Sidste uge</a></li>
 			<li class="leaf last"><a href="/search/news/?f[0]=ds_changed%3Apast_year" rel="nofollow">Sidste år</a></li>
 			</ul>
-			<form action="/?q=search/news" method="get" style="float:left">
-			<input name=query>
-			<input type=image alt=Search src="/profiles/os2web/themes/odsherredweb/css/img/inputSOG.png" border=0 name=submit>
-			</form>
 		</div>
 	</div>
 </div>',
