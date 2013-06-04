@@ -45,6 +45,8 @@ function odsherred_search_facetapi_default_facet_settings() {
     'hard_limit' => '50',
     'dependencies' => array(
       'roles' => array(),
+      'bundle' => 'none',
+      'bundle_selected' => array(),
     ),
     'facet_mincount' => 1,
     'facet_missing' => 0,
