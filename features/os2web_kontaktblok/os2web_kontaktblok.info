@@ -46,7 +46,6 @@ features[field][] = node-kontaktblok-field_phone1
 features[field][] = node-kontaktblok-field_stedadresse
 features[field][] = node-kontaktblok-field_stedpostnr
 features[field_group][] = group_aabningstider|node|kontaktblok|form
-features[filter][] = blokindhold
 features[node][] = kontaktblok
 features[user_permission][] = create kontaktblok content
 features[user_permission][] = delete any kontaktblok content
