@@ -658,7 +658,7 @@ function nyheder_default_page_manager_pages() {
 			</ul>
 			<ul class="facetapi-date-range facetapi-facet-changed facetapi-processed" id="facetapi-facet-apachesolrlocalhost-block-changed">
 			<li><span class="facet-date-label">Tidspunkt:</span></li>
-			<li class="leaf first"><a href="/search/news/?f[0]=ds_changed%3Apast_24_hours" rel="nofollow">Sidste 24 timer</a></li>
+			<li class="leaf first"><a href="/search/news?f[0]=ds_changed%3Apast_24_hours" rel="nofollow">Sidste 24 timer</a></li>
 			<li class="leaf"><a href="/search/news/?f[0]=ds_changed%3Apast_hour" rel="nofollow">Sidste time</a></li>
 			<li class="leaf"><a href="/search/news/?f[0]=ds_changed%3Apast_month" rel="nofollow">Sidste måned</a></li>
 			<li class="leaf"><a href="/search/news/?f[0]=ds_changed%3Apast_week" rel="nofollow">Sidste uge</a></li>
