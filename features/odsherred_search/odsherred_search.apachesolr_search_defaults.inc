@@ -14,10 +14,10 @@ function odsherred_search_apachesolr_search_default_searchers() {
   $searcher->disabled = FALSE; /* Edit this to true to make a default searcher disabled initially */
   $searcher->api_version = 3;
   $searcher->page_id = 'core_search';
-  $searcher->label = 'Core Search';
-  $searcher->description = 'Core Search';
+  $searcher->label = 'Søgeresultat';
+  $searcher->description = 'Søgeresultat';
   $searcher->search_path = 'search/site';
-  $searcher->page_title = 'Odsherred kommune';
+  $searcher->page_title = 'Søgeresultat';
   $searcher->env_id = 'localhost';
   $searcher->settings = array(
     'fq' => array(),

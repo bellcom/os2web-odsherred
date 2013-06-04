@@ -26,23 +26,11 @@ function odsherred_search_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'facetapi-LT2dFnd8cMmZGLVNO9fmhxRE08mqPGTJ' => array(
-          'module' => 'facetapi',
-          'delta' => 'LT2dFnd8cMmZGLVNO9fmhxRE08mqPGTJ',
+        'system-main' => array(
+          'module' => 'system',
+          'delta' => 'main',
           'region' => 'content',
-          'weight' => '-93',
-        ),
-        'apachesolr_search-sort' => array(
-          'module' => 'apachesolr_search',
-          'delta' => 'sort',
-          'region' => 'content',
-          'weight' => '-93',
-        ),
-        'facetapi-tWCrGXAGLKyRv1Hha469kKDo0BGurs8p' => array(
-          'module' => 'facetapi',
-          'delta' => 'tWCrGXAGLKyRv1Hha469kKDo0BGurs8p',
-          'region' => 'sidebar_first',
-          'weight' => '-4',
+          'weight' => '3',
         ),
       ),
     ),
