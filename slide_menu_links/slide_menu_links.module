@@ -11,14 +11,28 @@ function slide_menu_links_init() {
   drupal_add_js(drupal_get_path('module', 'slide_menu_links') . '/js/jquery.slide_menu_links.js');
   drupal_add_library('system', 'jquery.bbq');
 
+  // Load variables
   $slide_right_link = variable_get('slide_right_link', '<notset>'); 
   $slide_right_text = variable_get('slide_right_text', '<notset>'); 
-  $slide_left_link = variable_get('slide_left_link', '<notset');
-  $slide_left_text = variable_get('slide_left_text', '<notset');
+  $slide_left_link = variable_get('slide_left_link', '<notset>');
+  $slide_left_text = variable_get('slide_left_text', '<notset>');
+  $slide_sub_url = variable_get('slide_sub_url', '');
+  $slide_page_waiting = variable_get('slide_page_waiting', '');
 
+  // Check if the page is a subpage
+  $sub_urls =  explode("\n", $slide_sub_url);
+
+  foreach($sub_urls as $sub_url){
+    if(strstr(current_path(), trim($sub_url))){
+      $slide_subsite = 1;
+    }
+  }
+    
+  // Move variables to js
   drupal_add_js(array('slide_menu_links' => array('slide_left_link' => $slide_left_link, 'slide_right_link' => $slide_right_link)), 'setting');
   drupal_add_js(array('slide_menu_links' => array('slide_left_text' => $slide_left_text, 'slide_right_text' => $slide_right_text)), 'setting');
-
+  drupal_add_js(array('slide_menu_links' => array('slide_subsite' => $slide_subsite)), 'setting');
+  drupal_add_js(array('slide_menu_links' => array('slide_page_waiting' => $slide_page_waiting)), 'setting');
 }
 
 /*
@@ -38,7 +52,7 @@ function slide_menu_links_menu() {
 }
 
 /*
- * form for configuration
+ * Form  callback for configuration
  */
 function slide_menu_links_admin_menu_form() {
   $form = array();
@@ -68,5 +82,20 @@ function slide_menu_links_admin_menu_form() {
     '#default_value' => variable_get('slide_right_text'),
     '#description' => t('Hashtag text for right slider'),
   );
+  
+  $form['slide_sub_url'] = array(
+    '#title' => t('Subsites'),
+    '#type' => 'textarea',
+    '#default_value' => variable_get('slide_sub_url'),
+    '#description' => t('Place "Back to" link on pages, where the url contains... Multiple values allowed. One value per line'),
+  );
+
+  $form['slide_page_waiting'] = array(
+    '#title' => t('Waiting page markup'),
+    '#type' => 'textarea',
+    '#default_value' => variable_get('slide_page_waiting'),
+    '#description' => t('Markup for waiting page'),
+  );
+
   return system_settings_form($form);
 }
