@@ -17,7 +17,8 @@ function slide_menu_links_init() {
   $slide_left_link = variable_get('slide_left_link', '<notset>');
   $slide_left_text = variable_get('slide_left_text', '<notset>');
   $slide_sub_url = variable_get('slide_sub_url', '');
-  $slide_page_waiting = variable_get('slide_page_waiting', '');
+  $slide_page_waiting = variable_get('slide_page_waiting', '<none>');
+  $slide_subsite = 0;
 
   // Check if the page is a subpage
   $sub_urls =  explode("\n", $slide_sub_url);
