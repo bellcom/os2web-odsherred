@@ -438,6 +438,7 @@ function os2web_indholdstyper_field_default_fields() {
           0 => array(
             'vocabulary' => 'redaktoertags',
             'parent' => '0',
+            'depth' => '',
           ),
         ),
         'options_list_callback' => 'content_taxonomy_allowed_values',
@@ -486,11 +487,12 @@ function os2web_indholdstyper_field_default_fields() {
         'user_register_form' => FALSE,
       ),
       'widget' => array(
-        'active' => 0,
+        'active' => 1,
         'module' => 'taxonomy',
         'settings' => array(
+          'apply_chosen' => 1,
           'autocomplete_path' => 'taxonomy/autocomplete',
-          'content_taxonomy_autocomplete_new_terms' => 'allow',
+          'content_taxonomy_opt_groups' => 0,
           'size' => 60,
         ),
         'type' => 'taxonomy_autocomplete',
@@ -1899,6 +1901,7 @@ function os2web_indholdstyper_field_default_fields() {
           0 => array(
             'vocabulary' => 'redaktoertags',
             'parent' => '0',
+            'depth' => '',
           ),
         ),
         'options_list_callback' => 'content_taxonomy_allowed_values',
@@ -2888,6 +2891,7 @@ function os2web_indholdstyper_field_default_fields() {
           0 => array(
             'vocabulary' => 'redaktoertags',
             'parent' => '0',
+            'depth' => '',
           ),
         ),
         'options_list_callback' => 'content_taxonomy_allowed_values',
@@ -4353,6 +4357,7 @@ function os2web_indholdstyper_field_default_fields() {
           0 => array(
             'vocabulary' => 'redaktoertags',
             'parent' => '0',
+            'depth' => '',
           ),
         ),
         'options_list_callback' => 'content_taxonomy_allowed_values',

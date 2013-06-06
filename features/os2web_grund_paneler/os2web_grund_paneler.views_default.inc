@@ -956,6 +956,7 @@ return $field==1?true:false;';
     'image_style' => '80_60',
     'image_link' => 'content',
   );
+  $handler->display->display_options['fields']['field_lead_image']['delta_limit'] = '1';
   $handler->display->display_options['fields']['field_lead_image']['delta_offset'] = '0';
   /* Felt: Indhold: Titel */
   $handler->display->display_options['fields']['title']['id'] = 'title';
@@ -2561,6 +2562,13 @@ return $field==1?true:false;';
     'selvbetjeningslinks' => 'selvbetjeningslinks',
   );
   $handler->display->display_options['path'] = 'selvbetjening';
+  $handler->display->display_options['menu']['title'] = 'dsafg';
+  $handler->display->display_options['menu']['weight'] = '0';
+  $handler->display->display_options['menu']['context'] = 0;
+  $handler->display->display_options['menu']['context_only_inline'] = 0;
+  $handler->display->display_options['tab_options']['type'] = 'normal';
+  $handler->display->display_options['tab_options']['title'] = 'dsv';
+  $handler->display->display_options['tab_options']['weight'] = '0';
 
   /* Display: Feed */
   $handler = $view->new_display('feed', 'Feed', 'feed');

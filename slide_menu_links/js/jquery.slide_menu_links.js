@@ -6,7 +6,10 @@ jQuery(document).ready(function($){
       currentPage = "#page_1",
       left_link = Drupal.settings.slide_menu_links.slide_left_link,
       right_link = Drupal.settings.slide_menu_links.slide_right_link,
-      backDirection = '';
+      subsite = Drupal.settings.slide_menu_links.slide_subsite,
+      home_link = window.location.origin,
+      backDirection = '',
+      page_waiting = Drupal.settings.slide_menu_links.slide_page_waiting;
 
   $('#page').attr('id', 'page_1');
   if (Drupal.settings.slide_menu_links.slide_left_link !== '<notset>')
@@ -16,6 +19,10 @@ jQuery(document).ready(function($){
     if (left_link.indexOf('http://') === -1 )
     {
       $('#page_2').load(left_link + " , #page");
+    }
+    else
+    {
+      $('#page_2').html(page_waiting);
     }
     var sliderLeftHtml = '<div class="slider slider_left"><a class="slider_link" href="'+page1+'"><i class="link"></i></a></div>';
     $(sliderLeftHtml).insertBefore('#page_1');
@@ -29,6 +36,10 @@ jQuery(document).ready(function($){
     {
       $('#page_3').load(right_link + " , #page");
     }
+    else
+    {
+      $('#page_2').html(page_waiting);
+    }
     var sliderRightHtml = '<div class="slider slider_right"><a class="slider_link" href="'+page2+'"><i class="link"></i></a></div>';
     $(sliderRightHtml).insertBefore('#page_1');
   }
@@ -38,6 +49,15 @@ jQuery(document).ready(function($){
     location.hash = "";
   }
 
+  if(subsite === 1)
+  {
+    $('.slider_right').fadeOut();
+    $('.slider_left').addClass('slider_back');
+    $sliderLink = $('.slider_back').find('a');
+    $sliderLink.attr('href', '#home');
+    backDirection = 'right';
+  }
+  
   function slidePage(from, to, direction, pageUrl){
     var pageTop = $('#page_1').position().top;
     var $to = $(to);
@@ -114,6 +134,12 @@ jQuery(document).ready(function($){
         {
           Drupal.viewsSlideshow.action({ "action": 'pause', "slideshowID": 'aktuelt-panel_pane_3', "force": true });
         }
+        break;
+
+      case '#home':
+        $('.slider').fadeOut();
+        slidePage('#page_1', '#page_2', 'right', home_link);
+
         break;
 
       default:
