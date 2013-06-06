@@ -201,7 +201,7 @@ hjemmeside med søgningen i toppen, eller få en oversigt over de forskellige om
   $handler->display->display_options['style_options']['hide'] = TRUE;
   $handler->display->display_options['style_options']['path'] = 'name';
   $handler->display->display_options['style_options']['text'] = 'Skift';
-  $handler->display->display_options['style_options']['choose'] = '- Vælg -';
+  $handler->display->display_options['style_options']['choose'] = '- Find hjemmeside -';
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'fields';
@@ -241,12 +241,21 @@ hjemmeside med søgningen i toppen, eller få en oversigt over de forskellige om
   $handler = $view->new_display('attachment', 'Bilag', 'attachment_1');
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
-  $handler->display->display_options['style_plugin'] = 'list';
+  $handler->display->display_options['style_plugin'] = 'jump_menu';
+  $handler->display->display_options['style_options']['hide'] = TRUE;
+  $handler->display->display_options['style_options']['path'] = 'nothing';
+  $handler->display->display_options['style_options']['text'] = 'Skift';
+  $handler->display->display_options['style_options']['choose'] = '- Find hjemmeside -';
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['header'] = FALSE;
+  /* Overskrift: Global: View-område */
+  $handler->display->display_options['header']['view']['id'] = 'view';
+  $handler->display->display_options['header']['view']['table'] = 'views';
+  $handler->display->display_options['header']['view']['field'] = 'view';
+  $handler->display->display_options['header']['view']['view_to_insert'] = 'subsites_og_sites:block_2';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Felt: Ordforråd: Internt navn */
   $handler->display->display_options['fields']['machine_name']['id'] = 'machine_name';
@@ -274,6 +283,14 @@ hjemmeside med søgningen i toppen, eller få en oversigt over de forskellige om
   $handler->display->display_options['fields']['name_1']['alter']['make_link'] = TRUE;
   $handler->display->display_options['fields']['name_1']['alter']['path'] = 'subsites-og-sites/[name]';
   $handler->display->display_options['fields']['name_1']['element_label_colon'] = FALSE;
+  /* Felt: Global: Tilpasset tekst */
+  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['label'] = '';
+  $handler->display->display_options['fields']['nothing']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = 'subsites-og-sites/[name]';
+  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   $handler->display->display_options['displays'] = array(
     'page' => 'page',
     'default' => 0,
@@ -853,7 +870,7 @@ hjemmeside med søgningen i toppen, eller få en oversigt over de forskellige om
   $handler->display->display_options['style_options']['hide'] = TRUE;
   $handler->display->display_options['style_options']['path'] = 'field_url';
   $handler->display->display_options['style_options']['text'] = 'Skift';
-  $handler->display->display_options['style_options']['choose'] = '- Vælg -';
+  $handler->display->display_options['style_options']['choose'] = '- Vælg site -';
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'fields';
@@ -883,26 +900,6 @@ hjemmeside med søgningen i toppen, eller få en oversigt over de forskellige om
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
-  /* Felt: Indhold: Redigér-link */
-  $handler->display->display_options['fields']['edit_node']['id'] = 'edit_node';
-  $handler->display->display_options['fields']['edit_node']['table'] = 'views_entity_node';
-  $handler->display->display_options['fields']['edit_node']['field'] = 'edit_node';
-  $handler->display->display_options['fields']['edit_node']['label'] = '';
-  $handler->display->display_options['fields']['edit_node']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['edit_node']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['edit_node']['text'] = 'Rediger';
-  /* Felt: Global: Kontekstuelle links */
-  $handler->display->display_options['fields']['contextual_links']['id'] = 'contextual_links';
-  $handler->display->display_options['fields']['contextual_links']['table'] = 'views';
-  $handler->display->display_options['fields']['contextual_links']['field'] = 'contextual_links';
-  $handler->display->display_options['fields']['contextual_links']['label'] = '';
-  $handler->display->display_options['fields']['contextual_links']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['contextual_links']['fields'] = array(
-    'field_url' => 'field_url',
-    'title' => 'title',
-    'edit_node' => 'edit_node',
-    'field_subsite_banner' => 0,
-  );
   /* Felt: Indhold: Titel */
   $handler->display->display_options['fields']['title_1']['id'] = 'title_1';
   $handler->display->display_options['fields']['title_1']['table'] = 'node';
@@ -918,6 +915,93 @@ hjemmeside med søgningen i toppen, eller få en oversigt over de forskellige om
     'default' => 0,
     'block_1' => 0,
   );
+
+  /* Display: Blok 2 */
+  $handler = $view->new_display('block', 'Blok 2', 'block_2');
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'jump_menu';
+  $handler->display->display_options['style_options']['hide'] = TRUE;
+  $handler->display->display_options['style_options']['path'] = 'field_url';
+  $handler->display->display_options['style_options']['text'] = 'Skift';
+  $handler->display->display_options['style_options']['choose'] = '- Vælg -';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Felt: Indhold: URL */
+  $handler->display->display_options['fields']['field_url']['id'] = 'field_url';
+  $handler->display->display_options['fields']['field_url']['table'] = 'field_data_field_url';
+  $handler->display->display_options['fields']['field_url']['field'] = 'field_url';
+  $handler->display->display_options['fields']['field_url']['label'] = '';
+  $handler->display->display_options['fields']['field_url']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_url']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_url']['type'] = 'text_plain';
+  /* Felt: Indhold: Titel */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
+  /* Felt: Felt: Subsite banner */
+  $handler->display->display_options['fields']['field_subsite_banner']['id'] = 'field_subsite_banner';
+  $handler->display->display_options['fields']['field_subsite_banner']['table'] = 'field_data_field_subsite_banner';
+  $handler->display->display_options['fields']['field_subsite_banner']['field'] = 'field_subsite_banner';
+  $handler->display->display_options['fields']['field_subsite_banner']['label'] = '';
+  $handler->display->display_options['fields']['field_subsite_banner']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['field_subsite_banner']['alter']['path'] = '[field_url]';
+  $handler->display->display_options['fields']['field_subsite_banner']['alter']['absolute'] = TRUE;
+  $handler->display->display_options['fields']['field_subsite_banner']['alter']['external'] = TRUE;
+  $handler->display->display_options['fields']['field_subsite_banner']['alter']['alt'] = '[title]';
+  $handler->display->display_options['fields']['field_subsite_banner']['alter']['target'] = '_blank';
+  $handler->display->display_options['fields']['field_subsite_banner']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_subsite_banner']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_subsite_banner']['settings'] = array(
+    'image_style' => 'grid3',
+    'image_link' => '',
+  );
+  $handler->display->display_options['fields']['field_subsite_banner']['delta_limit'] = '1';
+  $handler->display->display_options['fields']['field_subsite_banner']['delta_offset'] = '0';
+  /* Felt: Indhold: Titel */
+  $handler->display->display_options['fields']['title_1']['id'] = 'title_1';
+  $handler->display->display_options['fields']['title_1']['table'] = 'node';
+  $handler->display->display_options['fields']['title_1']['field'] = 'title';
+  $handler->display->display_options['fields']['title_1']['label'] = '';
+  $handler->display->display_options['fields']['title_1']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title_1']['element_wrapper_type'] = 'h3';
+  $handler->display->display_options['fields']['title_1']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['title_1']['link_to_node'] = FALSE;
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Kontekstuelt filter: Indhold: Har taksonomiterm ID (med dybde) */
+  $handler->display->display_options['arguments']['term_node_tid_depth']['id'] = 'term_node_tid_depth';
+  $handler->display->display_options['arguments']['term_node_tid_depth']['table'] = 'node';
+  $handler->display->display_options['arguments']['term_node_tid_depth']['field'] = 'term_node_tid_depth';
+  $handler->display->display_options['arguments']['term_node_tid_depth']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['term_node_tid_depth']['exception']['title'] = 'Alle';
+  $handler->display->display_options['arguments']['term_node_tid_depth']['title_enable'] = TRUE;
+  $handler->display->display_options['arguments']['term_node_tid_depth']['title'] = '%1';
+  $handler->display->display_options['arguments']['term_node_tid_depth']['default_argument_type'] = 'taxonomy_tid';
+  $handler->display->display_options['arguments']['term_node_tid_depth']['default_argument_options']['term_page'] = FALSE;
+  $handler->display->display_options['arguments']['term_node_tid_depth']['default_argument_options']['node'] = TRUE;
+  $handler->display->display_options['arguments']['term_node_tid_depth']['default_argument_options']['vocabularies'] = array(
+    'site_struktur' => 'site_struktur',
+  );
+  $handler->display->display_options['arguments']['term_node_tid_depth']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['term_node_tid_depth']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['term_node_tid_depth']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['term_node_tid_depth']['specify_validation'] = TRUE;
+  $handler->display->display_options['arguments']['term_node_tid_depth']['validate']['type'] = 'taxonomy_term';
+  $handler->display->display_options['arguments']['term_node_tid_depth']['validate_options']['vocabularies'] = array(
+    'site_struktur' => 'site_struktur',
+  );
+  $handler->display->display_options['arguments']['term_node_tid_depth']['validate_options']['type'] = 'convert';
+  $handler->display->display_options['arguments']['term_node_tid_depth']['validate_options']['transform'] = TRUE;
+  $handler->display->display_options['arguments']['term_node_tid_depth']['validate']['fail'] = 'ignore';
+  $handler->display->display_options['arguments']['term_node_tid_depth']['depth'] = '4';
   $translatables['subsites_og_sites'] = array(
     t('Master'),
     t('Subsites og sites'),
@@ -936,6 +1020,7 @@ hjemmeside med søgningen i toppen, eller få en oversigt over de forskellige om
     t('[title_1]'),
     t('Blok'),
     t('Bilag'),
+    t('Blok 2'),
   );
   $export['subsites_og_sites'] = $view;
 

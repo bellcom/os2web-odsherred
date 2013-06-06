@@ -1045,6 +1045,30 @@ function odsherred_web_default_panels_mini() {
     $pane = new stdClass();
     $pane->pid = 'new-32';
     $pane->panel = 'kol4';
+    $pane->type = 'block';
+    $pane->subtype = 'searchcloud_block-searchcloud_block';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => 'Populære emner',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array(
+      'css_id' => 'searchcloud',
+      'css_class' => 'erhverv',
+    );
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-32'] = $pane;
+    $display->panels['kol4'][0] = 'new-32';
+    $pane = new stdClass();
+    $pane->pid = 'new-33';
+    $pane->panel = 'kol4';
     $pane->type = 'views';
     $pane->subtype = 'Tagadelic View';
     $pane->shown = TRUE;
@@ -1071,12 +1095,12 @@ function odsherred_web_default_panels_mini() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 0;
+    $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-32'] = $pane;
-    $display->panels['kol4'][0] = 'new-32';
+    $display->content['new-33'] = $pane;
+    $display->panels['kol4'][1] = 'new-33';
     $pane = new stdClass();
-    $pane->pid = 'new-33';
+    $pane->pid = 'new-34';
     $pane->panel = 'kol4';
     $pane->type = 'views_panes';
     $pane->subtype = 'megadd_news-panel_pane_2';
@@ -1093,10 +1117,10 @@ function odsherred_web_default_panels_mini() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 1;
+    $pane->position = 2;
     $pane->locks = array();
-    $display->content['new-33'] = $pane;
-    $display->panels['kol4'][1] = 'new-33';
+    $display->content['new-34'] = $pane;
+    $display->panels['kol4'][2] = 'new-34';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $mini->display = $display;
@@ -1132,7 +1156,7 @@ function odsherred_web_default_panels_mini() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-34';
+    $pane->pid = 'new-35';
     $pane->panel = 'kol1';
     $pane->type = 'block';
     $pane->subtype = 'menu_block-10';
@@ -1150,10 +1174,10 @@ function odsherred_web_default_panels_mini() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-34'] = $pane;
-    $display->panels['kol1'][0] = 'new-34';
+    $display->content['new-35'] = $pane;
+    $display->panels['kol1'][0] = 'new-35';
     $pane = new stdClass();
-    $pane->pid = 'new-35';
+    $pane->pid = 'new-36';
     $pane->panel = 'kol2';
     $pane->type = 'views_panes';
     $pane->subtype = 'nyheder_moedekalender-panel_pane_1';
@@ -1168,10 +1192,10 @@ function odsherred_web_default_panels_mini() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-35'] = $pane;
-    $display->panels['kol2'][0] = 'new-35';
+    $display->content['new-36'] = $pane;
+    $display->panels['kol2'][0] = 'new-36';
     $pane = new stdClass();
-    $pane->pid = 'new-36';
+    $pane->pid = 'new-37';
     $pane->panel = 'kol3';
     $pane->type = 'views_panes';
     $pane->subtype = 'nyheder_hoeringer-panel_pane_1';
@@ -1186,10 +1210,10 @@ function odsherred_web_default_panels_mini() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-36'] = $pane;
-    $display->panels['kol3'][0] = 'new-36';
+    $display->content['new-37'] = $pane;
+    $display->panels['kol3'][0] = 'new-37';
     $pane = new stdClass();
-    $pane->pid = 'new-37';
+    $pane->pid = 'new-38';
     $pane->panel = 'kol3';
     $pane->type = 'views_panes';
     $pane->subtype = 'spotbox_megadd-panel_pane_1';
@@ -1204,10 +1228,10 @@ function odsherred_web_default_panels_mini() {
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-37'] = $pane;
-    $display->panels['kol3'][1] = 'new-37';
+    $display->content['new-38'] = $pane;
+    $display->panels['kol3'][1] = 'new-38';
     $pane = new stdClass();
-    $pane->pid = 'new-38';
+    $pane->pid = 'new-39';
     $pane->panel = 'kol4';
     $pane->type = 'views_panes';
     $pane->subtype = 'spotbox_megadd-panel_pane_2';
@@ -1226,10 +1250,10 @@ function odsherred_web_default_panels_mini() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-38'] = $pane;
-    $display->panels['kol4'][0] = 'new-38';
+    $display->content['new-39'] = $pane;
+    $display->panels['kol4'][0] = 'new-39';
     $pane = new stdClass();
-    $pane->pid = 'new-39';
+    $pane->pid = 'new-40';
     $pane->panel = 'kol4';
     $pane->type = 'views_panes';
     $pane->subtype = 'megadd_news-panel_pane_2';
@@ -1248,8 +1272,8 @@ function odsherred_web_default_panels_mini() {
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-39'] = $pane;
-    $display->panels['kol4'][1] = 'new-39';
+    $display->content['new-40'] = $pane;
+    $display->panels['kol4'][1] = 'new-40';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $mini->display = $display;
