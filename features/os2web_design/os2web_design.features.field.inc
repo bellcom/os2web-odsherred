@@ -47,9 +47,12 @@ function os2web_design_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'hidden',
-          'module' => 'lightbox2',
-          'settings' => array(),
-          'type' => 'lightbox2__lightbox__medium__original',
+          'module' => 'image',
+          'settings' => array(
+            'image_link' => '',
+            'image_style' => 'fullscreen',
+          ),
+          'type' => 'image',
           'weight' => '0',
         ),
         'related_block' => array(
