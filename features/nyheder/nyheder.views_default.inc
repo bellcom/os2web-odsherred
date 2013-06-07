@@ -1564,6 +1564,12 @@ function nyheder_views_default_views() {
   );
   $handler->display->display_options['filters']['field_site_structure_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_site_structure_tid']['vocabulary'] = 'site_struktur';
+  /* Filterkriterie: Indhold: Udløbsdato (field_udloebsdato) */
+  $handler->display->display_options['filters']['field_udloebsdato_value']['id'] = 'field_udloebsdato_value';
+  $handler->display->display_options['filters']['field_udloebsdato_value']['table'] = 'field_data_field_udloebsdato';
+  $handler->display->display_options['filters']['field_udloebsdato_value']['field'] = 'field_udloebsdato_value';
+  $handler->display->display_options['filters']['field_udloebsdato_value']['operator'] = '>=';
+  $handler->display->display_options['filters']['field_udloebsdato_value']['default_date'] = 'now';
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
