@@ -410,6 +410,116 @@ function os2web_indholdstyper_field_default_fields() {
     ),
   );
 
+  // Exported field: 'node-contentpage-field_contentpage_media'.
+  $fields['node-contentpage-field_contentpage_media'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_contentpage_media',
+      'foreign keys' => array(
+        'fid' => array(
+          'columns' => array(
+            'fid' => 'fid',
+          ),
+          'table' => 'file_managed',
+        ),
+      ),
+      'indexes' => array(
+        'fid' => array(
+          0 => 'fid',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'image',
+      'settings' => array(
+        'default_image' => 0,
+        'uri_scheme' => 'public',
+      ),
+      'translatable' => '0',
+      'type' => 'image',
+    ),
+    'field_instance' => array(
+      'bundle' => 'contentpage',
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'image',
+          'settings' => array(
+            'image_link' => '',
+            'image_style' => '',
+          ),
+          'type' => 'image',
+          'weight' => 19,
+        ),
+        'related_block' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'search_index' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'search_result' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_contentpage_media',
+      'label' => 'Media',
+      'required' => 0,
+      'settings' => array(
+        'alt_field' => 0,
+        'alt_field_required' => 1,
+        'default_image' => 0,
+        'file_directory' => '',
+        'file_extensions' => 'png gif jpg jpeg',
+        'max_filesize' => '',
+        'max_resolution' => '',
+        'min_resolution' => '',
+        'title_field' => 0,
+        'title_field_required' => 1,
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'media',
+        'settings' => array(
+          'allowed_schemes' => array(
+            'public' => 'public',
+            'youtube' => 'youtube',
+          ),
+          'allowed_types' => array(
+            'audio' => 0,
+            'document' => 0,
+            'image' => 'image',
+            'video' => 'video',
+          ),
+          'browser_plugins' => array(
+            'media_internet' => 'media_internet',
+            'upload' => 'upload',
+            'yani_media_browser--media_browser_1' => 'yani_media_browser--media_browser_1',
+            'yani_media_browser--media_browser_my_files' => 'yani_media_browser--media_browser_my_files',
+            'youtube' => 0,
+          ),
+          'progress_indicator' => 'throbber',
+        ),
+        'type' => 'media_generic',
+        'weight' => '12',
+      ),
+    ),
+  );
+
   // Exported field: 'node-contentpage-field_editortags'.
   $fields['node-contentpage-field_editortags'] = array(
     'field_config' => array(
@@ -7036,6 +7146,7 @@ function os2web_indholdstyper_field_default_fields() {
   t('Kontaktblok');
   t('Link');
   t('Link til side');
+  t('Media');
   t('Nedarv højrespalte');
   t('Opmærk dit indhold med KLs Emneord.
 <br>Se fuld oversigt på <a target="_blank" href="http://www.kle-online.dk">KLE-Online</a>.
