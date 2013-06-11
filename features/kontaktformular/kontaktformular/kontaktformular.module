@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Kontaktformular feature.
+ */
+
+include_once 'kontaktformular.features.inc';

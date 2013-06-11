@@ -34,6 +34,7 @@ features[features_api][] = api:1
 features[field][] = node-contentpage-body
 features[field][] = node-contentpage-field_alternativt_billede
 features[field][] = node-contentpage-field_billede
+features[field][] = node-contentpage-field_contentpage_media
 features[field][] = node-contentpage-field_editortags
 features[field][] = node-contentpage-field_indholdsside_spotboxe
 features[field][] = node-contentpage-field_mediafile

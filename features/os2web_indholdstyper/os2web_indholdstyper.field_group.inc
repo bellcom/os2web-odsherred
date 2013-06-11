@@ -195,7 +195,8 @@ function os2web_indholdstyper_field_group_info() {
       3 => 'field_noderef_selvbtjn',
       4 => 'field_skjul_relaterede_links',
       5 => 'field_alternativt_billede',
-      6 => 'group_hidden',
+      6 => 'field_contentpage_media',
+      7 => 'group_hidden',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
@@ -220,7 +221,7 @@ function os2web_indholdstyper_field_group_info() {
   $field_group->parent_name = 'group_gruppe3';
   $field_group->data = array(
     'label' => 'Skjult',
-    'weight' => '12',
+    'weight' => '13',
     'children' => array(
       0 => 'field_source_id',
       1 => 'field_site_structure',

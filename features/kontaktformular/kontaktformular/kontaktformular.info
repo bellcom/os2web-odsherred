@@ -1,0 +1,13 @@
+name = Kontaktformular
+core = 7.x
+package = Features
+version = 7.x-1.0
+project = kontaktformular
+dependencies[] = context
+dependencies[] = ctools
+dependencies[] = panels_mini
+features[context][] = kontaktformular
+features[ctools][] = context:context:3
+features[ctools][] = panels_mini:panels_default:1
+features[features_api][] = api:1
+features[panels_mini][] = kontakt

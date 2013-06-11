@@ -13,7 +13,7 @@ function os2web_spotbokse_file_default_displays() {
   $file_display = new stdClass();
   $file_display->api_version = 1;
   $file_display->name = 'video__default__file_field_file_default';
-  $file_display->weight = 0;
+  $file_display->weight = -45;
   $file_display->status = FALSE;
   $file_display->settings = '';
   $export['video__default__file_field_file_default'] = $file_display;
@@ -21,7 +21,7 @@ function os2web_spotbokse_file_default_displays() {
   $file_display = new stdClass();
   $file_display->api_version = 1;
   $file_display->name = 'video__default__file_field_file_rendered';
-  $file_display->weight = 0;
+  $file_display->weight = -46;
   $file_display->status = FALSE;
   $file_display->settings = array(
     'file_view_mode' => 'default',
@@ -31,7 +31,7 @@ function os2web_spotbokse_file_default_displays() {
   $file_display = new stdClass();
   $file_display->api_version = 1;
   $file_display->name = 'video__default__file_field_file_table';
-  $file_display->weight = 0;
+  $file_display->weight = -42;
   $file_display->status = FALSE;
   $file_display->settings = '';
   $export['video__default__file_field_file_table'] = $file_display;
@@ -39,7 +39,7 @@ function os2web_spotbokse_file_default_displays() {
   $file_display = new stdClass();
   $file_display->api_version = 1;
   $file_display->name = 'video__default__file_field_file_url_plain';
-  $file_display->weight = 0;
+  $file_display->weight = -49;
   $file_display->status = FALSE;
   $file_display->settings = '';
   $export['video__default__file_field_file_url_plain'] = $file_display;
@@ -47,7 +47,7 @@ function os2web_spotbokse_file_default_displays() {
   $file_display = new stdClass();
   $file_display->api_version = 1;
   $file_display->name = 'video__default__file_field_media_large_icon';
-  $file_display->weight = 0;
+  $file_display->weight = -50;
   $file_display->status = FALSE;
   $file_display->settings = '';
   $export['video__default__file_field_media_large_icon'] = $file_display;
@@ -55,36 +55,46 @@ function os2web_spotbokse_file_default_displays() {
   $file_display = new stdClass();
   $file_display->api_version = 1;
   $file_display->name = 'video__default__file_image';
-  $file_display->weight = 0;
+  $file_display->weight = -43;
   $file_display->status = FALSE;
   $file_display->settings = array(
     'image_style' => '',
+    'alt' => '[file:field_file_image_alt_text]',
+    'title' => '[file:field_file_image_title_text]',
   );
   $export['video__default__file_image'] = $file_display;
 
   $file_display = new stdClass();
   $file_display->api_version = 1;
   $file_display->name = 'video__default__media_youtube_image';
-  $file_display->weight = 0;
+  $file_display->weight = -47;
   $file_display->status = TRUE;
   $file_display->settings = array(
-    'image_style' => 'video_forside',
+    'image_style' => 'indholdsside',
   );
   $export['video__default__media_youtube_image'] = $file_display;
 
   $file_display = new stdClass();
   $file_display->api_version = 1;
   $file_display->name = 'video__default__media_youtube_video';
-  $file_display->weight = 0;
+  $file_display->weight = -48;
   $file_display->status = TRUE;
   $file_display->settings = array(
+    'width' => '670',
+    'height' => '340',
     'theme' => 'light',
-    'width' => '310',
-    'height' => '177',
-    'autoplay' => 0,
-    'related' => 0,
-    'modestbranding' => 1,
+    'color' => 'white',
+    'autohide' => '2',
+    'autoplay' => 1,
+    'loop' => 0,
     'showinfo' => 0,
+    'modestbranding' => 1,
+    'rel' => 0,
+    'nocookie' => 1,
+    'protocol_specify' => 0,
+    'protocol' => 'https:',
+    'enablejsapi' => 0,
+    'origin' => '',
   );
   $export['video__default__media_youtube_video'] = $file_display;
 
