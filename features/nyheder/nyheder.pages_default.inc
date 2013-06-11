@@ -402,7 +402,7 @@ function nyheder_default_page_manager_handlers() {
     $pane->configuration = array(
       'admin_title' => '',
       'title' => '',
-      'body' => '<h3>Kontakt</h3><p><a href="contact">Skriv til os her</a></p><p>Vi besvarer din mail inden for 48 timer</p>',
+      'body' => '<h3>Kontakt</h3><p><a href="/indhold/aabnings-og-telefontider">Skriv til os her</a></p>',
       'format' => 'filtered_html',
       'substitute' => 1,
     );
