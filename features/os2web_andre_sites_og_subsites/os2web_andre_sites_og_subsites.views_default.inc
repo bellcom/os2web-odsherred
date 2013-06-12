@@ -108,15 +108,14 @@ hjemmeside med søgningen i toppen, eller få en oversigt over de forskellige om
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['header'] = FALSE;
-  /* Overskrift: Global: Tekstområde */
-  $handler->display->display_options['header']['area']['id'] = 'area';
-  $handler->display->display_options['header']['area']['table'] = 'views';
-  $handler->display->display_options['header']['area']['field'] = 'area';
-  $handler->display->display_options['header']['area']['content'] = 'Her kan du få en oversigt over alle kommunens forskellige hjemmesider. 
-Lige fra Børnehaven Raketten til Brandvæsnet i Odsherred. Find en helt bestemt 
-hjemmeside med søgningen i toppen, eller få en oversigt over de forskellige områder herunder.';
-  $handler->display->display_options['header']['area']['format'] = 'filtered_html';
   $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Felt: Ord i ordforråd: Navn */
+  $handler->display->display_options['fields']['name_1']['id'] = 'name_1';
+  $handler->display->display_options['fields']['name_1']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['fields']['name_1']['field'] = 'name';
+  $handler->display->display_options['fields']['name_1']['label'] = '';
+  $handler->display->display_options['fields']['name_1']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['name_1']['element_label_colon'] = FALSE;
   /* Felt: Ordforråd: Internt navn */
   $handler->display->display_options['fields']['machine_name']['id'] = 'machine_name';
   $handler->display->display_options['fields']['machine_name']['table'] = 'taxonomy_vocabulary';
@@ -157,7 +156,7 @@ hjemmeside med søgningen i toppen, eller få en oversigt over de forskellige om
   $handler->display->display_options['fields']['description']['label'] = '';
   $handler->display->display_options['fields']['description']['alter']['alter_text'] = TRUE;
   $handler->display->display_options['fields']['description']['alter']['text'] = '<div class="border"><a href="/subsites-og-sites/[name]">GOGOGO</a></div>
-<h3><a href="/subsites-og-sites/[name]">[name]</a></h3>
+<h3><a href="/subsites-og-sites/[name]">[name_1]</a></h3>
 <div class="tekst"><a href="/subsites-og-sites/[name]">[description]</a></div>';
   $handler->display->display_options['fields']['description']['element_type'] = 'div';
   $handler->display->display_options['fields']['description']['element_class'] = 'beskrivelse';
@@ -310,7 +309,7 @@ Lige fra Børnehaven Raketten til Brandvæsnet i Odsherred. Find en helt bestemt
 hjemmeside med søgningen i toppen, eller få en oversigt over de forskellige områder herunder.'),
     t('Page'),
     t('<div class="border"><a href="/subsites-og-sites/[name]">GOGOGO</a></div>
-<h3><a href="/subsites-og-sites/[name]">[name]</a></h3>
+<h3><a href="/subsites-og-sites/[name]">[name_1]</a></h3>
 <div class="tekst"><a href="/subsites-og-sites/[name]">[description]</a></div>'),
     t('Entity Reference'),
     t('Blok'),

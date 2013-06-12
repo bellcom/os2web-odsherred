@@ -34,6 +34,9 @@ function os2web_andre_sites_og_subsites_context_default_contexts() {
         ),
       ),
     ),
+    'theme_html' => array(
+      'class' => 'bluenwhite',
+    ),
   );
   $context->condition_mode = 0;
 
@@ -71,6 +74,11 @@ function os2web_andre_sites_og_subsites_context_default_contexts() {
   $context->description = 'Andre sider og subsites';
   $context->tag = '';
   $context->conditions = array(
+    'path' => array(
+      'values' => array(
+        'andre-sider/*' => 'andre-sider/*',
+      ),
+    ),
     'views' => array(
       'values' => array(
         'andre_sider' => 'andre_sider',

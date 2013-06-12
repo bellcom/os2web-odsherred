@@ -874,7 +874,10 @@ function odsherred_web_default_panels_mini() {
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => 'searchcloud-borger',
+      'css_class' => 'borger searchcloudblok',
+    );
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
@@ -1046,8 +1049,8 @@ function odsherred_web_default_panels_mini() {
       'settings' => NULL,
     );
     $pane->css = array(
-      'css_id' => 'searchcloud',
-      'css_class' => 'erhverv',
+      'css_id' => 'searchcloud-erhverv',
+      'css_class' => 'erhverv searchcloudblok',
     );
     $pane->extras = array();
     $pane->position = 0;
