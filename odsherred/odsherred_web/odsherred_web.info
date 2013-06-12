@@ -21,6 +21,7 @@ dependencies[] = search
 dependencies[] = strongarm
 dependencies[] = tagadelic_views
 dependencies[] = views
+features[context][] = kontaktformular
 features[context][] = odsherred_forside
 features[context][] = odsherred_generelt
 features[context][] = vis_sidetitel
