@@ -160,21 +160,18 @@ function os2web_grund_paneler_default_panels_mini() {
     $pane->pid = 'new-5';
     $pane->panel = 'middle';
     $pane->type = 'block';
-    $pane->subtype = 'menu-menu-erhverv-genveje';
+    $pane->subtype = 'menu_block-20';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'override_title' => 1,
-      'override_title_text' => 'Om kommunen',
+      'override_title' => 0,
+      'override_title_text' => '',
     );
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array(
-      'css_id' => '',
-      'css_class' => 'grid-3 omega',
-    );
+    $pane->css = array();
     $pane->extras = array();
     $pane->position = 3;
     $pane->locks = array();

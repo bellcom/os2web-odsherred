@@ -55,7 +55,7 @@ function odsherred_search_apachesolr_environments() {
         'last_entity_id' => 0,
       ),
     ),
-    'apachesolr_index_updated' => 1370594290,
+    'apachesolr_index_updated' => 1370870431,
     'apachesolr_last_optimize' => 1370594290,
     'apachesolr_read_only' => '0',
     'apachesolr_search_facet_pages' => '/search/*',

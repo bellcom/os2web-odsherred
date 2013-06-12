@@ -193,22 +193,6 @@ function os2web_menuer_og_blokke_menu_default_menu_links() {
     'expanded' => '0',
     'weight' => '0',
   );
-  // Exported menu link: menu-erhverv-genveje:contact
-  $menu_links['menu-erhverv-genveje:contact'] = array(
-    'menu_name' => 'menu-erhverv-genveje',
-    'link_path' => 'contact',
-    'router_path' => 'contact',
-    'link_title' => 'Kontakt',
-    'options' => array(
-      'attributes' => array(),
-    ),
-    'module' => 'menu',
-    'hidden' => '0',
-    'external' => '0',
-    'has_children' => '0',
-    'expanded' => '0',
-    'weight' => '-50',
-  );
   // Exported menu link: menu-erhverv-genveje:nyheder
   $menu_links['menu-erhverv-genveje:nyheder'] = array(
     'menu_name' => 'menu-erhverv-genveje',
@@ -353,7 +337,6 @@ function os2web_menuer_og_blokke_menu_default_menu_links() {
   // Included for use with string extractors like potx.
   t('Borger');
   t('Erhverv');
-  t('Kontakt');
   t('Log out');
   t('Log ud');
   t('Læs højt');
