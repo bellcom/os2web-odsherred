@@ -412,6 +412,14 @@ function os2web_grund_paneler_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
+  /* Felt: Indhold: Sti */
+  $handler->display->display_options['fields']['path']['id'] = 'path';
+  $handler->display->display_options['fields']['path']['table'] = 'node';
+  $handler->display->display_options['fields']['path']['field'] = 'path';
+  $handler->display->display_options['fields']['path']['label'] = '';
+  $handler->display->display_options['fields']['path']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['path']['alter']['text'] = '/[path]';
+  $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
   /* Felt: Indhold: Nid */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
   $handler->display->display_options['fields']['nid']['table'] = 'node';
@@ -437,7 +445,11 @@ function os2web_grund_paneler_views_default_views() {
   $handler->display->display_options['fields']['field_resume_long']['alter']['text'] = '<span class="title">[title]</span>
 <span class="text">[field_resume_long]</span>';
   $handler->display->display_options['fields']['field_resume_long']['alter']['make_link'] = TRUE;
-  $handler->display->display_options['fields']['field_resume_long']['alter']['path'] = '/node/[nid]';
+  $handler->display->display_options['fields']['field_resume_long']['alter']['path'] = '[path]';
+  $handler->display->display_options['fields']['field_resume_long']['alter']['absolute'] = TRUE;
+  $handler->display->display_options['fields']['field_resume_long']['alter']['max_length'] = '160';
+  $handler->display->display_options['fields']['field_resume_long']['alter']['trim'] = TRUE;
+  $handler->display->display_options['fields']['field_resume_long']['alter']['html'] = TRUE;
   $handler->display->display_options['fields']['field_resume_long']['element_type'] = 'span';
   $handler->display->display_options['fields']['field_resume_long']['element_class'] = 'overlay';
   $handler->display->display_options['fields']['field_resume_long']['element_label_colon'] = FALSE;
@@ -643,6 +655,7 @@ function os2web_grund_paneler_views_default_views() {
     t('View panes'),
     t('Blok'),
     t('Forside - Portalnyhed - 1'),
+    t('/[path]'),
     t('<span class="title">[title]</span>
 <span class="text">[field_resume_long]</span>'),
     t('Forside - Portalnyhed - 2-5'),
