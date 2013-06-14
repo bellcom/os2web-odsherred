@@ -195,7 +195,7 @@ function os2web_indholdstyper_field_default_fields() {
             'image_style' => '',
           ),
           'type' => 'image',
-          'weight' => 18,
+          'weight' => '6',
         ),
         'related_block' => array(
           'label' => 'above',
@@ -453,7 +453,7 @@ function os2web_indholdstyper_field_default_fields() {
             'image_style' => '',
           ),
           'type' => 'image',
-          'weight' => 19,
+          'weight' => '0',
         ),
         'related_block' => array(
           'label' => 'above',
@@ -568,7 +568,7 @@ function os2web_indholdstyper_field_default_fields() {
           'label' => 'inline',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '14',
+          'weight' => '15',
         ),
         'related_block' => array(
           'label' => 'above',
@@ -694,7 +694,7 @@ function os2web_indholdstyper_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '10',
+          'weight' => '11',
         ),
         'related_block' => array(
           'label' => 'above',
@@ -909,7 +909,7 @@ function os2web_indholdstyper_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '11',
+          'weight' => '12',
         ),
         'related_block' => array(
           'label' => 'above',
@@ -1034,7 +1034,7 @@ function os2web_indholdstyper_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '9',
+          'weight' => '10',
         ),
         'related_block' => array(
           'label' => 'above',
@@ -1123,7 +1123,7 @@ function os2web_indholdstyper_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '16',
+          'weight' => '17',
         ),
         'related_block' => array(
           'label' => 'above',
@@ -1212,7 +1212,7 @@ function os2web_indholdstyper_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '8',
+          'weight' => '9',
         ),
         'related_block' => array(
           'label' => 'above',
@@ -1431,7 +1431,7 @@ function os2web_indholdstyper_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '6',
+          'weight' => '7',
         ),
         'related_block' => array(
           'label' => 'above',
@@ -1526,7 +1526,7 @@ function os2web_indholdstyper_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '12',
+          'weight' => '13',
         ),
         'related_block' => array(
           'label' => 'above',
@@ -1607,7 +1607,7 @@ function os2web_indholdstyper_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '7',
+          'weight' => '8',
         ),
         'related_block' => array(
           'label' => 'above',
@@ -1673,7 +1673,7 @@ function os2web_indholdstyper_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '17',
+          'weight' => '18',
         ),
         'related_block' => array(
           'label' => 'above',
@@ -1768,7 +1768,7 @@ function os2web_indholdstyper_field_default_fields() {
           'label' => 'inline',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '13',
+          'weight' => '14',
         ),
         'related_block' => array(
           'label' => 'above',
@@ -1858,7 +1858,7 @@ function os2web_indholdstyper_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '15',
+          'weight' => '16',
         ),
         'related_block' => array(
           'label' => 'above',
