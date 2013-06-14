@@ -72,10 +72,7 @@ function os2web_indholdstyper_field_group_info() {
   $field_group->data = array(
     'label' => 'Hentet fra kommunens sagssystem',
     'weight' => '4',
-    'children' => array(
-      0 => 'field_case',
-      1 => 'field_doc',
-    ),
+    'children' => array(),
     'format_type' => 'fieldset',
     'format_settings' => array(
       'label' => 'Hentet fra kommunens sagssystem',
@@ -278,7 +275,7 @@ function os2web_indholdstyper_field_group_info() {
   $field_group->parent_name = 'group_indstillinger';
   $field_group->data = array(
     'label' => 'Skjult',
-    'weight' => '47',
+    'weight' => '52',
     'children' => array(
       0 => 'field_additional_info',
       1 => 'field_related',
@@ -339,9 +336,14 @@ function os2web_indholdstyper_field_group_info() {
     'weight' => '3',
     'children' => array(
       0 => 'field_promoteto',
-      1 => 'field_side_baggrungsbillede',
-      2 => 'path',
-      3 => 'group_hidden',
+      1 => 'field_newstypedato',
+      2 => 'field_udloebsdato',
+      3 => 'field_side_baggrungsbillede',
+      4 => 'field_mediafile',
+      5 => 'field_skjul_relaterede_links',
+      6 => 'path',
+      7 => 'redirect',
+      8 => 'group_hidden',
     ),
     'format_type' => 'htab',
     'format_settings' => array(

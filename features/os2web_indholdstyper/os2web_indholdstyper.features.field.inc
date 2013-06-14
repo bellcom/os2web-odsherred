@@ -195,7 +195,7 @@ function os2web_indholdstyper_field_default_fields() {
             'image_style' => '',
           ),
           'type' => 'image',
-          'weight' => 18,
+          'weight' => '6',
         ),
         'related_block' => array(
           'label' => 'above',
@@ -453,7 +453,7 @@ function os2web_indholdstyper_field_default_fields() {
             'image_style' => '',
           ),
           'type' => 'image',
-          'weight' => 19,
+          'weight' => '0',
         ),
         'related_block' => array(
           'label' => 'above',
@@ -568,7 +568,7 @@ function os2web_indholdstyper_field_default_fields() {
           'label' => 'inline',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '14',
+          'weight' => '15',
         ),
         'related_block' => array(
           'label' => 'above',
@@ -694,7 +694,7 @@ function os2web_indholdstyper_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '10',
+          'weight' => '11',
         ),
         'related_block' => array(
           'label' => 'above',
@@ -909,7 +909,7 @@ function os2web_indholdstyper_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '11',
+          'weight' => '12',
         ),
         'related_block' => array(
           'label' => 'above',
@@ -1034,7 +1034,7 @@ function os2web_indholdstyper_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '9',
+          'weight' => '10',
         ),
         'related_block' => array(
           'label' => 'above',
@@ -1123,7 +1123,7 @@ function os2web_indholdstyper_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '16',
+          'weight' => '17',
         ),
         'related_block' => array(
           'label' => 'above',
@@ -1212,7 +1212,7 @@ function os2web_indholdstyper_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '8',
+          'weight' => '9',
         ),
         'related_block' => array(
           'label' => 'above',
@@ -1431,7 +1431,7 @@ function os2web_indholdstyper_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '6',
+          'weight' => '7',
         ),
         'related_block' => array(
           'label' => 'above',
@@ -1526,7 +1526,7 @@ function os2web_indholdstyper_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '12',
+          'weight' => '13',
         ),
         'related_block' => array(
           'label' => 'above',
@@ -1607,7 +1607,7 @@ function os2web_indholdstyper_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '7',
+          'weight' => '8',
         ),
         'related_block' => array(
           'label' => 'above',
@@ -1673,7 +1673,7 @@ function os2web_indholdstyper_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '17',
+          'weight' => '18',
         ),
         'related_block' => array(
           'label' => 'above',
@@ -1768,7 +1768,7 @@ function os2web_indholdstyper_field_default_fields() {
           'label' => 'inline',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '13',
+          'weight' => '14',
         ),
         'related_block' => array(
           'label' => 'above',
@@ -1858,7 +1858,7 @@ function os2web_indholdstyper_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '15',
+          'weight' => '16',
         ),
         'related_block' => array(
           'label' => 'above',
@@ -4619,7 +4619,103 @@ function os2web_indholdstyper_field_default_fields() {
           'resolution' => '690x237',
         ),
         'type' => 'imagefield_crop_widget',
-        'weight' => 0,
+        'weight' => '0',
+      ),
+    ),
+  );
+
+  // Exported field: 'node-news-field_mediafile'.
+  $fields['node-news-field_mediafile'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '-1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_mediafile',
+      'foreign keys' => array(
+        'fid' => array(
+          'columns' => array(
+            'fid' => 'fid',
+          ),
+          'table' => 'file_managed',
+        ),
+      ),
+      'indexes' => array(
+        'fid' => array(
+          0 => 'fid',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'file',
+      'settings' => array(
+        'display_default' => 0,
+        'display_field' => 0,
+        'uri_scheme' => 'public',
+      ),
+      'translatable' => '0',
+      'type' => 'file',
+    ),
+    'field_instance' => array(
+      'bundle' => 'news',
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'file',
+          'settings' => array(),
+          'type' => 'file_default',
+          'weight' => 19,
+        ),
+        'related_block' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_mediafile',
+      'label' => 'Filer',
+      'required' => 0,
+      'settings' => array(
+        'description_field' => 0,
+        'file_directory' => '',
+        'file_extensions' => 'pdf',
+        'max_filesize' => '',
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'media',
+        'settings' => array(
+          'allowed_schemes' => array(
+            'public' => 'public',
+            'youtube' => 0,
+          ),
+          'allowed_types' => array(
+            'audio' => 0,
+            'document' => 'document',
+            'image' => 0,
+            'video' => 0,
+          ),
+          'browser_plugins' => array(
+            'media_internet' => 0,
+            'upload' => 'upload',
+            'yani_media_browser--media_browser_1' => 'yani_media_browser--media_browser_1',
+            'yani_media_browser--media_browser_my_files' => 'yani_media_browser--media_browser_my_files',
+            'youtube' => 0,
+          ),
+          'progress_indicator' => 'throbber',
+        ),
+        'type' => 'media_generic',
+        'weight' => '46',
       ),
     ),
   );
@@ -4795,7 +4891,7 @@ function os2web_indholdstyper_field_default_fields() {
           'year_range' => '-3:+3',
         ),
         'type' => 'date_popup',
-        'weight' => '46',
+        'weight' => '49',
       ),
     ),
   );
@@ -5521,6 +5617,81 @@ function os2web_indholdstyper_field_default_fields() {
     ),
   );
 
+  // Exported field: 'node-news-field_skjul_relaterede_links'.
+  $fields['node-news-field_skjul_relaterede_links'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_skjul_relaterede_links',
+      'foreign keys' => array(),
+      'indexes' => array(
+        'value' => array(
+          0 => 'value',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'list',
+      'settings' => array(
+        'allowed_values' => array(
+          0 => '0',
+          1 => '1',
+        ),
+        'allowed_values_function' => '',
+      ),
+      'translatable' => '0',
+      'type' => 'list_boolean',
+    ),
+    'field_instance' => array(
+      'bundle' => 'news',
+      'default_value' => array(
+        0 => array(
+          'value' => 1,
+        ),
+      ),
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'list',
+          'settings' => array(),
+          'type' => 'list_default',
+          'weight' => 20,
+        ),
+        'related_block' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_skjul_relaterede_links',
+      'label' => 'Skjul relaterede links',
+      'required' => 0,
+      'settings' => array(
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'options',
+        'settings' => array(
+          'display_label' => 1,
+        ),
+        'type' => 'options_onoff',
+        'weight' => '48',
+      ),
+    ),
+  );
+
   // Exported field: 'node-news-field_source_id'.
   $fields['node-news-field_source_id'] = array(
     'field_config' => array(
@@ -5836,7 +6007,7 @@ function os2web_indholdstyper_field_default_fields() {
           'year_range' => '-3:+3',
         ),
         'type' => 'date_popup',
-        'weight' => '47',
+        'weight' => '50',
       ),
     ),
   );
@@ -7133,6 +7304,7 @@ function os2web_indholdstyper_field_default_fields() {
   t('Direkte link');
   t('Egenavne / stednavne');
   t('Egennavne/stednavne');
+  t('Filer');
   t('Forfrem til');
   t('Forældre-menupunkt');
   t('Gruppe ID');
