@@ -57,7 +57,7 @@ function odsherred_web_views_default_views() {
   $handler->display->display_options['fields']['field_url']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_url']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_url']['type'] = 'text_plain';
-  /* Felt: Felt: Spotboxe Bund */
+  /* Felt: Felt: Link til side */
   $handler->display->display_options['fields']['field_attached_node']['id'] = 'field_attached_node';
   $handler->display->display_options['fields']['field_attached_node']['table'] = 'field_data_field_attached_node';
   $handler->display->display_options['fields']['field_attached_node']['field'] = 'field_attached_node';
@@ -159,7 +159,7 @@ function odsherred_web_views_default_views() {
   $handler->display->display_options['fields']['field_url']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_url']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_url']['type'] = 'text_plain';
-  /* Felt: Felt: Spotboxe Bund */
+  /* Felt: Felt: Link til side */
   $handler->display->display_options['fields']['field_attached_node']['id'] = 'field_attached_node';
   $handler->display->display_options['fields']['field_attached_node']['table'] = 'field_data_field_attached_node';
   $handler->display->display_options['fields']['field_attached_node']['field'] = 'field_attached_node';
@@ -253,7 +253,7 @@ function odsherred_web_views_default_views() {
   $handler->display->display_options['fields']['field_url']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_url']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_url']['type'] = 'text_plain';
-  /* Felt: Felt: Spotboxe Bund */
+  /* Felt: Felt: Link til side */
   $handler->display->display_options['fields']['field_attached_node']['id'] = 'field_attached_node';
   $handler->display->display_options['fields']['field_attached_node']['table'] = 'field_data_field_attached_node';
   $handler->display->display_options['fields']['field_attached_node']['field'] = 'field_attached_node';
