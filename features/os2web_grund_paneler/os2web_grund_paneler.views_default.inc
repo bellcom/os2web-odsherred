@@ -2480,7 +2480,7 @@ return $field==1?true:false;';
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
-  /* Felt: Felt: Spotboxe Bund */
+  /* Felt: Felt: Link til side */
   $handler->display->display_options['fields']['field_attached_node']['id'] = 'field_attached_node';
   $handler->display->display_options['fields']['field_attached_node']['table'] = 'field_data_field_attached_node';
   $handler->display->display_options['fields']['field_attached_node']['field'] = 'field_attached_node';
@@ -2646,7 +2646,7 @@ return $field==1?true:false;';
   $handler->display->display_options['footer']['view_1']['field'] = 'view';
   $handler->display->display_options['footer']['view_1']['view_to_insert'] = 'selvbetjening:sb_block_forside_att_2';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Felt: Felt: Spotboxe Bund */
+  /* Felt: Felt: Link til side */
   $handler->display->display_options['fields']['field_attached_node']['id'] = 'field_attached_node';
   $handler->display->display_options['fields']['field_attached_node']['table'] = 'field_data_field_attached_node';
   $handler->display->display_options['fields']['field_attached_node']['field'] = 'field_attached_node';
@@ -2737,7 +2737,7 @@ return $field==1?true:false;';
   $handler->display->display_options['header']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['empty'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Felt: Felt: Spotboxe Bund */
+  /* Felt: Felt: Link til side */
   $handler->display->display_options['fields']['field_attached_node']['id'] = 'field_attached_node';
   $handler->display->display_options['fields']['field_attached_node']['table'] = 'field_data_field_attached_node';
   $handler->display->display_options['fields']['field_attached_node']['field'] = 'field_attached_node';
@@ -2905,7 +2905,7 @@ return $field==1?true:false;';
   $handler->display->display_options['footer']['area']['content'] = '<div class="selbetjening-bund"><a class="nemid" href="http://nemid.dk" title="NemID">NEMID</a><a class="borgerdk" href="https://www.borger.dk/Sider/default.aspx?KommuneId=706" title="Borger.dk">Borger.dk</a><a class="virkdk" href="http://virk.dk" title="Virk.dk">Virk.dk</a></div>';
   $handler->display->display_options['footer']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Felt: Felt: Spotboxe Bund */
+  /* Felt: Felt: Link til side */
   $handler->display->display_options['fields']['field_attached_node']['id'] = 'field_attached_node';
   $handler->display->display_options['fields']['field_attached_node']['table'] = 'field_data_field_attached_node';
   $handler->display->display_options['fields']['field_attached_node']['field'] = 'field_attached_node';
@@ -3006,7 +3006,7 @@ return $field==1?true:false;';
   $handler->display->display_options['footer']['view_1']['view_to_insert'] = 'selvbetjening:sb_block_portal_att_2';
   $handler->display->display_options['footer']['view_1']['inherit_arguments'] = TRUE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Felt: Felt: Spotboxe Bund */
+  /* Felt: Felt: Link til side */
   $handler->display->display_options['fields']['field_attached_node']['id'] = 'field_attached_node';
   $handler->display->display_options['fields']['field_attached_node']['table'] = 'field_data_field_attached_node';
   $handler->display->display_options['fields']['field_attached_node']['field'] = 'field_attached_node';
@@ -3111,7 +3111,7 @@ return $field==1?true:false;';
   $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Felt: Felt: Spotboxe Bund */
+  /* Felt: Felt: Link til side */
   $handler->display->display_options['fields']['field_attached_node']['id'] = 'field_attached_node';
   $handler->display->display_options['fields']['field_attached_node']['table'] = 'field_data_field_attached_node';
   $handler->display->display_options['fields']['field_attached_node']['field'] = 'field_attached_node';
@@ -3188,7 +3188,7 @@ return $field==1?true:false;';
   $handler->display->display_options['defaults']['header'] = FALSE;
   $handler->display->display_options['defaults']['footer'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Felt: Felt: Spotboxe Bund */
+  /* Felt: Felt: Link til side */
   $handler->display->display_options['fields']['field_attached_node']['id'] = 'field_attached_node';
   $handler->display->display_options['fields']['field_attached_node']['table'] = 'field_data_field_attached_node';
   $handler->display->display_options['fields']['field_attached_node']['field'] = 'field_attached_node';
@@ -3295,7 +3295,7 @@ return $field==1?true:false;';
   $handler->display->display_options['footer']['area']['content'] = '<div class="selbetjening-bund"><a class="nemid" href="http://nemid.dk" title="NemID">NEMID</a><a class="borgerdk" href="https://www.borger.dk/Sider/default.aspx?KommuneId=706" title="Borger.dk">Borger.dk</a><a class="virkdk" href="http://virk.dk" title="Virk.dk">Virk.dk</a></div>';
   $handler->display->display_options['footer']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Felt: Felt: Spotboxe Bund */
+  /* Felt: Felt: Link til side */
   $handler->display->display_options['fields']['field_attached_node']['id'] = 'field_attached_node';
   $handler->display->display_options['fields']['field_attached_node']['table'] = 'field_data_field_attached_node';
   $handler->display->display_options['fields']['field_attached_node']['field'] = 'field_attached_node';
@@ -3401,7 +3401,7 @@ return $field==1?true:false;';
   $handler->display->display_options['footer']['view_1']['view_to_insert'] = 'selvbetjening:sb_block_portal_att_2';
   $handler->display->display_options['footer']['view_1']['inherit_arguments'] = TRUE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Felt: Felt: Spotboxe Bund */
+  /* Felt: Felt: Link til side */
   $handler->display->display_options['fields']['field_attached_node']['id'] = 'field_attached_node';
   $handler->display->display_options['fields']['field_attached_node']['table'] = 'field_data_field_attached_node';
   $handler->display->display_options['fields']['field_attached_node']['field'] = 'field_attached_node';
@@ -3512,7 +3512,7 @@ return $field==1?true:false;';
   $handler->display->display_options['footer']['area']['content'] = '<div class="selbetjening-bund"><a class="nemid" href="http://nemid.dk">NEMID</a><a class="borgerdk" href="https://www.borger.dk/Sider/default.aspx?KommuneId=706">Borger.dk</a><a class="virkdk" href="http://virk.dk">Virk.dk</a></div>';
   $handler->display->display_options['footer']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Felt: Felt: Spotboxe Bund */
+  /* Felt: Felt: Link til side */
   $handler->display->display_options['fields']['field_attached_node']['id'] = 'field_attached_node';
   $handler->display->display_options['fields']['field_attached_node']['table'] = 'field_data_field_attached_node';
   $handler->display->display_options['fields']['field_attached_node']['field'] = 'field_attached_node';
@@ -3613,7 +3613,7 @@ return $field==1?true:false;';
   $handler->display->display_options['relationships']['field_noderef_selvbtjn_nid']['required'] = TRUE;
   $handler->display->display_options['relationships']['field_noderef_selvbtjn_nid']['delta'] = '-1';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Felt: Felt: Spotboxe Bund */
+  /* Felt: Felt: Link til side */
   $handler->display->display_options['fields']['field_attached_node']['id'] = 'field_attached_node';
   $handler->display->display_options['fields']['field_attached_node']['table'] = 'field_data_field_attached_node';
   $handler->display->display_options['fields']['field_attached_node']['field'] = 'field_attached_node';
@@ -3625,7 +3625,7 @@ return $field==1?true:false;';
   $handler->display->display_options['fields']['field_attached_node']['type'] = 'balk_custom_node_reference_nid';
   $handler->display->display_options['fields']['field_attached_node']['delta_limit'] = '3';
   $handler->display->display_options['fields']['field_attached_node']['delta_offset'] = '0';
-  /* Felt: Felt: Spotboxe Bund */
+  /* Felt: Felt: Link til side */
   $handler->display->display_options['fields']['field_attached_node_1']['id'] = 'field_attached_node_1';
   $handler->display->display_options['fields']['field_attached_node_1']['table'] = 'field_data_field_attached_node';
   $handler->display->display_options['fields']['field_attached_node_1']['field'] = 'field_attached_node';

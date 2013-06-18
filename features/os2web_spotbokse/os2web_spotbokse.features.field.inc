@@ -127,7 +127,6 @@ function os2web_spotbokse_field_default_fields() {
           0 => array(
             'vocabulary' => 'redaktoertags',
             'parent' => '0',
-            'depth' => '',
           ),
         ),
         'options_list_callback' => 'content_taxonomy_allowed_values',

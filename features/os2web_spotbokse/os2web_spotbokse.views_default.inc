@@ -3816,6 +3816,7 @@ function os2web_spotbokse_views_default_views() {
   $handler->display->display_options['fields']['title_1']['label'] = '';
   $handler->display->display_options['fields']['title_1']['alter']['make_link'] = TRUE;
   $handler->display->display_options['fields']['title_1']['alter']['path'] = '[field_url]';
+  $handler->display->display_options['fields']['title_1']['alter']['absolute'] = TRUE;
   $handler->display->display_options['fields']['title_1']['alter']['strip_tags'] = TRUE;
   $handler->display->display_options['fields']['title_1']['element_type'] = 'h2';
   $handler->display->display_options['fields']['title_1']['element_class'] = 'pane-title';
