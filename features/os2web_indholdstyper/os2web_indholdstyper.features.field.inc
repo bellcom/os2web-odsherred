@@ -192,7 +192,7 @@ function os2web_indholdstyper_field_default_fields() {
           'module' => 'image',
           'settings' => array(
             'image_link' => '',
-            'image_style' => '',
+            'image_style' => '316x237',
           ),
           'type' => 'image',
           'weight' => '6',
@@ -548,7 +548,6 @@ function os2web_indholdstyper_field_default_fields() {
           0 => array(
             'vocabulary' => 'redaktoertags',
             'parent' => '0',
-            'depth' => '',
           ),
         ),
         'options_list_callback' => 'content_taxonomy_allowed_values',
@@ -2011,7 +2010,6 @@ function os2web_indholdstyper_field_default_fields() {
           0 => array(
             'vocabulary' => 'redaktoertags',
             'parent' => '0',
-            'depth' => '',
           ),
         ),
         'options_list_callback' => 'content_taxonomy_allowed_values',
@@ -3001,7 +2999,6 @@ function os2web_indholdstyper_field_default_fields() {
           0 => array(
             'vocabulary' => 'redaktoertags',
             'parent' => '0',
-            'depth' => '',
           ),
         ),
         'options_list_callback' => 'content_taxonomy_allowed_values',
@@ -4467,7 +4464,6 @@ function os2web_indholdstyper_field_default_fields() {
           0 => array(
             'vocabulary' => 'redaktoertags',
             'parent' => '0',
-            'depth' => '',
           ),
         ),
         'options_list_callback' => 'content_taxonomy_allowed_values',
