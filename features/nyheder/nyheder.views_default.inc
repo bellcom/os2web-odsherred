@@ -977,6 +977,37 @@ function nyheder_views_default_views() {
   $handler->display->display_options['fields']['field_resume_long']['alter']['trim'] = TRUE;
   $handler->display->display_options['fields']['field_resume_long']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_resume_long']['type'] = 'text_plain';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filterkriterie: Indhold: Udgivet */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filterkriterie: Indhold: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'news' => 'news',
+  );
+  /* Filterkriterie: Indhold: Type (field_newstype) */
+  $handler->display->display_options['filters']['field_newstype_tid']['id'] = 'field_newstype_tid';
+  $handler->display->display_options['filters']['field_newstype_tid']['table'] = 'field_data_field_newstype';
+  $handler->display->display_options['filters']['field_newstype_tid']['field'] = 'field_newstype_tid';
+  $handler->display->display_options['filters']['field_newstype_tid']['value'] = array(
+    25752 => '25752',
+  );
+  $handler->display->display_options['filters']['field_newstype_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_newstype_tid']['vocabulary'] = 'nyhedstype';
+  /* Filterkriterie: Indhold: Udløbsdato (field_udloebsdato) */
+  $handler->display->display_options['filters']['field_udloebsdato_value']['id'] = 'field_udloebsdato_value';
+  $handler->display->display_options['filters']['field_udloebsdato_value']['table'] = 'field_data_field_udloebsdato';
+  $handler->display->display_options['filters']['field_udloebsdato_value']['field'] = 'field_udloebsdato_value';
+  $handler->display->display_options['filters']['field_udloebsdato_value']['operator'] = '>';
+  $handler->display->display_options['filters']['field_udloebsdato_value']['default_date'] = 'now';
   $translatables['nyheder_hoeringer'] = array(
     t('Master'),
     t('I høring lige nu'),
