@@ -20,6 +20,7 @@ function os2web_node_feedback_feedback_insert($entry) {
     '!location' => url($entry->location, array('absolute' => TRUE)),
     '!message' => check_plain($entry->message),
     '!user' => format_username($account),
+    '!email' => isset($entry->field_feedback_email[und][0]['value']) ? $entry->field_feedback_email[und][0]['value'] : t('Anonymous'),
     '!date' => format_date($entry->timestamp),
     '!fid' => $entry->fid,
   );
@@ -27,11 +28,10 @@ function os2web_node_feedback_feedback_insert($entry) {
   $mail_body = t('Feedback entry') . ": !fid\n";
   $mail_body .= t('Location') . ":\n  !location\n";
   $mail_body .= t('Date') . ":\n  !date\n";
-  $mail_body .= t('User') . ":\n !user\n";
+  $mail_body .= t('User') . ":\n !user (!email)\n";
   $mail_body .= t('Message') . ":\n !message\n";
 
   $from = variable_get('site_mail','');
-  error_log(basename(__FILE__) . ':' . __LINE__ . ' Var: $from = ' . print_r($from, 1));
   $my_module = 'os2web_node_feedback';
   $my_mail_token = 'feedbackmail';
   $message = array(
