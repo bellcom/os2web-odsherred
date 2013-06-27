@@ -38,12 +38,6 @@ function os2web_menuer_og_blokke_context_default_contexts() {
           'region' => 'user_first',
           'weight' => '-9',
         ),
-        'views-os2web_diverse-block_1' => array(
-          'module' => 'views',
-          'delta' => 'os2web_diverse-block_1',
-          'region' => 'user_second',
-          'weight' => '-71',
-        ),
         'menu-menu-top-menu' => array(
           'module' => 'menu',
           'delta' => 'menu-top-menu',
@@ -55,18 +49,6 @@ function os2web_menuer_og_blokke_context_default_contexts() {
           'delta' => '19',
           'region' => 'user_second',
           'weight' => '-10',
-        ),
-        'views-os2web_diverse-block_2' => array(
-          'module' => 'views',
-          'delta' => 'os2web_diverse-block_2',
-          'region' => 'preface_first',
-          'weight' => '-71',
-        ),
-        'nice_menus-1' => array(
-          'module' => 'nice_menus',
-          'delta' => '1',
-          'region' => 'preface_first',
-          'weight' => '-70',
         ),
         'block-7' => array(
           'module' => 'block',

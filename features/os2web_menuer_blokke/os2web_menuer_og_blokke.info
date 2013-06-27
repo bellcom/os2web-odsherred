@@ -2,7 +2,7 @@ name = OS2Web Menuer og Blokke
 core = 7.x
 package = OS2Web - Struktur
 php = 5.2.4
-version = 7.x-1.11
+version = 7.x-1.12
 project = os2web_menuer_og_blokke
 dependencies[] = block
 dependencies[] = context
@@ -11,7 +11,6 @@ dependencies[] = features
 dependencies[] = menu
 dependencies[] = menu_block
 dependencies[] = menu_minipanels
-dependencies[] = nice_menus
 dependencies[] = os2web_grund_paneler
 dependencies[] = views
 datestamp = 1338117520
@@ -35,10 +34,4 @@ features[menu_links][] = menu-top-menu:user/logout
 features[menu_links][] = user-menu:user
 features[menu_links][] = user-menu:user/logout
 features[views_view][] = os2web_diverse
-timestamp = 1353326099
-
-;Added by OS2Web 2013-05-30
-project=OS2Web
-version=1.11
-timestamp=1369904058
-
+timestamp = 1369904058
