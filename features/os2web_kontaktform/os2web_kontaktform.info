@@ -12,3 +12,9 @@ features[user_permission][] = access site-wide contact form
 features[user_permission][] = access user contact forms
 features[user_permission][] = administer contact forms
 timestamp = 1353326099
+
+;Added by OS2Web 2013-05-30
+project=OS2Web
+version=1.11
+timestamp=1369904058
+

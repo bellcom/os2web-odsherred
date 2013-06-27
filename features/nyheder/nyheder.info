@@ -48,3 +48,9 @@ features[views_view][] = nyheder_moedekalender
 features[views_view][] = nyheder_nyheder
 features[views_view][] = nyheder_udbud
 features[views_view][] = nyheds_lister
+
+;Added by OS2Web 2013-05-30
+project=OS2Web
+version=1.11
+timestamp=1369904058
+

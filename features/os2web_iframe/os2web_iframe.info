@@ -12,3 +12,9 @@ dependencies[] = wysiwyg
 features[features_api][] = api:1
 features[filter][] = full_html_iframe
 features[wysiwyg][] = full_html_iframe
+
+;Added by OS2Web 2013-05-30
+project=OS2Web
+version=1.11
+timestamp=1369904058
+
