@@ -3,7 +3,7 @@ description = Indstillinger til div. moduler samt administration sektion
 core = 7.x
 package = OS2Web - Kerne
 php = 5.2.4
-version = 7.x-1.10
+version = 7.x-1.12
 project = os2web_settings
 dependencies[] = better_formats
 dependencies[] = ctools
@@ -171,10 +171,4 @@ features[variable][] = print_pdf_pdf_tool
 features[variable][] = print_pdf_sys_link_visibility
 features[variable][] = site_frontpage
 features[variable][] = theme_default
-timestamp = 1353326099
-
-;Added by OS2Web 2013-05-30
-project=OS2Web
-version=1.11
-timestamp=1369904058
-
+timestamp = 1369904058
