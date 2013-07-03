@@ -1,6 +1,7 @@
 <?php
 /**
  * @file
+ * slide_menu_links.module
  */
 
 /*
@@ -17,22 +18,23 @@ function slide_menu_links_init() {
   $slide_left_link = variable_get('slide_left_link', '<notset>');
   $slide_left_text = variable_get('slide_left_text', '<notset>');
   $slide_sub_url = variable_get('slide_sub_url', '');
+  $slide_visible_on = variable_get('slide_visible_on', '<front>');
   $slide_page_waiting = variable_get('slide_page_waiting', '<none>');
   $slide_subsite = 0;
+  $slide_show_links = 0;
+  $path = drupal_get_path_alias(current_path());
 
-  // Check if the page is a subpage
-  $sub_urls =  explode("\n", $slide_sub_url);
-
-  foreach($sub_urls as $sub_url){
-    if(strstr(current_path(), trim($sub_url))){
-      $slide_subsite = 1;
-    }
+  if(drupal_match_path($path, $slide_sub_url)){
+    $slide_subsite = 1;
   }
-    
+  if(drupal_match_path($path, $slide_visible_on)){
+    $slide_show_links = 1;
+  }
+
   // Move variables to js
   drupal_add_js(array('slide_menu_links' => array('slide_left_link' => $slide_left_link, 'slide_right_link' => $slide_right_link)), 'setting');
   drupal_add_js(array('slide_menu_links' => array('slide_left_text' => $slide_left_text, 'slide_right_text' => $slide_right_text)), 'setting');
-  drupal_add_js(array('slide_menu_links' => array('slide_subsite' => $slide_subsite)), 'setting');
+  drupal_add_js(array('slide_menu_links' => array('slide_subsite' => $slide_subsite, 'slide_show_links' => $slide_show_links)), 'setting');
   drupal_add_js(array('slide_menu_links' => array('slide_page_waiting' => $slide_page_waiting)), 'setting');
 }
 
@@ -61,34 +63,41 @@ function slide_menu_links_admin_menu_form() {
   $form['slide_left_link'] = array(
     '#title' => t('Slide left link'),
     '#type' => 'textfield',
-    '#default_value' => variable_get('slide_left_link'),
+    '#default_value' => variable_get('slide_left_link', 'http://odsherred.dk'),
     '#description' => t('Link for right slider. If the page is external prepend with http://'),
   );
   $form['slide_left_text'] = array(
     '#title' => t('Slide left text'),
     '#type' => 'textfield',
-    '#default_value' => variable_get('slide_left_text'),
+    '#default_value' => variable_get('slide_left_text', 'odsherred'),
     '#description' => t('Hashtag text for left slider'),
   );
 
   $form['slide_right_link'] = array(
     '#title' => t('Slide right link'),
     '#type' => 'textfield',
-    '#default_value' => variable_get('slide_right_link'),
+    '#default_value' => variable_get('slide_right_link', 'http://odsherred.dk/andre-sider'),
     '#description' => t('Link for right slider. If the page is external prepend with http://'),
   );
   $form['slide_right_text'] = array(
     '#title' => t('Slide right text'),
     '#type' => 'textfield',
-    '#default_value' => variable_get('slide_right_text'),
+    '#default_value' => variable_get('slide_right_text', 'andre-sider'),
     '#description' => t('Hashtag text for right slider'),
+  );
+
+  $form['slide_visible_on'] = array(
+    '#title' => t('Subsites'),
+    '#type' => 'textarea',
+    '#default_value' => variable_get('slide_visible_on', '<front>'),
+    '#description' => t('Show links on these pages, if left empty, links will show on all'),
   );
   
   $form['slide_sub_url'] = array(
     '#title' => t('Subsites'),
     '#type' => 'textarea',
     '#default_value' => variable_get('slide_sub_url'),
-    '#description' => t('Place "Back to" link on pages, where the url contains... Multiple values allowed. One value per line'),
+    '#description' => t('Place "Back to" link on pages, where the url contains... Multiple values allowed. One, per line'),
   );
 
   $form['slide_page_waiting'] = array(

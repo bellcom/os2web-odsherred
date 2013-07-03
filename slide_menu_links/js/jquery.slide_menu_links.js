@@ -7,12 +7,13 @@ jQuery(document).ready(function($){
       left_link = Drupal.settings.slide_menu_links.slide_left_link,
       right_link = Drupal.settings.slide_menu_links.slide_right_link,
       subsite = Drupal.settings.slide_menu_links.slide_subsite,
+      show_links = Drupal.settings.slide_menu_links.slide_show_links,
       home_link = window.location.origin,
       backDirection = '',
       page_waiting = Drupal.settings.slide_menu_links.slide_page_waiting;
 
   $('#page').attr('id', 'page_1');
-  if (Drupal.settings.slide_menu_links.slide_left_link !== '<notset>')
+  if (Drupal.settings.slide_menu_links.slide_left_link !== '<notset>' && show_links === 1)
   {
     $('<div data-role="page" id="page_2">').insertBefore('#page_1');
     $('#page_2').css({ "display" : "none"  });
@@ -28,7 +29,7 @@ jQuery(document).ready(function($){
     $(sliderLeftHtml).insertBefore('#page_1');
   }
 
-  if (Drupal.settings.slide_menu_links.slide_right_link !== '<notset>')
+  if (Drupal.settings.slide_menu_links.slide_right_link !== '<notset>' && show_links === 1)
   {
     $('<div data-role="page" id="page_3">').insertBefore('#page_1');
     $('#page_3').css({ "display" : "none"  });
@@ -38,7 +39,7 @@ jQuery(document).ready(function($){
     }
     else
     {
-      $('#page_2').html(page_waiting);
+      $('#page_3').html(page_waiting);
     }
     var sliderRightHtml = '<div class="slider slider_right"><a class="slider_link" href="'+page2+'"><i class="link"></i></a></div>';
     $(sliderRightHtml).insertBefore('#page_1');
