@@ -8,7 +8,7 @@ jQuery(document).ready(function($){
       right_link = Drupal.settings.slide_menu_links.slide_right_link,
       subsite = Drupal.settings.slide_menu_links.slide_subsite,
       show_links = Drupal.settings.slide_menu_links.slide_show_links,
-      home_link = window.location.origin,
+      home_link = 'http://' + window.location.host,
       backDirection = '',
       page_waiting = Drupal.settings.slide_menu_links.slide_page_waiting;
 
