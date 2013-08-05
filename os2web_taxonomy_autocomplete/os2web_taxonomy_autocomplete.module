@@ -59,6 +59,7 @@ function os2web_taxonomy_autocomplete_taxonomy_autocomplete($field_name, $tags_t
   $tag_last = drupal_strtolower(array_pop($tags_typed));
 
   $matches = array();
+  $term_matches = array();
   if ($tag_last != '') {
 
     // Part of the criteria for the query come from the field's own settings.
@@ -101,7 +102,6 @@ function os2web_taxonomy_autocomplete_taxonomy_autocomplete($field_name, $tags_t
 
     $prefix = count($tags_typed) ? drupal_implode_tags($tags_typed) . ', ' : '';
 
-    $term_matches = array();
     foreach ($tags_return as $tid => $name) {
       $n = $name;
       // Term names containing commas or quotes must be wrapped in quotes.
@@ -110,6 +110,10 @@ function os2web_taxonomy_autocomplete_taxonomy_autocomplete($field_name, $tags_t
       }
       $term_matches[$prefix . $n] = check_plain($name);
     }
+  }
+
+  if (empty($term_matches)) {
+    $term_matches[] = 'No result found for "'. $tag_last .'"';
   }
 
   drupal_json_output($term_matches);
