@@ -10,7 +10,7 @@
 ?>
 <h2>Tak for din registrering!</h2>
 
-<p>Dine registrerede informaiton er:</p>
+<p>Dine registrerede informationer er:</p>
 <?php if (count($fields)>1): ?>
 <p><ul class="webform-fields">
 <?php foreach ($fields as $field): ?>
