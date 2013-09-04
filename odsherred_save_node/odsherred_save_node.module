@@ -1,0 +1,39 @@
+<?php
+/**
+ * @file
+ *  odsherred_save_node.module
+ *
+ * @author Thomas Thune Hansen <tth@bellcom.dk>
+ * @copyright bellcom open source aps
+ */
+
+/*
+ * Implements hook_node_presave()
+ */
+
+function odsherred_save_node_node_presave($node){
+  /**
+   * Configuration array, map menu names to term ids
+   * 'menu-name' => 'term-id'
+   * @could-do
+   *  Create administration page for this
+   */
+  $menu_term = array(
+    'menu-indhold' => '4',
+    'menu-erhverv' => '5',
+    'menu-politik' => '6',
+  );
+
+  if(isset($node->fmenu)){
+    $menu_name = $node->fmenu['menu_name'];
+  }
+  if(isset($node->menu)){
+    $menu_name = $node->menu['menu_name'];
+  }
+
+  if(isset($node->field_site_structure)){
+    if(empty($node->field_site_structure[LANGUAGE_NONE]) || $node->type == 'contentpage'){
+      $node->field_site_structure[LANGUAGE_NONE][0]['tid'] = $menu_term[$menu_name]; 
+    }
+  }
+}

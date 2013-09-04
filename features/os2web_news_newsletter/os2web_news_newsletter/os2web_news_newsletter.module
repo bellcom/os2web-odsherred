@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the OS2web - News Newsletter feature.
+ */
+
+include_once 'os2web_news_newsletter.features.inc';
