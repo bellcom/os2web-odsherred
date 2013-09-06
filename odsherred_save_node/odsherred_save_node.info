@@ -1,0 +1,9 @@
+name = Odsherred save node
+description = Save additional information on node save
+core = 7.x
+; Examples - use at will
+;package = Views
+;dependencies[] = views
+;dependencies[] = panels
+;files[] = example.test
+;configure = admin/config/content/example

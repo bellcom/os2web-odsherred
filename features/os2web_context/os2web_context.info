@@ -3,7 +3,7 @@ description = Alle contexts for sitet
 core = 7.x
 package = OS2Web - Struktur
 php = 5.2.4
-version = 7.x-1.10
+version = 7.x-1.12
 project = os2web_context
 dependencies[] = block
 dependencies[] = context
@@ -18,15 +18,11 @@ dependencies[] = os2web_sektionssider
 dependencies[] = os2web_webform_downloads
 dependencies[] = panels_mini
 dependencies[] = search
-dependencies[] = superfish
 dependencies[] = views
 datestamp = 1338117520
 features[context][] = borgerblokke
 features[context][] = erhvervblokke
-features[context][] = footerblokke
-features[context][] = global
 features[context][] = planer_og_fritid_blokke
-features[context][] = portalforside
 features[ctools][] = context:context:3
 features[ctools][] = field_group:field_group:1
 features[ctools][] = strongarm:strongarm:1
@@ -116,10 +112,4 @@ features[variable][] = node_submitted_esdh_dokument
 features[variable][] = node_submitted_esdh_sag
 features[variable][] = node_submitted_local_plan
 features[variable][] = node_submitted_referat
-timestamp = 1353326099
-
-;Added by OS2Web 2013-05-30
-project=OS2Web
-version=1.11
-timestamp=1369904058
-
+timestamp = 1369904058

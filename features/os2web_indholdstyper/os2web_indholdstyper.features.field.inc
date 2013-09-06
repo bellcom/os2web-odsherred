@@ -99,9 +99,9 @@ function os2web_indholdstyper_field_default_fields() {
             'filtered_html' => 'filtered_html',
             'full_html' => 'full_html',
             'full_html_iframe' => 'full_html_iframe',
-            'php_code' => 0,
+            'php_code' => 'php_code',
             'plain_text' => 0,
-            'raw' => 0,
+            'raw' => 'raw',
             'standard' => 0,
           ),
           'allowed_formats_toggle' => 1,
@@ -192,7 +192,7 @@ function os2web_indholdstyper_field_default_fields() {
           'module' => 'image',
           'settings' => array(
             'image_link' => '',
-            'image_style' => '',
+            'image_style' => '316x237',
           ),
           'type' => 'image',
           'weight' => '6',
@@ -207,7 +207,7 @@ function os2web_indholdstyper_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '0',
         ),
         'search_result' => array(
           'label' => 'above',
@@ -332,40 +332,8 @@ function os2web_indholdstyper_field_default_fields() {
         ),
         'search_index' => array(
           'label' => 'hidden',
-          'module' => 'field_slideshow',
-          'settings' => array(
-            'slideshow_caption' => 'alt',
-            'slideshow_caption_link' => '',
-            'slideshow_carousel_circular' => 0,
-            'slideshow_carousel_follow' => 0,
-            'slideshow_carousel_image_style' => '',
-            'slideshow_carousel_scroll' => '1',
-            'slideshow_carousel_skin' => '',
-            'slideshow_carousel_speed' => '500',
-            'slideshow_carousel_vertical' => 0,
-            'slideshow_carousel_visible' => '3',
-            'slideshow_colorbox_image_style' => '',
-            'slideshow_colorbox_slideshow' => '',
-            'slideshow_colorbox_slideshow_speed' => '4000',
-            'slideshow_colorbox_speed' => '350',
-            'slideshow_colorbox_transition' => 'elastic',
-            'slideshow_controls' => 0,
-            'slideshow_controls_pause' => 0,
-            'slideshow_controls_position' => 'after',
-            'slideshow_field_collection_image' => '',
-            'slideshow_fx' => 'fade',
-            'slideshow_image_style' => 'indholdsside',
-            'slideshow_link' => '',
-            'slideshow_order' => '',
-            'slideshow_pager' => '',
-            'slideshow_pager_image_style' => '',
-            'slideshow_pager_position' => 'after',
-            'slideshow_pause' => 0,
-            'slideshow_speed' => '1000',
-            'slideshow_start_on_hover' => 0,
-            'slideshow_timeout' => '4000',
-          ),
-          'type' => 'slideshow',
+          'settings' => array(),
+          'type' => 'hidden',
           'weight' => '1',
         ),
         'search_result' => array(
@@ -465,7 +433,7 @@ function os2web_indholdstyper_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '0',
         ),
         'search_result' => array(
           'label' => 'above',
@@ -548,7 +516,6 @@ function os2web_indholdstyper_field_default_fields() {
           0 => array(
             'vocabulary' => 'redaktoertags',
             'parent' => '0',
-            'depth' => '',
           ),
         ),
         'options_list_callback' => 'content_taxonomy_allowed_values',
@@ -2011,7 +1978,6 @@ function os2web_indholdstyper_field_default_fields() {
           0 => array(
             'vocabulary' => 'redaktoertags',
             'parent' => '0',
-            'depth' => '',
           ),
         ),
         'options_list_callback' => 'content_taxonomy_allowed_values',
@@ -3001,7 +2967,6 @@ function os2web_indholdstyper_field_default_fields() {
           0 => array(
             'vocabulary' => 'redaktoertags',
             'parent' => '0',
-            'depth' => '',
           ),
         ),
         'options_list_callback' => 'content_taxonomy_allowed_values',
@@ -4324,7 +4289,7 @@ function os2web_indholdstyper_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '19',
         ),
         'rss' => array(
           'label' => 'hidden',
@@ -4404,7 +4369,7 @@ function os2web_indholdstyper_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '13',
         ),
         'rss' => array(
           'label' => 'above',
@@ -4467,7 +4432,6 @@ function os2web_indholdstyper_field_default_fields() {
           0 => array(
             'vocabulary' => 'redaktoertags',
             'parent' => '0',
-            'depth' => '',
           ),
         ),
         'options_list_callback' => 'content_taxonomy_allowed_values',
@@ -4491,7 +4455,7 @@ function os2web_indholdstyper_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '10',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -4567,10 +4531,14 @@ function os2web_indholdstyper_field_default_fields() {
           'weight' => '0',
         ),
         'related_block' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
+          'label' => 'hidden',
+          'module' => 'image',
+          'settings' => array(
+            'image_link' => 'content',
+            'image_style' => '316x237',
+          ),
+          'type' => 'image',
+          'weight' => '0',
         ),
         'rss' => array(
           'label' => 'hidden',
@@ -4611,15 +4579,15 @@ function os2web_indholdstyper_field_default_fields() {
         'module' => 'imagefield_crop',
         'settings' => array(
           'collapsible' => '2',
-          'croparea' => '690x400',
-          'enforce_minimum' => 1,
+          'croparea' => '690x0',
+          'enforce_minimum' => 0,
           'enforce_ratio' => 1,
           'preview_image_style' => 'thumbnail',
           'progress_indicator' => 'throbber',
           'resolution' => '690x237',
         ),
         'type' => 'imagefield_crop_widget',
-        'weight' => '0',
+        'weight' => 0,
       ),
     ),
   );
@@ -4671,7 +4639,7 @@ function os2web_indholdstyper_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '8',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -4777,7 +4745,7 @@ function os2web_indholdstyper_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '1',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -4858,7 +4826,7 @@ function os2web_indholdstyper_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '5',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -4947,7 +4915,7 @@ function os2web_indholdstyper_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '11',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -5029,7 +4997,7 @@ function os2web_indholdstyper_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '2',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -5111,7 +5079,7 @@ function os2web_indholdstyper_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '3',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -5204,7 +5172,7 @@ function os2web_indholdstyper_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '12',
         ),
         'rss' => array(
           'label' => 'hidden',
@@ -5307,7 +5275,7 @@ function os2web_indholdstyper_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '14',
         ),
         'rss' => array(
           'label' => 'above',
@@ -5386,7 +5354,7 @@ function os2web_indholdstyper_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '15',
         ),
         'rss' => array(
           'label' => 'hidden',
@@ -5478,7 +5446,7 @@ function os2web_indholdstyper_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '9',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -5589,7 +5557,7 @@ function os2web_indholdstyper_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '17',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -5664,7 +5632,7 @@ function os2web_indholdstyper_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '7',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -5724,7 +5692,7 @@ function os2web_indholdstyper_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '18',
         ),
         'rss' => array(
           'label' => 'above',
@@ -5811,7 +5779,7 @@ function os2web_indholdstyper_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '16',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -5892,7 +5860,7 @@ function os2web_indholdstyper_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '4',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -5974,7 +5942,7 @@ function os2web_indholdstyper_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '6',
         ),
         'teaser' => array(
           'label' => 'above',
