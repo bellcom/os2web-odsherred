@@ -1,0 +1,14 @@
+name = Odsherred create content page
+description = The feature that handles the creation of "content page" type. Includes the check of which role can create specific terms.
+core = 7.x
+package = Odsherred
+version = 7.x-1.0
+project = odsherred_create_content_page
+dependencies[] = ctools
+dependencies[] = strongarm
+features[ctools][] = strongarm:strongarm:1
+features[features_api][] = api:1
+features[variable][] = disable_messages_enable
+features[variable][] = disable_messages_filter_by_page
+features[variable][] = disable_messages_ignore_case
+features[variable][] = disable_messages_page_filter_paths
