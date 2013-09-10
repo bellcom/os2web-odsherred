@@ -1,0 +1,14 @@
+name = OS2web - Spam
+core = 7.x
+package = OS2Web
+version = 7.x-1.0
+project = os2web_spam
+dependencies[] = ctools
+dependencies[] = honeypot
+dependencies[] = strongarm
+features[ctools][] = strongarm:strongarm:1
+features[features_api][] = api:1
+features[variable][] = honeypot_element_name
+features[variable][] = honeypot_form_user_register_form
+features[variable][] = honeypot_form_webforms
+project path = profiles/os2web/modules/os2web/features
