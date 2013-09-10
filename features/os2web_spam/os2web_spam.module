@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the OS2web - Spam feature.
+ */
+
+include_once 'os2web_spam.features.inc';
