@@ -20,7 +20,7 @@ function odsherred_create_content_page_form_validate($form, &$form_state){
 
   if(!user_access('administer site configuration') && !in_array('Administrator', $user->roles) && !in_array('Webmaster', $user->roles)){
     //drupal_set_message(print_r($form_state['input']['field_termref_sted']['und']['value_field'], TRUE));
-    $sted_input = explode(' ', $form_state['input']['field_termref_sted']['und']['value_field']);
+    $sted_input = explode('" "', $form_state['input']['field_termref_sted']['und']['value_field']);
 
     foreach($sted_input as $sted){
       $sted = str_replace('"', "", $sted);
@@ -28,12 +28,12 @@ function odsherred_create_content_page_form_validate($form, &$form_state){
         continue;
       $sted_term = taxonomy_get_term_by_name($sted,'egennavne_stednavne');
       if (empty($sted_term)){
-        form_set_error('field_termref_sted', $sted . ': ' . t('Du kan kun væge de eksisterende navne'));
+        form_set_error('field_termref_sted', $sted . ': ' . t('Du kan kun vælge de eksisterende navne'));
       }
     }
 
     //drupal_set_message(print_r($form_state['input']['field_organization']['und']['value_field'], TRUE));
-    $org_input = explode(' ', $form_state['input']['field_organization']['und']['value_field']);
+    $org_input = explode('" "', $form_state['input']['field_organization']['und']['value_field']);
 
     foreach($org_input as $org){
       $org = str_replace('"', "", $org);
@@ -46,7 +46,7 @@ function odsherred_create_content_page_form_validate($form, &$form_state){
     }
       
     //drupal_set_message(print_r($form_state['input']['field_politics']['und']['value_field'], TRUE));
-    $politics_input = explode(' ', $form_state['input']['field_politics']['und']['value_field']);
+    $politics_input = explode('" "', $form_state['input']['field_politics']['und']['value_field']);
 
     foreach($politics_input as $politics){
       $politics = str_replace('"', "", $politics);
@@ -59,7 +59,7 @@ function odsherred_create_content_page_form_validate($form, &$form_state){
     }
 
     if (!in_array('Webredaktør', $user->roles)){
-      $stikord_input = explode(' ', $form_state['input']['field_editortags']['und']['value_field']);
+      $stikord_input = explode('" "', $form_state['input']['field_editortags']['und']['value_field']);
 
       foreach($stikord_input as $stikord){
         $stikord = str_replace('"', "", $stikord);
