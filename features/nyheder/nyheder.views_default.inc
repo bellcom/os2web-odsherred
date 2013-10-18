@@ -1608,18 +1608,40 @@ function nyheder_views_default_views() {
   $handler->display->display_options['relationships']['field_newstype_tid']['table'] = 'field_data_field_newstype';
   $handler->display->display_options['relationships']['field_newstype_tid']['field'] = 'field_newstype_tid';
   $handler->display->display_options['relationships']['field_newstype_tid']['required'] = TRUE;
+  /* Felt: Indhold: Udløbsdato */
+  $handler->display->display_options['fields']['field_udloebsdato']['id'] = 'field_udloebsdato';
+  $handler->display->display_options['fields']['field_udloebsdato']['table'] = 'field_data_field_udloebsdato';
+  $handler->display->display_options['fields']['field_udloebsdato']['field'] = 'field_udloebsdato';
+  $handler->display->display_options['fields']['field_udloebsdato']['label'] = '';
+  $handler->display->display_options['fields']['field_udloebsdato']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_udloebsdato']['element_type'] = 'span';
+  $handler->display->display_options['fields']['field_udloebsdato']['element_label_type'] = 'span';
+  $handler->display->display_options['fields']['field_udloebsdato']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_udloebsdato']['element_wrapper_type'] = 'div';
+  $handler->display->display_options['fields']['field_udloebsdato']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_udloebsdato']['settings'] = array(
+    'format_type' => 'medium',
+    'fromto' => 'both',
+    'multiple_number' => '',
+    'multiple_from' => '',
+    'multiple_to' => '',
+  );
   /* Felt: Indhold: Titel */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['title']['alter']['text'] = '[title] ([field_udloebsdato])';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   /* Felt: Indhold: Dato */
   $handler->display->display_options['fields']['field_newstypedato']['id'] = 'field_newstypedato';
   $handler->display->display_options['fields']['field_newstypedato']['table'] = 'field_data_field_newstypedato';
   $handler->display->display_options['fields']['field_newstypedato']['field'] = 'field_newstypedato';
   $handler->display->display_options['fields']['field_newstypedato']['label'] = '';
+  $handler->display->display_options['fields']['field_newstypedato']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_newstypedato']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_newstypedato']['settings'] = array(
     'format_type' => 'short',
@@ -1635,10 +1657,10 @@ function nyheder_views_default_views() {
   $handler->display->display_options['fields']['field_site_structure']['label'] = '';
   $handler->display->display_options['fields']['field_site_structure']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_site_structure']['element_label_colon'] = FALSE;
-  /* Sorteringskriterie: Indhold: Dato (field_newstypedato) */
-  $handler->display->display_options['sorts']['field_newstypedato_value']['id'] = 'field_newstypedato_value';
-  $handler->display->display_options['sorts']['field_newstypedato_value']['table'] = 'field_data_field_newstypedato';
-  $handler->display->display_options['sorts']['field_newstypedato_value']['field'] = 'field_newstypedato_value';
+  /* Sorteringskriterie: Indhold: Udløbsdato (field_udloebsdato) */
+  $handler->display->display_options['sorts']['field_udloebsdato_value']['id'] = 'field_udloebsdato_value';
+  $handler->display->display_options['sorts']['field_udloebsdato_value']['table'] = 'field_data_field_udloebsdato';
+  $handler->display->display_options['sorts']['field_udloebsdato_value']['field'] = 'field_udloebsdato_value';
   /* Filterkriterie: Indhold: Udgivet */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
@@ -1791,6 +1813,7 @@ function nyheder_views_default_views() {
     t('sidste »'),
     t('Ingen udbud.'),
     t('term fra field_newstype'),
+    t('[title] ([field_udloebsdato])'),
     t('Page'),
     t('Type (field_newstype)'),
     t('MegaDD'),
