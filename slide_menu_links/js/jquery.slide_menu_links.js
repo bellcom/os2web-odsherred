@@ -15,7 +15,7 @@ jQuery(document).ready(function($){
   $('#page').attr('id', 'page_1');
   if (Drupal.settings.slide_menu_links.slide_left_link !== '<notset>' && show_links === 1)
   {
-    $('<div data-role="page" id="page_2">').insertBefore('#page_1');
+    $('<div data-role="page" aria-hidden="true" id="page_2">').insertBefore('#page_1');
     $('#page_2').css({ "display" : "none"  });
     if (left_link.indexOf('http://') === -1 )
     {
@@ -31,7 +31,7 @@ jQuery(document).ready(function($){
 
   if (Drupal.settings.slide_menu_links.slide_right_link !== '<notset>' && show_links === 1)
   {
-    $('<div data-role="page" id="page_3">').insertBefore('#page_1');
+    $('<div data-role="page" aria-hidden="true" id="page_3">').insertBefore('#page_1');
     $('#page_3').css({ "display" : "none"  });
     if (right_link.indexOf('http://') === -1 )
     {
