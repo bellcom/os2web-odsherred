@@ -25,7 +25,7 @@ jQuery(document).ready(function($){
     {
       $('#page_2').html(page_waiting);
     }
-    var sliderLeftHtml = '<div class="slider slider_left"><a class="slider_link" href="'+page1+'"><i class="link"></i></a></div>';
+    var sliderLeftHtml = '<div class="slider slider_left" aria-hidden="true"><a class="slider_link" href="'+page1+'"><i class="link"></i></a></div>';
     $(sliderLeftHtml).insertBefore('#page_1');
   }
 
@@ -41,7 +41,7 @@ jQuery(document).ready(function($){
     {
       $('#page_3').html(page_waiting);
     }
-    var sliderRightHtml = '<div class="slider slider_right"><a class="slider_link" href="'+page2+'"><i class="link"></i></a></div>';
+    var sliderRightHtml = '<div class="slider slider_right" aria-hidden="true"><a class="slider_link" href="'+page2+'"><i class="link"></i></a></div>';
     $(sliderRightHtml).insertBefore('#page_1');
   }
 
