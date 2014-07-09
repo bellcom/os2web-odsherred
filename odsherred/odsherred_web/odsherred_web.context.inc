@@ -74,6 +74,11 @@ function odsherred_web_context_default_contexts() {
   $context->description = '';
   $context->tag = '';
   $context->conditions = array(
+    'path' => array(
+      'values' => array(
+        '~nyheder' => '~nyheder',
+      ),
+    ),
     'sitewide' => array(
       'values' => array(
         1 => 1,
