@@ -3,7 +3,7 @@ description = Mødekalender, Udbud, Høringer
 core = 7.x
 package = Features
 php = 5.2.4
-version = 7.x-1.7
+version = 7.x-1.2
 project = nyheder
 dependencies[] = apachesolr_search
 dependencies[] = block
@@ -48,9 +48,4 @@ features[views_view][] = nyheder_moedekalender
 features[views_view][] = nyheder_nyheder
 features[views_view][] = nyheder_udbud
 features[views_view][] = nyheds_lister
-
-;Added by OS2Web 2013-05-30
-project=OS2Web
-version=1.11
-timestamp=1369904058
-
+timestamp = 1369904058

@@ -15,7 +15,7 @@ jQuery(document).ready(function($){
   $('#page').attr('id', 'page_1');
   if (Drupal.settings.slide_menu_links.slide_left_link !== '<notset>' && show_links === 1)
   {
-    $('<div data-role="page" id="page_2">').insertBefore('#page_1');
+    $('<div data-role="page" aria-hidden="true" id="page_2">').insertBefore('#page_1');
     $('#page_2').css({ "display" : "none"  });
     if (left_link.indexOf('http://') === -1 )
     {
@@ -25,13 +25,13 @@ jQuery(document).ready(function($){
     {
       $('#page_2').html(page_waiting);
     }
-    var sliderLeftHtml = '<div class="slider slider_left"><a class="slider_link" href="'+page1+'"><i class="link"></i></a></div>';
+    var sliderLeftHtml = '<div class="slider slider_left" aria-hidden="true"><a class="slider_link" href="'+page1+'"><i class="link"></i></a></div>';
     $(sliderLeftHtml).insertBefore('#page_1');
   }
 
   if (Drupal.settings.slide_menu_links.slide_right_link !== '<notset>' && show_links === 1)
   {
-    $('<div data-role="page" id="page_3">').insertBefore('#page_1');
+    $('<div data-role="page" aria-hidden="true" id="page_3">').insertBefore('#page_1');
     $('#page_3').css({ "display" : "none"  });
     if (right_link.indexOf('http://') === -1 )
     {
@@ -41,7 +41,7 @@ jQuery(document).ready(function($){
     {
       $('#page_3').html(page_waiting);
     }
-    var sliderRightHtml = '<div class="slider slider_right"><a class="slider_link" href="'+page2+'"><i class="link"></i></a></div>';
+    var sliderRightHtml = '<div class="slider slider_right" aria-hidden="true"><a class="slider_link" href="'+page2+'"><i class="link"></i></a></div>';
     $(sliderRightHtml).insertBefore('#page_1');
   }
 
