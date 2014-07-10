@@ -677,8 +677,8 @@ function odsherred_web_default_panels_mini() {
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'override_title' => 0,
-      'override_title_text' => '',
+      'override_title' => 1,
+      'override_title_text' => '<a href="borger">Borger</a>',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -701,8 +701,8 @@ function odsherred_web_default_panels_mini() {
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'override_title' => 0,
-      'override_title_text' => '',
+      'override_title' => 1,
+      'override_title_text' => '<a href="erhverv">Erhverv</a>',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -725,8 +725,8 @@ function odsherred_web_default_panels_mini() {
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'override_title' => 0,
-      'override_title_text' => '',
+      'override_title' => 1,
+      'override_title_text' => '<a href="politik">Politik</a>',
     );
     $pane->cache = array();
     $pane->style = array(
